@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: docs
+  execute-dir: project
 
 website:
   title: "SEEA Africa"
@@ -7,7 +9,11 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: documentation
+        text: Documentation
       - about.qmd
+  sidebar:
+    contents: auto
 
 format:
   html:

@@ -1,3 +1,14 @@
+---
+title: "Terms of Reference"
+author:
+  - name: "Renato Vargas"
+    id: rv
+    # email: renovargas@gmail.com
+    affiliation: 
+      - name: "Consultant for The World Bank"
+# bibliography: references.bib
+---
+
 # Introduction
 
 
@@ -36,3 +47,4 @@ A note (10–15 pages) presenting the results of the analyses proposed under tas
     * Discuss policy-relevant insights of the NCA data and links with national development, climate resilience, and green growth.
     * Provide reflections and conclusions on data limitations and offer recommendations to improve future analysis and data use.
     * Prepare list of recommendations to enhance the quality, policy relevance, and usability of NCA outputs in Eastern and Southern Africa. This should include suggestions for improving data consistency and the usability of the accounts per country and account for and integration of NCA into planning and decision-making.
+
