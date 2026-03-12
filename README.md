@@ -1,0 +1,24 @@
+The consultancy aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy. The consultant will conduct a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others (if available). The accounts cover ecosystem services, energy, forests, land, water, minerals and any other available accounts for the countries in Eastern and Southern Africa. The consultant will also work on preparing applications with the NCA data that can inform the World Bank's current priorities in Eastern and Southern Africa in areas such as energy access, sustainable management of water resources and their contribution to key economic sectors, the contribution of the forest sector to the economy, job creation, among others. The specific tasks and deliverables will include:
+
+Deliverable 1: Diagnostic Review and Analytical Opportunities (15 working days)
+A technical note (10–15 pages) summarizing the methodological quality and alignment of natural capital accounts (NCAs) for the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia and other countries in Eastern and Southern Africa (if available). The consultant will: 
+    1. Conduct a review of the most recent NCA reports and associated data files (e.g., Excel spreadsheets) for the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, Zambia, and any other Eastern and Southern African countries with available published accounts. Conduct an internet search to identify other countries and accounts with available data. 
+    2. Assess the extent to which each country’s accounts (ecosystem services, energy, forests, land, water, minerals, and others available) adhere to the SEEA framework and international best practices.
+    3. Identify and report strengths, gaps, and deviations from recommended standards for each country and account.
+    4. Assess the quality of data used as inputs for the preparation of accounts, including the appropriate level of disaggregation, identify and report all data issues. 
+    5. Provide a comparative summary for each country and account, highlighting areas of compliance and divergence.
+    6. Propose cross-country and country-specific analyses and stylized facts that can be derived from the available data, that could inform, planning, economic policy and decision-making.
+
+Deliverable 2: Analytical Results and Policy-Relevant Findings (15 working days)
+A note (10–15 pages) presenting the results of the analyses proposed under task six for Deliverable 1, using the available NCA data. The consultant will:
+    • Prepare an analysis of the following applications: 
+        ◦ From the review of the energy accounts and mineral accounts (only available for Rwanda) assess how these accounts can inform the World Bank's Accelerating Sustainable and Clean Energy Access Transformation (ASCENT) program. 
+        ◦ From the review of forest accounts, assess the contribution of forests to GDP and how the data can be used to improve the estimation of the impact of the forest activities on jobs and the elasticities to be used in each country to estimate the World Bank More and Better-Paid Jobs (MBJ) indicator.  
+        ◦ From the review of the water accounts, assess the contribution of the water sector to economic sectors such as agriculture, industry, and manufacturing. 
+    • Present the results of additional applications proposed and derived from the reviewed accounts.
+    • Describe the results of cross-country comparisons and trends in the NCA data, natural capital stocks and ecosystem services.
+    • Include visualizations (e.g., tables, charts, maps) to support interpretation and communication of results.
+    • Submit all data files to replicate the analyses included in the final note. 
+    • Discuss policy-relevant insights of the NCA data and links with national development, climate resilience, and green growth.
+    • Provide reflections and conclusions on data limitations and offer recommendations to improve future analysis and data use.
+    • Prepare list of recommendations to enhance the quality, policy relevance, and usability of NCA outputs in Eastern and Southern Africa. This should include suggestions for improving data consistency and the usability of the accounts per country and account for and integration of NCA into planning and decision-making.
