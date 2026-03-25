@@ -4,7 +4,7 @@ project:
   execute-dir: project
 
 website:
-  title: "SEEA Africa"
+  title: "SEEA AFE"
   navbar:
     left:
       - href: index.qmd
