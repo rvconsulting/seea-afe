@@ -121,6 +121,10 @@ div.csl-indent {
 <span class="menu-text">Documentation</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../dashboard/index.html"> 
+<span class="menu-text">Dashboard</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -185,6 +189,13 @@ div.csl-indent {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#regional-assessment-dataset" id="toc-regional-assessment-dataset" class="nav-link" data-scroll-target="#regional-assessment-dataset">Regional Assessment Dataset</a>
+  <ul class="collapse">
+  <li><a href="#data-sources-and-scope" id="toc-data-sources-and-scope" class="nav-link" data-scroll-target="#data-sources-and-scope">Data Sources and Scope</a></li>
+  <li><a href="#implementation-status" id="toc-implementation-status" class="nav-link" data-scroll-target="#implementation-status">Implementation Status</a></li>
+  <li><a href="#account-coverage" id="toc-account-coverage" class="nav-link" data-scroll-target="#account-coverage">Account Coverage</a></li>
+  <li><a href="#gaps-and-opportunities" id="toc-gaps-and-opportunities" class="nav-link" data-scroll-target="#gaps-and-opportunities">Gaps and Opportunities</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -226,9 +237,558 @@ div.csl-indent {
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>The System of Environmental Economic Accounting (SEEA) <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span> is the international statistical standard for measuring the environment and its relationship with the economy.</p>
+</section>
+<section id="regional-assessment-dataset" class="level1">
+<h1>Regional Assessment Dataset</h1>
+<section id="data-sources-and-scope" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources-and-scope">Data Sources and Scope</h2>
+<p>The 2025 Global Assessment of SEEA Implementation, coordinated by the United Nations Statistics Division (UNSD), documents the state of natural capital accounting across all UN member states. This review draws on the Africa and Far East (AFE) subset of that dataset, covering <strong>26 countries</strong> in Eastern and Southern Africa. For each country, the dataset tracks whether 36 distinct SEEA accounts, spanning the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and a set of Thematic Accounts, have been compiled at least once.</p>
+<p>The variable of interest, <em>Compiled</em>, reflects whether a country has produced a given account, based on either self-reported data from the country’s national statistical office or a responding line ministry, or through imputation by the assessment team where direct responses were unavailable. Accounts are grouped into three broad categories: the SEEA CF covers material and monetary flow and asset accounts; the SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts; and Thematic Accounts cover specialised topics such as forests, ocean, and protected areas.</p>
+</section>
+<section id="implementation-status" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-status">Implementation Status</h2>
+<p>Of the 26 AFE countries assessed, <strong>11 are actively implementing the SEEA</strong> in some form, while the remaining 15 have not yet begun. Among those implementing, countries are classified by their stage of progress under the SDG 15.9.1b indicator: Stage I countries have compiled at least one SEEA CF account; Stage II countries have additionally compiled at least one SEEA EA or Thematic account; and Stage III countries demonstrate a sustained institutional programme of accounting across multiple account types. In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake is modest, a meaningful cluster of countries has progressed beyond initial experimentation.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-stage" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A lollipop chart showing 26 AFE countries on the y-axis, ordered by number of compiled accounts. Points are coloured by SEEA implementation stage. South Africa and Uganda lead with 5 accounts each.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-stage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="01_diagnostic_review_files/figure-html/fig-stage-1.png" class="img-fluid figure-img" alt="A lollipop chart showing 26 AFE countries on the y-axis, ordered by number of compiled accounts. Points are coloured by SEEA implementation stage. South Africa and Uganda lead with 5 accounts each." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: AFE countries by SEEA implementation stage and number of compiled accounts. Countries are sorted by compiled account count; non-implementing countries are shown in grey.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="account-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="account-coverage">Account Coverage</h2>
+<p>Across all 11 implementing countries, a total of <strong>29 account-compilations</strong> have been recorded covering 16 distinct account types out of the 36 tracked. The most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for energy and water, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region’s resource management priorities. Physical asset accounts for land follow, compiled by 3 countries. Beyond this initial tier, uptake drops sharply: monetary accounts, which require additional institutional capacity and data integration, and ecosystem accounts appear in only 1 to 2 countries each, with thematic accounts for forests and protected areas at the same level.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-heatmap" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A tile heatmap with SEEA accounts on the y-axis (grouped by account category) and implementing countries on the x-axis. Filled tiles indicate a compiled account. Energy and water PSUTs have the most coverage.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-heatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="01_diagnostic_review_files/figure-html/fig-heatmap-1.png" class="img-fluid figure-img" alt="A tile heatmap with SEEA accounts on the y-axis (grouped by account category) and implementing countries on the x-axis. Filled tiles indicate a compiled account. Energy and water PSUTs have the most coverage." width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-heatmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Account compilation status across the 11 implementing AFE countries, grouped by account category. Countries are ordered left to right by total number of compiled accounts; accounts within each group are ordered by frequency of compilation.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#tbl-group-summary" class="quarto-xref">Table&nbsp;1</a> provides an aggregate view of account group coverage, showing the number of distinct accounts within each group, how many individual account-compilations have been recorded across implementing countries, and how many countries have compiled at least one account in each group.</p>
+<div class="cell">
+<div id="tbl-group-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-group-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of SEEA account coverage by account group across the 11 implementing AFE countries.
+</figcaption>
+<div aria-describedby="tbl-group-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="snsrlrytzy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#snsrlrytzy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#snsrlrytzy thead, #snsrlrytzy tbody, #snsrlrytzy tfoot, #snsrlrytzy tr, #snsrlrytzy td, #snsrlrytzy th {
+  border-style: none;
+}
+
+#snsrlrytzy p {
+  margin: 0;
+  padding: 0;
+}
+
+#snsrlrytzy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#snsrlrytzy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#snsrlrytzy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#snsrlrytzy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#snsrlrytzy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#snsrlrytzy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#snsrlrytzy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#snsrlrytzy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#snsrlrytzy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#snsrlrytzy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#snsrlrytzy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#snsrlrytzy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#snsrlrytzy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#snsrlrytzy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#snsrlrytzy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#snsrlrytzy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#snsrlrytzy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#snsrlrytzy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#snsrlrytzy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#snsrlrytzy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#snsrlrytzy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#snsrlrytzy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#snsrlrytzy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#snsrlrytzy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#snsrlrytzy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#snsrlrytzy .gt_left {
+  text-align: left;
+}
+
+#snsrlrytzy .gt_center {
+  text-align: center;
+}
+
+#snsrlrytzy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#snsrlrytzy .gt_font_normal {
+  font-weight: normal;
+}
+
+#snsrlrytzy .gt_font_bold {
+  font-weight: bold;
+}
+
+#snsrlrytzy .gt_font_italic {
+  font-style: italic;
+}
+
+#snsrlrytzy .gt_super {
+  font-size: 65%;
+}
+
+#snsrlrytzy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#snsrlrytzy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#snsrlrytzy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#snsrlrytzy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#snsrlrytzy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#snsrlrytzy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#snsrlrytzy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#snsrlrytzy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#snsrlrytzy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Account-Group" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Account Group</th>
+<th id="n_accounts" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Accounts tracked</th>
+<th id="n_compiled" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Compilations recorded</th>
+<th id="n_countries" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Countries compiling at least one</th>
+<th id="pct_compiled" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">% of possible cells</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Account Group">SEEA Central Framework accounts</td>
+<td class="gt_row gt_right" headers="n_accounts">25</td>
+<td class="gt_row gt_right" headers="n_compiled">20</td>
+<td class="gt_row gt_right" headers="n_countries">11</td>
+<td class="gt_row gt_right" headers="pct_compiled" style="background-color: #A4CBD9; color: #000000">7.3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Account Group">SEEA Ecosystem accounts</td>
+<td class="gt_row gt_right" headers="n_accounts">5</td>
+<td class="gt_row gt_right" headers="n_compiled">7</td>
+<td class="gt_row gt_right" headers="n_countries">3</td>
+<td class="gt_row gt_right" headers="pct_compiled" style="background-color: #219EBC; color: #FFFFFF">12.7</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Account Group">Thematic accounts</td>
+<td class="gt_row gt_right" headers="n_accounts">6</td>
+<td class="gt_row gt_right" headers="n_compiled">2</td>
+<td class="gt_row gt_right" headers="n_countries">2</td>
+<td class="gt_row gt_right" headers="pct_compiled" style="background-color: #F0F0F0; color: #000000">3.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="gaps-and-opportunities" class="level2">
+<h2 class="anchored" data-anchor-id="gaps-and-opportunities">Gaps and Opportunities</h2>
+<p>The data reveal a clear two-tier structure in AFE natural capital accounting. A small leading group, South Africa, Uganda, Ethiopia, and Kenya, has built programmes that span multiple account types and framework components, and are the natural candidates for peer learning and south-south knowledge exchange. A second tier of countries, namely Namibia, Mauritius, and Zambia, has made a start but remains anchored in the CF accounts, suggesting that targeted support to expand into ecosystem and thematic accounts would yield the highest marginal gains.</p>
+<p>The greatest gaps lie in <strong>monetary accounts</strong>, where valuation capacity and statistical infrastructure requirements are highest, and in <strong>SEEA EA accounts</strong>, particularly ecosystem condition and monetary ecosystem services accounts. Thematic accounts for oceans and biodiversity, which are especially relevant given the region’s coastal and savannah ecosystems, are essentially absent. These gaps define the primary areas for capacity development support under this project, and they are explored further in the analytical results chapter.</p>
 
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">

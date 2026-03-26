@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – SEEA AFE</title>
+<title>deliverable1_plan – SEEA AFE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c78d814eed26a74be727ee35b6a76a55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c78d814eed26a74be727ee35b6a76a55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,19 +104,19 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SEEA AFE</span>
     </a>
   </div>
@@ -92,19 +127,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documentation/index.html"> 
+    <a class="nav-link" href="./documentation/index.html"> 
 <span class="menu-text">Documentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../dashboard/index.html"> 
+    <a class="nav-link" href="./dashboard/index.html"> 
 <span class="menu-text">Dashboard</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -113,83 +148,204 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../documentation/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../documentation/01_diagnostic_review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Diagnostic Review</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../documentation/02_analytical_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analytical Results</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#deliverable-1-implementation-plan" id="toc-deliverable-1-implementation-plan" class="nav-link active" data-scroll-target="#deliverable-1-implementation-plan">Deliverable 1 Implementation Plan</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#workstream-1-diagnostic-review-section-01_diagnostic_review.qmd" id="toc-workstream-1-diagnostic-review-section-01_diagnostic_review.qmd" class="nav-link" data-scroll-target="#workstream-1-diagnostic-review-section-01_diagnostic_review.qmd">Workstream 1 — Diagnostic Review Section (<code>01_diagnostic_review.qmd</code>)</a>
+  <ul class="collapse">
+  <li><a href="#goal" id="toc-goal" class="nav-link" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#dataset-facts-from-afe2025" id="toc-dataset-facts-from-afe2025" class="nav-link" data-scroll-target="#dataset-facts-from-afe2025">Dataset facts (from <code>afe2025</code>)</a></li>
+  <li><a href="#section-outline" id="toc-section-outline" class="nav-link" data-scroll-target="#section-outline">Section outline</a></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes">Implementation notes</a></li>
+  </ul></li>
+  <li><a href="#workstream-2-country-dashboard-dashboardindex.qmd" id="toc-workstream-2-country-dashboard-dashboardindex.qmd" class="nav-link" data-scroll-target="#workstream-2-country-dashboard-dashboardindex.qmd">Workstream 2 — Country Dashboard (<code>dashboard/index.qmd</code>)</a>
+  <ul class="collapse">
+  <li><a href="#goal-1" id="toc-goal-1" class="nav-link" data-scroll-target="#goal-1">Goal</a></li>
+  <li><a href="#site-changes-required" id="toc-site-changes-required" class="nav-link" data-scroll-target="#site-changes-required">Site changes required</a></li>
+  <li><a href="#dashboard-layout" id="toc-dashboard-layout" class="nav-link" data-scroll-target="#dashboard-layout">Dashboard layout</a></li>
+  <li><a href="#technical-approach" id="toc-technical-approach" class="nav-link" data-scroll-target="#technical-approach">Technical approach</a></li>
+  <li><a href="#quarto.yml-addition" id="toc-quarto.yml-addition" class="nav-link" data-scroll-target="#quarto.yml-addition"><code>_quarto.yml</code> addition</a></li>
+  </ul></li>
+  <li><a href="#file-checklist" id="toc-file-checklist" class="nav-link" data-scroll-target="#file-checklist">File checklist</a></li>
+  <li><a href="#suggested-implementation-order" id="toc-suggested-implementation-order" class="nav-link" data-scroll-target="#suggested-implementation-order">Suggested implementation order</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Introduction</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
+<section id="deliverable-1-implementation-plan" class="level1">
+<h1>Deliverable 1 Implementation Plan</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Two parallel workstreams: (1) a narrative + visual section added to <code>documentation/01_diagnostic_review.qmd</code>, and (2) a new Dashboard section in the Quarto website presenting country-level SEEA implementation profiles.</p>
+<hr>
+</section>
+<section id="workstream-1-diagnostic-review-section-01_diagnostic_review.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="workstream-1-diagnostic-review-section-01_diagnostic_review.qmd">Workstream 1 — Diagnostic Review Section (<code>01_diagnostic_review.qmd</code>)</h2>
+<section id="goal" class="level3">
+<h3 class="anchored" data-anchor-id="goal">Goal</h3>
+<p>Add a self-contained section after the Introduction that describes the AFE regional dataset, summarizes implementation status, and visualizes account coverage across countries.</p>
+</section>
+<section id="dataset-facts-from-afe2025" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-facts-from-afe2025">Dataset facts (from <code>afe2025</code>)</h3>
+<ul>
+<li><strong>26 countries</strong> in the AFE region assessed</li>
+<li><strong>11 implementing</strong> the SEEA; 15 not yet implementing</li>
+<li>Implementation stages (SDG 15.9.1b): Stage I (3), Stage II (4), Stage III (4)</li>
+<li><strong>36 accounts</strong> tracked across 3 groups: SEEA Central Framework, SEEA Ecosystem Accounts, Thematic Accounts</li>
+<li><strong>29 compiled accounts</strong> across 11 countries (some countries compile multiple)</li>
+<li>Most compiled accounts: energy PSUTs (5 countries), water PSUTs (5 countries), land physical asset accounts (3 countries)</li>
+<li>Most active compilers: South Africa and Uganda (5 accounts each), Ethiopia and Kenya (4 each)</li>
+</ul>
+</section>
+<section id="section-outline" class="level3">
+<h3 class="anchored" data-anchor-id="section-outline">Section outline</h3>
+<p><strong>2. Regional Assessment Dataset</strong></p>
+<p>2.1 Data Sources and Scope - Describe the 2025 Global Assessment dataset, the AFE subset, the 26 countries, the 36 SEEA accounts tracked, and what “Compiled” means. - Note imputed vs.&nbsp;self-reported data. - Cite SEEA CF and EA frameworks.</p>
+<p>2.2 Implementation Status - Paragraph: share of countries implementing, stage distribution, and what SDG 15.9.1b stages mean. - <strong>Visual A — Stage of Implementation bar/lollipop chart</strong>: countries on y-axis, colored by stage (Stage I / II / III / Not implementing), sorted by number of compiled accounts. Rendered with <code>ggplot2</code>; Word-safe (no interactive elements).</p>
+<p>2.3 Account Coverage - Paragraph: which account groups are most common and why (energy/water PSUTs are entry-level accounts, hence widest adoption). - <strong>Visual B — Heat-map tile plot</strong>: rows = accounts (grouped by Account Group), columns = countries (ordered by total compiled accounts), fill = “Compiled” (Yes/No). Clean, minimal <code>ggplot2</code> tile chart with <code>facet_grid</code> for account groups. This renders well in both HTML and Word. - Optional complement: a <code>gt</code> summary table showing, per Account Group, the number of accounts and the number of countries compiling at least one — useful as a Word-friendly alternative or addition.</p>
+<p>2.4 Gaps and Opportunities - Short narrative identifying the biggest gaps (ecosystem accounts, monetary accounts, thematic accounts) and flagging high-potential countries for deeper analysis in Deliverable 2.</p>
+</section>
+<section id="implementation-notes" class="level3">
+<h3 class="anchored" data-anchor-id="implementation-notes">Implementation notes</h3>
+<ul>
+<li>Load data from <code>outputs/assessment/AFE_assessment_2025.RDS</code> at the top of the document so it is self-contained.</li>
+<li>Use a <code>#| echo: false</code> code block for all data prep.</li>
+<li>Use <code>#| fig-alt</code> for accessibility.</li>
+<li>Figures should use the project’s <code>styles.css</code> color palette or a colorblind- safe discrete palette (<code>scale_fill_brewer(palette = "Set2")</code>).</li>
+<li>The <code>gt</code> table should use <code>as_word()</code> / <code>tab_options(latex.use_longtable)</code> guards if needed, but basic <code>gt</code> renders fine in both HTML and Word docx.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="workstream-2-country-dashboard-dashboardindex.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="workstream-2-country-dashboard-dashboardindex.qmd">Workstream 2 — Country Dashboard (<code>dashboard/index.qmd</code>)</h2>
+<section id="goal-1" class="level3">
+<h3 class="anchored" data-anchor-id="goal-1">Goal</h3>
+<p>A new top-level Quarto page (type: <code>dashboard</code>) with one tab per country, showing that country’s SEEA implementation profile at a glance.</p>
+</section>
+<section id="site-changes-required" class="level3">
+<h3 class="anchored" data-anchor-id="site-changes-required">Site changes required</h3>
+<ul>
+<li>Add <code>dashboard/index.qmd</code> to the repo.</li>
+<li>Register it in <code>_quarto.yml</code> navbar (e.g., label “Dashboard”).</li>
+</ul>
+</section>
+<section id="dashboard-layout" class="level3">
+<h3 class="anchored" data-anchor-id="dashboard-layout">Dashboard layout</h3>
+<ul>
+<li><strong>Page header</strong>: brief explainer (1–2 sentences on SEEA and the AFE region).</li>
+<li><strong>Tabset</strong>: one tab per country (26 tabs), ordered alphabetically.
+<ul>
+<li>Tabs labelled with country name.</li>
+<li>Each tab contains:</li>
+</ul></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Card</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Status</strong></td>
+<td>Implementing SEEA? Stage of implementation. Responding institution.</td>
+</tr>
+<tr class="even">
+<td><strong>Account coverage</strong></td>
+<td>Small horizontal bar chart (<code>ggplot2</code>) — accounts on y, fill = Compiled (Yes/No), faceted by Account Group.</td>
+</tr>
+<tr class="odd">
+<td><strong>Summary table</strong></td>
+<td><code>gt</code> table listing compiled accounts (Account Group, Account name) — only “Yes” rows shown.</td>
+</tr>
+<tr class="even">
+<td><strong>Notes</strong></td>
+<td>Imputed data flag, website link (if available).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="technical-approach" class="level3">
+<h3 class="anchored" data-anchor-id="technical-approach">Technical approach</h3>
+<ul>
+<li>Use <code>quarto</code> dashboard format (<code>format: dashboard</code>).</li>
+<li>Data loaded once at top of document with <code>#| context: setup</code> (or plain setup chunk before tabset).</li>
+<li>Tabs generated with <code>#| output: asis</code> + <code>cat()</code> in a loop, or preferably with <code>purrr::walk</code> + inline R child chunks using <code>::: {.panel-tabset}</code>.</li>
+<li>Keep all visuals static (<code>ggplot2</code> / <code>gt</code>) for Word compatibility even though the dashboard is HTML-first; avoid <code>plotly</code> / <code>DT</code> unless explicitly requested.</li>
+<li>Country-level data filtered from <code>afe2025</code> (loaded from RDS).</li>
+</ul>
+</section>
+<section id="quarto.yml-addition" class="level3">
+<h3 class="anchored" data-anchor-id="quarto.yml-addition"><code>_quarto.yml</code> addition</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dashboard"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">href</span><span class="kw">:</span><span class="at"> dashboard/index.qmd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="file-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="file-checklist">File checklist</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>documentation/01_diagnostic_review.qmd</code></td>
+<td>Add section 2 (dataset description + 2 visuals)</td>
+</tr>
+<tr class="even">
+<td><code>dashboard/index.qmd</code></td>
+<td>Create new dashboard page</td>
+</tr>
+<tr class="odd">
+<td><code>_quarto.yml</code></td>
+<td>Register dashboard in navbar</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="suggested-implementation-order" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-implementation-order">Suggested implementation order</h2>
+<ol type="1">
+<li>Add data-loading chunk and Section 2 narrative + Visual A (stage chart) to <code>01_diagnostic_review.qmd</code>.</li>
+<li>Add Visual B (heat-map) and optional <code>gt</code> summary table to same file.</li>
+<li>Create <code>dashboard/index.qmd</code> with tabset structure and per-country cards.</li>
+<li>Update <code>_quarto.yml</code> to register the dashboard.</li>
+</ol>
 
 
-</header>
-
-
-<p>This page on top of documentation.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

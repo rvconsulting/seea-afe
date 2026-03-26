@@ -1,0 +1,219 @@
+---
+title: "SEEA Implementation -- AFE Region"
+format:
+  dashboard:
+    scrolling: true
+    nav-buttons:
+      - icon: house
+        href: ../index.qmd
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(gt)
+afe2025 <- readRDS("outputs/assessment/AFE_assessment_2025.RDS")
+
+stage_palette <- c(
+  "Not implementing" = "#cccccc",
+  "Stage I"          = "#8ecae6",
+  "Stage II"         = "#219ebc",
+  "Stage III"        = "#023047"
+)
+
+# Implementing countries metadata, ordered by compiled count
+implementing_meta <- afe2025 |>
+  filter(`Implementing the SEEA` == "Yes") |>
+  distinct(
+    `Country or area`,
+    `Stage of implementation (SDG 15.9.1b)`,
+    `Imputed data`,
+    `Responding institution`,
+    `Website(s)`,
+    Links
+  ) |>
+  left_join(
+    afe2025 |>
+      filter(Compiled == "Yes") |>
+      count(`Country or area`, name = "n_compiled"),
+    by = "Country or area"
+  ) |>
+  mutate(n_compiled = replace_na(n_compiled, 0L)) |>
+  arrange(desc(n_compiled))
+
+implementing_countries <- implementing_meta$`Country or area`
+
+# Account order for heatmap (by frequency)
+account_order <- afe2025 |>
+  filter(Compiled == "Yes") |>
+  count(Account, sort = TRUE) |>
+  pull(Account)
+```
+
+# Overview
+
+## Row {height="20%"}
+
+```{r}
+#| content: valuebox
+#| title: "Countries Assessed"
+list(
+  icon  = "globe-americas",
+  color = "#219ebc",
+  value = n_distinct(afe2025$`Country or area`)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Implementing SEEA"
+list(
+  icon  = "check-circle",
+  color = "#023047",
+  value = length(implementing_countries)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Accounts Tracked"
+list(
+  icon  = "list-check",
+  color = "#8ecae6",
+  value = n_distinct(afe2025$Account)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Account Compilations"
+list(
+  icon  = "bar-chart",
+  color = "#ffb703",
+  value = afe2025 |> filter(Compiled == "Yes") |> nrow()
+)
+```
+
+## Row {height="80%"}
+
+### Col {width="50%"}
+
+```{r}
+#| title: "Implementation Stage by Country"
+#| fig-width: 6
+#| fig-height: 5
+
+implementing_meta |>
+  mutate(
+    `Country or area` = fct_reorder(`Country or area`, n_compiled),
+    stage = factor(
+      `Stage of implementation (SDG 15.9.1b)`,
+      levels = c("Stage I", "Stage II", "Stage III")
+    )
+  ) |>
+  ggplot(aes(x = n_compiled, y = `Country or area`, colour = stage)) +
+  geom_segment(
+    aes(x = 0, xend = n_compiled, yend = `Country or area`),
+    linewidth = 0.6
+  ) +
+  geom_point(size = 3) +
+  scale_colour_manual(values = stage_palette, name = NULL) +
+  scale_x_continuous(breaks = 0:6, expand = expansion(mult = c(0, 0.1))) +
+  labs(x = "Compiled accounts", y = NULL) +
+  theme_minimal(base_size = 10) +
+  theme(
+    legend.position    = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank()
+  )
+```
+
+### Col {width="50%"}
+
+```{r}
+#| title: "Account Coverage of Implementers"
+#| fig-width: 7
+#| fig-height: 5
+
+afe2025 |>
+  filter(`Country or area` %in% implementing_countries) |>
+  mutate(
+    Account           = factor(Account, levels = rev(account_order)),
+    `Country or area` = factor(`Country or area`, levels = implementing_countries),
+    grp               = str_remove(`Account Group`, "^SEEA ") |> str_wrap(18),
+    compiled_flag     = Compiled == "Yes"
+  ) |>
+  ggplot(aes(x = `Country or area`, y = Account, fill = compiled_flag)) +
+  geom_tile(colour = "white", linewidth = 0.3) +
+  facet_grid(
+    rows   = vars(grp),
+    scales = "free_y",
+    space  = "free_y",
+    switch = "y"
+  ) +
+  scale_fill_manual(
+    values = c("TRUE" = "#219ebc", "FALSE" = "#eeeeee"),
+    labels = c("TRUE" = "Compiled", "FALSE" = "Not compiled"),
+    name   = NULL
+  ) +
+  scale_x_discrete(position = "top") +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_size = 8) +
+  theme(
+    axis.text.x       = element_text(angle = 35, hjust = 0, vjust = 0, size = 7),
+    axis.text.y       = element_text(size = 7),
+    strip.text.y.left = element_text(angle = 0, hjust = 1, size = 7, face = "bold"),
+    strip.placement   = "outside",
+    legend.position   = "bottom",
+    panel.grid        = element_blank()
+  )
+```
+
+# Country Profiles
+
+## Row {.tabset}
+
+```{r}
+#| output: asis
+#| echo: false
+
+for (ctry in implementing_countries) {
+
+  meta   <- implementing_meta |> filter(`Country or area` == ctry)
+  stage  <- meta$`Stage of implementation (SDG 15.9.1b)`
+  inst   <- meta$`Responding institution`
+  n_comp <- meta$n_compiled
+  source <- if_else(meta$`Imputed data` == "Yes", "Imputed", "Self-reported")
+
+  compiled_accounts <- afe2025 |>
+    filter(`Country or area` == ctry, Compiled == "Yes") |>
+    select(`Account Group`, Account)
+
+  cat("###", ctry, "\n\n")
+
+  # Info cards row
+  cat("::: {.card}\n")
+  cat(paste0("**Stage (SDG 15.9.1b):** ", stage, "  \n"))
+  cat(paste0("**Compiled accounts:** ", n_comp, "  \n"))
+  cat(paste0("**Data source:** ", source, "  \n"))
+  cat(paste0("**Responding institution:** ", inst, "\n"))
+  cat(":::\n\n")
+
+  # Compiled accounts table
+  if (nrow(compiled_accounts) > 0) {
+    tbl <- compiled_accounts |>
+      gt() |>
+      cols_label(`Account Group` = "Group", Account = "Account") |>
+      tab_style(
+        style     = cell_text(weight = "bold"),
+        locations = cells_column_labels()
+      ) |>
+      tab_options(table.width = pct(100), data_row.padding = px(4))
+    print(tbl)
+  } else {
+    cat("No accounts compiled yet.\n\n")
+  }
+}
+```

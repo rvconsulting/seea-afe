@@ -1,17 +1,103 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "deliverable1_plan.html",
+    "href": "deliverable1_plan.html",
+    "title": "Deliverable 1 Implementation Plan",
     "section": "",
-    "text": "About this site"
+    "text": "Two parallel workstreams: (1) a narrative + visual section added to documentation/01_diagnostic_review.qmd, and (2) a new Dashboard section in the Quarto website presenting country-level SEEA implementation profiles.\n\n\n\n\n\n\nAdd a self-contained section after the Introduction that describes the AFE regional dataset, summarizes implementation status, and visualizes account coverage across countries.\n\n\n\n\n26 countries in the AFE region assessed\n11 implementing the SEEA; 15 not yet implementing\nImplementation stages (SDG 15.9.1b): Stage I (3), Stage II (4), Stage III (4)\n36 accounts tracked across 3 groups: SEEA Central Framework, SEEA Ecosystem Accounts, Thematic Accounts\n29 compiled accounts across 11 countries (some countries compile multiple)\nMost compiled accounts: energy PSUTs (5 countries), water PSUTs (5 countries), land physical asset accounts (3 countries)\nMost active compilers: South Africa and Uganda (5 accounts each), Ethiopia and Kenya (4 each)\n\n\n\n\n2. Regional Assessment Dataset\n2.1 Data Sources and Scope - Describe the 2025 Global Assessment dataset, the AFE subset, the 26 countries, the 36 SEEA accounts tracked, and what “Compiled” means. - Note imputed vs. self-reported data. - Cite SEEA CF and EA frameworks.\n2.2 Implementation Status - Paragraph: share of countries implementing, stage distribution, and what SDG 15.9.1b stages mean. - Visual A — Stage of Implementation bar/lollipop chart: countries on y-axis, colored by stage (Stage I / II / III / Not implementing), sorted by number of compiled accounts. Rendered with ggplot2; Word-safe (no interactive elements).\n2.3 Account Coverage - Paragraph: which account groups are most common and why (energy/water PSUTs are entry-level accounts, hence widest adoption). - Visual B — Heat-map tile plot: rows = accounts (grouped by Account Group), columns = countries (ordered by total compiled accounts), fill = “Compiled” (Yes/No). Clean, minimal ggplot2 tile chart with facet_grid for account groups. This renders well in both HTML and Word. - Optional complement: a gt summary table showing, per Account Group, the number of accounts and the number of countries compiling at least one — useful as a Word-friendly alternative or addition.\n2.4 Gaps and Opportunities - Short narrative identifying the biggest gaps (ecosystem accounts, monetary accounts, thematic accounts) and flagging high-potential countries for deeper analysis in Deliverable 2.\n\n\n\n\nLoad data from outputs/assessment/AFE_assessment_2025.RDS at the top of the document so it is self-contained.\nUse a #| echo: false code block for all data prep.\nUse #| fig-alt for accessibility.\nFigures should use the project’s styles.css color palette or a colorblind- safe discrete palette (scale_fill_brewer(palette = \"Set2\")).\nThe gt table should use as_word() / tab_options(latex.use_longtable) guards if needed, but basic gt renders fine in both HTML and Word docx.\n\n\n\n\n\n\n\n\nA new top-level Quarto page (type: dashboard) with one tab per country, showing that country’s SEEA implementation profile at a glance.\n\n\n\n\nAdd dashboard/index.qmd to the repo.\nRegister it in _quarto.yml navbar (e.g., label “Dashboard”).\n\n\n\n\n\nPage header: brief explainer (1–2 sentences on SEEA and the AFE region).\nTabset: one tab per country (26 tabs), ordered alphabetically.\n\nTabs labelled with country name.\nEach tab contains:\n\n\n\n\n\n\n\n\n\nCard\nContent\n\n\n\n\nStatus\nImplementing SEEA? Stage of implementation. Responding institution.\n\n\nAccount coverage\nSmall horizontal bar chart (ggplot2) — accounts on y, fill = Compiled (Yes/No), faceted by Account Group.\n\n\nSummary table\ngt table listing compiled accounts (Account Group, Account name) — only “Yes” rows shown.\n\n\nNotes\nImputed data flag, website link (if available).\n\n\n\n\n\n\n\nUse quarto dashboard format (format: dashboard).\nData loaded once at top of document with #| context: setup (or plain setup chunk before tabset).\nTabs generated with #| output: asis + cat() in a loop, or preferably with purrr::walk + inline R child chunks using ::: {.panel-tabset}.\nKeep all visuals static (ggplot2 / gt) for Word compatibility even though the dashboard is HTML-first; avoid plotly / DT unless explicitly requested.\nCountry-level data filtered from afe2025 (loaded from RDS).\n\n\n\n\n- text: \"Dashboard\"\n  href: dashboard/index.qmd\n\n\n\n\n\n\n\n\n\n\n\n\nFile\nAction\n\n\n\n\ndocumentation/01_diagnostic_review.qmd\nAdd section 2 (dataset description + 2 visuals)\n\n\ndashboard/index.qmd\nCreate new dashboard page\n\n\n_quarto.yml\nRegister dashboard in navbar\n\n\n\n\n\n\n\n\nAdd data-loading chunk and Section 2 narrative + Visual A (stage chart) to 01_diagnostic_review.qmd.\nAdd Visual B (heat-map) and optional gt summary table to same file.\nCreate dashboard/index.qmd with tabset structure and per-country cards.\nUpdate _quarto.yml to register the dashboard."
+  },
+  {
+    "objectID": "deliverable1_plan.html#overview",
+    "href": "deliverable1_plan.html#overview",
+    "title": "Deliverable 1 Implementation Plan",
+    "section": "",
+    "text": "Two parallel workstreams: (1) a narrative + visual section added to documentation/01_diagnostic_review.qmd, and (2) a new Dashboard section in the Quarto website presenting country-level SEEA implementation profiles."
+  },
+  {
+    "objectID": "deliverable1_plan.html#workstream-1-diagnostic-review-section-01_diagnostic_review.qmd",
+    "href": "deliverable1_plan.html#workstream-1-diagnostic-review-section-01_diagnostic_review.qmd",
+    "title": "Deliverable 1 Implementation Plan",
+    "section": "",
+    "text": "Add a self-contained section after the Introduction that describes the AFE regional dataset, summarizes implementation status, and visualizes account coverage across countries.\n\n\n\n\n26 countries in the AFE region assessed\n11 implementing the SEEA; 15 not yet implementing\nImplementation stages (SDG 15.9.1b): Stage I (3), Stage II (4), Stage III (4)\n36 accounts tracked across 3 groups: SEEA Central Framework, SEEA Ecosystem Accounts, Thematic Accounts\n29 compiled accounts across 11 countries (some countries compile multiple)\nMost compiled accounts: energy PSUTs (5 countries), water PSUTs (5 countries), land physical asset accounts (3 countries)\nMost active compilers: South Africa and Uganda (5 accounts each), Ethiopia and Kenya (4 each)\n\n\n\n\n2. Regional Assessment Dataset\n2.1 Data Sources and Scope - Describe the 2025 Global Assessment dataset, the AFE subset, the 26 countries, the 36 SEEA accounts tracked, and what “Compiled” means. - Note imputed vs. self-reported data. - Cite SEEA CF and EA frameworks.\n2.2 Implementation Status - Paragraph: share of countries implementing, stage distribution, and what SDG 15.9.1b stages mean. - Visual A — Stage of Implementation bar/lollipop chart: countries on y-axis, colored by stage (Stage I / II / III / Not implementing), sorted by number of compiled accounts. Rendered with ggplot2; Word-safe (no interactive elements).\n2.3 Account Coverage - Paragraph: which account groups are most common and why (energy/water PSUTs are entry-level accounts, hence widest adoption). - Visual B — Heat-map tile plot: rows = accounts (grouped by Account Group), columns = countries (ordered by total compiled accounts), fill = “Compiled” (Yes/No). Clean, minimal ggplot2 tile chart with facet_grid for account groups. This renders well in both HTML and Word. - Optional complement: a gt summary table showing, per Account Group, the number of accounts and the number of countries compiling at least one — useful as a Word-friendly alternative or addition.\n2.4 Gaps and Opportunities - Short narrative identifying the biggest gaps (ecosystem accounts, monetary accounts, thematic accounts) and flagging high-potential countries for deeper analysis in Deliverable 2.\n\n\n\n\nLoad data from outputs/assessment/AFE_assessment_2025.RDS at the top of the document so it is self-contained.\nUse a #| echo: false code block for all data prep.\nUse #| fig-alt for accessibility.\nFigures should use the project’s styles.css color palette or a colorblind- safe discrete palette (scale_fill_brewer(palette = \"Set2\")).\nThe gt table should use as_word() / tab_options(latex.use_longtable) guards if needed, but basic gt renders fine in both HTML and Word docx."
+  },
+  {
+    "objectID": "deliverable1_plan.html#workstream-2-country-dashboard-dashboardindex.qmd",
+    "href": "deliverable1_plan.html#workstream-2-country-dashboard-dashboardindex.qmd",
+    "title": "Deliverable 1 Implementation Plan",
+    "section": "",
+    "text": "A new top-level Quarto page (type: dashboard) with one tab per country, showing that country’s SEEA implementation profile at a glance.\n\n\n\n\nAdd dashboard/index.qmd to the repo.\nRegister it in _quarto.yml navbar (e.g., label “Dashboard”).\n\n\n\n\n\nPage header: brief explainer (1–2 sentences on SEEA and the AFE region).\nTabset: one tab per country (26 tabs), ordered alphabetically.\n\nTabs labelled with country name.\nEach tab contains:\n\n\n\n\n\n\n\n\n\nCard\nContent\n\n\n\n\nStatus\nImplementing SEEA? Stage of implementation. Responding institution.\n\n\nAccount coverage\nSmall horizontal bar chart (ggplot2) — accounts on y, fill = Compiled (Yes/No), faceted by Account Group.\n\n\nSummary table\ngt table listing compiled accounts (Account Group, Account name) — only “Yes” rows shown.\n\n\nNotes\nImputed data flag, website link (if available).\n\n\n\n\n\n\n\nUse quarto dashboard format (format: dashboard).\nData loaded once at top of document with #| context: setup (or plain setup chunk before tabset).\nTabs generated with #| output: asis + cat() in a loop, or preferably with purrr::walk + inline R child chunks using ::: {.panel-tabset}.\nKeep all visuals static (ggplot2 / gt) for Word compatibility even though the dashboard is HTML-first; avoid plotly / DT unless explicitly requested.\nCountry-level data filtered from afe2025 (loaded from RDS).\n\n\n\n\n- text: \"Dashboard\"\n  href: dashboard/index.qmd"
+  },
+  {
+    "objectID": "deliverable1_plan.html#file-checklist",
+    "href": "deliverable1_plan.html#file-checklist",
+    "title": "Deliverable 1 Implementation Plan",
+    "section": "",
+    "text": "File\nAction\n\n\n\n\ndocumentation/01_diagnostic_review.qmd\nAdd section 2 (dataset description + 2 visuals)\n\n\ndashboard/index.qmd\nCreate new dashboard page\n\n\n_quarto.yml\nRegister dashboard in navbar"
+  },
+  {
+    "objectID": "deliverable1_plan.html#suggested-implementation-order",
+    "href": "deliverable1_plan.html#suggested-implementation-order",
+    "title": "Deliverable 1 Implementation Plan",
+    "section": "",
+    "text": "Add data-loading chunk and Section 2 narrative + Visual A (stage chart) to 01_diagnostic_review.qmd.\nAdd Visual B (heat-map) and optional gt summary table to same file.\nCreate dashboard/index.qmd with tabset structure and per-country cards.\nUpdate _quarto.yml to register the dashboard."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SEEA Africa",
+    "section": "",
+    "text": "This work aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy.\nWe conducted a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others (if available).\nThe accounts cover ecosystem services, energy, forests, land, water, minerals and any other available accounts for the countries in Eastern and Southern Africa."
   },
   {
     "objectID": "documentation/01_diagnostic_review.html",
     "href": "documentation/01_diagnostic_review.html",
     "title": "Diagnostic Review and Analytical Opportunities",
     "section": "",
-    "text": "Introduction\nThe System of Environmental Economic Accounting (SEEA) (European Commission et al., 2013) is the international statistical standard for measuring the environment and its relationship with the economy.\n\n\n\n\n\nReferences\n\nEuropean Commission, Organisation for Economic Cooperation and Development, United Nations, & World Bank. (2013). System of Environmental-Economic Accounting 2012. United Nations.",
+    "text": "The System of Environmental Economic Accounting (SEEA) (European Commission et al., 2013) is the international statistical standard for measuring the environment and its relationship with the economy.",
+    "crumbs": [
+      "Documentation",
+      "Diagnostic Review"
+    ]
+  },
+  {
+    "objectID": "documentation/01_diagnostic_review.html#data-sources-and-scope",
+    "href": "documentation/01_diagnostic_review.html#data-sources-and-scope",
+    "title": "Diagnostic Review and Analytical Opportunities",
+    "section": "Data Sources and Scope",
+    "text": "Data Sources and Scope\nThe 2025 Global Assessment of SEEA Implementation, coordinated by the United Nations Statistics Division (UNSD), documents the state of natural capital accounting across all UN member states. This review draws on the Africa and Far East (AFE) subset of that dataset, covering 26 countries in Eastern and Southern Africa. For each country, the dataset tracks whether 36 distinct SEEA accounts, spanning the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and a set of Thematic Accounts, have been compiled at least once.\nThe variable of interest, Compiled, reflects whether a country has produced a given account, based on either self-reported data from the country’s national statistical office or a responding line ministry, or through imputation by the assessment team where direct responses were unavailable. Accounts are grouped into three broad categories: the SEEA CF covers material and monetary flow and asset accounts; the SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts; and Thematic Accounts cover specialised topics such as forests, ocean, and protected areas.",
+    "crumbs": [
+      "Documentation",
+      "Diagnostic Review"
+    ]
+  },
+  {
+    "objectID": "documentation/01_diagnostic_review.html#implementation-status",
+    "href": "documentation/01_diagnostic_review.html#implementation-status",
+    "title": "Diagnostic Review and Analytical Opportunities",
+    "section": "Implementation Status",
+    "text": "Implementation Status\nOf the 26 AFE countries assessed, 11 are actively implementing the SEEA in some form, while the remaining 15 have not yet begun. Among those implementing, countries are classified by their stage of progress under the SDG 15.9.1b indicator: Stage I countries have compiled at least one SEEA CF account; Stage II countries have additionally compiled at least one SEEA EA or Thematic account; and Stage III countries demonstrate a sustained institutional programme of accounting across multiple account types. In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake is modest, a meaningful cluster of countries has progressed beyond initial experimentation.\n\n\n\n\n\n\n\n\nFigure 1: AFE countries by SEEA implementation stage and number of compiled accounts. Countries are sorted by compiled account count; non-implementing countries are shown in grey.",
+    "crumbs": [
+      "Documentation",
+      "Diagnostic Review"
+    ]
+  },
+  {
+    "objectID": "documentation/01_diagnostic_review.html#account-coverage",
+    "href": "documentation/01_diagnostic_review.html#account-coverage",
+    "title": "Diagnostic Review and Analytical Opportunities",
+    "section": "Account Coverage",
+    "text": "Account Coverage\nAcross all 11 implementing countries, a total of 29 account-compilations have been recorded covering 16 distinct account types out of the 36 tracked. The most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for energy and water, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region’s resource management priorities. Physical asset accounts for land follow, compiled by 3 countries. Beyond this initial tier, uptake drops sharply: monetary accounts, which require additional institutional capacity and data integration, and ecosystem accounts appear in only 1 to 2 countries each, with thematic accounts for forests and protected areas at the same level.\n\n\n\n\n\n\n\n\nFigure 2: Account compilation status across the 11 implementing AFE countries, grouped by account category. Countries are ordered left to right by total number of compiled accounts; accounts within each group are ordered by frequency of compilation.\n\n\n\n\n\nTable 1 provides an aggregate view of account group coverage, showing the number of distinct accounts within each group, how many individual account-compilations have been recorded across implementing countries, and how many countries have compiled at least one account in each group.\n\n\n\n\nTable 1: Summary of SEEA account coverage by account group across the 11 implementing AFE countries.\n\n\n\n\n\n\n\n\n\nAccount Group\nAccounts tracked\nCompilations recorded\nCountries compiling at least one\n% of possible cells\n\n\n\n\nSEEA Central Framework accounts\n25\n20\n11\n7.3\n\n\nSEEA Ecosystem accounts\n5\n7\n3\n12.7\n\n\nThematic accounts\n6\n2\n2\n3.0",
+    "crumbs": [
+      "Documentation",
+      "Diagnostic Review"
+    ]
+  },
+  {
+    "objectID": "documentation/01_diagnostic_review.html#gaps-and-opportunities",
+    "href": "documentation/01_diagnostic_review.html#gaps-and-opportunities",
+    "title": "Diagnostic Review and Analytical Opportunities",
+    "section": "Gaps and Opportunities",
+    "text": "Gaps and Opportunities\nThe data reveal a clear two-tier structure in AFE natural capital accounting. A small leading group, South Africa, Uganda, Ethiopia, and Kenya, has built programmes that span multiple account types and framework components, and are the natural candidates for peer learning and south-south knowledge exchange. A second tier of countries, namely Namibia, Mauritius, and Zambia, has made a start but remains anchored in the CF accounts, suggesting that targeted support to expand into ecosystem and thematic accounts would yield the highest marginal gains.\nThe greatest gaps lie in monetary accounts, where valuation capacity and statistical infrastructure requirements are highest, and in SEEA EA accounts, particularly ecosystem condition and monetary ecosystem services accounts. Thematic accounts for oceans and biodiversity, which are especially relevant given the region’s coastal and savannah ecosystems, are essentially absent. These gaps define the primary areas for capacity development support under this project, and they are explored further in the analytical results chapter.",
     "crumbs": [
       "Documentation",
       "Diagnostic Review"
@@ -49,10 +135,10 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SEEA Africa",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This work aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy.\nWe conducted a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others (if available).\nThe accounts cover ecosystem services, energy, forests, land, water, minerals and any other available accounts for the countries in Eastern and Southern Africa."
+    "text": "About this site"
   }
 ]

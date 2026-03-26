@@ -9,6 +9,227 @@ bibliography: references.bib
 csl: apa.csl
 ---
 
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gt)
+
+afe2025 <- readRDS("outputs/assessment/AFE_assessment_2025.RDS")
+
+# Remove NA accounts before any summaries
+afe2025 <- afe2025 |> filter(!is.na(Account), Account != "NA")
+
+# ── Country-level summary (one row per country) ────────────────────────────
+country_summary <- afe2025 |>
+  distinct(
+    `Country or area`,
+    `Implementing the SEEA`,
+    `Stage of implementation (SDG 15.9.1b)`,
+    `Imputed data`,
+    `Responding institution`
+  ) |>
+  left_join(
+    afe2025 |>
+      filter(Compiled == "Yes") |>
+      count(`Country or area`, name = "n_compiled"),
+    by = "Country or area"
+  ) |>
+  mutate(
+    n_compiled = replace_na(n_compiled, 0L),
+    stage_label = if_else(
+      `Implementing the SEEA` == "Yes",
+      `Stage of implementation (SDG 15.9.1b)`,
+      "Not implementing"
+    ),
+    stage_label = factor(
+      stage_label,
+      levels = c("Not implementing", "Stage I", "Stage II", "Stage III")
+    )
+  )
+
+# ── Implementing countries only, for heatmap ──────────────────────────────
+implementing_countries <- country_summary |>
+  filter(`Implementing the SEEA` == "Yes") |>
+  arrange(desc(n_compiled)) |>
+  pull(`Country or area`)
+
+account_order <- afe2025 |>
+  filter(Compiled == "Yes") |>
+  count(Account, sort = TRUE) |>
+  pull(Account)
+
+heatmap_data <- afe2025 |>
+  filter(`Country or area` %in% implementing_countries) |>
+  mutate(
+    Account = factor(Account, levels = rev(account_order)),
+    `Country or area` = factor(
+      `Country or area`,
+      levels = implementing_countries
+    ),
+    grp = str_remove(`Account Group`, "^SEEA ") |> str_wrap(20),
+    compiled_flag = Compiled == "Yes"
+  )
+
+# ── gt summary table: denominator = non-NA accounts × implementing countries ──
+n_implementing <- length(implementing_countries)
+n_accounts_total <- n_distinct(afe2025$Account)
+
+group_summary <- afe2025 |>
+  summarise(
+    n_accounts = n_distinct(Account),
+    n_compiled = sum(Compiled == "Yes"),
+    n_countries = n_distinct(`Country or area`[Compiled == "Yes"]),
+    .by = `Account Group`
+  ) |>
+  mutate(
+    pct_compiled = round(100 * n_compiled / (n_accounts * n_implementing), 1)
+  )
+```
+
 # Introduction
 
 The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy.
+
+# Regional Assessment Dataset
+
+## Data Sources and Scope
+
+The 2025 Global Assessment of SEEA Implementation, coordinated by the United Nations Statistics Division (UNSD), documents the state of natural capital accounting across all UN member states. This review draws on the Africa and Far East (AFE) subset of that dataset, covering **26 countries** in Eastern and Southern Africa. For each country, the dataset tracks whether 36 distinct SEEA accounts, spanning the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and a set of Thematic Accounts, have been compiled at least once.
+
+The variable of interest, *Compiled*, reflects whether a country has produced a given account, based on either self-reported data from the country's national statistical office or a responding line ministry, or through imputation by the assessment team where direct responses were unavailable. Accounts are grouped into three broad categories: the SEEA CF covers material and monetary flow and asset accounts; the SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts; and Thematic Accounts cover specialised topics such as forests, ocean, and protected areas.
+
+## Implementation Status
+
+Of the 26 AFE countries assessed, **11 are actively implementing the SEEA** in some form, while the remaining 15 have not yet begun. Among those implementing, countries are classified by their stage of progress under the SDG 15.9.1b indicator: Stage I countries have compiled at least one SEEA CF account; Stage II countries have additionally compiled at least one SEEA EA or Thematic account; and Stage III countries demonstrate a sustained institutional programme of accounting across multiple account types. In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake is modest, a meaningful cluster of countries has progressed beyond initial experimentation.
+
+```{r}
+#| label: fig-stage
+#| echo: false
+#| fig-cap: "AFE countries by SEEA implementation stage and number of compiled accounts. Countries are sorted by compiled account count; non-implementing countries are shown in grey."
+#| fig-alt: "A lollipop chart showing 26 AFE countries on the y-axis, ordered by number of compiled accounts. Points are coloured by SEEA implementation stage. South Africa and Uganda lead with 5 accounts each."
+#| fig-width: 7
+#| fig-height: 6
+
+stage_palette <- c(
+  "Not implementing" = "#cccccc",
+  "Stage I" = "#8ecae6",
+  "Stage II" = "#219ebc",
+  "Stage III" = "#023047"
+)
+
+country_summary |>
+  mutate(
+    `Country or area` = fct_reorder(`Country or area`, n_compiled)
+  ) |>
+  ggplot(aes(x = n_compiled, y = `Country or area`, colour = stage_label)) +
+  geom_segment(
+    aes(x = 0, xend = n_compiled, yend = `Country or area`),
+    linewidth = 0.6
+  ) +
+  geom_point(size = 3.5) +
+  scale_colour_manual(values = stage_palette, name = "Stage (SDG 15.9.1b)") +
+  scale_x_continuous(breaks = 0:6, expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "SEEA Implementation in the AFE Region (2025)",
+    subtitle = "Number of compiled accounts per country",
+    x = "Number of compiled accounts",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Account Coverage
+
+Across all 11 implementing countries, a total of **29 account-compilations** have been recorded covering 16 distinct account types out of the 36 tracked. The most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for energy and water, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region's resource management priorities. Physical asset accounts for land follow, compiled by 3 countries. Beyond this initial tier, uptake drops sharply: monetary accounts, which require additional institutional capacity and data integration, and ecosystem accounts appear in only 1 to 2 countries each, with thematic accounts for forests and protected areas at the same level.
+
+```{r}
+#| label: fig-heatmap
+#| echo: false
+#| fig-cap: "Account compilation status across the 11 implementing AFE countries, grouped by account category. Countries are ordered left to right by total number of compiled accounts; accounts within each group are ordered by frequency of compilation."
+#| fig-alt: "A tile heatmap with SEEA accounts on the y-axis (grouped by account category) and implementing countries on the x-axis. Filled tiles indicate a compiled account. Energy and water PSUTs have the most coverage."
+#| fig-width: 9
+#| fig-height: 7
+
+ggplot(
+  heatmap_data,
+  aes(x = `Country or area`, y = Account, fill = compiled_flag)
+) +
+  geom_tile(colour = "white", linewidth = 0.4) +
+  facet_grid(
+    rows = vars(grp),
+    scales = "free_y",
+    space = "free_y",
+    switch = "y"
+  ) +
+  scale_fill_manual(
+    values = c("TRUE" = "#219ebc", "FALSE" = "#f0f0f0"),
+    labels = c("TRUE" = "Compiled", "FALSE" = "Not compiled"),
+    name = NULL
+  ) +
+  scale_x_discrete(position = "top") +
+  labs(
+    title = "SEEA Account Coverage of Implementing Countries (2025)",
+    subtitle = "Each cell indicates whether a country has compiled that account at least once",
+    x = NULL,
+    y = NULL
+  ) +
+  theme_minimal(base_size = 9) +
+  theme(
+    axis.text.x = element_text(angle = 35, hjust = 0, vjust = 0, size = 8),
+    axis.text.y = element_text(size = 8),
+    strip.text.y.left = element_text(
+      angle = 0,
+      hjust = 1,
+      size = 8,
+      face = "bold"
+    ),
+    strip.placement = "outside",
+    legend.position = "bottom",
+    panel.grid = element_blank()
+  )
+```
+
+@tbl-group-summary provides an aggregate view of account group coverage, showing the number of distinct accounts within each group, how many individual account-compilations have been recorded across implementing countries, and how many countries have compiled at least one account in each group.
+
+```{r}
+#| label: tbl-group-summary
+#| echo: false
+#| tbl-cap: "Summary of SEEA account coverage by account group across the 11 implementing AFE countries."
+
+group_summary |>
+  arrange(`Account Group`) |>
+  gt() |>
+  cols_label(
+    `Account Group` = "Account Group",
+    n_accounts = "Accounts tracked",
+    n_compiled = "Compilations recorded",
+    n_countries = "Countries compiling at least one",
+    pct_compiled = "% of possible cells"
+  ) |>
+  fmt_number(columns = c(n_accounts, n_compiled, n_countries), decimals = 0) |>
+  fmt_number(columns = pct_compiled, decimals = 1) |>
+  data_color(
+    columns = pct_compiled,
+    palette = c("#f0f0f0", "#219ebc")
+  ) |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_options(table.width = pct(100))
+```
+
+## Gaps and Opportunities
+
+The data reveal a clear two-tier structure in AFE natural capital accounting. A small leading group, South Africa, Uganda, Ethiopia, and Kenya, has built programmes that span multiple account types and framework components, and are the natural candidates for peer learning and south-south knowledge exchange. A second tier of countries, namely Namibia, Mauritius, and Zambia, has made a start but remains anchored in the CF accounts, suggesting that targeted support to expand into ecosystem and thematic accounts would yield the highest marginal gains.
+
+The greatest gaps lie in **monetary accounts**, where valuation capacity and statistical infrastructure requirements are highest, and in **SEEA EA accounts**, particularly ecosystem condition and monetary ecosystem services accounts. Thematic accounts for oceans and biodiversity, which are especially relevant given the region's coastal and savannah ecosystems, are essentially absent. These gaps define the primary areas for capacity development support under this project, and they are explored further in the analytical results chapter.
