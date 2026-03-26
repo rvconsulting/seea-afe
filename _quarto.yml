@@ -6,14 +6,34 @@ project:
 website:
   title: "SEEA AFE"
   navbar:
+    pinned: true
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - href: documentation
-        text: Documentation
+      - text: Home
+        href: index.qmd
+      - text: "Documentation"
+        href: documentation/index.qmd
       - about.qmd
   sidebar:
-    contents: auto
+    - title: Documentation
+      contents:
+        - section: "Documentation"
+          href: documentation/index.qmd
+          contents:
+              - text: "Diagnostic Review"
+                href: documentation/01_diagnostic_review.qmd
+              - text: "Analytical Results"
+                href: documentation/02_analytical_results.qmd
+
+  # sidebar:
+  #   - section: "Documentation" 
+  #     style: "docked"
+  #     search: true
+  #     contents:
+  #       - section: "Documentation"
+  #         contents:
+  #           - href: documentation/diagnostic_review.qmd
+  #             text: Diagnostic Review and Analytical Opportunities
 
 format:
   html:

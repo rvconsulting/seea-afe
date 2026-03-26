@@ -1,6 +1,5 @@
 ---
-title: "Documentation"
-
+title: "Introduction"
 ---
 
 This page on top of documentation.
