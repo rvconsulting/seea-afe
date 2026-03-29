@@ -1,0 +1,39 @@
+# Introduction
+
+These notes are taken according to:
+
+1. Quality of inputs
+2. Does it have datasets?
+3. Years
+4. Geographic coverage
+5. Notes
+
+# Country assessments
+
+## Ethiopia
+
+### Quality of inputs
+
+* Physical asset accounts for land: 
+* Monetary asset accounts for land
+* Ecosystem extent accounts
+* Ecosystem condition accounts
+
+
+### Does it have datasets?
+
+* Physical asset accounts for land: LULC maps which had to be compressed (ETHIOPIAN LULC_2013_compressed.tif, ETHIOPIAN LULC_2022_compressed.tif). No Excel extent tables. Available docx (_First Edition Land accounts for Ethiopia_Decemebr_2025.docx_)
+* Monetary asset accounts for land:
+* Ecosystem extent accounts: 
+* Ecosystem condition accounts: 
+
+Soil protection (avoided erosion)  (tons). Flood mitigation (avoided quick flow) (Cubic meter). Sustained water in dry periods  (baseflow)  (Cubic meter). Water quality regulation (avoided sediment) (tons). Water yield (Cubic meter). Climate regulation: Carbon retention ( tons of carbon). Climate regulation: Carbon sequestration ( tons of carbon  per year).
+
+
+
+### Years
+
+### Geographic coverage
+
+### Notes
+

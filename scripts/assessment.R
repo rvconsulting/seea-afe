@@ -32,13 +32,65 @@ afe2025 <- ga2025long |>
     notes = ""
   )
 
-# Extract the list of accounts
+# Extract the list of all possible accounts
 seea_accounts <- read_excel(
   "data/assessment/global_assessment_2025.xlsx",
   sheet = "Cover",
   range = "B23:C59"
 ) |>
   fill(`Thematic category`, .direction = "down")
+
+# Compilation summary table
+
+# Ethiopia data
+
+es_condition_region <- read_excel(
+  "data/assessment/eth/eth_ecosystem_services_2025.xlsx",
+  sheet = "ServPotSupply_byRegion",
+  range = "B2:Q15"
+) |>
+  rename(
+    `Ecosystem Service / Unit` = Regions
+  ) |>
+  pivot_longer(
+    cols = 3:16,
+    names_to = "Region",
+    values_to = "Value"
+  )
+
+es_condition_basin <- read_excel(
+  "data/assessment/eth/eth_ecosystem_services_2025.xlsx",
+  sheet = "ServPotSupply_byRiverBasin",
+  range = "A2:L15"
+) |>
+  rename(
+    `Ecosystem Service / Unit` = Watershed
+  ) |>
+  pivot_longer(
+    cols = 3:12,
+    names_to = "Basin",
+    values_to = "Value"
+  )
+
+# ETH Save to disc
+write.xlsx(
+  es_condition_basin,
+  "data/assessment/eth/es_condition_region.xlsx",
+  overwrite = T
+)
+write.xlsx(
+  es_condition_basin,
+  "data/assessment/eth/es_condition_basin.xlsx",
+  overwrite = T
+)
+saveRDS(
+  es_condition_basin,
+  "data/assessment/eth/es_condition_region.RDS",
+)
+saveRDS(
+  es_condition_basin,
+  "data/assessment/eth/es_condition_basin.RDS"
+)
 
 # Various saves
 saveRDS(
