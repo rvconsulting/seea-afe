@@ -7,6 +7,8 @@ author:
       - name: "Consultant for The World Bank"
 bibliography: references.bib
 csl: apa.csl
+params:
+  city: "El Salvador"
 ---
 
 ```{r}
@@ -92,9 +94,9 @@ group_summary <- afe2025 |>
 
 # Introduction
 
-The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy.
+The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy. 
 
-# Regional Assessment Dataset
+# Regional Assessment
 
 ## Data Sources and Scope
 
