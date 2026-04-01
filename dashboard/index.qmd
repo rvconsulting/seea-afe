@@ -71,7 +71,7 @@ list(
 #| title: "Implementing SEEA"
 list(
   icon = "check-circle",
-  color = "#023047",
+  color = "#209609",
   value = length(implementing_countries)
 )
 ```
