@@ -1,10 +1,23 @@
 ---
-title: "Diagnostic Review and Analytical Opportunities"
+title: "Regional Assessment"
 author:
   - name: "Renato Vargas"
     id: rv
     affiliation: 
       - name: "Consultant for The World Bank"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    # css: styles.css
+  docx:
+    toc: true
+    number-sections: true
+    syntax-highlighting: github
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 bibliography: references.bib
 csl: apa.csl
 params:
@@ -19,37 +32,47 @@ params:
 
 library(tidyverse)
 library(gt)
+library(readxl)
 
-afe2025 <- readRDS("outputs/assessment/AFE_assessment_2025.RDS")
+# afe2025 <- readRDS("outputs/assessment/AFE_assessment_2025.RDS")
+afe2025 <- readxl::read_xlsx(
+  "data/assessment/AFE_assessment_2025.xlsx",
+  sheet = "Sheet 1",
+  na = c("", "NA")
+)
+
 
 # Remove NA accounts before any summaries
 afe2025 <- afe2025 |> filter(!is.na(Account), Account != "NA")
 
-# ── Country-level summary (one row per country) ────────────────────────────
+# ── Country-level summary (one row per country)
 country_summary <- afe2025 |>
-  distinct(
-    `Country or area`,
-    `Implementing the SEEA`,
-    `Stage of implementation (SDG 15.9.1b)`,
-    `Imputed data`,
-    `Responding institution`
-  ) |>
-  left_join(
-    afe2025 |>
-      filter(Compiled == "Yes") |>
-      count(`Country or area`, name = "n_compiled"),
-    by = "Country or area"
+  summarise(
+    `Implementing the SEEA` = first(`Implementing the SEEA`),
+    `Stage of implementation (SDG 15.9.1b)` = first(
+      `Stage of implementation (SDG 15.9.1b)`
+    ),
+    `Imputed data` = first(`Imputed data`),
+    `Responding institution` = first(`Responding institution`),
+    n_compiled = sum(Compiled == "Yes", na.rm = TRUE),
+    .by = `Country or area`
   ) |>
   mutate(
-    n_compiled = replace_na(n_compiled, 0L),
-    stage_label = if_else(
-      `Implementing the SEEA` == "Yes",
-      `Stage of implementation (SDG 15.9.1b)`,
-      "Not implementing"
+    stage_label = case_when(
+      `Implementing the SEEA` ==
+        "Yes" ~ `Stage of implementation (SDG 15.9.1b)`,
+      n_compiled > 0 ~ "Compiling (non-SEEA)",
+      TRUE ~ "Not implementing"
     ),
     stage_label = factor(
       stage_label,
-      levels = c("Not implementing", "Stage I", "Stage II", "Stage III")
+      levels = c(
+        "Not implementing",
+        "Compiling (non-SEEA)",
+        "Stage I",
+        "Stage II",
+        "Stage III"
+      )
     )
   )
 
@@ -60,7 +83,7 @@ implementing_countries <- country_summary |>
   pull(`Country or area`)
 
 account_order <- afe2025 |>
-  filter(Compiled == "Yes") |>
+  filter(`Country or area` %in% implementing_countries, Compiled == "Yes") |>
   count(Account, sort = TRUE) |>
   pull(Account)
 
@@ -74,11 +97,21 @@ heatmap_data <- afe2025 |>
     ),
     grp = str_remove(`Account Group`, "^SEEA ") |> str_wrap(20),
     compiled_flag = Compiled == "Yes"
-  )
+  ) |>
+  filter(!is.na(Account))
 
 # ── gt summary table: denominator = non-NA accounts × implementing countries ──
 n_implementing <- length(implementing_countries)
 n_accounts_total <- n_distinct(afe2025$Account)
+
+n_compilations <- afe2025 |>
+  filter(`Country or area` %in% implementing_countries, Compiled == "Yes") |>
+  nrow()
+
+n_distinct_accounts <- afe2025 |>
+  filter(`Country or area` %in% implementing_countries, Compiled == "Yes") |>
+  summarise(n = n_distinct(Account)) |>
+  pull(n)
 
 group_summary <- afe2025 |>
   summarise(
@@ -94,15 +127,56 @@ group_summary <- afe2025 |>
 
 # Introduction
 
-The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy. 
+The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy. It covers 36 accounts, which are detailed in @tbl-all-seea-accounts. 
+
+
+```{r}
+#| label: tbl-all-seea-accounts
+#| tbl-cap: "Accounts of the System of Environmental and Economic Accounts (SEEA)"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(gt)
+library(dplyr)
+
+readRDS("outputs/assessment/seea_accounts.RDS") |>
+  rename(Account = Accounts, Category = `Thematic category`) |>
+  select(Category, Account) |>
+  group_by(Category) |>
+  mutate(Category = if_else(row_number() == 1, Category, "")) |>
+  ungroup() |>
+  gt() |>
+  cols_label(Category = "Category", Account = "Account") |>
+  cols_width(Category ~ pct(30), Account ~ pct(70)) |>
+  opt_row_striping() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(
+      columns = Category,
+      rows = Category != ""
+    )
+  ) |>
+  tab_options(
+    table.font.size = px(13),
+    data_row.padding = px(4),
+    column_labels.background.color = "#f2f2f2"
+  )
+```
+
+This work aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy. 
+
+We conducted a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others. 
 
 # Regional Assessment
 
-## Data Sources and Scope
+The 2025 Global Assessment of SEEA Implementation, which documents the state of natural capital accounting across all UN member states, was complemented with an individual review of countries that have made efforts towards Natural Capital Analysis in any form, regardless of SEEA status. This review draws on the Africa and Far East (AFE) group, covering 26 countries in Eastern and Southern Africa. For each country, an evaluation was conducted whether 36 distinct SEEA accounts, spanning the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and a set of Thematic Accounts, have been compiled at least once.
 
-The 2025 Global Assessment of SEEA Implementation, coordinated by the United Nations Statistics Division (UNSD), documents the state of natural capital accounting across all UN member states. This review draws on the Africa and Far East (AFE) subset of that dataset, covering **26 countries** in Eastern and Southern Africa. For each country, the dataset tracks whether 36 distinct SEEA accounts, spanning the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and a set of Thematic Accounts, have been compiled at least once.
-
-The variable of interest, *Compiled*, reflects whether a country has produced a given account, based on either self-reported data from the country's national statistical office or a responding line ministry, or through imputation by the assessment team where direct responses were unavailable. Accounts are grouped into three broad categories: the SEEA CF covers material and monetary flow and asset accounts; the SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts; and Thematic Accounts cover specialised topics such as forests, ocean, and protected areas.
+Accounts are grouped into three broad categories: the SEEA CF covers material and monetary flow and asset accounts; the SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts; and Thematic Accounts cover specialised topics such as forests, ocean, and protected areas.
 
 ## Implementation Status
 
@@ -118,6 +192,7 @@ Of the 26 AFE countries assessed, **11 are actively implementing the SEEA** in s
 
 stage_palette <- c(
   "Not implementing" = "#cccccc",
+  "Compiling (non-SEEA)" = "#f4a261",
   "Stage I" = "#8ecae6",
   "Stage II" = "#219ebc",
   "Stage III" = "#023047"
@@ -151,7 +226,7 @@ country_summary |>
 
 ## Account Coverage
 
-Across all 11 implementing countries, a total of **29 account-compilations** have been recorded covering 16 distinct account types out of the 36 tracked. The most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for energy and water, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region's resource management priorities. Physical asset accounts for land follow, compiled by 3 countries. Beyond this initial tier, uptake drops sharply: monetary accounts, which require additional institutional capacity and data integration, and ecosystem accounts appear in only 1 to 2 countries each, with thematic accounts for forests and protected areas at the same level.
+Across all `r n_implementing` implementing countries, a total of **`r n_compilations` account-compilations** have been recorded covering `r n_distinct_accounts` distinct account types out of the 36 tracked. The most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for water, compiled by 6 countries, followed by PSUTs for energy and Ecosystem Extent Accounts, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region's resource management priorities. Physical asset accounts for land follow, compiled by 4 countries. Beyond this initial tier, uptake drops sharply: monetary accounts, which require additional institutional capacity and data integration, and ecosystem accounts appear in only 1 to 3 countries each, with thematic accounts for forests and protected areas at the same level.
 
 ```{r}
 #| label: fig-heatmap
@@ -186,7 +261,7 @@ ggplot(
   ) +
   theme_minimal(base_size = 9) +
   theme(
-    axis.text.x = element_text(angle = 35, hjust = 0, vjust = 0, size = 8),
+    axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0.5, size = 8),
     axis.text.y = element_text(size = 8),
     strip.text.y.left = element_text(
       angle = 0,
@@ -214,15 +289,10 @@ group_summary |>
     `Account Group` = "Account Group",
     n_accounts = "Accounts tracked",
     n_compiled = "Compilations recorded",
-    n_countries = "Countries compiling at least one",
-    pct_compiled = "% of possible cells"
+    n_countries = "Countries compiling at least one"
   ) |>
   fmt_number(columns = c(n_accounts, n_compiled, n_countries), decimals = 0) |>
-  fmt_number(columns = pct_compiled, decimals = 1) |>
-  data_color(
-    columns = pct_compiled,
-    palette = c("#f0f0f0", "#219ebc")
-  ) |>
+  cols_hide(pct_compiled) |>
   tab_style(
     style = cell_text(weight = "bold"),
     locations = cells_column_labels()
@@ -230,8 +300,61 @@ group_summary |>
   tab_options(table.width = pct(100))
 ```
 
-## Gaps and Opportunities
+# General findings and policy insights
+## Water accounts
 
-The data reveal a clear two-tier structure in AFE natural capital accounting. A small leading group, South Africa, Uganda, Ethiopia, and Kenya, has built programmes that span multiple account types and framework components, and are the natural candidates for peer learning and south-south knowledge exchange. A second tier of countries, namely Namibia, Mauritius, and Zambia, has made a start but remains anchored in the CF accounts, suggesting that targeted support to expand into ecosystem and thematic accounts would yield the highest marginal gains.
+Across the reviewed countries, water accounts are emerging as one of the most policy-ready components of SEEA implementation because they link a clearly defined physical resource to concrete allocation, infrastructure, and productivity questions. In Kenya, the first physical water accounts already demonstrate the value of combining physical supply and use tables with asset accounts: they distinguish abstraction for own use from distributed supply, identify non-revenue water, and reveal basin-level stress that is obscured by national aggregates. The Kenya accounts show that national water supply is dominated by surface water, while groundwater pressures are already acute in specific basins, particularly the Rift Valley. Water quality issues, such as nutrient pollution, low dissolved oxygen, and fluoride contamination, are also sufficiently prominent to justify moving toward dedicated water quality accounts. This progression, from quantity to condition and risk, illustrates how water accounts evolve into policy-relevant tools (Government of Kenya, 2025).
 
-The greatest gaps lie in **monetary accounts**, where valuation capacity and statistical infrastructure requirements are highest, and in **SEEA EA accounts**, particularly ecosystem condition and monetary ecosystem services accounts. Thematic accounts for oceans and biodiversity, which are especially relevant given the region's coastal and savannah ecosystems, are essentially absent. These gaps define the primary areas for capacity development support under this project, and they are explored further in the analytical results chapter.
+Rwanda and Uganda demonstrate the complementary strength of water accounts in assessing efficiency, productivity, and allocation trade-offs across sectors. Rwanda’s accounts explicitly link physical water flows to economic accounts, showing that agriculture is the largest water user but not the most efficient, thereby informing decisions on allocation, pricing, and infrastructure investment (Government of Rwanda, 2019). Uganda’s recent accounts extend this approach by deriving indicators of water productivity and efficiency, highlighting that service sectors generate significantly higher value added per cubic meter than agriculture, even as agriculture remains central to livelihoods (Uganda Bureau of Statistics, 2025). Together, these examples show that water accounting in the region is shifting from descriptive reporting toward economically interpretable indicators that can inform sector policy and public investment.
+
+Zambia adds a more risk-centered perspective by framing water not only as a production input but also as a source of macroeconomic vulnerability. Its accounts highlight drought and flood exposure, hydropower dependence, groundwater stress, and water quality risks linked to mining, municipal effluent, and agriculture. A consistent stylized fact across countries is that national-level “water abundance” often coexists with severe local scarcity, quality deterioration, or seasonal unreliability. This underscores the importance of complementing national accounts with basin- or catchment-level analysis to capture spatial heterogeneity and inform targeted policy responses (Government of Zambia, 2025).
+
+More broadly, water accounts are most decision-useful when treated as a platform for integrated resource management rather than as standalone statistical products. Kenya explicitly highlights the water-energy nexus, while Rwanda emphasizes allocation trade-offs and cost recovery. South Africa’s thematic accounts for Strategic Water Source Areas go further by linking land cover change to water security and ecological functioning. These examples suggest that the next frontier for water accounting in the region lies not only in expanding time series but in integrating water with land, ecosystems, climate risk, and infrastructure planning (Statistics South Africa, 2023).
+
+## Land accounts
+
+Land accounts are proving to be a foundational entry point for SEEA implementation because they are spatially intuitive, highly policy-relevant, and relatively tractable when remote sensing and administrative data are available. Ethiopia’s land accounts provide a strong example, documenting expansion of cropland and built-up areas alongside changes in forest cover, while also cautioning that interpretation must account for differences in classifications, methods, and source data. Their application at river basin level further enhances relevance for agricultural expansion, watershed management, and urban planning (Government of Ethiopia, 2026).
+
+Kenya’s land accounts emphasize spatial targeting and transition analysis. Rather than presenting static land-cover totals, the accounts focus on land-use change matrices and a spatial backbone that enables county-level disaggregation and policy targeting. This shifts the role of land accounts from descriptive reporting to identifying where land conversion is occurring and where interventions, such as restoration, zoning, or employment programs, may be most effective. However, the absence of monetary and ownership accounts limits the ability to assess the economic implications of land conversion (World Bank, 2025a).
+
+Rwanda’s land accounts illustrate another important application: linking land information to valuation, administration, and development planning. By integrating land accounting with administrative datasets, the accounts support analysis of land markets, valuation, and regional disparities. This demonstrates how land accounts can bridge physical land-use change and economic data systems, making them particularly valuable in contexts of rapid urbanization and land market development (Government of Rwanda, 2018).
+
+South Africa’s land and terrestrial ecosystem accounts represent a more mature stage of development, with standardized spatial units, hierarchical classifications, and indicators such as ecosystem extent indices and turnover measures. These features enhance comparability across time and space and provide a model for how land accounts can evolve into a comprehensive ecosystem accounting framework. Across countries, a key lesson is that land accounts become significantly more useful when they move beyond net change to analyze conversion pathways, thresholds, and spatial heterogeneity (Statistics South Africa, 2020).
+
+## Energy accounts
+
+Energy accounts remain less widespread than land or water accounts but show strong potential where they are compiled. Kenya’s recent work is particularly important because it introduces monetary energy supply and use tables alongside existing physical accounts. This reveals a key policy insight: physical dominance does not necessarily correspond to economic significance. While biomass dominates household energy use in physical terms, household expenditures are concentrated on electricity and petroleum products. Monetary accounts also make visible imports, taxes, and distribution margins, providing insights into affordability, fiscal exposure, and energy transition dynamics (Government of Kenya, 2025).
+
+South Africa’s energy flow accounts demonstrate the value of consistent time series and standardized indicators, such as the energy dependency ratio. These indicators reveal vulnerabilities associated with reliance on imported fuels, particularly natural gas and oil products, while highlighting the continued importance of domestically sourced coal. Such metrics are highly relevant for assessing energy security, transition risks, and macroeconomic resilience (Statistics South Africa, 2025).
+
+Overall, energy accounts in the region have two primary analytical uses. First, they improve visibility into dependence on imported fuels and the structure of domestic energy use. Second, when combined with water and land accounts, they enable analysis of trade-offs related to hydropower, biomass use, industrial competitiveness, and climate transition pathways. However, such integration remains at an early stage in most country programs.
+
+## Ecosystem accounts
+
+Ecosystem accounts are the most analytically rich but also the most demanding component of SEEA implementation. The Democratic Republic of Congo provides a clear example of advanced ecosystem accounting, with accounts covering extent, condition, biodiversity, ecosystem services, and asset valuation. These accounts move beyond isolated indicators to provide an integrated picture of how ecosystems contribute to livelihoods, economic activity, and national wealth (World Bank, 2024a).
+
+A key policy insight from the DRC is that ecosystem accounts can simultaneously reveal ecological decline and economic dependence. Forests remain globally significant in scale and carbon storage, yet deforestation has accelerated and ecosystem condition has deteriorated. At the same time, the accounts highlight a broad portfolio of ecosystem services, including timber, non-timber forest products, carbon sequestration, sediment regulation, and tourism. This integrated perspective is critical for informing conservation finance and sustainable development planning.
+
+Ethiopia and Zambia illustrate more incremental pathways. Ethiopia’s ecosystem services work emphasizes the transition from potential supply to actual use, highlighting the need for better information on users and demand. Zambia’s accounts adopt a more synthetic approach, integrating land, forest, water, and biodiversity information to characterize provisioning, regulating, and cultural services, while identifying significant data gaps, particularly for valuation. These examples suggest that ecosystem accounts in the region are often built progressively from sectoral accounts rather than from a fully developed SEEA Ecosystem Accounting framework (Government of Ethiopia, 2025; Government of Zambia, 2025).
+
+South Africa’s thematic ecosystem accounts for Strategic Water Source Areas offer a policy-targeted approach by focusing on ecologically critical areas rather than attempting comprehensive national coverage. This approach may be particularly relevant for countries where policy demand is concentrated on specific landscapes or ecosystem services, such as water security (Statistics South Africa, 2023).
+
+## Common data gaps and recurring problems
+
+A consistent finding across countries is that implementation progress has outpaced the maturity of underlying data systems. Reports highlight fragmented institutional data, incomplete monitoring networks, inconsistent time series, and difficulties aligning administrative data with SEEA classifications. These challenges are especially evident in water accounting, where gaps in reporting, groundwater data, and water quality information are common (Government of Kenya, 2025; Government of Rwanda, 2019; Government of Zambia, 2025).
+
+A second recurring issue is limited spatial disaggregation. National-level results often mask localized pressures, reducing their usefulness for policy design. Basin-level analysis in Kenya, catchment-level needs identified in Rwanda, and spatially explicit approaches in South Africa all demonstrate that disaggregation is critical for effective resource management (Statistics South Africa, 2020; Government of Rwanda, 2019).
+
+A third gap concerns monetary valuation and non-market ecosystem services. While provisioning services are generally well captured, regulating and cultural services remain underdeveloped due to methodological complexity and data limitations. This is evident across land and ecosystem accounts, where valuation frameworks are often incomplete or experimental (Government of Rwanda, 2018; World Bank, 2025a; World Bank, 2024a).
+
+A fourth issue is heavy reliance on remote sensing data without sufficient field validation or harmonized classification systems. While remote sensing enables rapid account development, differences in definitions and methodologies limit comparability and increase uncertainty in interpreting trends (Government of Ethiopia, 2026; Government of Zambia, 2025).
+
+Finally, all countries emphasize that sustainable SEEA implementation requires institutionalization rather than one-off technical exercises. This includes formal coordination mechanisms, clear mandates, regular data production cycles, and sustained investment in capacity building. The main constraint is no longer the ability to produce pilot accounts, but the ability to integrate them into official statistical systems and policy processes (Government of Ethiopia, 2026; Government of Kenya, 2025; World Bank, 2024a; Government of Rwanda, 2019).
+
+
+# Other Assessment Problems and Opportunities
+
+The assessment reveals a clear two-tier structure in AFE natural capital accounting. A small leading group, Kenya, South Africa, Uganda, and Zambia, has built programmes that span multiple account types and framework components, and are the natural candidates for peer learning and south-south knowledge exchange. A second tier of countries, namely Ethiopia, Namibia, and Mauritius, has made a start but remains anchored in the CF accounts, suggesting that targeted support to expand into ecosystem and thematic accounts would yield the highest marginal gains.
+
+The greatest gaps lie in **monetary accounts**, where valuation capacity and statistical infrastructure requirements are highest, and in **SEEA EA accounts**, particularly ecosystem condition and monetary ecosystem services accounts. Thematic accounts for oceans and biodiversity, which are especially relevant given the region's coastal and savannah ecosystems, are essentially absent. These gaps define the primary areas for capacity development support under this project.
+

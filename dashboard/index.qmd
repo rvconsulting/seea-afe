@@ -1,5 +1,5 @@
 ---
-title: "SEEA Implementation -- AFE Region"
+title: "SEEA Implementation | AFE Region"
 format:
   dashboard:
     scrolling: true
@@ -18,9 +18,9 @@ afe2025 <- readRDS("outputs/assessment/AFE_assessment_2025.RDS")
 
 stage_palette <- c(
   "Not implementing" = "#cccccc",
-  "Stage I"          = "#8ecae6",
-  "Stage II"         = "#219ebc",
-  "Stage III"        = "#023047"
+  "Stage I" = "#8ecae6",
+  "Stage II" = "#219ebc",
+  "Stage III" = "#023047"
 )
 
 # Implementing countries metadata, ordered by compiled count
@@ -60,7 +60,7 @@ account_order <- afe2025 |>
 #| content: valuebox
 #| title: "Countries Assessed"
 list(
-  icon  = "globe-americas",
+  icon = "globe-americas",
   color = "#219ebc",
   value = n_distinct(afe2025$`Country or area`)
 )
@@ -70,7 +70,7 @@ list(
 #| content: valuebox
 #| title: "Implementing SEEA"
 list(
-  icon  = "check-circle",
+  icon = "check-circle",
   color = "#023047",
   value = length(implementing_countries)
 )
@@ -80,7 +80,7 @@ list(
 #| content: valuebox
 #| title: "Accounts Tracked"
 list(
-  icon  = "list-check",
+  icon = "list-check",
   color = "#8ecae6",
   value = n_distinct(afe2025$Account)
 )
@@ -90,7 +90,7 @@ list(
 #| content: valuebox
 #| title: "Account Compilations"
 list(
-  icon  = "bar-chart",
+  icon = "bar-chart",
   color = "#ffb703",
   value = afe2025 |> filter(Compiled == "Yes") |> nrow()
 )
@@ -124,9 +124,9 @@ implementing_meta |>
   labs(x = "Compiled accounts", y = NULL) +
   theme_minimal(base_size = 10) +
   theme(
-    legend.position    = "bottom",
+    legend.position = "bottom",
     panel.grid.major.y = element_blank(),
-    panel.grid.minor   = element_blank()
+    panel.grid.minor = element_blank()
   )
 ```
 
@@ -140,34 +140,42 @@ implementing_meta |>
 afe2025 |>
   filter(`Country or area` %in% implementing_countries) |>
   mutate(
-    Account           = factor(Account, levels = rev(account_order)),
-    `Country or area` = factor(`Country or area`, levels = implementing_countries),
-    grp               = str_remove(`Account Group`, "^SEEA ") |> str_wrap(18),
-    compiled_flag     = Compiled == "Yes"
+    Account = factor(Account, levels = rev(account_order)),
+    `Country or area` = factor(
+      `Country or area`,
+      levels = implementing_countries
+    ),
+    grp = str_remove(`Account Group`, "^SEEA ") |> str_wrap(18),
+    compiled_flag = Compiled == "Yes"
   ) |>
   ggplot(aes(x = `Country or area`, y = Account, fill = compiled_flag)) +
   geom_tile(colour = "white", linewidth = 0.3) +
   facet_grid(
-    rows   = vars(grp),
+    rows = vars(grp),
     scales = "free_y",
-    space  = "free_y",
+    space = "free_y",
     switch = "y"
   ) +
   scale_fill_manual(
     values = c("TRUE" = "#219ebc", "FALSE" = "#eeeeee"),
     labels = c("TRUE" = "Compiled", "FALSE" = "Not compiled"),
-    name   = NULL
+    name = NULL
   ) +
   scale_x_discrete(position = "top") +
   labs(x = NULL, y = NULL) +
   theme_minimal(base_size = 8) +
   theme(
-    axis.text.x       = element_text(angle = 35, hjust = 0, vjust = 0, size = 7),
-    axis.text.y       = element_text(size = 7),
-    strip.text.y.left = element_text(angle = 0, hjust = 1, size = 7, face = "bold"),
-    strip.placement   = "outside",
-    legend.position   = "bottom",
-    panel.grid        = element_blank()
+    axis.text.x = element_text(angle = 35, hjust = 0, vjust = 0, size = 7),
+    axis.text.y = element_text(size = 7),
+    strip.text.y.left = element_text(
+      angle = 0,
+      hjust = 1,
+      size = 7,
+      face = "bold"
+    ),
+    strip.placement = "outside",
+    legend.position = "bottom",
+    panel.grid = element_blank()
   )
 ```
 
@@ -180,10 +188,9 @@ afe2025 |>
 #| echo: false
 
 for (ctry in implementing_countries) {
-
-  meta   <- implementing_meta |> filter(`Country or area` == ctry)
-  stage  <- meta$`Stage of implementation (SDG 15.9.1b)`
-  inst   <- meta$`Responding institution`
+  meta <- implementing_meta |> filter(`Country or area` == ctry)
+  stage <- meta$`Stage of implementation (SDG 15.9.1b)`
+  inst <- meta$`Responding institution`
   n_comp <- meta$n_compiled
   source <- if_else(meta$`Imputed data` == "Yes", "Imputed", "Self-reported")
 
@@ -207,7 +214,7 @@ for (ctry in implementing_countries) {
       gt() |>
       cols_label(`Account Group` = "Group", Account = "Account") |>
       tab_style(
-        style     = cell_text(weight = "bold"),
+        style = cell_text(weight = "bold"),
         locations = cells_column_labels()
       ) |>
       tab_options(table.width = pct(100), data_row.padding = px(4))

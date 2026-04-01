@@ -2,4 +2,43 @@
 title: "Introduction"
 ---
 
-This page on top of documentation.
+This work aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy. 
+
+We conducted a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others (if available). 
+
+The accounts cover:
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(gt)
+library(dplyr)
+
+readRDS("outputs/assessment/seea_accounts.RDS") |>
+  rename(Account = Accounts, Category = `Thematic category`) |>
+  select(Category, Account) |>
+  group_by(Category) |>
+  mutate(Category = if_else(row_number() == 1, Category, "")) |>
+  ungroup() |>
+  gt() |>
+  cols_label(Category = "Category", Account = "Account") |>
+  cols_width(Category ~ pct(30), Account ~ pct(70)) |>
+  opt_row_striping() |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(
+      columns = Category,
+      rows = Category != ""
+    )
+  ) |>
+  tab_options(
+    table.font.size = px(13),
+    data_row.padding = px(4),
+    column_labels.background.color = "#f2f2f2"
+  )
+```

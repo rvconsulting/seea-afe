@@ -1,10 +1,31 @@
 ---
-title: "SEEA Africa"
+title: "Introduction"
 ---
 
 This work aims to review the NCA data produced for Eastern and Southern Africa and prepare relevant applications that can inform current World Bank priorities and the usability of the data for planning and policy. 
 
 We conducted a review and comparative analysis of the most recent natural capital accounts (from 2015 onward) prepared by countries in Eastern and Southern Africa, including the Democratic Republic of Congo, Ethiopia, Kenya, Rwanda, South Africa, Uganda, and Zambia, and others (if available). 
 
-The accounts cover ecosystem services, energy, forests, land, water, minerals and any other available accounts for the countries in Eastern and Southern Africa.
+The accounts cover:
+
+```{r}
+#| echo: false
+library(gt)
+library(dplyr)
+
+readRDS("outputs/assessment/seea_accounts.RDS") |>
+  rename(Account = Accounts, Category = `Thematic category`) |>
+  gt(groupname_col = "Category") |>
+  cols_label(Account = "Account") |>
+  cols_hide("Category") |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_row_groups()
+  ) |>
+  tab_options(
+    row_group.background.color = "#f2f2f2",
+    table.font.size = px(13),
+    data_row.padding = px(4)
+  )
+```
 
