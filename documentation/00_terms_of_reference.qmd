@@ -37,7 +37,7 @@ A technical note (10–15 pages) summarizing the methodological quality and alig
 A note (10–15 pages) presenting the results of the analyses proposed under task six for Deliverable 1, using the available NCA data.
 
 1. Prepare an analysis of the following applications: 
-    * From the review of the energy accounts and mineral accounts (only available for Rwanda) assess how these accounts can inform the World Bank's Accelerating Sustainable and Clean Energy Access Transformation (ASCENT) program.
+    * From the review of the energy accounts and mineral accounts assess how these accounts can inform the World Bank's Accelerating Sustainable and Clean Energy Access Transformation (ASCENT) program.
     * From the review of forest accounts, assess the contribution of forests to GDP and how the data can be used to improve the estimation of the impact of the forest activities on jobs and the elasticities to be used in each country to estimate the World Bank More and Better-Paid Jobs (MBJ) indicator.
     * From the review of the water accounts, assess the contribution of the water sector to economic sectors such as agriculture, industry, and manufacturing. 
     * Present the results of additional applications proposed and derived from the reviewed accounts.

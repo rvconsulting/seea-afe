@@ -178,6 +178,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#file-checklist" id="toc-file-checklist" class="nav-link" data-scroll-target="#file-checklist">File checklist</a></li>
   <li><a href="#suggested-implementation-order" id="toc-suggested-implementation-order" class="nav-link" data-scroll-target="#suggested-implementation-order">Suggested implementation order</a></li>
+  <li><a href="#meeting-with-client" id="toc-meeting-with-client" class="nav-link" data-scroll-target="#meeting-with-client">Meeting with client</a></li>
+  <li><a href="#annex-implementation" id="toc-annex-implementation" class="nav-link" data-scroll-target="#annex-implementation">Annex implementation</a>
+  <ul class="collapse">
+  <li><a href="#countries-completed" id="toc-countries-completed" class="nav-link" data-scroll-target="#countries-completed">Countries completed:</a></li>
+  <li><a href="#countries-pending" id="toc-countries-pending" class="nav-link" data-scroll-target="#countries-pending">Countries pending:</a></li>
+  </ul></li>
+  <li><a href="#session-3-deliverable-2-preparation" id="toc-session-3-deliverable-2-preparation" class="nav-link" data-scroll-target="#session-3-deliverable-2-preparation">Session 3 — Deliverable 2 Preparation</a>
+  <ul class="collapse">
+  <li><a href="#tasks-completed" id="toc-tasks-completed" class="nav-link" data-scroll-target="#tasks-completed">Tasks completed:</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -342,8 +352,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create <code>dashboard/index.qmd</code> with tabset structure and per-country cards.</li>
 <li>Update <code>_quarto.yml</code> to register the dashboard.</li>
 </ol>
+</section>
+<section id="meeting-with-client" class="level2">
+<h2 class="anchored" data-anchor-id="meeting-with-client">Meeting with client</h2>
+<p>Client liked <span class="citation" data-cites="01_diagnostic_review.qmd">@01_diagnostic_review.qmd</span> and noted that they need:</p>
+<ul>
+<li>A better explanation of the stages relating to figure 1, which have been added already. We also explained that we added a new category denoting those that have implemented “something,” but it’s not SEEA related.</li>
+<li>One big ask that was given to us in the meeting is that we are no longer bound by length. The core of the note can stay at ~15 pages, but we can have an unbound Annex where we show important data that focuses on the last item of the terms of reference for the first product (<span class="citation" data-cites="00_terms_of_reference.qmd">@00_terms_of_reference.qmd</span>) for each country. Specifically, <em>6. Propose cross-country and country-specific analyses and stylized facts that can be derived from the available data, that could inform, planning, economic policy and decision-making</em>. They are keen on data that speaks to impacts on GDP or vs GDP and know if data insights are already useful for their reports (not necessarily for modelling efforts). Pull out useful indicators for policy from the published reports or data, which are illustrative but not overwhelm the reader that wants to use our document as reference when putting together proposals or reports for the World Bank.</li>
+<li>We are also required to hint at answers to (we do not have to implement the answers in this paper, just talk about what projects we could promote down the line to improve upon these things through the partnership between the World Bank and these countries):
+<ul>
+<li>How can the World Bank prioritize if data is not disaggregated at regional level (especially for water and sanitation projects)?</li>
+<li>Related to the first item, how can we solve spatial disaggregation? Which investments could improve that if the Bank were to help the countries create projects for institutional strenghtening at statistics institutions.</li>
+<li>How can the World Bank support institutionalization (one big problem of SEEA implementation projects is budget continuity and institutional take-up at statistical institutions)?</li>
+<li>They want more examples of monetary valuation and more specific indicators.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="annex-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="annex-implementation">Annex implementation</h2>
+<p>The Annex “Country-Level Policy Insights from Available Accounts” was added to the end of <code>01_diagnostic_review.qmd</code>. Structure per country:</p>
+<ul>
+<li>Accounts are ordered following the SEEA account order in Table 1 (tbl-all-seea-accounts).</li>
+<li>Each entry describes available accounts, extracts specific indicators with numbers, GDP linkages, and points to source tables/figures.</li>
+<li>Where monetary valuation is absent, the physical flows are quantified and valuation pathways identified.</li>
+</ul>
+<section id="countries-completed" class="level3">
+<h3 class="anchored" data-anchor-id="countries-completed">Countries completed:</h3>
+<ul>
+<li><p><strong>Ethiopia</strong> (eth): Land accounts (physical + monetary context, 4 SEEA accounts) + Ecosystem services (physical only). Sources: <code>First Edition Land accounts for Ethiopia_Jan 2026.pdf</code> + <code>Ethiopia_EcosystemServicesAccounting_Technical_Report_vers0.2_Dec_2025.pdf</code>. Citation keys added to <code>references.bib</code>.</p></li>
+<li><p><strong>Kenya</strong> (ken): 10 compiled accounts across 5 sectors (water, energy, land, ecosystem, forest). Includes full monetary ecosystem services accounts (livestock KSh 185 bn, sediment retention KSh 24 bn, tourism KSh 38 bn = KSh 247 bn total = 1.8% of GDP in 2018). Sources: 5 DOCX reports converted to plain text via pandoc. Citation keys added to <code>references.bib</code>.</p></li>
+<li><p><strong>Madagascar</strong> (mad): 2 compiled accounts (ecosystem extent + condition). Physical-only accounts based on integrated landscape assessment (1992–2020). Key indicators: 35.6% of land area degrading; 3.08 Gt/year soil erosion; 27.2 Mt/year sediment export; 6.25 Gt carbon stock; 1.56 Mt CO₂/year absorption loss (≈ US$59M/year social cost); 81% erosion reduction potential from NBS in priority zones; top 7.5% of territory holds 31% of national carbon stock. Sources: <code>Madagascar Landacpe Analysis_Technical_Methods_18May2022_final.docx</code> + <code>Mad_EcosystemIndex_database_updatedV2.xlsx</code>. Citation key <code>vogl_madagascar_2022</code> added to <code>references.bib</code>.</p></li>
+<li><p><strong>Mauritius</strong> (mus): 2 compiled accounts (physical supply/use tables for water + physical asset accounts for water). 5th edition institutional series by Statistics Mauritius (Dec 2024). Key indicators: TRWR 2,874 Mm³ (2022); abstraction 22% of TRWR (no stress); hydropower largest abstractor (431 Mm³, 40.5%); UFW 64.6% and worsening (56.4% in 2013); total water consumption 229 Mm³ (agriculture 89.1%); households receive 197 L/day vs 719 L/day abstracted (difference = leakage). Source: <code>Water_Yr22_231224.pdf</code>. Citation key <code>statsmauritius_water_2024</code> added to <code>references.bib</code>.</p></li>
+<li><p><strong>Rwanda</strong> (rwa): 5 compiled accounts (water physical + <strong>monetary</strong> PSUT, land physical assets, ecosystem condition + physical services). Monetary water productivity = 4,762 Rwf/m³ (2015); agriculture 118 Rwf/m³ vs mining 6,236 Rwf/m³; GDP +25% while water use +10% (relative decoupling 2012-2015); WASAC NRW 41% = US$8.7M loss; soil erosion +54% since 1990 = 158 Mt/yr; baseflow −11%; sediment export +123%; wetland −14,000 ha 2010-2015; land transactions avg 35M Rwf/ha (Kigali 130M). Sources: 3 PDFs + water Excel. Citation keys <code>nisr_rwanda_water_2019</code>, <code>nisr_rwanda_ecosystem_2019</code>, <code>nisr_rwanda_land_2018</code> added.</p></li>
+<li><p><strong>Uganda</strong> (uga): 6 compiled accounts (water physical PSUT, <strong>monetary</strong> timber asset accounts, ecosystem extent, physical + <strong>monetary</strong> ecosystem services, ecosystem asset accounts). Forest cover −60% (4.93 → 1.95 M ha, 1990–2015); monetary wood stock −19% (US$9.1B → US$7.4B); forest land value US$34.9B (2015) despite area loss; sustainable wood supply depleted by ~2025; supply deficit 35 Mt (2015) → 105 Mt (2040); charcoal = 78% of national energy; forestry 4–8% GDP. Water productivity UGX 5,557/m³ consumed (2024, +84% from 2015); distribution losses 34.8%; oil sector abstraction +113.9%. Sources: 1 PDF (forest) + 1 PDF (water 2024). Citation keys <code>ubos_uganda_forest_2020</code>, <code>ubos_uganda_water_2025</code> added.</p></li>
+<li><p><strong>South Africa</strong> (zaf): 7 compiled accounts (water PSUT + asset + <strong>emission</strong> accounts for SWSAs, energy PSUT, land asset accounts, ecosystem extent, physical ecosystem services). SWSAs = 8.2% of land but supply ~two-thirds of economic activity; 3 SWSAs below 60% natural threshold. Energy: 6,519 PJ natural inputs; coal 72.2% domestic supply; oil 93.1% import dependent. Land: natural stable (+0.8%) but pivots +221%, mines +16%, grassland historically −11.1M ha. Biodiversity tourism = 0.4–0.5% GDP = R27.7B (2019) + 92k jobs. Estuaries: condition 63.7/100; 63% area heavily modified; sawfish extinct; only 4% of estuaries have good fish condition. Sources: 4 PDFs + 2 Excel files. Citation keys <code>statssa_water_swsa_2023</code>, <code>statssa_land_2020</code>, <code>statssa_energy_2025</code>, <code>statssa_biodiversity_tourism_2024</code>, <code>statssa_protected_areas_2021</code>, <code>csir_estuaries_2020</code> added.</p></li>
+<li><p><strong>Zambia</strong> (zmb): 5 compiled accounts (land physical assets, timber PSUT, water PSUT, ecosystem extent, protected areas thematic). Land: trees −1.88M ha (−4.5%, 2018-2023) = 376k ha/yr; crops +960k ha (+36.9%); trees→rangeland 4.9M ha dominant transition; NEDI 1.44%. Water: 19% of territory is wetlands; Bangweulu US$11.7M/year; Lake Kariba &lt;15% capacity 2016+2024; drought national disaster 2023/24. Carbon: NPV loss USD 46M (2018-2023). Fish: +42.4% (178k MT, ZMW 8B = US$423M in 2023). Bush meat: K118M (+158%) = US$4.6M. 40% income from natural resources. Sources: 2 DOCXs + 2 Excels. Citation keys <code>zambia_nca_compendium_2026</code>, <code>zambia_ecosystem_account_2026</code> added.</p></li>
+</ul>
+</section>
+<section id="countries-pending" class="level3">
+<h3 class="anchored" data-anchor-id="countries-pending">Countries pending:</h3>
+<ul>
+<li>DRC (drc) — Annex section not yet written; DRC data extracted via subagent (see below) and incorporated into data gaps section and 02_analytical_results.qmd.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="session-3-deliverable-2-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="session-3-deliverable-2-preparation">Session 3 — Deliverable 2 Preparation</h2>
+<section id="tasks-completed" class="level3">
+<h3 class="anchored" data-anchor-id="tasks-completed">Tasks completed:</h3>
+<ol type="1">
+<li><p><strong>Common Data Gaps section</strong> (<code>01_diagnostic_review.qmd</code>, lines 344–): Completely rewrote and expanded <code>## Common data gaps and recurring problems</code>. New section is <code>## Common Data Gaps and Systemic Recommendations</code> with six subsections (Data Infrastructure, Classification/Comparability, Monetary Valuation, Spatial Disaggregation, Institutionalization, Thematic Gaps) plus <code>### Priority Areas for Capacity Development</code>. Merged and replaced <code># Other Assessment Problems and Opportunities</code> (which was at the wrong hierarchical level). Added DRC citation key <code>worldbank_drc_forest_2025</code> to <code>references.bib</code>.</p></li>
+<li><p><strong>Inventory</strong> (<code>documentation/inventory_for_analytical_results.md</code>): Created 71-item numbered inventory of named tables, figures, and Excel tabs organized by <code>country.account_type.item#</code> format. Covers DRC (6 items), ETH (9), KEN (10), MAD (2), MUS (3), RWA (9), UGA (8), ZAF (19), ZMB (7). Maps flagged as reference-only. No CSVs created.</p></li>
+<li><p><strong>02_analytical_results.qmd</strong> (<code>documentation/02_analytical_results.qmd</code>): Full draft of Deliverable 2 analytical results document with six thematic sections:</p>
+<ul>
+<li>Energy and Minerals (ASCENT program lens; countries: DRC, ETH, KEN, UGA, ZAF, ZMB)</li>
+<li>Forests (MBJ indicator lens; countries: DRC, ETH, KEN, UGA, ZMB)</li>
+<li>Water (contribution to sectors; countries: KEN, MUS, RWA, UGA, ZAF, ZMB)</li>
+<li>Additional Applications (soil, carbon, biodiversity tourism, fisheries; all countries)</li>
+<li>Cross-Country Comparisons (charcoal parallel, forest loss, valuation frontier, water productivity)</li>
+<li>Policy Relevance, Reflections, and Conclusions (combined)</li>
+<li>Inventory item placeholders inserted as [inventory item: X.X.X about here]</li>
+<li>ASCENT and MBJ researched online; findings incorporated.</li>
+</ul></li>
+<li><p><strong>DRC data extracted</strong> via subagent from <code>P180767_DRC - Forest Ecosystems accounts 2000-20-EN.pdf</code>:</p>
+<ul>
+<li>Title: “Democratic Republic of Congo’s Forest Ecosystem Accounts and Policy Recommendations: Ecosystem extent, condition, services, and asset accounts 2000-2020”</li>
+<li>Institution: World Bank Group; Year: August 2025; Project P180767</li>
+<li>Lead technical team: Dr Jane Turpie (Anchor Environmental Consultants)</li>
+<li>Forest lost 2000-2020: 11.6M ha; deforestation rate doubled 0.5% → 0.8%/yr</li>
+<li>Carbon: 55,640 Mt C total (peat soils 1,917 t/ha); ecosystem services US$706B/yr (incl.&nbsp;carbon)</li>
+<li>Forestry 9% GDP; 94% energy from biomass; 90% informal logging</li>
+<li>Citation key <code>worldbank_drc_forest_2025</code> added to references.bib</li>
+</ul></li>
+</ol>
 
 
+</section>
 </section>
 </section>
 

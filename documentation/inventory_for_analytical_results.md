@@ -1,0 +1,366 @@
+# Inventory for Analytical Results
+
+This inventory catalogs extractable tables, figures, and charts from the source documents reviewed
+for each country. Items are numbered `country.account_type.item#`. Maps are referenced for context
+only (no GIS files available in the dataset). Items marked **[map]** should be cited from the
+document rather than reproduced. Items marked **[Excel]** are drawn from tabular data files and can
+be replicated programmatically. Items marked **[PDF]** are from printed reports and will require
+manual extraction or digitization.
+
+---
+
+## DRC — Democratic Republic of Congo
+
+### DRC.forest — Forest Ecosystem Accounts
+*(Source: `data/assessment/drc/Accounts_Ecosystem/P180767_DRC - Forest Ecosystems accounts 2000-20-EN.pdf` — @worldbank_drc_forest_2025)*
+
+1. **DRC.forest.1** — Table O.1: Extent of Each Ecosystem Type (Hectares) and Percentage of Total
+   Area in 2000, 2010, and 2020. Data table showing hectares and percentage of 15 ecosystem/land-
+   cover types across three benchmark years. Overview section, p. xvi. [PDF]
+
+2. **DRC.forest.2** — Table O.2: Biomass, Soil and Total Carbon Content of Forest Ecosystem Types
+   in DRC, and Their Average Carbon Retention per Hectare in 2020. Data table with total biomass C,
+   soil organic C, total C, and average carbon density (t/ha) by forest type including peat forests.
+   Overview, p. xxi. [PDF]
+
+3. **DRC.forest.3** — Table O.3: Aggregate Supply of Forest Ecosystem Services for 2000, 2010, and
+   2020 (CDF and US$ per Year). Monetary values in CDF billions and US$ millions for five ecosystem
+   service categories (timber, wild resources, sediment retention, global climate regulation,
+   tourism). Overview, p. xxi. [PDF]
+
+4. **DRC.forest.4** — Table 10.1: ANNI, GNI, and GDP Macroeconomic Indicators, 2000–2020. Adjusted
+   Net National Income, GNI, ANS, and forest depletion values in CDF billions. Section 10, p. ~120.
+   [PDF]
+
+5. **DRC.forest.5** — Table 11.1: Confidence Levels by Ecosystem Service. Summary table rating
+   confidence (moderate to high) across timber, fuelwood, wild plants, bushmeat, global climate
+   regulation, soil/sediment retention, and tourism. Section 11, p. ~134. [PDF]
+
+6. **DRC.forest.6** — Map: Forest cover change 2000–2020 by province (deforestation hotspots
+   including Kwilu and Kinshasa). **[map — reference only]**
+
+---
+
+## ETH — Ethiopia
+
+### ETH.land — Land Asset Accounts
+*(Source: `data/assessment/eth/` — @government_of_ethiopia_land_2026)*
+
+7. **ETH.land.1** — Table 4.1: National land cover by class, 2013 vs 2022. Data table showing
+   hectares and percentage for 13 land cover classes at national level for both years. Chapter 4.
+   [PDF]
+
+8. **ETH.land.2** — Figure 4.1–4.2: Land change matrix visualization showing conversion flows
+   between land cover classes 2013–2022. Chapter 4. [PDF]
+
+9. **ETH.land.3** — Map: Abay (Blue Nile) and Awash basin land cover spatial distribution.
+   **[map — reference only]**
+
+### ETH.ecosystem — Ecosystem Services Accounts
+*(Source: `data/assessment/eth/` — @rutebuka_ethiopia_2025)*
+
+10. **ETH.ecosystem.1** — Table 3: National ecosystem service supply by service type (soil
+    protection, water quality regulation, baseflow, quickflow, water yield, carbon sequestration,
+    carbon stock), 2013 and 2022. Physical units. [PDF]
+
+11. **ETH.ecosystem.2** — Table 7: Soil protection efficiency per hectare of cropland, 2013 vs
+    2022 (411 to 338 t/ha — 18% efficiency decline). [PDF]
+
+12. **ETH.ecosystem.3** — Table 8: Basin-level soil protection totals by major river basin (Abbay,
+    Awash, etc.). Abbay accounts for over 40% of national total. [PDF]
+
+13. **ETH.ecosystem.4** — Table 9: Annual carbon sequestration / emission by land cover class, 2022.
+    Open shrubland = 194.8 Mt C/yr emission; moderate forests = 93.6 Mt C/yr sequestration. [PDF]
+
+14. **ETH.ecosystem.5** — Figure 10: Map of ecosystem services by basin with flood mitigation
+    values, including Addis Ababa negative value (−2,691 m³/ha). **[map — reference only]**
+
+---
+
+## KEN — Kenya
+
+### KEN.water — Water Accounts
+*(Source: `data/assessment/ken/` — @worldbank_kenya_water_energy_2025)*
+
+15. **KEN.water.1** — Table 3-5: Per capita water use by basin (2021 and 2023). Shows tenfold
+    variation: Lake Victoria South 8 m³/person/yr to Tana 91 m³/person/yr; national average
+    26.6 m³. [PDF]
+
+16. **KEN.water.2** — Figure 7: Water supply and demand comparison by basin for 2021 and 2023,
+    including Rift Valley groundwater stress (use-to-availability > 100%). [PDF]
+
+### KEN.energy — Energy Accounts
+*(Source: `data/assessment/ken/` — @worldbank_kenya_water_energy_2025; @knbs_energy_2026)*
+
+17. **KEN.energy.1** — Table 2-1: Monetary energy supply and use table (MSUT) for 2024. Total
+    monetary supply KES 580.5 billion; household expenditure KES 749.8 billion. Shows physical vs
+    monetary contrast (biomass dominates physical; electricity/petroleum dominate monetary). [PDF]
+
+18. **KEN.energy.2** — Physical energy supply and use table showing geothermal (19,984 TJ), hydro
+    (13,071 TJ), wind (6,472 TJ) vs biomass (>1.2 million TJ) in household energy balance. [PDF]
+
+### KEN.land — Land Accounts
+*(Source: `data/assessment/ken/` — @soulard_kenya_land_2025)*
+
+19. **KEN.land.1** — Land cover change matrix 1990–2024. Forest cover from 3,934,279 ha (6.65%)
+    to 3,591,486 ha (6.07%). Annual cropland +1.4 million ha (+29.5%) between 2002–2018. [PDF]
+
+### KEN.ecosystem — Ecosystem Accounts
+*(Source: `data/assessment/ken/` — @turpie_kenya_ecosystem_2025)*
+
+20. **KEN.ecosystem.1** — Table 3.2: Ecosystem extent change 2002–2018. All natural ecosystem types
+    declined; moist wooded grassland −28.9%, Masai xeric shrubland −15.6%, montane forest −8.2%. [PDF]
+
+21. **KEN.ecosystem.2** — Tables 5.3–5.4: Monetary ecosystem services for 2002 and 2018. Total
+    KSh 188B (2002) → KSh 247B (2018) = 1.8% of GDP. Livestock KSh 185B, sediment KSh 24B,
+    tourism KSh 38B. [PDF]
+
+22. **KEN.ecosystem.3** — Table 4.6: Monetary value of sediment retention services, 2002 and 2018.
+    KSh 29,589M → KSh 23,912M (−19%). Avoided cost of reservoir storage loss. [PDF]
+
+23. **KEN.ecosystem.4** — Table 4.8: Ecosystem-based tourism value by ecosystem type, 2002 and
+    2018. KSh 19,019M → KSh 38,119M (+100%); grassland and Acacia-Commiphora = 82% of total. [PDF]
+
+### KEN.forest — Forest Accounts
+*(Source: `data/assessment/ken/` — @knbs_forest_2026)*
+
+24. **KEN.forest.1** — Forest area by stratum (montane, western rainforest, coastal, mangrove,
+    dryland, plantation) for 1990 and 2024, including county-level breakdown across 47 counties. [PDF]
+
+---
+
+## MAD — Madagascar
+
+### MAD.ecosystem — Ecosystem Extent and Condition Accounts
+*(Source: `data/assessment/mad/` — @vogl_madagascar_2022)*
+
+25. **MAD.ecosystem.1** — Table `LandDegr_0.x_ha`: Land degradation classification by area. 35.6%
+    of national area (21.1M ha) degrading; 12.5% highly degrading, 10.3% moderately, 12.8%
+    slightly. Supplementary Excel database (`Mad_EcosystemIndex_database_updatedV2.xlsx`). [Excel]
+
+26. **MAD.ecosystem.2** — Regional breakdown of degradation by the 22 administrative regions.
+    Excel database (`Mad_EcosystemIndex_database_updatedV2.xlsx`). [Excel]
+
+---
+
+## MUS — Mauritius
+
+### MUS.water — Water Accounts
+*(Source: `data/assessment/mus/Water_Yr22_231224.pdf` — @statsmauritius_water_2024)*
+
+27. **MUS.water.1** — Table 1: Total Renewable Water Resources and rainfall 2021–2022 with
+    ten-year series. TRWR 2,643–2,874 Mm³; abstraction 22% of TRWR (below stress threshold). [PDF]
+
+28. **MUS.water.2** — Table 4: Abstraction by sector, 2021 and 2022. Hydropower 431 Mm³ (40.5%),
+    agriculture 302 Mm³ (28.5%), CWA utility 320 Mm³. [PDF]
+
+29. **MUS.water.3** — Annex 1: Unaccounted-for Water (UFW) trend 2013–2022. UFW rose from 56.4%
+    (2013) to 64.6% (2022); household receipt per capita per day: 197 L/day vs 719 L/day
+    abstracted. [PDF]
+
+---
+
+## RWA — Rwanda
+
+### RWA.water — Water Accounts (Physical and Monetary)
+*(Source: `data/assessment/rwa/` — @nisr_rwanda_water_2019)*
+
+30. **RWA.water.1** — Table 11 / Figure 11: Monetary water productivity by economic sector, 2015.
+    Agriculture 118 Rwf/m³, manufacturing 523 Rwf/m³, mining 6,236 Rwf/m³, services
+    9,300–11,600 Rwf/m³. Bar chart and table. [PDF]
+
+31. **RWA.water.2** — Figure 15: GDP growth vs water use growth comparison, 2012–2015. GDP +25%,
+    water use +10% (relative decoupling illustrated). Line chart. [PDF]
+
+32. **RWA.water.3** — Table 12: WASAC water utility data — abstraction, distribution, NRW, tariffs,
+    cost recovery. NRW = 41% = US$8.7M foregone revenue. [PDF]
+
+33. **RWA.water.4** — Table 6 / Text Box 2: Reservoir sedimentation 1990–2015. Storage +63% but
+    sediment load +123%; 2010–2015 alone +39% sediment increase. [PDF]
+
+### RWA.land — Land Accounts
+*(Source: `data/assessment/rwa/` — @nisr_rwanda_land_2018)*
+
+34. **RWA.land.1** — Table 13: RCMRD land cover change 1990–2015. Cropland 613,527 ha (24.2%) →
+    1,310,704 ha (51.7%); sparse forest −673,137 ha; wetland −22,000 ha. [PDF]
+
+35. **RWA.land.2** — Table 15: Land transactions 2014. 15,520 transactions; 4,020 ha at 141,825M
+    Rwf; national average 35M Rwf/ha; Kigali 130M Rwf/ha. [PDF]
+
+### RWA.ecosystem — Ecosystem Services Accounts
+*(Source: `data/assessment/rwa/` — @nisr_rwanda_ecosystem_2019)*
+
+36. **RWA.ecosystem.1** — Table 1: Soil erosion by province/district, 1990–2015. National total
+    102.5 → 158.2 Mt/yr (+54%); Northern Province 109 t/ha/yr; Mukungwa catchment 129 t/ha/yr. [PDF]
+
+37. **RWA.ecosystem.2** — Table 2: Sediment export to waterways, 1990–2015. 6.3 → 14.0 Mt/yr
+    (+123%); Mukungwa catchment 11.39 t/ha/yr highest nationally. [PDF]
+
+38. **RWA.ecosystem.3** — Tables 4 and 6: Quickflow and baseflow trends 1990–2015. Quickflow
+    +35% (2.4 → 3.2 Bm³/yr); baseflow −11.4% (5.1 → 4.5 Bm³/yr). [PDF]
+
+---
+
+## UGA — Uganda
+
+### UGA.water — Water Accounts
+*(Source: `data/assessment/uga/` — @ubos_uganda_water_2025)*
+
+39. **UGA.water.1** — Table 2: Water abstraction by source, 2024. Rainfall for rain-fed
+    agriculture 278,872 Mm³ (56%); surface water 219,916 Mm³; groundwater 252 Mm³. [PDF]
+
+40. **UGA.water.2** — Table 6: Water use by sector. Agriculture 55.4% of abstraction and 96.4%
+    of consumptive use; oil/mining abstraction +113.9% year-on-year. [PDF]
+
+41. **UGA.water.3** — Figure 4 / Table 7: National water productivity trend 2015–2024. UGX 3,014
+    /m³ (2015) → UGX 5,557/m³ (2024) — +84%. Line chart. [PDF]
+
+### UGA.forest — Forest and Timber Accounts
+*(Source: `data/assessment/uga/` — @ubos_uganda_forest_2020; Excel: `Accounts_Forest/Forest land value33.xlsx`)*
+
+42. **UGA.forest.1** — Table 3.1 / Figure 3.1: Forest cover change 1990–2015. 4,933,762 ha
+    (24%) → 1,951,662 ha — loss of 2,982,100 ha; woodland −69%. Bar chart with forest types. [PDF]
+
+43. **UGA.forest.2** — Forest land value by sub-region and year (1990, 2000, 2005, 2010, 2015).
+    National total US$27.6B (1990) → US$34.9B (2015) despite area loss; Central region US$129,700
+    /ha in 2015. Excel: `Accounts_Forest/Forest land value33.xlsx`, sheet `Forest land valuation`.
+    [Excel]
+
+44. **UGA.forest.3** — Figures 3.3–3.4: Monetary forest land value trends 1990–2015 including
+    per-hectare price escalation. National average US$7,800/ha (1990) → US$19,700/ha (2015). [PDF]
+
+45. **UGA.forest.4** — Figure 6.8: Sustainable wood supply depletion projection to 2040. Supply
+    deficit 1.6 Mt (2000) → 35 Mt (2015) → projected 105 Mt (2040). [PDF]
+
+46. **UGA.forest.5** — Figure 6.11: Wood product supply values by category, 1990 and 2015.
+    Sawn timber US$111.7M, poles US$77.7M, firewood US$60.6M, charcoal US$20.6M. [PDF]
+
+---
+
+## ZAF — South Africa
+
+### ZAF.water — Strategic Water Source Area Accounts
+*(Source: `data/assessment/zaf/Accounts_Water/D040132020_strategic_water.pdf` — @statssa_water_swsa_2023)*
+
+47. **ZAF.water.1** — Tables 9–10: SWSA land cover change 1990–2020. Natural land −181,141 ha
+    (−2.6%); timber plantations +71,847 ha; urban +65,277 ha; mining +51.9%. [PDF]
+
+48. **ZAF.water.2** — Table 5: SWSA biome composition by SWSA. Grassland 63.4%, Fynbos 20.0%,
+    Savanna 12.5%. [PDF]
+
+49. **ZAF.water.3** — Figure 10: SWSAs natural land vs national average comparison — intensively
+    modified land covers 28.8% SWSAs vs 16.2% nationally. [PDF]
+
+50. **ZAF.water.4** — Figure 14: SWSA ecological integrity map — three SWSAs below 60% natural
+    threshold (Upper Usutu 40.9%, Table Mountain 50.4%, Mpumalanga Drakensberg 51.3%).
+    **[map — reference only]**
+
+51. **ZAF.water.5** — Table 15: Protected area coverage in SWSAs, 2020. 18.9% overall; ranges
+    from Swartberg 76.5% to Eastern Cape Drakensberg 1.1%. [PDF]
+
+### ZAF.energy — Energy Flow Accounts
+*(Source: `data/assessment/zaf/Accounts_Energy/Physical Energy Flow Accounts for South Africa 2022.xlsx` — @statssa_energy_2025)*
+
+52. **ZAF.energy.1** — Table 4: Total energy supply (TJ) by source, 2022. 20,910.6 PJ total;
+    coal 72.2% of domestic inputs; renewables 1.4%. Excel: sheet `Table 4`. [Excel]
+
+53. **ZAF.energy.2** — Table 12: Energy import dependency by fuel type, 2015–2022. Overall
+    dependency 17.5% → 19.9%; oil 93.1%; natural gas 99.9%. Excel: sheet `Table 12`. [Excel]
+
+54. **ZAF.energy.3** — Tables 17–18: Household energy use by fuel type, 2015–2022. Biofuels
+    46.5% of household energy (12.0 GJ per capita in 2022). Excel: sheets `Table 17` and
+    `Table 18`. [Excel]
+
+55. **ZAF.energy.4** — Tables 19–20: Energy exports and coal sector, 2022. Coal exports 2,046.9 PJ
+    (90.4% of total energy exports). Excel. [Excel]
+
+### ZAF.land — Land Accounts
+*(Source: `data/assessment/zaf/Accounts_Land/D040111990to2014_land.pdf` — @statssa_land_2020)*
+
+56. **ZAF.land.1** — Table 2: National land cover change 1990–2014. Natural land +826,384 ha
+    (+0.8%); cultivated land −347,267 ha; built-up +196,735 ha. [PDF]
+
+57. **ZAF.land.2** — Table 4: Tier 2 land use change detail. Pivot irrigation +221.4%;
+    informal settlements +95.7%; mine footprint +15.9%; orchards +17.4%. [PDF]
+
+58. **ZAF.land.3** — Tables 17–19: Ecological Ensemble Index (EEI) by ecosystem type. 52% of
+    458 ecosystem types near-pristine; 18% at or below 60% EEI; Grassland historically −11.1M ha.
+    [PDF]
+
+### ZAF.biodiversity — Biodiversity Tourism Accounts
+*(Source: `data/assessment/zaf/Accounts_Ecosystem/D040152019_biodiversity.pdf` — @statssa_biodiversity_tourism_2024)*
+
+59. **ZAF.biodiversity.1** — Table 1 / Figure 1: Biodiversity-based tourism GDP 2013–2019.
+    Internal tourism spending R43,389M (2013) → R60,663M (2019); BTDGDP R19,622M → R27,726M
+    (0.4–0.5% of GDP). [PDF]
+
+60. **ZAF.biodiversity.2** — Tables 22–23: Tourism employment by type, 2019. Total tourism
+    780,096 jobs (4.8% of employment); biodiversity-specific 91,836 jobs (11.8% of tourism
+    employment). [PDF]
+
+### ZAF.protected — Protected Areas Accounts
+*(Source: `data/assessment/zaf/Accounts_Ecosystem/D040122020_protected_areas.pdf` — @statssa_protected_areas_2021)*
+
+61. **ZAF.protected.1** — Table 4: Protected area extent by type, 2000–2020. Mainland 7.3%
+    (2000) → 9.2% (2020) = 11,280,684 ha; National Parks 37.4%; Nature Reserves 44.5%. [PDF]
+
+### ZAF.estuary — Estuarine Ecosystem Accounts
+*(Source: `data/assessment/zaf/Accounts_Ecosystem/CSIR_National_Estuaries_Ecosystem_Accounts_2020_0026.pdf` — @csir_estuaries_2020)*
+
+62. **ZAF.estuary.1** — Tables 5.2–5.3: Estuarine condition index by system. National index 63.7/100;
+    23% natural/near-natural; 63% heavily modified. 290 estuaries, 200,730 ha total. [PDF]
+
+63. **ZAF.estuary.2** — Table 7.1: Blue carbon sequestration loss since 1750. Net loss ~1.37
+    million tonnes. [PDF]
+
+64. **ZAF.estuary.3** — Table 7.2: Fish nursery condition. Dusky kob SBPR below 2% of pristine;
+    70–94% of nursery habitats under high or very high fishing pressure. [PDF]
+
+---
+
+## ZMB — Zambia
+
+### ZMB.land — Land Accounts
+*(Source: `data/assessment/zmb/Accounts_Land/Land_Account_Tables.xlsx` and
+`data/assessment/zmb/Accounts_Land/Land_Account_Indices.xlsx` — @zambia_nca_compendium_2026)*
+
+65. **ZMB.land.1** — Table 2.1: National land cover change 2018–2023. Tree cover from 55.4% to
+    52.8% (−1,881,924 ha); cropland +960,450 ha (+36.9%); built-up +39.9%. Excel:
+    `Land_Account_Tables.xlsx`, sheet `Table_2_1`. [Excel]
+
+66. **ZMB.land.2** — Table 2.3: Land cover transition flow matrix, 2018–2023. Trees→rangeland
+    4,921,342 ha (44.7% of all conversions); rangeland→trees 3,259,379 ha (regeneration). Excel:
+    `Land_Account_Tables.xlsx`, sheet `Table_2_3`. [Excel]
+
+67. **ZMB.land.3** — Table 4: Land account indices by province (NACI, RRI, NEDI, WLI, UEI).
+    Eastern Province NEDI = 5.25%; North-Western Province NEDI = 0.12%; national NEDI = 1.44%.
+    Excel: `Land_Account_Indices.xlsx`. [Excel]
+
+### ZMB.ecosystem — Ecosystem Extent and Services Accounts
+*(Source: `data/assessment/zmb/Accounts_Ecosystem/Final Ecosystem Account 26 December 2025.docx` — @zambia_ecosystem_account_2026)*
+
+68. **ZMB.ecosystem.1** — Carbon storage by ecosystem type and change, 2018–2023. Total 18,732,820
+    → 18,110,965 million Mg C; net loss 621,854 million Mg C; NPV loss USD 46M. Section 5.6.2. [PDF]
+
+### ZMB.wildlife — Protected Areas and Wildlife Accounts
+*(Source: `data/assessment/zmb/FINAL NCA Compendium for Zambia_26 December 2025.docx` — @zambia_nca_compendium_2026)*
+
+69. **ZMB.wildlife.1** — Figure 31: Bush meat revenue time series, 2018–2023. Revenue K45.8M
+    (US$3.85M) → K118.4M (US$4.60M) = +158.5%; volume 1,236.85 → 1,748.03 MT. [PDF]
+
+70. **ZMB.wildlife.2** — Fish production time series, 2018–2023. Production 125,300 → 178,452 MT
+    (+42.4%); aquaculture +112.2%; total value ZMW 8 billion (US$422.6M) in 2023. Chapter 5. [PDF]
+
+71. **ZMB.wildlife.3** — Figure 10: Non-wood forest product harvest quantities. Wild fruits
+    109,968 t; leaves 83,177 t; mushrooms 74,454 t; tubers 44,842 t; honey 2,097 t; nuts
+    1,477 t. [PDF]
+
+---
+
+*Notes:*
+- *Items flagged [map] should be cited by document location rather than reproduced, as no spatial
+  data files (GIS/shapefiles) are included in the dataset.*
+- *Items flagged [Excel] can be reproduced programmatically using the `readxl` package in R.*
+- *Items flagged [PDF] require manual extraction or digitization of table values.*
+- *No CSV files have been created in this session; data extraction for chart replication is
+  planned for a subsequent session.*
