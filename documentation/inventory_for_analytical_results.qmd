@@ -1,13 +1,22 @@
+---
+title: "Inventory for Analytical Results"
+author:
+  - name: "Renato Vargas"
+    id: rv
+    affiliation: 
+      - name: "Consultant for The World Bank"
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    # css: styles.css
+---
+
 # Inventory for Analytical Results
 
 This inventory catalogs extractable tables, figures, and charts from the source documents reviewed
-for each country. Items are numbered `country.account_type.item#`. Maps are referenced for context
-only (no GIS files available in the dataset). Items marked **[map]** should be cited from the
-document rather than reproduced. Items marked **[Excel]** are drawn from tabular data files and can
-be replicated programmatically. Items marked **[PDF]** are from printed reports and will require
-manual extraction or digitization.
+for each country. Items are numbered `country.account_type.item#`.
 
----
 
 ## DRC — Democratic Republic of Congo
 
@@ -355,12 +364,3 @@ manual extraction or digitization.
     109,968 t; leaves 83,177 t; mushrooms 74,454 t; tubers 44,842 t; honey 2,097 t; nuts
     1,477 t. [PDF]
 
----
-
-*Notes:*
-- *Items flagged [map] should be cited by document location rather than reproduced, as no spatial
-  data files (GIS/shapefiles) are included in the dataset.*
-- *Items flagged [Excel] can be reproduced programmatically using the `readxl` package in R.*
-- *Items flagged [PDF] require manual extraction or digitization of table values.*
-- *No CSV files have been created in this session; data extraction for chart replication is
-  planned for a subsequent session.*
