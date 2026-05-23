@@ -1,6 +1,6 @@
 # Formal comments received
 
-Comments:
+## General comments:
     1. Combine the two reports in one. Most things presented in Deliverable 2 were repeated from Deliverable 1.
 
     2. Outline: Follow this suggested outline:
@@ -15,8 +15,8 @@ Comments:
         6. Recommendations: Refine this section, assess how AI can help address some of the recommendations/constraints, and include the new deadline from the UN, as all countries will now need to comply with the SEEA.
         7. Annex 1. Country-Level Details: Follow the same order for each country and include the links to the public websites with the accounts for each country.
 
-Other comments:
-Diagnostic review 
+## Other comments: Diagnostic review 
+
 Pg.5 - Define regular basis… some of these have just started, so regular is annual, two years, etc.? Or is what is more relevant an institutional mechanism and BUDGET for replication?
 Pg. 6 – how is “demonstrate a sustained institutional programme” assessed?
 Figure on SEEA Implementation in AFE Region – clarify if this is from our data or UN data. Add source. Add numbers after 6, clarify what the numbers are after 6, and also clarify what it means to say compiling non SEEA?
@@ -40,7 +40,8 @@ Land – Kenya – is the finding showing where restoration would be most effect
 Interesting point on data and deviation that arises when using global data - Zambia’s ecosystem extent accounts use MODIS satellite data with classification boundaries that differ from national land cover data 
 Gap – yes, but the question is why – data, understanding of how to use this information, other? “Across the region, the most consistently missing services in monetary terms are pollination, which is absent everywhere, freshwater provisioning to households, which remains unpriced, flood damage avoided, which is proposed but not compiled, and the contribution of forests to agricultural production through rainfall maintenance and soil protection.”
 
-Analysis: 
+## Other Comments: Analysis document
+
 Story on fuel in Uganda - should look at whether the expected outcome by 2025 on tree cover actually happened.. and if not, see if it is due to the way the accounts were done or something else.
 
 DRC: “The forest asset value increased from USD 5.4 trillion (2000) to USD 10.3 trillion (2020) in total international asset value terms, but per capita forest wealth declined over the same period as population grew faster than sustainable forest income. Forest depletion increased 113 percent between 2010 and 2020, indicating that nominal asset growth masks accelerating unsustainable extraction” – interesting point but what should we focus on – nominal values of sustainability? Any suggestions based on trends?
