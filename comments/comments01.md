@@ -51,7 +51,7 @@ Interesting geographically explicit findings for Ethiopia – would be interesti
 
 # Additional comments expressed by staff verbally in Spanish (However, the work remains in English)
 
-(Note that these aim to clarify the ones above, sort of.)
+(Note that these aim to clarify the ones above, sort of, but the ones above are the non-negotiable ones that have to be addressed.)
 
 ## Yurani
 
