@@ -26,6 +26,8 @@ website:
                 href: documentation/01_diagnostic_review.qmd
               - text: "Analytical Results"
                 href: documentation/02_analytical_results.qmd
+              - text: "Combined Analysis"
+                href: documentation/03_combined_document.qmd
 
 format:
   html:

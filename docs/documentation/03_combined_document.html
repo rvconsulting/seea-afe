@@ -95,7 +95,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,7 +117,7 @@ div.csl-indent {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../documentation/index.html"> 
+    <a class="nav-link active" href="../documentation/index.html" aria-current="page"> 
 <span class="menu-text">Documentation</span></a>
   </li>  
   <li class="nav-item">
@@ -134,10 +134,56 @@ div.csl-indent {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/03_combined_document.html">Combined Analysis</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../documentation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/01_diagnostic_review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagnostic Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/02_analytical_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analytical Results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/03_combined_document.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Combined Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -149,10 +195,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#account-coverage" id="toc-account-coverage" class="nav-link" data-scroll-target="#account-coverage">Account Coverage</a></li>
   </ul></li>
-  <li><a href="#correlations-with-macroeconomic-indicators" id="toc-correlations-with-macroeconomic-indicators" class="nav-link" data-scroll-target="#correlations-with-macroeconomic-indicators">Correlations with Macroeconomic Indicators</a>
-  <ul class="collapse">
-  <li><a href="#biomass-energy-dependence-and-the-emissions-blind-spot" id="toc-biomass-energy-dependence-and-the-emissions-blind-spot" class="nav-link" data-scroll-target="#biomass-energy-dependence-and-the-emissions-blind-spot">Biomass Energy Dependence and the Emissions Blind Spot</a></li>
-  </ul></li>
+  <li><a href="#correlations-with-macroeconomic-indicators" id="toc-correlations-with-macroeconomic-indicators" class="nav-link" data-scroll-target="#correlations-with-macroeconomic-indicators">Correlations with Macroeconomic Indicators</a></li>
   <li><a href="#thematic-findings-by-account-type" id="toc-thematic-findings-by-account-type" class="nav-link" data-scroll-target="#thematic-findings-by-account-type">Thematic Findings by Account Type</a>
   <ul class="collapse">
   <li><a href="#water-accounts" id="toc-water-accounts" class="nav-link" data-scroll-target="#water-accounts">Water Accounts</a></li>
@@ -163,7 +206,6 @@ div.csl-indent {
   </ul></li>
   <li><a href="#applications-of-natural-capital-accounts" id="toc-applications-of-natural-capital-accounts" class="nav-link" data-scroll-target="#applications-of-natural-capital-accounts">Applications of Natural Capital Accounts</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#ethiopia-investment-prioritization-and-the-calm-program" id="toc-ethiopia-investment-prioritization-and-the-calm-program" class="nav-link" data-scroll-target="#ethiopia-investment-prioritization-and-the-calm-program">Ethiopia: Investment Prioritization and the CALM Program</a></li>
   <li><a href="#kenya-natural-capital-data-in-the-macro-fiscal-framework" id="toc-kenya-natural-capital-data-in-the-macro-fiscal-framework" class="nav-link" data-scroll-target="#kenya-natural-capital-data-in-the-macro-fiscal-framework">Kenya: Natural Capital Data in the Macro-Fiscal Framework</a></li>
   <li><a href="#rwanda-water-pricing-and-infrastructure-investment" id="toc-rwanda-water-pricing-and-infrastructure-investment" class="nav-link" data-scroll-target="#rwanda-water-pricing-and-infrastructure-investment">Rwanda: Water Pricing and Infrastructure Investment</a></li>
@@ -240,12 +282,12 @@ div.csl-indent {
   </ul></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="03_combined_document.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/03_combined_document.html">Combined Analysis</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Natural Capital Accounts (NCAs) in Eastern and Southern Africa</h1>
 <p class="subtitle lead">Diagnostic Review, Analytical Findings, and Policy Applications</p>
@@ -284,7 +326,7 @@ div.csl-indent {
 <p><strong>Implementation of NCA varies across the region.</strong> Of the 26 AFE countries assessed, 11 are implementing the SEEA. Four are at Stage III (i.e.&nbsp;they have sustained institutional programs for the continuous production of NCAs), four at Stage II (i.e.&nbsp;have produced at least one SEEA ecosystem or thematic account, in addition to at least one SEEA Central Framework account), and three at Stage I (i.e.&nbsp;have produced at least one SEEA Central Framework account). Three additional countries are compiling accounts outside the formal SEEA framework. South Africa and Uganda lead with six and five compiled accounts respectively. Physical water accounts are the most common entry point, compiled by six countries.</p>
 <p><strong>Across the nine reviewed countries, the accounts reveal a structurally coherent picture of natural capital stress.</strong> For example, Woody biomass supplies 78 to 94 percent of national energy in the DRC, Uganda, and Zambia, a share that is driving forest loss across all three. Uganda’s forest cover fell 60 percent between 1990 and 2015, while Zambia lost 1.9 million hectares of tree cover in just five years (2018–2023). Water productivity in agriculture is consistently the lowest of any sector. For instance, Rwanda’s agriculture achieves 118 Rwf per cubic metre against 6,236 Rwf/m³ for mining and Uganda’s agriculture earns UGX 1,458/m³ against UGX 364,299/m³ for services, which translate into those sectors being 52 and 250 times more productive than agriculture, respectively. Mauritius has lost two-thirds of treated potable water to distribution leaks before it reaches households.</p>
 <p><strong>This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.</strong> Forest cover change correlates positively with agricultural value added as a share of GDP, confirming that forest-to-cropland conversion tracks structural economic transformation but does not always improve food security per capita. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.</p>
-<p><strong>The accounts have been applied to real decisions in several countries.</strong> In Kenya, NCA data underpin the KENMod macro-fiscal model, which is now used by the National Treasury to simulate the fiscal impact of drought, flooding, and infrastructure damage and to compute adjusted net savings. The model’s Land Use and Natural Capital Module draws directly on ecosystem service data from the accounts and is cited in the 2026 Budget Policy Statement. In Ethiopia, BELA ecosystem service modeling, which is grounded in the same biophysical accounts reviewed here, identified priority investment watersheds for the World Bank’s CALM PforR programme (a US$900 million portfolio covering 8,000 community watersheds) and informed the Ethiopia Strategic Investment Framework for Sustainable Land Management. In Rwanda, the monetary water supply and use tables provided the quantitative case for water pricing reform. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected area expansion.</p>
+<p><strong>The accounts have been applied to real decisions in several countries.</strong> In Kenya, NCA data underpin the KENMod macro-fiscal model, which is now used by the National Treasury to simulate the fiscal impact of drought, flooding, and infrastructure damage and to compute adjusted net savings. The model’s Land Use and Natural Capital Module draws directly on ecosystem service data from the accounts and is cited in the 2026 Budget Policy Statement. In Ethiopia, BELA ecosystem service modeling, which is grounded in the same biophysical accounts reviewed here, identified priority investment watersheds for the World Bank’s CALM PforR program (a US$900 million portfolio covering 8,000 community watersheds) and informed the Ethiopia Strategic Investment Framework for Sustainable Land Management. In Rwanda, the monetary water supply and use tables provided the quantitative case for water pricing reform. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected area expansion.</p>
 <p><strong>Priority actions include completing monetary ecosystem service accounts in Ethiopia and Madagascar, expanding sub-national disaggregation for water and land accounts, institutionalizing compilation within national statistical plans, and developing cross-country harmonized accounts for shared river basins.</strong> The international statistical landscape now creates an urgency that was not present only a few years ago, because the 2025 System of National Accounts, adopted by the UN Statistical Commission, incorporates natural resource depletion as a cost of production and the split-asset approach—both directly aligned with SEEA Central Framework methodology. This means that countries implementing SNA 2025 will require SEEA-compatible data systems. Additionally, the SEEA is the methodological basis for headline indicators under the Kunming-Montreal Global Biodiversity Framework, with reporting targets due by 2030.</p>
 </section>
 <section id="implementation-and-status" class="level1">
@@ -299,23 +341,23 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
 </figcaption>
 <div aria-describedby="tbl-all-seea-accounts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="iylrcuoapd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iylrcuoapd table {
+<div id="vciunzzsrb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vciunzzsrb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iylrcuoapd thead, #iylrcuoapd tbody, #iylrcuoapd tfoot, #iylrcuoapd tr, #iylrcuoapd td, #iylrcuoapd th {
+#vciunzzsrb thead, #vciunzzsrb tbody, #vciunzzsrb tfoot, #vciunzzsrb tr, #vciunzzsrb td, #vciunzzsrb th {
   border-style: none;
 }
 
-#iylrcuoapd p {
+#vciunzzsrb p {
   margin: 0;
   padding: 0;
 }
 
-#iylrcuoapd .gt_table {
+#vciunzzsrb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -341,12 +383,12 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-left-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_caption {
+#vciunzzsrb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iylrcuoapd .gt_title {
+#vciunzzsrb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -358,7 +400,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-width: 0;
 }
 
-#iylrcuoapd .gt_subtitle {
+#vciunzzsrb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -370,7 +412,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-width: 0;
 }
 
-#iylrcuoapd .gt_heading {
+#vciunzzsrb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -382,13 +424,13 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_bottom_border {
+#vciunzzsrb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_col_headings {
+#vciunzzsrb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -403,7 +445,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_col_heading {
+#vciunzzsrb .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -423,7 +465,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#iylrcuoapd .gt_column_spanner_outer {
+#vciunzzsrb .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -435,15 +477,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 4px;
 }
 
-#iylrcuoapd .gt_column_spanner_outer:first-child {
+#vciunzzsrb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iylrcuoapd .gt_column_spanner_outer:last-child {
+#vciunzzsrb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iylrcuoapd .gt_column_spanner {
+#vciunzzsrb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -455,11 +497,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   width: 100%;
 }
 
-#iylrcuoapd .gt_spanner_row {
+#vciunzzsrb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iylrcuoapd .gt_group_heading {
+#vciunzzsrb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -485,7 +527,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   text-align: left;
 }
 
-#iylrcuoapd .gt_empty_group_heading {
+#vciunzzsrb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -500,15 +542,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: middle;
 }
 
-#iylrcuoapd .gt_from_md > :first-child {
+#vciunzzsrb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iylrcuoapd .gt_from_md > :last-child {
+#vciunzzsrb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iylrcuoapd .gt_row {
+#vciunzzsrb .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -527,7 +569,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#iylrcuoapd .gt_stub {
+#vciunzzsrb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -540,7 +582,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#iylrcuoapd .gt_stub_row_group {
+#vciunzzsrb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -554,15 +596,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: top;
 }
 
-#iylrcuoapd .gt_row_group_first td {
+#vciunzzsrb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iylrcuoapd .gt_row_group_first th {
+#vciunzzsrb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iylrcuoapd .gt_summary_row {
+#vciunzzsrb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -572,16 +614,16 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#iylrcuoapd .gt_first_summary_row {
+#vciunzzsrb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_first_summary_row.thick {
+#vciunzzsrb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iylrcuoapd .gt_last_summary_row {
+#vciunzzsrb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -591,7 +633,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_grand_summary_row {
+#vciunzzsrb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -601,7 +643,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#iylrcuoapd .gt_first_grand_summary_row {
+#vciunzzsrb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -611,7 +653,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_last_grand_summary_row_top {
+#vciunzzsrb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -621,11 +663,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_striped {
+#vciunzzsrb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iylrcuoapd .gt_table_body {
+#vciunzzsrb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -634,7 +676,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_footnotes {
+#vciunzzsrb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -648,7 +690,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_footnote {
+#vciunzzsrb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -657,7 +699,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#iylrcuoapd .gt_sourcenotes {
+#vciunzzsrb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -671,7 +713,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#iylrcuoapd .gt_sourcenote {
+#vciunzzsrb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -679,72 +721,72 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#iylrcuoapd .gt_left {
+#vciunzzsrb .gt_left {
   text-align: left;
 }
 
-#iylrcuoapd .gt_center {
+#vciunzzsrb .gt_center {
   text-align: center;
 }
 
-#iylrcuoapd .gt_right {
+#vciunzzsrb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iylrcuoapd .gt_font_normal {
+#vciunzzsrb .gt_font_normal {
   font-weight: normal;
 }
 
-#iylrcuoapd .gt_font_bold {
+#vciunzzsrb .gt_font_bold {
   font-weight: bold;
 }
 
-#iylrcuoapd .gt_font_italic {
+#vciunzzsrb .gt_font_italic {
   font-style: italic;
 }
 
-#iylrcuoapd .gt_super {
+#vciunzzsrb .gt_super {
   font-size: 65%;
 }
 
-#iylrcuoapd .gt_footnote_marks {
+#vciunzzsrb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iylrcuoapd .gt_asterisk {
+#vciunzzsrb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iylrcuoapd .gt_indent_1 {
+#vciunzzsrb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iylrcuoapd .gt_indent_2 {
+#vciunzzsrb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iylrcuoapd .gt_indent_3 {
+#vciunzzsrb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iylrcuoapd .gt_indent_4 {
+#vciunzzsrb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iylrcuoapd .gt_indent_5 {
+#vciunzzsrb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iylrcuoapd .katex-display {
+#vciunzzsrb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iylrcuoapd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vciunzzsrb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -917,7 +959,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
 <p>Within the structure of the UN’s assessment, 11 of the 26 AFE countries are actively implementing the SEEA <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span>. The remaining 15 have not yet begun. Among those implementing, countries are classified by their stage of progress under SDG indicator 15.9.1(b), <em>“Integration of biodiversity into national accounting and reporting systems, defined as implementation of the System of Environmental-Economic Accounting”</em>.</p>
 <p>The stages are defined as Stage I, which refers to countries that have compiled at least one SEEA CF account. Stage II includes countries that have additionally compiled at least one SEEA EA or Thematic account. Stage III countries demonstrate a sustained institutional program to produce NCA. In practice, a sustained program means that at least two account types are compiled under a formally established institutional mandate, with a dedicated budget line or inter-agency data-sharing agreement in place to ensure continuity across government cycles, rather than relying exclusively on project-by-project donor financing. The distinction matters because the analytical value of NCA data grows with temporal depth, because a single account produces a snapshot, while a maintained series produces the trends required by economic planning.</p>
 <p>Regular compilation and dissemination, referenced in Stage III criteria, means at minimum biennial production of accounts. More important than the frequency, however, is whether an institutional mechanism and a budget for replication are in place. Mauritius’s five-edition water account series and Uganda’s ten-iteration water account series both illustrate how a sustainable institutional arrangement, rather than technical sophistication, is what determines whether accounts persist.</p>
-<p>In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake remains modest, a meaningful cluster of countries has progressed beyond initial experimentation. <a href="#fig-stage" class="quarto-xref">Figure&nbsp;1</a> shows a summary of implementation in the region. Countries are sorted by number of compiled accounts, while non-implementing countries are shown in grey. Stage labels follow SDG indicator 15.9.1(b) definitions as reported in the UN Global Assessment of Environmental-Economic Accounting (2025). Additionally, Three additional countries, which include Rwanda, the Democratic Republic of Congo, and Madagascar, have accounts compiled through World Bank and international donor programs, and that means that they are not registered as formally implementing the SEEA in the UN classification. These are shown separately in <a href="#fig-stage" class="quarto-xref">Figure&nbsp;1</a> as “Compiled (donor program)” to distinguish them from countries with nationally institutionalized programmes. The accounts produced under these donor programs are substantive and are reviewed in this report. This means that the classification reflects their institutional status, not the quality or scope of the work.</p>
+<p>In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake remains modest, a meaningful cluster of countries has progressed beyond initial experimentation. <a href="#fig-stage" class="quarto-xref">Figure&nbsp;1</a> shows a summary of implementation in the region. Countries are sorted by number of compiled accounts, while non-implementing countries are shown in grey. Stage labels follow SDG indicator 15.9.1(b) definitions as reported in the UN Global Assessment of Environmental-Economic Accounting (2025). Additionally, Three additional countries, which include Rwanda, the Democratic Republic of Congo, and Madagascar, have accounts compiled through World Bank and international donor programs, and that means that they are not registered as formally implementing the SEEA in the UN classification. These are shown separately in <a href="#fig-stage" class="quarto-xref">Figure&nbsp;1</a> as “Compiled (donor program)” to distinguish them from countries with nationally institutionalized programs. The accounts produced under these donor programs are substantive and are reviewed in this report. This means that the classification reflects their institutional status, not the quality or scope of the work.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-stage" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A lollipop chart showing 26 AFE countries on the y-axis, ordered by number of compiled accounts. Points are colored by SEEA implementation stage. Kenya and South Africa lead with 10 and 7 accounts each.">
@@ -935,7 +977,7 @@ Figure&nbsp;1: AFE countries by SEEA implementation stage and number of compiled
 <p>The slow growth of formally registered implementation across the region reflects primarily resource and budget constraints, including the absence of dedicated funding lines within national statistical budgets and the limited technical staffing available for a task that requires sustained multi-agency coordination. It does not reflect a lack of country interest, because in the 2023 Global Assessment, 77 percent of non-implementing countries indicated plans to begin implementation. The count of accounts identified in this review also diverges from UN-reported figures in that Kenya and South Africa each have more accounts documented here than in official UN records, reflecting World Bank program work not yet captured in the UN’s institutional classification cycle.</p>
 <section id="account-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="account-coverage">Account Coverage</h2>
-<p><a href="#tbl-group-summary" class="quarto-xref">Table&nbsp;2</a> provides an aggregate view of account group coverage. Countries are ordered left to right by total number of compiled accounts; accounts within each group are ordered by frequency of compilation. Across all 14 implementing countries, the most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for water, compiled by 6 countries, followed by PSUTs for Energy and Ecosystem Extent Accounts, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region’s resource management priorities. Physical asset accounts for land follow, compiled by 4 countries. Beyond this initial tier, account compilation remains constrained by data availability and institutional capacity, due to the fact that monetary accounts require price data, sector-level consumption surveys, and inter-agency coordination. Ecosystem accounts appear in only 3 countries, and thematic accounts for forests and protected areas are at the same level. This pattern reflects capacity and resource limitations rather than absence of demand.</p>
+<p><a href="#tbl-group-summary" class="quarto-xref">Table&nbsp;2</a> provides an aggregate view of account group coverage. Countries are ordered left to right by total number of compiled accounts and accounts within each group are ordered by frequency of compilation. Across all 14 implementing countries, the most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for water, compiled by 6 countries, followed by PSUTs for Energy and Ecosystem Extent Accounts, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region’s resource management priorities. Physical asset accounts for land follow, compiled by 4 countries. Beyond this initial tier, account compilation remains constrained by data availability and institutional capacity, due to the fact that monetary accounts require price data, sector-level consumption surveys, and inter-agency coordination. Ecosystem accounts appear in only 3 countries, and thematic accounts for forests and protected areas are at the same level. This pattern reflects capacity and resource limitations rather than absence of demand.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-heatmap" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A tile heatmap with SEEA accounts on the y-axis grouped by account category and implementing countries on the x-axis. Filled tiles indicate a compiled account. Energy and water PSUTs have the most coverage.">
@@ -958,23 +1000,23 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
 </figcaption>
 <div aria-describedby="tbl-group-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="rlqxnntlca" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rlqxnntlca table {
+<div id="qkhhckdxbi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qkhhckdxbi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rlqxnntlca thead, #rlqxnntlca tbody, #rlqxnntlca tfoot, #rlqxnntlca tr, #rlqxnntlca td, #rlqxnntlca th {
+#qkhhckdxbi thead, #qkhhckdxbi tbody, #qkhhckdxbi tfoot, #qkhhckdxbi tr, #qkhhckdxbi td, #qkhhckdxbi th {
   border-style: none;
 }
 
-#rlqxnntlca p {
+#qkhhckdxbi p {
   margin: 0;
   padding: 0;
 }
 
-#rlqxnntlca .gt_table {
+#qkhhckdxbi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1000,12 +1042,12 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-left-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_caption {
+#qkhhckdxbi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rlqxnntlca .gt_title {
+#qkhhckdxbi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1017,7 +1059,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-width: 0;
 }
 
-#rlqxnntlca .gt_subtitle {
+#qkhhckdxbi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1029,7 +1071,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-top-width: 0;
 }
 
-#rlqxnntlca .gt_heading {
+#qkhhckdxbi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1041,13 +1083,13 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_bottom_border {
+#qkhhckdxbi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_col_headings {
+#qkhhckdxbi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1062,7 +1104,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_col_heading {
+#qkhhckdxbi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1082,7 +1124,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   overflow-x: hidden;
 }
 
-#rlqxnntlca .gt_column_spanner_outer {
+#qkhhckdxbi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1094,15 +1136,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 4px;
 }
 
-#rlqxnntlca .gt_column_spanner_outer:first-child {
+#qkhhckdxbi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rlqxnntlca .gt_column_spanner_outer:last-child {
+#qkhhckdxbi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rlqxnntlca .gt_column_spanner {
+#qkhhckdxbi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1114,11 +1156,11 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   width: 100%;
 }
 
-#rlqxnntlca .gt_spanner_row {
+#qkhhckdxbi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rlqxnntlca .gt_group_heading {
+#qkhhckdxbi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1144,7 +1186,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   text-align: left;
 }
 
-#rlqxnntlca .gt_empty_group_heading {
+#qkhhckdxbi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1159,15 +1201,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   vertical-align: middle;
 }
 
-#rlqxnntlca .gt_from_md > :first-child {
+#qkhhckdxbi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rlqxnntlca .gt_from_md > :last-child {
+#qkhhckdxbi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rlqxnntlca .gt_row {
+#qkhhckdxbi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1186,7 +1228,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   overflow-x: hidden;
 }
 
-#rlqxnntlca .gt_stub {
+#qkhhckdxbi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1199,7 +1241,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#rlqxnntlca .gt_stub_row_group {
+#qkhhckdxbi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1213,15 +1255,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   vertical-align: top;
 }
 
-#rlqxnntlca .gt_row_group_first td {
+#qkhhckdxbi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rlqxnntlca .gt_row_group_first th {
+#qkhhckdxbi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rlqxnntlca .gt_summary_row {
+#qkhhckdxbi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1231,16 +1273,16 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#rlqxnntlca .gt_first_summary_row {
+#qkhhckdxbi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_first_summary_row.thick {
+#qkhhckdxbi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rlqxnntlca .gt_last_summary_row {
+#qkhhckdxbi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1250,7 +1292,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_grand_summary_row {
+#qkhhckdxbi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1260,7 +1302,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#rlqxnntlca .gt_first_grand_summary_row {
+#qkhhckdxbi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1270,7 +1312,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-top-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_last_grand_summary_row_top {
+#qkhhckdxbi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1280,11 +1322,11 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_striped {
+#qkhhckdxbi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rlqxnntlca .gt_table_body {
+#qkhhckdxbi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1293,7 +1335,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_footnotes {
+#qkhhckdxbi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1307,7 +1349,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_footnote {
+#qkhhckdxbi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1316,7 +1358,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#rlqxnntlca .gt_sourcenotes {
+#qkhhckdxbi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1330,7 +1372,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#rlqxnntlca .gt_sourcenote {
+#qkhhckdxbi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1338,72 +1380,72 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#rlqxnntlca .gt_left {
+#qkhhckdxbi .gt_left {
   text-align: left;
 }
 
-#rlqxnntlca .gt_center {
+#qkhhckdxbi .gt_center {
   text-align: center;
 }
 
-#rlqxnntlca .gt_right {
+#qkhhckdxbi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rlqxnntlca .gt_font_normal {
+#qkhhckdxbi .gt_font_normal {
   font-weight: normal;
 }
 
-#rlqxnntlca .gt_font_bold {
+#qkhhckdxbi .gt_font_bold {
   font-weight: bold;
 }
 
-#rlqxnntlca .gt_font_italic {
+#qkhhckdxbi .gt_font_italic {
   font-style: italic;
 }
 
-#rlqxnntlca .gt_super {
+#qkhhckdxbi .gt_super {
   font-size: 65%;
 }
 
-#rlqxnntlca .gt_footnote_marks {
+#qkhhckdxbi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rlqxnntlca .gt_asterisk {
+#qkhhckdxbi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rlqxnntlca .gt_indent_1 {
+#qkhhckdxbi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rlqxnntlca .gt_indent_2 {
+#qkhhckdxbi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rlqxnntlca .gt_indent_3 {
+#qkhhckdxbi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rlqxnntlca .gt_indent_4 {
+#qkhhckdxbi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rlqxnntlca .gt_indent_5 {
+#qkhhckdxbi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rlqxnntlca .katex-display {
+#qkhhckdxbi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rlqxnntlca div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qkhhckdxbi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1449,8 +1491,8 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
 </section>
 <section id="correlations-with-macroeconomic-indicators" class="level1">
 <h1>Correlations with Macroeconomic Indicators</h1>
-<p>The analytical value of natural capital accounts increases substantially when account-derived indicators are placed alongside macroeconomic benchmarks. The three comparisons in this section pair NCA-derived indicators, which are drawn from compiled water, forest, and energy accounts, with other macro level indicators to provide that additional context. In each figure, the NCA indicator is the primary variable, while GDP, agricultural value added, and CO₂ emissions per capita serve as the economic reference against which account findings are interpreted. All indicator data use the most recent available observation per country for the period covered by NCA and account reference periods vary by country and are noted in each figure caption.</p>
-<p><a href="#fig-water-gdp" class="quarto-xref">Figure&nbsp;3</a> shows Water Productivity and Economic Development. That is, how many times more economic value per m³ each non-agriculture sector generates compared to agriculture, for three AFE countries with compiled water accounts. Agriculture is equivalent to the reference line (or 1x) in each country. Rwanda and Uganda values are derived from monetary water supply and use tables (national currency per m³, indexed) and Mauritius values are derived from WDI sector GVA divided by sector water use volumes in the Physical Water Account 2021–2022 (Statistics Mauritius, 5th edition, December 2024). For context, agriculture GDP share is shown in parentheses (from World Development Indicators). Sources: Rwanda monetary water accounts <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>; Uganda water accounts <span class="citation" data-cites="ubos_uganda_water_2025">(<a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">Uganda Bureau of Statistics, 2025</a>)</span>; Mauritius Physical Water Account <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>; WDI (2026).</p>
+<p>The analytical value of natural capital accounts increases substantially when account-derived indicators are placed alongside macroeconomic benchmarks. The three comparisons in this section pair indicators from compiled water, forest, and energy accounts, with other macro level indicators to provide additional context. In each figure, the NCA indicator is the primary variable, while GDP, agricultural value added, and CO₂ emissions per capita serve as the economic reference against which account findings are interpreted. All indicator data use the most recent available observation per country for the period covered by NCA and account reference periods vary by country and are noted as such.</p>
+<p><a href="#fig-water-gdp" class="quarto-xref">Figure&nbsp;3</a> shows Water Productivity and Sectoral Economic Performance. That is, how many times more economic value per m³ each non-agriculture sector generates compared to agriculture, for three AFE countries with compiled water accounts. Agriculture is equivalent to the reference line (or 1x) in each country. Rwanda and Uganda values are derived from monetary water supply and use tables (local currency per m³, indexed) and Mauritius values are derived from WDI sector GVA divided by sector water use volumes in the Physical Water Account 2021–2022 (Statistics Mauritius, 5th edition, December 2024). For context, agriculture GDP share is shown in parentheses from World Development Indicators (WDI) alongside Rwanda monetary water accounts data <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>; Uganda water accounts data <span class="citation" data-cites="ubos_uganda_water_2025">(<a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">Uganda Bureau of Statistics, 2025</a>)</span>; and Mauritius Physical Water Account <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-water-gdp" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1465,9 +1507,9 @@ Figure&nbsp;3: Water Productivity and Economic Development
 </div>
 </div>
 </div>
-<p>Water supply and use tables from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value, which GDP statistics alone cannot reveal. The gaps are significant. In Uganda, the services sector generates 250 times more economic value per cubic metre than agriculture, while in Mauritius, manufacturing and services generate 214 times more. Similarly, in Rwanda, services generate 89 times more and mining 53 times more than agriculture.</p>
-<p>The pattern holds across countries at very different income levels and with different accounting methodologies. Rwanda and Uganda values come from compiled monetary water supply and use tables in national currency; Mauritius values are derived from WDI sector gross value added divided by physical water volumes recorded in the 2021–2022 Water Account (Statistics Mauritius, 5th edition, 2024). Despite these methodological differences, all three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This policy signal is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs and it is only observable through water accounts.</p>
-<p>Placing forest cover change from the accounts against agricultural value added from WDI shows that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. <a href="#fig-forest-agr" class="quarto-xref">Figure&nbsp;4</a> shows net forest cover change derived from national SEEA accounts against agricultural value added as a percentage of GDP (X-axis, WDI, latest year) for six reviewed countries with compiled forest or ecosystem extent accounts. Point size reflects rural population as a percentage of total population (WDI, latest year). Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020. Sources: National forest and ecosystem extent accounts; WDI NV.AGR.TOTL.ZS and SP.RUR.TOTL.ZS.</p>
+<p>Water supply and use tables from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value. The gaps are significant. In Uganda, the services sector generates 250 times more economic value per cubic metre than agriculture, while in Mauritius, manufacturing and services generate 214 times more. Similarly, in Rwanda, services generate 89 times more and mining 53 times more than agriculture.</p>
+<p>The pattern holds across countries at very different income levels and with different accounting methodologies. All three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This finding is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs, which is an insight that is only observable through water accounts.</p>
+<p>Comparing forest cover change from the accounts against agricultural value added from WDI shows that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. <a href="#fig-forest-agr" class="quarto-xref">Figure&nbsp;4</a> shows net forest cover change derived from national SEEA accounts plotted against agricultural value added as a percentage of GDP for the six reviewed countries with compiled forest or ecosystem extent accounts. Point size reflects rural population as a percentage of total population. Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-forest-agr" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1482,113 +1524,108 @@ Figure&nbsp;4: Forest Cover Change and Agricultural Transformation
 </div>
 </div>
 </div>
-<p>Uganda (agriculture 24% of GDP) and Rwanda (27%) each document approximately 60 percent net forest cover decline over their account periods, driven by smallholder cropland expansion. The DRC, with the lowest agricultural GDP share at 10 percent, still shows a 6.6 percent forest decline—reflecting artisanal fuelwood extraction rather than formal cropland conversion. Zambia presents a notable exception: agriculture accounts for only 2.2 percent of GDP, yet 59 percent of its population is rural and it lost 1.88 million hectares of tree cover in five years (2018–2023) through woodland-to-rangeland degradation. South Africa, with a low agricultural share and low rural population, shows near-zero forest change. The critical observation is that the Y-axis in this figure—net forest cover change over the account period—is entirely invisible in WDI data. The WDI forest area indicator provides an annual static snapshot; only compiled SEEA accounts provide the change rates and driving factors that make this comparison possible.</p>
-<section id="biomass-energy-dependence-and-the-emissions-blind-spot" class="level2">
-<h2 class="anchored" data-anchor-id="biomass-energy-dependence-and-the-emissions-blind-spot">Biomass Energy Dependence and the Emissions Blind Spot</h2>
+<p>Uganda (where agriculture represents 24% of GDP) and Rwanda (where it represents 27%) each show approximately 60 percent net forest cover decline over their account periods, driven by smallholder cropland expansion. The DRC, with the lowest agricultural GDP share at 10 percent, still shows a 6.6 percent forest decline, which reflects artisanal fuelwood extraction rather than formal cropland conversion. Zambia presents a notable exception, in which agriculture accounts for only 2.2 percent of GDP, but at the same time 59 percent of its population is rural. It lost 1.88 million hectares of tree cover in five years (2018–2023) through woodland-to-rangeland degradation. South Africa, with a low agricultural share and low rural population, shows near-zero forest change. The critical observation is that net forest cover change over the account period is traditionally invisible in macroeconomic data. While there is a forest area indicator in WDI, it only provides an annual static snapshot. SEEA accounts provide change rates and driving factors that make this comparison possible.</p>
+<p>Regarding energy dependence, <a href="#fig-land-rural" class="quarto-xref">Figure&nbsp;5</a> shows the biomass share of national energy supply derived from compiled NCA energy accounts, compared against CO₂ emissions per capita, excluding LULUCF (WDI AR5 methodology, latest year) for six AFE countries with energy account data. Point size reflects GDP per capita (in current USD) from WDI. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics, which is an apparent paradox that natural capital accounts resolve by documenting accelerating forest depletion from fuelwood harvesting <span class="citation" data-cites="worldbank_drc_forest_2025 ubos_uganda_forest_2020 zambia_nca_compendium_2026 statssa_energy_2025">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>; <a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>; <a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-land-rural" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-land-rural" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-land-rural-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03_combined_document_files/figure-html/fig-land-rural-1.png" class="img-fluid figure-img" width="672">
+<img src="03_combined_document_files/figure-html/fig-land-rural-1.png" id="fig-land-rural" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-land-rural-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA energy accounts (Y-axis) vs.&nbsp;CO₂ emissions per capita excluding LULUCF (X-axis, WDI EN.GHG.CO2.PC.CE.AR5, AR5 methodology, latest year) for six AFE countries with energy account data. Point size reflects GDP per capita (WDI, current USD). Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics—an apparent paradox that accounts resolve by documenting accelerating forest depletion from fuelwood harvesting. Sources: National energy accounts <span class="citation" data-cites="worldbank_drc_forest_2025 ubos_uganda_forest_2020 zambia_nca_compendium_2026 statssa_energy_2025">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>; <a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>; <a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>; emissions and income data: WDI.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-land-rural-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The accounts reveal a systematic paradox that WDI emissions statistics cannot: the countries most dependent on biomass for energy—DRC (94%), Ethiopia (90%), Uganda and Zambia (78%)—appear among the least carbon-intensive by conventional WDI CO₂ statistics. From a standard emissions perspective, they look clean. From the energy accounts, they are depleting their forests. Uganda’s forest supply deficit reached 35 million tonnes by 2015 and is projected at 105 million tonnes by 2040 <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>; the DRC’s fuelwood harvesting from forest-farm mosaics grew 709 percent between 2000 and 2020 <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. South Africa and Mauritius show the opposite: high CO₂ per capita driven by coal and fossil fuels, low biomass dependency. This is the analytical story that only NCA data can tell: a country burning coal (high WDI CO₂) and a country burning forests (low WDI CO₂, high ecological cost) look completely different in the accounts but similarly misleading in GDP statistics alone. For the ASCENT clean energy program, this establishes that energy transition investments in biomass-dependent economies deliver a triple dividend—improved energy access, reduced forest depletion, and legitimate carbon reduction—a case that accounts, and only accounts, can quantify at country level.</p>
-</section>
+<p>Countries most dependent on biomass for energy, like the DRC (94%), Ethiopia (90%), Uganda and Zambia (78%), appear among the least carbon-intensive by conventional CO₂ statistics. From a standard emissions perspective, they look clean. From the energy accounts perspective, they show forest biomass depletion. Uganda’s forest supply deficit reached 35 million tonnes by 2015 and is projected at 105 million tonnes by 2040 <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. The DRC’s fuelwood harvesting from forest-farm mosaics grew 709 percent between 2000 and 2020 <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Conversely, South Africa and Mauritius show high CO₂ per capita driven by coal and fossil fuels and low biomass dependency. NCA shows that a country burning fossil fuels instead of depending on biomass (with high CO₂) and a country depleting forests for energy (low CO₂, but high ecological cost) look completely different in the accounts but similarly misleading in GDP statistics alone. For the ASCENT clean energy program, this establishes that energy transition investments in biomass-dependent economies deliver a triple dividends that include improved energy access, reduced forest depletion, and legitimate carbon reduction.</p>
 </section>
 <section id="thematic-findings-by-account-type" class="level1">
 <h1>Thematic Findings by Account Type</h1>
-<p>This section synthesizes findings across the nine reviewed countries, organized by account type (water, energy, land, ecosystem and forests). Within each type, countries are presented in alphabetical order. This section draws on the full text of published account reports, supplemented by the inventory of extractable tables and figures catalogued in the companion inventory document.</p>
+<p>This section synthesizes findings across the nine reviewed countries, organized by account type (water, energy, land, ecosystem and forests). Within each type, countries are presented in alphabetical order. This section draws on the full text of published account reports.</p>
 <section id="water-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="water-accounts">Water Accounts</h2>
-<p>Water accounts are the most widely compiled component of SEEA implementation in the AFE region and the most directly actionable for policy. Six countries have compiled physical supply and use tables for water, and Rwanda has produced monetary supply and use tables—the only such account in Africa—linking water flows to GDP through sector-level water productivity estimates.</p>
-<p><strong>Democratic Republic of Congo.</strong> No dedicated water accounts have been compiled for the DRC. The forest ecosystem accounts document that fuelwood dependency is a driver of the water-energy nexus, but direct water sector accounts remain a gap. The DRC is the second-largest country in Sub-Saharan Africa by freshwater endowment; its absence from regional water accounting is itself a data gap of significance.</p>
+<p>Water accounts are the most widely compiled component of SEEA implementation in the AFE region and the most directly actionable for policy. Six countries have compiled physical supply and use tables for water, and Rwanda has produced monetary supply and use tables, linking water flows to GDP through sector-level water productivity estimates.</p>
+<p><strong>Democratic Republic of Congo.</strong> No dedicated water accounts have been compiled for the DRC. The forest ecosystem accounts document that fuelwood dependency is a driver of the water scarcity and energy link, but direct water sector accounts remain a gap. The DRC is the second-largest country in Sub-Saharan Africa by freshwater endowment; its absence from regional water accounting is itself a data gap of significance.</p>
 <p><strong>Ethiopia.</strong> Ethiopia’s ecosystem services accounts provide physical evidence on hydrological services that water accounts would formalize. National water yield reached 347 billion m³ in 2022 (+0.9 percent since 2013), but dry-season baseflow fell 1.3 percent and flood mitigation capacity fell 2.7 percent, indicating that while total water volume was maintained, the natural buffering capacity of Ethiopia’s landscapes is weakening <span class="citation" data-cites="rutebuka_ethiopia_2025">(<a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. Southwest Ethiopia (5,039 m³/ha) and Benishangul-Gumuz (3,527 m³/ha) stand out as disproportionate contributors to dry-season water flows and represent high-priority zones for watershed investment. Addis Ababa records a negative flood mitigation value of −2,691 m³/ha because impervious urban surfaces amplify rather than attenuate peak flows.</p>
-<p><strong>Kenya.</strong> Kenya’s water accounts reveal that per capita water availability varies by a factor of eleven across basins, from 8 m³ per person per year in Lake Victoria South to 91 m³ in the Tana basin, against a national average of 26.6 m³ <span class="citation" data-cites="worldbank_kenya_water_energy_2025">(<a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. The Rift Valley shows groundwater abstraction exceeding 100 percent of sustainable yield—a direct policy signal for managed recharge or demand reduction. Electricity generation is the single largest sectoral water user, making the water-energy nexus a direct planning concern. Basin-level water accounts provide the baseline for linking ecosystem condition (sediment loads, dry-season flow) to the economic costs of infrastructure degradation: the Tana Basin’s Seven Forks hydropower cascade shows average reservoir sedimentation of approximately 1.45 percent per year. The sediment retention service protecting this infrastructure was valued at KSh 23,912 million per year in 2018 <span class="citation" data-cites="turpie_kenya_ecosystem_2025">(<a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>)</span>. Non-revenue water declined modestly over the accounting period. The accounts include an initial step toward water quality accounts, documenting nutrient pollution, low dissolved oxygen, and high fluoride concentrations across basins, and proposing a SEEA water quality account structure for future compilation. [inventory item: KEN.water.1 about here] [inventory item: KEN.water.2 about here]</p>
+<p><strong>Kenya.</strong> Kenya’s water accounts reveal that per capita water availability varies by a factor of eleven across basins, from 8 m³ per person per year in Lake Victoria South to 91 m³ in the Tana basin, against a national average of 26.6 m³ <span class="citation" data-cites="worldbank_kenya_water_energy_2025">(<a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. The Rift Valley shows groundwater abstraction exceeding 100 percent of sustainable yield, which hints at the need for managed recharge or demand reduction. Electricity generation is the single largest sectoral water user, making the water-energy nexus a direct planning concern. Basin-level water accounts provide the baseline for linking ecosystem condition (sediment loads, dry-season flow) to the economic costs of infrastructure degradation. For example, the Tana Basin’s Seven Forks hydropower cascade shows average reservoir sedimentation of approximately 1.45 percent per year. The sediment retention service protecting this infrastructure was valued at KSh 23,912 million per year in 2018 <span class="citation" data-cites="turpie_kenya_ecosystem_2025">(<a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>)</span>. Non-revenue water declined modestly over the accounting period. The accounts include an initial step toward water quality accounts, documenting nutrient pollution, low dissolved oxygen, and high fluoride concentrations across basins, and proposing a SEEA water quality account structure for future compilation. [inventory item: KEN.water.1 about here] [inventory item: KEN.water.2 about here]</p>
 <p><strong>Madagascar.</strong> Madagascar has no water supply and use tables, but the ecosystem accounts document that the three main hydropower plants serving Antananarivo’s interconnected grid lose approximately 19 percent of generation capacity to watershed degradation <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. Total annual sediment exported to waterways was 27.2 million tonnes per year under the 2020 baseline, with top-priority NBS investment zones contributing 9.7 million tonnes per year. These physical flows provide the foundation for a water account structure that would quantify the economic case for catchment investment.</p>
-<p><strong>Mauritius.</strong> Mauritius maintains the most institutionalized water accounting programme in the region—its fifth consecutive edition. Total freshwater abstraction is 22 percent of total renewable water resources, below the 25 percent stress threshold, but agriculture accounts for 89.1 percent of net water consumption and the trend is worsening <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>. The most policy-significant finding is the rate of unaccounted-for water (UFW) in the Central Water Authority (CWA) network: 64.6 percent in 2022, up from 56.4 percent in 2013. Nearly two-thirds of all treated potable water abstracted by the utility is lost before reaching end users. The reason is deteriorating distribution infrastructure: households received only 197 litres per capita per day in 2022 despite 99.8 percent access to safely managed drinking water services, because the abstraction-to-delivery gap of 719 L/day vs 197 L/day is almost entirely explained by pipe network losses. A monetary water account that quantified the treatment cost, pumping energy, and foregone revenue of UFW would provide a direct economic argument for infrastructure investment. [inventory item: MUS.water.3 about here]</p>
-<p><strong>Rwanda.</strong> Rwanda’s monetary water supply and use tables are one of only two such accounts in Africa and provide the most direct link between water use and economic productivity available in the region <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>. Agriculture consumes over 96 percent of freshwater abstraction but achieves water productivity of only 118 Rwf/m³, against 523 Rwf/m³ for manufacturing, 6,236 Rwf/m³ for mining, and 9,300–11,600 Rwf/m³ for services. Rwanda’s GDP grew 25 percent between 2012 and 2015 while total water use grew only 10 percent—a relative decoupling signal that is invisible in standard national accounts. This productivity ratio data, comparable with Uganda’s accounts (see below), provides the quantified basis for water pricing reform, investment in irrigated agriculture, and the case for water allocation governance. WASAC’s non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Reservoir sedimentation grew 123 percent between 1990 and 2015, with 39 percent growth in just 2010–2015, directly linking catchment ecosystem degradation to infrastructure maintenance costs. [inventory item: RWA.water.1 about here] [inventory item: RWA.water.2 about here]</p>
-<p><strong>South Africa.</strong> South Africa’s water accounts focus on Strategic Water Source Areas (SWSAs)—the mountain and highland catchments that cover only 8.2 percent of national land but supply approximately two-thirds of national economic activity and more than 90 percent of urban water users <span class="citation" data-cites="statssa_water_swsa_2023">(<a href="#ref-statssa_water_swsa_2023" role="doc-biblioref">Statistics South Africa, 2023</a>)</span>. This finding exemplifies how the management of water resources is not uniform across the country but determined by the specific watersheds where economic activity is concentrated. Three SWSAs have already fallen below the 60 percent natural land cover threshold considered necessary for functional water production: Upper Usutu (40.9 percent natural), Table Mountain (50.4 percent), and Mpumalanga Drakensberg (51.3 percent). These catchments regulate water for Gauteng, South Africa’s economic core. The accounts document that commercially irrigated pivots expanded 221 percent nationally between 1990 and 2014, with the largest expansion in the water-scarce Free State (+489.7 percent), creating acute demand growth in the catchments least able to absorb it. [inventory item: ZAF.water.1 about here] [inventory item: ZAF.water.3 about here]</p>
-<p><strong>Uganda.</strong> Uganda’s water accounts confirm that national water productivity reached UGX 5,557 per m³ consumed in 2024—84 percent above the 2015 baseline—but that agriculture (UGX 1,458/m³) remains more than 250 times less productive per cubic metre than the services sector (UGX 364,299/m³) <span class="citation" data-cites="ubos_uganda_water_2025">(<a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">Uganda Bureau of Statistics, 2025</a>)</span>. This gap does not argue against agricultural water use; it provides the quantified basis for designing water allocation reforms and pricing policy. Rainfed agriculture accounts for 56 percent of total abstraction, while irrigated land represents only 0.5 percent of agronomic potential—one of the lowest irrigation uptake rates regionally. An emerging pressure point is crude oil and mining abstraction, which grew 113.9 percent year-on-year in 2024 (from 164,676 to 352,188 thousand m³), evidencing the emerging water demands of Uganda’s oil development program. Distribution losses in the supply network are 34.8 percent, and per-household daily consumption of 27 litres is well below the 50-litre basic-needs benchmark. [inventory item: UGA.water.3 about here]</p>
+<p><strong>Mauritius.</strong> Mauritius total freshwater abstraction is 22 percent of total renewable water resources, below the 25 percent stress threshold, but agriculture accounts for 89.1 percent of net water consumption and the trend is worsening <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>. The most policy-significant finding is the rate of unaccounted-for water (UFW) in the Central Water Authority (CWA) network: 64.6 percent in 2022, up from 56.4 percent in 2013. Nearly two-thirds of all treated potable water abstracted by the utility is lost before reaching end users. The reason is deteriorating distribution infrastructure, resulting in households receiving only 197 litres per capita per day in 2022 despite 99.8 percent access to safely managed drinking water services, because the abstraction-to-delivery gap of 719 L/day vs 197 L/day is almost entirely explained by pipe network losses. A monetary water account that quantified the treatment cost, pumping energy, and foregone revenue of UFW would provide a direct economic argument for infrastructure investment. [inventory item: MUS.water.3 about here]</p>
+<p><strong>Rwanda.</strong> Rwanda’s monetary water supply and use tables are one of only two such accounts in Africa and provide the most direct link between water use and economic productivity available in the region <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>. Agriculture consumes over 96 percent of freshwater abstraction but achieves water productivity of only 118 Rwf/m³, against 523 Rwf/m³ for manufacturing, 6,236 Rwf/m³ for mining, and 9,300–11,600 Rwf/m³ for services. Rwanda’s GDP grew 25 percent between 2012 and 2015 while total water use grew only 10 percent. This productivity ratio data, comparable with Uganda’s accounts (see below), provides the quantified basis for water pricing reform, investment in irrigated agriculture, and the case for water allocation governance. WASAC’s non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Reservoir sedimentation grew 123 percent between 1990 and 2015, with 39 percent growth in just 2010–2015, directly linking catchment ecosystem degradation to infrastructure maintenance costs. [inventory item: RWA.water.1 about here] [inventory item: RWA.water.2 about here]</p>
+<p><strong>South Africa.</strong> South Africa’s water accounts focus on Strategic Water Source Areas (SWSAs), which are the mountain and highland catchments that cover only 8.2 percent of national land but supply approximately two-thirds of national economic activity and more than 90 percent of urban water users <span class="citation" data-cites="statssa_water_swsa_2023">(<a href="#ref-statssa_water_swsa_2023" role="doc-biblioref">Statistics South Africa, 2023</a>)</span>. This finding exemplifies how the management of water resources is not uniform across the country but determined by the specific watersheds where economic activity is concentrated. Three SWSAs have already fallen below the 60 percent natural land cover threshold considered necessary for functional water production. These catchments include Upper Usutu (40.9 percent natural), Table Mountain (50.4 percent), and Mpumalanga Drakensberg (51.3 percent) and regulate water for Gauteng, South Africa’s economic core. The accounts document that commercially irrigated pivots expanded 221 percent nationally between 1990 and 2014, with the largest expansion in the water-scarce Free State (+489.7 percent), creating acute demand growth in the catchments least able to absorb it. [inventory item: ZAF.water.1 about here] [inventory item: ZAF.water.3 about here]</p>
+<p><strong>Uganda.</strong> Uganda’s water accounts confirm that national water productivity reached UGX 5,557 per m³ consumed in 2024; for an 84 percent increase above the 2015 baseline; but that agriculture (UGX 1,458/m³) remains more than 250 times less productive per cubic metre than the services sector (UGX 364,299/m³) <span class="citation" data-cites="ubos_uganda_water_2025">(<a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">Uganda Bureau of Statistics, 2025</a>)</span>. This gap does not argue against agricultural water use; it provides the quantified basis for designing water allocation reforms and pricing policy. Rainfed agriculture accounts for 56 percent of total abstraction, while irrigated land represents only 0.5 percent of agronomic potential, which is one of the lowest irrigation uptake rates regionally. An emerging pressure point is crude oil and mining abstraction, which grew 113.9 percent year-on-year in 2024 (from 164,676 to 352,188 thousand m³), evidencing the emerging water demands of Uganda’s oil development program. Distribution losses in the supply network are 34.8 percent, and per-household daily consumption of 27 litres is well below the 50-litre basic-needs benchmark. [inventory item: UGA.water.3 about here]</p>
 <p><strong>Zambia.</strong> Zambia’s water accounts situate water not only as a production input but as a source of macroeconomic vulnerability <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. Hydropower at Lake Kariba, Kafue Gorge, and Itezhi-Tezhi underpins national electricity supply, while agriculture is the largest consumptive user. Lake Kariba fell below 15 percent of capacity in both 2016 and 2024, triggering nationwide load-shedding, while the 2023/24 El Niño drought simultaneously destroyed the maize harvest and crippled hydropower generation. Bangweulu wetlands alone generate an estimated USD 11.7 million per year in ecosystem services and support approximately 490 freshwater fish species including 138 endemics in Lake Tanganyika. The accounts acknowledge that a fully SEEA-Water-compliant national account has not yet been institutionalized, with monitoring networks remaining sparse and groundwater abstraction largely unmetered.</p>
 </section>
 <section id="energy-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="energy-accounts">Energy Accounts</h2>
-<p>Energy accounts remain the least compiled component in the AFE review, but where they exist they reveal a structural tension between physical and monetary energy realities that is directly relevant to the energy transition.</p>
-<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts establish that 94 percent of the country’s total energy supply comes from forest biomass <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Fuelwood harvesting from forest-farm mosaics increased 709 percent between 2000 and 2020 as the agricultural frontier expanded. Only approximately 10 percent of the population has reliable electricity access. For the ASCENT program, this creates a dual entry point: clean cooking programs can simultaneously address household energy access and reduce a primary driver of forest degradation. Carbon finance mechanisms under Article 6 of the Paris Agreement represent an additional revenue stream, given that DRC forests store approximately 204,000 million tonnes of CO₂ equivalent.</p>
+<p>Energy accounts remain the least compiled component in this review, but where they exist they reveal a structural tension between physical and monetary energy realities that is directly relevant to the energy transition.</p>
+<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts establish that 94 percent of the country’s total energy supply comes from forest biomass <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Fuelwood harvesting from forest-farm mosaics increased 709 percent between 2000 and 2020 as the agricultural frontier expanded. Only approximately 10 percent of the population has reliable electricity access. For the ASCENT program, this creates a dual entry point in which clean cooking programs can simultaneously address household energy access and reduce a primary driver of forest degradation. Carbon finance mechanisms under Article 6 of the Paris Agreement represent an additional revenue stream, given that DRC forests store approximately 204,000 million tonnes of CO₂ equivalent.</p>
 <p><strong>Ethiopia.</strong> Ethiopia does not yet have compiled energy supply and use tables. The ecosystem accounts document that over 90 percent of Ethiopian households rely on wood as their primary energy source, representing a large but unmeasured contribution to household energy demand <span class="citation" data-cites="rutebuka_ethiopia_2025">(<a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. A future energy supply and use table would provide the physical baseline needed to design ASCENT interventions and monitor their impact on biomass demand. Ethiopia’s participation in carbon markets under Article 6, explicitly noted in the land accounts, could generate revenue to offset the cost of energy transition programs.</p>
-<p><strong>Kenya.</strong> Kenya’s monetary energy supply and use table (MSUT)—the first in the AFE region—provides a model for the kind of account most directly relevant to ASCENT planning <span class="citation" data-cites="worldbank_kenya_water_energy_2025 knbs_energy_2026">(<a href="#ref-knbs_energy_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026a</a>; <a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. The physical accounts confirm heavy reliance on renewable sources for grid electricity (geothermal 19,984 TJ, hydropower 13,071 TJ, wind 6,472 TJ), but biomass dwarfs all grid sources in the overall physical energy balance, with firewood and charcoal accounting for more than 1.2 million TJ of household energy use. The monetary accounts reveal a structurally different picture: total monetary supply was KES 580.5 billion, with household monetary energy spending at KES 749.8 billion concentrated on electricity and petroleum products rather than biomass, which is essentially unpriced in market terms. This divergence between physical and monetary accounts is policy-critical: subsidies, taxes, and tariffs are calibrated to a monetized minority of total energy use while the majority (rural biomass) remains outside the fiscal system. [inventory item: KEN.energy.1 about here] [inventory item: KEN.energy.2 about here]</p>
-<p><strong>South Africa.</strong> South Africa’s physical energy flow accounts—the most detailed in the region—document that coal accounts for 72.2 percent of domestic natural energy inputs while oil import dependency reached 93.1 percent and natural gas 99.9 percent following the closure of domestic refineries <span class="citation" data-cites="statssa_energy_2025">(<a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>)</span>. Despite coal self-sufficiency, overall import dependency rose from 17.5 to 19.9 percent between 2015 and 2022. Household biofuels account for 46.5 percent of residential energy—a share comparable to Uganda’s urban bioenergy share, indicating substantial energy poverty coexisting with a modern industrial economy. Mining consumes 1.21 TJ per million Rand of GVA, the highest energy intensity among all sectors. [inventory item: ZAF.energy.1 about here] [inventory item: ZAF.energy.2 about here]</p>
-<p><strong>Uganda.</strong> Uganda’s forest accounts establish that woody biomass supplies 78 percent of national energy <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Charcoal production grew fivefold between 1990 and 2015, consuming approximately 95.7 million tonnes of wood per year at a kiln efficiency of only 12.5 percent. The accounts projected in 2020 that sustainable wood supply would be fully depleted by approximately 2025 under business-as-usual conditions—a projection now overdue for verification. Updated land cover and forest productivity data for the post-2020 period would allow assessment of whether this threshold was reached, whether it was due to the way accounts measured sustainable yield, or whether policy interventions or changed demand patterns altered the trajectory. For ASCENT, Uganda’s charcoal-driven deforestation trajectory represents one of the clearest cases where clean cooking scale-up would generate co-benefits across energy access, forest conservation, and climate.</p>
-<p><strong>Zambia.</strong> Zambia’s accounts document that charcoal and fuelwood account for 78 percent of total national energy consumed, with unlicensed charcoal extraction vastly exceeding licensed production <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. The 2023/24 drought illustrated a double vulnerability: Lake Kariba fell below 15 percent of capacity, triggering electricity imports, while simultaneously the maize harvest failed. Solar and clean cooking solutions address both exposure pathways—this dual-benefit case is demonstrable from the accounts but would be strengthened considerably by a compiled energy supply and use table.</p>
+<p><strong>Kenya.</strong> Kenya’s monetary energy supply and use table (MSUT) provides a model for the kind of account most directly relevant to ASCENT planning <span class="citation" data-cites="worldbank_kenya_water_energy_2025 knbs_energy_2026">(<a href="#ref-knbs_energy_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026a</a>; <a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. The physical accounts confirm heavy reliance on renewable sources for grid electricity (geothermal 19,984 TJ, hydropower 13,071 TJ, wind 6,472 TJ), but biomass dwarfs all grid sources in the overall physical energy balance, with firewood and charcoal accounting for more than 1.2 million TJ of household energy use. The monetary accounts reveal a structurally different picture in which total monetary supply was KES 580.5 billion, with household monetary energy spending at KES 749.8 billion concentrated on electricity and petroleum products rather than biomass, which is essentially unpriced in market terms. This divergence between physical and monetary accounts is policy-critical, becaucse subsidies, taxes, and tariffs are calibrated to a monetized minority of total energy use while the majority, which is rural biomass, remains outside the formal market and fiscal system. [inventory item: KEN.energy.1 about here] [inventory item: KEN.energy.2 about here]</p>
+<p><strong>South Africa.</strong> South Africa’s physical energy flow accountsdocument that coal accounts for 72.2 percent of domestic natural energy inputs while oil import dependency reached 93.1 percent and natural gas 99.9 percent following the closure of domestic refineries <span class="citation" data-cites="statssa_energy_2025">(<a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>)</span>. Despite coal self-sufficiency, overall import dependency rose from 17.5 to 19.9 percent between 2015 and 2022. Household biofuels account for 46.5 percent of residential energy, comparable to Uganda’s urban bioenergy share, indicating substantial energy poverty coexisting with a modern industrial economy. Mining consumes 1.21 TJ per million Rand of GVA, the highest energy intensity among all sectors. [inventory item: ZAF.energy.1 about here] [inventory item: ZAF.energy.2 about here]</p>
+<p><strong>Uganda.</strong> Uganda’s forest accounts establish that woody biomass supplies 78 percent of national energy <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Charcoal production grew fivefold between 1990 and 2015, consuming approximately 95.7 million tonnes of wood per year at a kiln efficiency of only 12.5 percent. The accounts projected in 2020 that sustainable wood supply would be fully depleted by approximately 2025 under business-as-usual conditions (this projection is now overdue for verification). Updated land cover and forest productivity data for the post-2020 period would allow assessment of whether this threshold was reached, whether it was due to the way accounts measured sustainable yield, or whether policy interventions or changed demand patterns altered the trajectory. For ASCENT, Uganda’s charcoal-driven deforestation trajectory represents one of the clearest cases where clean cooking scale-up would generate co-benefits across energy access, forest conservation, and climate.</p>
+<p><strong>Zambia.</strong> Zambia’s accounts document that charcoal and fuelwood account for 78 percent of total national energy consumed, with unlicensed charcoal extraction vastly exceeding licensed production <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. The 2023/24 drought illustrated a double vulnerability in which Lake Kariba fell below 15 percent of capacity, triggering electricity imports, while the maize harvest failed simultaneously. Solar and clean cooking solutions address both exposure pathways; a dual-benefit case that is demonstrable from the accounts but would be strengthened considerably by a compiled energy supply and use table.</p>
 </section>
 <section id="land-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="land-accounts">Land Accounts</h2>
 <p>Land accounts are the most universal entry point into SEEA implementation, because every country in this review has compiled at least one form of land cover or land use change account.</p>
-<p><strong>Democratic Republic of Congo.</strong> The DRC’s ecosystem extent accounts use a 15-class typology documenting forest and land cover change from 2000 to 2020. Total forest cover lost was 11.6 million hectares, with the annual deforestation rate more than doubling from approximately 0.5 percent per year in 2000–2010 to above 0.8 percent per year in 2010–2020. The most revealing dynamic is the 259 percent expansion of forest-farm mosaic—degraded, mixed-use agricultural-forest landscapes—from 2.8 million to 9.97 million hectares, alongside cropland growing 147 percent <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. At the provincial level, Kwilu suffered the largest absolute lowland forest loss (720,000 ha), while Kinshasa province lost 67 percent of its forest cover, documenting that proximity to population centers drives distinct deforestation patterns compared to remote interior dynamics. [inventory item: DRC.forest.1 about here]</p>
-<p><strong>Ethiopia.</strong> Ethiopia’s land asset accounts document cropland growing 20 percent (21.7 to 25.9 million hectares) and built-up area growing 50 percent between 2013 and 2022, while open shrublands declined 23 percent <span class="citation" data-cites="government_of_ethiopia_land_2026">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>)</span>. Total forest cover increased 22 percent (22.3 to 27.2 million hectares), but the report cautions explicitly that differences in data sources, forest definitions, and canopy cover sensitivity to rainfall make it difficult to apportion change between genuine ecological recovery and reclassification. This methodological note is essential context for any cross-country comparison of forest trends. Land degradation is estimated to reduce Ethiopia’s agricultural GDP by 2 to 6.75 percent annually—a foregone value of USD 1–3 billion per year based on 2022 sector size—providing the motivation for completing a monetary land asset account. [inventory item: ETH.land.1 about here] [inventory item: ETH.land.2 about here]</p>
-<p><strong>Kenya.</strong> Kenya’s land accounts, covering 1990–2024, show forest cover declining from 6.65 to 6.07 percent, a net loss of 342,793 hectares <span class="citation" data-cites="soulard_kenya_land_2025">(<a href="#ref-soulard_kenya_land_2025" role="doc-biblioref">Soulard, 2025</a>)</span>. Annual cropland grew approximately 1.4 million hectares (+29.5 percent) between 2002 and 2018, and all natural terrestrial ecosystem types declined. The land accounts provide a spatial backbone for county-level disaggregation and map conversion flows that enable identification of where interventions—restoration, conservation employment, zoning changes—would be most effective in reversing degradation rather than simply documenting where degradation is occurring. This distinction is important: the accounts answer both questions simultaneously, but they serve different planning purposes. [inventory item: KEN.land.1 about here]</p>
-<p><strong>Madagascar.</strong> Madagascar’s degradation index shows that 35.6 percent of national territory (21.1 million hectares) experienced degrading trends over 29 years, with 12.5 percent highly degrading <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. At 7.5 percent of national territory, the highest-priority NBS investment zones contain 31 percent of total national carbon stock—an extreme geographic concentration of natural capital value that is highly relevant to both climate finance and watershed protection investment.</p>
-<p><strong>Rwanda.</strong> Rwanda’s land accounts present the sharpest documented land transition in the region: cropland rose from 24.2 to 51.7 percent of national territory between 1990 and 2015, while sparse forest lost 673,137 hectares and average farm parcels shrank to 0.184 hectares <span class="citation" data-cites="nisr_rwanda_land_2018">(<a href="#ref-nisr_rwanda_land_2018" role="doc-biblioref">Government of Rwanda, 2018</a>)</span>. This land fragmentation threshold limits mechanization and structural transformation. During the same period—as cropland expanded—Rwanda’s GDP grew substantially and poverty fell, documenting the difficult trade-off between forest protection and rural economic development that the accounts make explicit. Soil erosion costs have been estimated at USD 34 million per year (approximately 2 percent of GDP). [inventory item: RWA.land.1 about here]</p>
-<p><strong>South Africa.</strong> South Africa’s land accounts occupy the most technically advanced position in the region, combining ecosystem extent indices, classification hierarchies, and turnover metrics over three decades <span class="citation" data-cites="statssa_land_2020">(<a href="#ref-statssa_land_2020" role="doc-biblioref">Statistics South Africa, 2020</a>)</span>. While natural land nationally increased marginally (+0.8 percent, 1990–2014), commercially irrigated pivots expanded 221 percent, the mine footprint grew 15.9 percent in area, and 18 percent of South Africa’s 458 nationally defined ecosystem types have already fallen at or below the 60 percent natural cover threshold associated with ecosystem dysfunction. Informal settlements doubled in extent (+95.7 percent), and KwaZulu-Natal is the only province with net loss of natural area (−178,241 ha). [inventory item: ZAF.land.1 about here] [inventory item: ZAF.land.2 about here]</p>
-<p><strong>Zambia.</strong> Zambia’s five-year accounts (2018–2023) show tree cover falling from 55.4 to 52.8 percent of national territory—a loss of 1.88 million hectares, equivalent to 376,000 ha per year <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. The dominant conversion is trees to rangeland (4.9 million ha), reflecting miombo woodland degradation rather than direct agricultural conversion. The provincial degradation index (NEDI) reveals Eastern Province (5.25 percent) degrading at nearly four times the national average (1.44 percent), with conversion patterns that differ fundamentally from the more stable North-Western Province (NEDI = 0.12 percent). Zambia’s accounts also include a methodological note that merits attention: the ecosystem extent accounts use MODIS satellite data with classification boundaries that differ from national land cover data, meaning some biome totals appear to exceed expected national territory extents. The accounts interpret percentage changes as more reliable than absolute areas—a transparency worth preserving in cross-country comparisons. [inventory item: ZMB.land.1 about here] [inventory item: ZMB.land.3 about here]</p>
+<p><strong>Democratic Republic of Congo.</strong> The DRC’s ecosystem extent accounts use a 15-class typology documenting forest and land cover change from 2000 to 2020. Total forest cover lost was 11.6 million hectares, with the annual deforestation rate more than doubling from approximately 0.5 percent per year in 2000–2010 to above 0.8 percent per year in 2010–2020. The most revealing dynamic is the 259 percent expansion of forest-farm mosaic—degraded, mixed-use agricultural-forest landscapes, which went from 2.8 million to 9.97 million hectares, alongside cropland growing 147 percent <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. At the provincial level, Kwilu suffered the largest absolute lowland forest loss (720,000 ha), while Kinshasa province lost 67 percent of its forest cover, documenting that proximity to population centers drives distinct deforestation patterns compared to remote interior dynamics. [inventory item: DRC.forest.1 about here]</p>
+<p><strong>Ethiopia.</strong> Ethiopia’s land asset accounts document cropland growing 20 percent (21.7 to 25.9 million hectares) and built-up area growing 50 percent between 2013 and 2022, while open shrublands declined 23 percent <span class="citation" data-cites="government_of_ethiopia_land_2026">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>)</span>. Total forest cover increased 22 percent (22.3 to 27.2 million hectares), but the report cautions explicitly that differences in data sources, forest definitions, and canopy cover sensitivity to rainfall make it difficult to apportion change between genuine ecological recovery and reclassification. Land degradation is estimated to reduce Ethiopia’s agricultural GDP by 2 to 6.75 percent annually, which is a foregone value of USD 1–3 billion per year, based on 2022 sector size, providing the motivation for completing a monetary land asset account. [inventory item: ETH.land.1 about here] [inventory item: ETH.land.2 about here]</p>
+<p><strong>Kenya.</strong> Kenya’s land accounts, covering 1990–2024, show forest cover declining from 6.65 to 6.07 percent, a net loss of 342,793 hectares <span class="citation" data-cites="soulard_kenya_land_2025">(<a href="#ref-soulard_kenya_land_2025" role="doc-biblioref">Soulard, 2025</a>)</span>. Annual cropland grew approximately 1.4 million hectares (+29.5 percent) between 2002 and 2018, and all natural terrestrial ecosystem types declined. The land accounts provide a spatial backbone for county-level disaggregation and map conversion flows that enable identification of where interventions, like restoration, conservation employment, and zoning changes, would be most effective in reversing degradation rather than simply documenting where degradation is occurring. This distinction is important, because the accounts answer both questions simultaneously, but they serve different planning purposes. [inventory item: KEN.land.1 about here]</p>
+<p><strong>Madagascar.</strong> Madagascar’s degradation index shows that 35.6 percent of national territory (21.1 million hectares) experienced degrading trends over 29 years, with 12.5 percent highly degrading <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. At 7.5 percent of national territory, the highest-priority NBS investment zones contain 31 percent of total national carbon stock, which is an extreme geographic concentration of natural capital value that is highly relevant to both climate finance and watershed protection investment.</p>
+<p><strong>Rwanda.</strong> Rwanda’s land accounts present the sharpest documented land transition in the region, showing that cropland rose from 24.2 to 51.7 percent of national territory between 1990 and 2015, while sparse forest lost 673,137 hectares and average farm parcels shrank to 0.184 hectares <span class="citation" data-cites="nisr_rwanda_land_2018">(<a href="#ref-nisr_rwanda_land_2018" role="doc-biblioref">Government of Rwanda, 2018</a>)</span>. This land fragmentation threshold limits mechanization and structural transformation. During the same period Rwanda’s GDP grew substantially and poverty fell, showing the difficult trade-off between forest protection and rural economic development that the accounts make explicit. Soil erosion costs have been estimated at USD 34 million per year (approximately 2 percent of GDP). [inventory item: RWA.land.1 about here]</p>
+<p><strong>South Africa.</strong> South Africa’s land accounts combine ecosystem extent indices, classification hierarchies, and turnover metrics over three decades <span class="citation" data-cites="statssa_land_2020">(<a href="#ref-statssa_land_2020" role="doc-biblioref">Statistics South Africa, 2020</a>)</span>. While natural land nationally increased marginally (+0.8 percent, 1990–2014), commercially irrigated pivots expanded 221 percent, the mine footprint grew 15.9 percent in area, and 18 percent of South Africa’s 458 nationally defined ecosystem types have already fallen at or below the 60 percent natural cover threshold associated with ecosystem dysfunction. Informal settlements doubled in extent (+95.7 percent), and KwaZulu-Natal is the only province with net loss of natural area (−178,241 ha). [inventory item: ZAF.land.1 about here] [inventory item: ZAF.land.2 about here]</p>
+<p><strong>Zambia.</strong> Zambia’s five-year accounts (2018–2023) show tree cover falling from 55.4 to 52.8 percent of national territory; a loss of 1.88 million hectares, equivalent to 376,000 ha per year <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. The dominant conversion is trees to rangeland (4.9 million ha), reflecting miombo woodland degradation rather than direct agricultural conversion. The provincial degradation index (NEDI) reveals Eastern Province (5.25 percent) degrading at nearly four times the national average (1.44 percent), with conversion patterns that differ fundamentally from the more stable North-Western Province (NEDI = 0.12 percent). Zambia’s accounts also include a methodological note that merits attention, due to the fact that the ecosystem extent accounts use MODIS satellite data with classification boundaries that differ from national land cover data, meaning some biome totals appear to exceed expected national territory extents. The accounts interpret percentage changes as more reliable than absolute areas, which is something to keep in mind in cross-country comparisons. [inventory item: ZMB.land.1 about here] [inventory item: ZMB.land.3 about here]</p>
 </section>
 <section id="ecosystem-and-forest-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="ecosystem-and-forest-accounts">Ecosystem and Forest Accounts</h2>
-<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts are the most comprehensive in the region for any single ecosystem type. Total annual monetary supply of forest ecosystem services reached CDF 1,991,451 billion (USD 706,188 million) in 2020, dominated by global climate regulation at the social cost of carbon <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Excluding this carbon externality, the domestically captured value was USD 3.3 billion per year—consisting of timber, wild resources, sediment retention, and tourism. The gap between global value (USD 706 billion) and domestically captured value (USD 3.3 billion) is the economic explanation for continued deforestation: DRC bears the full cost of forest protection while the majority of the benefit accrues globally. Forest depletion costs grew 113 percent between 2010 and 2020, indicating that nominal asset growth—total forest value increased from USD 5.4 trillion (2000) to USD 10.3 trillion (2020)—masks accelerating unsustainable extraction. For policy relevance, the focus should be on the per-capita sustainability trajectory rather than nominal totals: per-capita forest wealth declined as population growth outpaced sustainable forest income, and depletion accelerated. Bushmeat extraction at 64 percent above sustainable yield is both an ecological risk and a livelihood vulnerability, with bushmeat income representing approximately 32 percent of annual household income in some forest-dependent communities. [inventory item: DRC.forest.3 about here] [inventory item: DRC.forest.4 about here]</p>
-<p><strong>Ethiopia.</strong> Ethiopia’s ecosystem services accounts cover soil protection, water regulation, baseflow, flood mitigation, water yield, carbon sequestration, and carbon stock—all in physical units, with monetary valuation explicitly deferred <span class="citation" data-cites="rutebuka_ethiopia_2025">(<a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. Ecosystems avoided 29.7 billion tonnes of soil erosion in 2022, but the service delivered per hectare of cropland fell 18 percent (from 411 to 338 t/ha), showing that landscape conversion is reducing protective ecosystem cover even as agricultural area expands. The Abbay basin accounts for over 40 percent of national soil protection value. Carbon sequestration of forests and croplands is being eroded by continued conversion of shrublands: open shrubland alone emitted 194.8 million tonnes C per year nationally. [inventory item: ETH.ecosystem.1 about here] [inventory item: ETH.ecosystem.2 about here]</p>
-<p><strong>Kenya.</strong> Kenya’s monetary ecosystem service accounts are the most policy-relevant in the AFE region, covering livestock production (provisioning), sediment retention (regulating), and ecosystem-based tourism (cultural) for 2002 and 2018 <span class="citation" data-cites="turpie_kenya_ecosystem_2025">(<a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>)</span>. Total services reached KSh 247 billion per year in 2018 (1.8 percent of GDP). The decline in the ecosystem service share of GDP—from 2.8 percent in 2002—reflects Kenya’s GDP growing faster than measured ecosystem service flows, not declining natural capital value; it primarily reflects accounts not yet compiled (carbon, fuelwood, pollination, water regulation). Wildlife populations declined from 31.9 percent of their 1977–1980 baseline levels to 27.3 percent by 2018 and are projected below 10 percent by 2050 under business-as-usual—a trajectory that would directly erode the tourism asset value currently captured in the accounts. Across the region, the most consistently missing ecosystem services in monetary terms are pollination (absent everywhere), freshwater provisioning to households (unpriced throughout), flood damage avoided (proposed but not compiled), and the contribution of forests to agricultural production through rainfall maintenance and soil protection. The reason these remain missing is a combination of data requirements (household water use surveys, detailed spatial flood records), institutional capacity (specialized valuation expertise not yet embedded in national statistical offices), and methodological complexity (non-market valuation requires explicit modeling assumptions about reference states and counterfactuals). [inventory item: KEN.ecosystem.2 about here] [inventory item: KEN.ecosystem.4 about here]</p>
-<p><strong>Madagascar.</strong> Madagascar’s accounts document that 35.6 percent of territory is degrading, with 1.96 billion tonnes of carbon (31 percent of national total) concentrated in the highest-priority NBS zones, which represent only 7.5 percent of national territory <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. At indicative social cost of carbon values, the annual carbon absorption loss from land degradation reaches approximately USD 59 million per year. No monetary ecosystem service accounts have been compiled; the economic analysis of hydropower losses and agricultural productivity costs was computed in a companion assessment but has not been formally published as part of the accounts.</p>
-<p><strong>Rwanda.</strong> Rwanda’s ecosystem accounts track soil erosion increasing 54 percent between 1990 and 2015, sediment export increasing 123 percent, and quickflow (surface runoff) increasing 35 percent, while baseflow (dry-season flow) declined 11 percent nationally and 29–32 percent in peri-urban Kigali districts <span class="citation" data-cites="nisr_rwanda_ecosystem_2019">(<a href="#ref-nisr_rwanda_ecosystem_2019" role="doc-biblioref">Government of Rwanda, 2019a</a>)</span>. These trends, driven by cropland expansion from the land accounts, close the feedback loop between land use change and water supply security. Soil erosion costs are estimated at USD 34 million per year. [inventory item: RWA.ecosystem.1 about here] [inventory item: RWA.ecosystem.3 about here]</p>
-<p><strong>South Africa.</strong> South Africa’s biodiversity tourism accounts—the only fully compiled monetary ecosystem services accounts in the AFE region outside Kenya—show total biodiversity-based tourism generating R60,663 million in spending in 2019, with direct employment of 91,836 jobs <span class="citation" data-cites="statssa_biodiversity_tourism_2024">(<a href="#ref-statssa_biodiversity_tourism_2024" role="doc-biblioref">Statistics South Africa, 2024</a>)</span>. Protected area expanded from 7.3 to 9.2 percent of national territory between 2000 and 2020, and marine protected areas grew from 4,748 to 57,943 km². The estuarine accounts document severe degradation: only 4 percent of estuaries in good fish condition, sawfish now extinct, dusky kob spawner biomass below 2 percent of pristine levels, with 70–94 percent of nursery habitats under high or very high fishing pressure <span class="citation" data-cites="csir_estuaries_2020">(<a href="#ref-csir_estuaries_2020" role="doc-biblioref"><span class="nocase">Niekerk et al.</span>, 2020</a>)</span>. [inventory item: ZAF.biodiversity.1 about here] [inventory item: ZAF.estuary.2 about here]</p>
-<p><strong>Uganda.</strong> Uganda’s monetary forest asset accounts provide the most detailed forest sector data in the region after the DRC <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Total forest land value was USD 34.9 billion in 2015, despite a 60 percent loss in forest area since 1990—reflecting rapid escalation in per-hectare land values especially in the Central region (USD 129,700/ha). Non-wood forest products including <em>Prunus africana</em> bark (UGX 265,195 million) and shea butter (UGX 14,553 million) provide significant additional economic values. The 2020 accounts projected sustainable wood supply fully depleted by approximately 2025 under business-as-usual conditions. This projection now warrants explicit verification: has the expected depletion occurred, and if not, did policy interventions, demand changes, or accounting assumptions explain the deviation? This retrospective analysis—checking whether the account’s own projection materialized—is precisely the kind of learning that validates and builds the credibility of NCA programmes. [inventory item: UGA.forest.1 about here] [inventory item: UGA.forest.4 about here] [inventory item: UGA.forest.5 about here]</p>
-<p><strong>Zambia.</strong> Zambia’s wildlife and fisheries accounts establish the economic contribution of natural resources to an economy where approximately 40 percent of national income is estimated to derive from natural capital <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. Fish production increased 42.4 percent between 2018 and 2023, with aquaculture growing 112.2 percent. Bush meat revenue from Game Management Areas grew 158.5 percent in nominal terms, reflecting both kwacha depreciation and genuine volume growth. The net present value of carbon stock loss due to ecosystem degradation between 2018 and 2023 was estimated at USD 46 million—the only monetary ecosystem services estimate available for Zambia, and a direct entry point for carbon finance discussions. [inventory item: ZMB.wildlife.1 about here] [inventory item: ZMB.ecosystem.1 about here]</p>
+<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts are the most comprehensive in the region for any single ecosystem type. Total annual monetary supply of forest ecosystem services reached CDF 1,991,451 billion (USD 706,188 million) in 2020, dominated by global climate regulation at the social cost of carbon <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Excluding this carbon externality, the domestically captured value was USD 3.3 billion per year, consisting of timber, wild resources, sediment retention, and tourism. The gap between global value (USD 706 billion) and domestically captured value (USD 3.3 billion) is the economic explanation for continued deforestation; a situation in which DRC bears the full cost of forest protection while the majority of the benefit accrues globally. Forest depletion costs grew 113 percent between 2010 and 2020, indicating that nominal asset growth masks accelerating unsustainable extraction, because total forest value increased from USD 5.4 trillion (2000) to USD 10.3 trillion (2020). For policy relevance, the focus should be on the per-capita sustainability trajectory rather than nominal totals, because per-capita forest wealth declined as population growth outpaced sustainable forest income, and depletion accelerated. Bushmeat extraction at 64 percent above sustainable yield is both an ecological risk and a livelihood vulnerability, with bushmeat income representing approximately 32 percent of annual household income in some forest-dependent communities. [inventory item: DRC.forest.3 about here] [inventory item: DRC.forest.4 about here]</p>
+<p><strong>Ethiopia.</strong> Ethiopia’s ecosystem services accounts cover soil protection, water regulation, baseflow, flood mitigation, water yield, carbon sequestration, and carbon stock; all in physical units, with monetary valuation explicitly deferred <span class="citation" data-cites="rutebuka_ethiopia_2025">(<a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. Ecosystems avoided 29.7 billion tonnes of soil erosion in 2022, but the service delivered per hectare of cropland fell 18 percent (from 411 to 338 t/ha), showing that landscape conversion is reducing protective ecosystem cover even as agricultural area expands. The Abbay basin accounts for over 40 percent of national soil protection value. Carbon sequestration of forests and croplands is being eroded by continued conversion of shrublands; open shrubland alone emitted 194.8 million tonnes C per year nationally. [inventory item: ETH.ecosystem.1 about here] [inventory item: ETH.ecosystem.2 about here]</p>
+<p><strong>Kenya.</strong> Kenya’s monetary ecosystem service accounts cover livestock production (provisioning), sediment retention (regulating), and ecosystem-based tourism (cultural) for 2002 and 2018 <span class="citation" data-cites="turpie_kenya_ecosystem_2025">(<a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>)</span>. Total services reached KSh 247 billion per year in 2018 (1.8 percent of GDP). The decline in the ecosystem service share of GDP, down from 2.8 percent in 2002, reflects Kenya’s GDP growing faster than measured ecosystem service flows, not declining natural capital value. It primarily reflects accounts not yet compiled (carbon, fuelwood, pollination, water regulation). Wildlife populations declined from 31.9 percent of their 1977–1980 baseline levels to 27.3 percent by 2018 and are projected below 10 percent by 2050 under business-as-usual. This trajectory directly erodes the tourism asset value currently captured in the accounts. Across the region, the most consistently missing ecosystem services in monetary terms are pollination (absent everywhere), freshwater provisioning to households (unpriced throughout), flood damage avoided (proposed but not compiled), and the contribution of forests to agricultural production through rainfall maintenance and soil protection. The reason these remain missing is a combination of data requirements (household water use surveys, detailed spatial flood records), institutional capacity (specialized valuation expertise not yet embedded in national statistical offices), and methodological complexity (non-market valuation requires explicit modeling assumptions about reference states and counterfactuals). [inventory item: KEN.ecosystem.2 about here] [inventory item: KEN.ecosystem.4 about here]</p>
+<p><strong>Madagascar.</strong> Madagascar’s accounts show that 35.6 percent of territory is degrading, with 1.96 billion tonnes of carbon (31 percent of national total) concentrated in the highest-priority NBS zones, which represent only 7.5 percent of national territory <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. At indicative social cost of carbon values, the annual carbon absorption loss from land degradation reaches approximately USD 59 million per year. No monetary ecosystem service accounts have been compiled; the economic analysis of hydropower losses and agricultural productivity costs was computed in a companion assessment but has not been formally published as part of the accounts.</p>
+<p><strong>Rwanda.</strong> Rwanda’s ecosystem accounts track soil erosion increasing 54 percent between 1990 and 2015, sediment export increasing 123 percent, and quickflow (surface runoff) increasing 35 percent, while baseflow (dry-season flow) declined 11 percent nationally and 29–32 percent in peri-urban Kigali districts <span class="citation" data-cites="nisr_rwanda_ecosystem_2019">(<a href="#ref-nisr_rwanda_ecosystem_2019" role="doc-biblioref">Government of Rwanda, 2019a</a>)</span>. These trends, driven by cropland expansion from the land accounts show an explicit link between land use change and water supply security. Soil erosion costs are estimated at USD 34 million per year. [inventory item: RWA.ecosystem.1 about here] [inventory item: RWA.ecosystem.3 about here]</p>
+<p><strong>South Africa.</strong> South Africa’s biodiversity tourism accounts, which are fully compiled monetary ecosystem services accounts, show total biodiversity-based tourism generating R60,663 million in spending in 2019, with direct employment of 91,836 jobs <span class="citation" data-cites="statssa_biodiversity_tourism_2024">(<a href="#ref-statssa_biodiversity_tourism_2024" role="doc-biblioref">Statistics South Africa, 2024</a>)</span>. Protected area expanded from 7.3 to 9.2 percent of national territory between 2000 and 2020, and marine protected areas grew from 4,748 to 57,943 km². The estuarine accounts show severe degradation, in which only 4 percent of estuaries are in good fish condition, sawfish now extinct, dusky kob spawner biomass below 2 percent of pristine levels, with 70–94 percent of nursery habitats under high or very high fishing pressure <span class="citation" data-cites="csir_estuaries_2020">(<a href="#ref-csir_estuaries_2020" role="doc-biblioref"><span class="nocase">Niekerk et al.</span>, 2020</a>)</span>. [inventory item: ZAF.biodiversity.1 about here] [inventory item: ZAF.estuary.2 about here]</p>
+<p><strong>Uganda.</strong> Uganda’s monetary forest asset accounts provide the most detailed forest sector data in the region after the DRC <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Total forest land value was USD 34.9 billion in 2015, despite a 60 percent loss in forest area since 1990, reflecting rapid escalation in per-hectare land values especially in the Central region (USD 129,700/ha). Non-wood forest products including <em>Prunus africana</em> bark (UGX 265,195 million) and shea butter (UGX 14,553 million) provide significant additional economic values. The 2020 accounts projected sustainable wood supply fully depleted by approximately 2025 under business-as-usual conditions. This projection needs verification to understand whether the expected depletion occurred, and if not, were policy interventions, demand changes, or accounting assumptions the elements that explain the deviation? [inventory item: UGA.forest.1 about here] [inventory item: UGA.forest.4 about here] [inventory item: UGA.forest.5 about here]</p>
+<p><strong>Zambia.</strong> Zambia’s wildlife and fisheries accounts show the economic contribution of natural resources to an economy where approximately 40 percent of national income is estimated to derive from natural capital <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. Fish production increased 42.4 percent between 2018 and 2023, with aquaculture growing 112.2 percent. Bush meat revenue from Game Management Areas grew 158.5 percent in nominal terms, reflecting both kwacha depreciation and genuine volume growth. The net present value of carbon stock loss due to ecosystem degradation between 2018 and 2023 was estimated at USD 46 million, which is the only monetary ecosystem services estimate available for Zambia, and a direct policy item for carbon finance discussions. [inventory item: ZMB.wildlife.1 about here] [inventory item: ZMB.ecosystem.1 about here]</p>
 </section>
 <section id="common-data-gaps-and-systemic-patterns" class="level2">
 <h2 class="anchored" data-anchor-id="common-data-gaps-and-systemic-patterns">Common Data Gaps and Systemic Patterns</h2>
 <p>Across the reviewed accounts, data gaps follow recurring patterns that reflect structural challenges common to statistical systems in the region.</p>
-<p><strong>Data infrastructure and monitoring.</strong> Primary measurement infrastructure for SEEA inputs remains underdeveloped. Zambia’s water accounts acknowledge that groundwater abstraction is “largely unmetered” and monitoring networks “remain sparse.” Rwanda’s monitoring network was designed for far lower abstraction rates than the tenfold demand increase projected by 2040. DRC poverty and inequality data are over a decade old, preventing adjusted net savings calculations for some years.</p>
-<p><strong>Classification and cross-country comparability.</strong> The forest cover data illustrate the classification problem. Ethiopia’s observed 22 percent forest cover gain may partly reflect reclassification rather than genuine restoration—the accounts themselves state this explicitly. Zambia’s MODIS-based ecosystem extent accounts use classification boundaries that differ from national land cover data. The DRC uses 15 ecosystem classes while most peer countries use simpler schemes. Harmonizing common reporting categories alongside national definitions would substantially improve cross-country analytical value.</p>
-<p><strong>Monetary valuation gaps.</strong> The absence of monetary ecosystem service accounts remains the most consequential gap for the policy applications NCA programmes are designed to support. Ethiopia, Madagascar, and most countries in the region have physical accounts only. Monetary accounts are what enable direct comparison with GDP, infrastructure costs, and fiscal revenue—the language of economic planning.</p>
+<p><strong>Data infrastructure and monitoring.</strong> Primary measurement infrastructure for SEEA inputs remains underdeveloped. Zambia’s water accounts acknowledge that groundwater abstraction is “largely unmetered” and monitoring networks “remain sparse.” Rwanda’s monitoring network was designed for far lower abstraction rates than the tenfold demand increase projected by 2040. DRC poverty and inequality data are over a decade old, preventing adjusted net savings calculations in general.</p>
+<p><strong>Classification and cross-country comparability.</strong> The forest cover data illustrate the classification problem. Ethiopia’s observed 22 percent forest cover gain may partly reflect reclassification rather than genuine restoration (a fact that the accounts themselves state explicitly). Zambia’s MODIS-based ecosystem extent accounts use classification boundaries that differ from national land cover data. The DRC uses 15 ecosystem classes while most peer countries use simpler schemes. Harmonizing common reporting categories alongside national definitions would substantially improve cross-country analytical value.</p>
+<p><strong>Monetary valuation gaps.</strong> The absence of monetary ecosystem service accounts remains the most consequential gap for the policy applications NCA programs are designed to support. Ethiopia, Madagascar, and most countries in the region have physical accounts only. Monetary accounts are what enable direct comparison with GDP, infrastructure costs, and fiscal revenue; the language of economic planning.</p>
 <p><strong>Spatial disaggregation.</strong> National-level aggregates systematically mask localized pressures. Kenya’s tenfold range in basin-level per-capita water availability, Zambia’s fourfold difference in provincial degradation rates, and Rwanda’s district-level baseflow declines of up to 32 percent are all invisible in national statistics. Sub-national disaggregation transforms national accounts into investment targeting tools.</p>
 <p><strong>Institutionalization.</strong> The most persistent structural challenge is the transition from one-off project-funded accounts to permanent, budgeted statistical products. Mauritius (fifth water account edition) and Uganda (tenth water account iteration) demonstrate that institutionalization depends less on technical capacity than on formal inter-agency data-sharing agreements, clear mandates within national statistical plans, and budget lines independent of donor project cycles.</p>
 </section>
 </section>
 <section id="applications-of-natural-capital-accounts" class="level1">
 <h1>Applications of Natural Capital Accounts</h1>
-<p>The accounts reviewed above are not produced for their own sake. Their value lies in whether they inform investment decisions, policy design, and economic planning. This section synthesizes documented applications—cases where account data has demonstrably entered planning or program design processes—across the nine reviewed countries.</p>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The accounts reviewed above are not produced for their own sake. Their value lies in whether they inform investment decisions, policy design, and economic planning. This section synthesizes documented applications or cases where account data has demonstrably entered planning or program design processes.</p>
 <p>The pattern of application varies by country and account type. The most advanced cases involve direct integration of NCA data into macro-fiscal models (Kenya) and investment targeting tools (Ethiopia). Other countries demonstrate application through specific policy citations, pricing reform arguments (Rwanda), or conservation investment justifications (South Africa, Uganda). The common thread is that data utility is highest where an institutional channel connects account compilers with planning and budget decision-makers—either through a formal model, a national plan, or a specific program in preparation.</p>
-</section>
 <section id="ethiopia-investment-prioritization-and-the-calm-program" class="level2">
 <h2 class="anchored" data-anchor-id="ethiopia-investment-prioritization-and-the-calm-program">Ethiopia: Investment Prioritization and the CALM Program</h2>
 <p>Ethiopia’s natural capital accounting work directly informed two major policy processes, both rooted in the biophysical ecosystem services accounts reviewed above.</p>
 <p>The World Bank’s BELA initiative developed an Investment Prioritization Tool (IPT) for Ethiopia using the ecosystem services modelling that underpins the accounts reviewed in Section 4 <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. The tool measures soil protection, water regulation, and carbon storage services and identifies priority watersheds for investment based on the greatest potential to improve ecosystem services. A Technical Working Group, co-chaired by the Ministry of Agriculture, was established to co-develop the IPT and build national capacity for its use.</p>
 <p>The analysis identified that while Government investments in the highlands had effectively reversed some degradation trends, additional degradation hotspots were emerging in lowland areas. This geographic shift in priorities was incorporated as a key recommendation in the Ethiopia Country Climate and Development Report (CCDR) and subsequently informed the World Bank’s Climate Action through Landscape Management (CALM) Programme for Results (PforR). CALM operates across a portfolio of approximately USD 900 million covering 8,000 community watersheds nationwide. The IPT’s geographically explicit analysis—identifying which watersheds would yield the greatest improvement per dollar invested—directly informed the selection of CALM’s investment areas.</p>
 <p>The IPT and associated analysis also provides the analytical foundation for Ethiopia’s Strategic Investment Framework for Sustainable Land Management (ESIF-II), which will guide government-financed programs on sustainable land management.</p>
-<p>Under a business-as-usual scenario, erosion and sedimentation are projected to rise by more than 26 percent in numerous regions of Ethiopia. The Adaptation scenario—which directs investments toward areas with the highest potential to enhance ecosystem services, including erosion control, water regulation, and carbon sequestration—projects conversion and restoration of approximately 6.7 million hectares by 2030 and 23.8 million hectares by 2050. The Resilient Scenario projects carbon stocks increasing by 389 million metric tonnes by 2050, with a carbon market potential estimated at approximately USD 130 million, providing a potential financing stream for land restoration programs.</p>
-<p>The ecosystem accounts’ specific finding that Southwest Ethiopia and Benishangul-Gumuz are disproportionate contributors to dry-season water flows illustrates the type of watershed investment justification that the accounts make possible. These regions had been identified in the accounts as high-priority zones for water security investment; the question of whether the accounts directly informed Bank engagement in these areas is one that warrants confirmation with the GPS teams involved—and is precisely the type of documentation that should be maintained in institutional records as the programs proceed.</p>
+<p>Under a business-as-usual scenario, erosion and sedimentation are projected to rise by more than 26 percent in numerous regions of Ethiopia. The Adaptation scenario, which directs investments toward areas with the highest potential to enhance ecosystem services, including erosion control, water regulation, and carbon sequestration, projects conversion and restoration of approximately 6.7 million hectares by 2030 and 23.8 million hectares by 2050. The Resilient Scenario projects carbon stocks increasing by 389 million metric tonnes by 2050, with a carbon market potential estimated at approximately USD 130 million, providing a potential financing stream for land restoration programs.</p>
+<p>The ecosystem accounts’ specific finding that Southwest Ethiopia and Benishangul-Gumuz are disproportionate contributors to dry-season water flows illustrates the type of watershed investment justification that the accounts make possible. These regions had been identified in the accounts as high-priority zones for water security investment; the question of whether the accounts directly informed Bank engagement in these areas is one that warrants confirmation with the GPS teams involved.</p>
 </section>
 <section id="kenya-natural-capital-data-in-the-macro-fiscal-framework" class="level2">
 <h2 class="anchored" data-anchor-id="kenya-natural-capital-data-in-the-macro-fiscal-framework">Kenya: Natural Capital Data in the Macro-Fiscal Framework</h2>
 <p>Kenya’s use of natural capital accounts in fiscal planning is the most advanced documented case in the AFE region, as formally recognized in the 2026 Budget Policy Statement of the National Treasury <span class="citation" data-cites="national_treasury_kenya_2026">(<a href="#ref-national_treasury_kenya_2026" role="doc-biblioref">National Treasury of Kenya, 2026</a>)</span>.</p>
-<p>The World Bank, working with the National Treasury through technical assistance, supported development of a customized macroeconomic model for Kenya known as KENMod. This is an extension of the World Bank’s standard Macro-Fiscal Model (MFMod)—a structural macroeconometric model used across client countries for GDP, consumption, investment, employment, and fiscal forecasting—customized to incorporate a Climate and Natural Capital Extension. Technical capacity was built among officers from the National Treasury, the State Department of Planning, and the Kenya National Bureau of Statistics.</p>
-<p>KENMod’s Climate and Natural Capital Extension comprises four interlinked analytical channels: (a) a Climate Damages Module covering labor heat stress, human health, water and heat stress, erosion and land degradation, livestock, flooding, and roads and bridges; (b) a Reconstruction and Adaptation Module analyzing investment costs and benefits in reducing climate damages; (c) an Energy, Emissions, and Pollution Module that includes energy as a production factor, assesses carbon pricing impacts, and tracks CO₂ and PM 2.5 emissions; and (d) a Land Use and Natural Capital Module that models land allocation using ecosystem service-adjusted land prices and computes Adjusted Net Savings—capturing resource depletion. Data from the NCA programme, including water accounts, energy accounts, land accounts, and ecosystem service accounts, directly feed into channels (a) and (d).</p>
+<p>The World Bank, working with the National Treasury through technical assistance, supported development of a customized macroeconomic model for Kenya known as KENMod. This is an extension of the World Bank’s standard Macro-Fiscal Model (MFMod), which is a structural macroeconometric model used across client countries for GDP, consumption, investment, employment, and fiscal forecasting, customized to incorporate a Climate and Natural Capital Extension. Technical capacity was built among officers from the National Treasury, the State Department of Planning, and the Kenya National Bureau of Statistics.</p>
+<p>KENMod’s Climate and Natural Capital Extension comprises four interlinked analytical channels: (a) a Climate Damages Module covering labor heat stress, human health, water and heat stress, erosion and land degradation, livestock, flooding, and roads and bridges; (b) a Reconstruction and Adaptation Module analyzing investment costs and benefits in reducing climate damages; (c) an Energy, Emissions, and Pollution Module that includes energy as a production factor, assesses carbon pricing impacts, and tracks CO₂ and PM 2.5 emissions; and (d) a Land Use and Natural Capital Module that models land allocation using ecosystem service-adjusted land prices and computes Adjusted Net Savings—capturing resource depletion. Data from the NCA program, including water accounts, energy accounts, land accounts, and ecosystem service accounts, directly feed into channels (a) and (d).</p>
 <p>The 2026 BPS reports that four climate-related scenarios were simulated using KENMod: a 10 percent reduction in crop yields from drought; a 20 percent decline in livestock output; flood-related road and bridge damage equivalent to 2 percent of public capital stock; and a combined scenario of all three shocks. The analysis shows that climate shocks reduce GDP, widen the primary deficit, and increase debt-to-GDP ratios—findings used to justify climate-responsive budgeting and investment in climate-resilient infrastructure. Under a hot scenario, GDP is projected 4.2 percentage points lower than baseline by 2100.</p>
 <p>The BPS also documents progress in NCA institutionalization: advances in Ecosystem, Energy, Forest, and Water Accounts with the natural capital dataset extending to 2023; development of an Investment Prioritization Tool for land restoration; and establishment of a National Plan for the Advancement of Environmental-Economic Accounting with discussions underway on a National Steering Committee for NCA integration into national planning.</p>
-<p>Kenya’s forest accounts note separately that the KENMOD framework enables forest-related scenarios—including climate shocks to forest extent and macroeconomic impacts of forest restoration investments—to be translated directly into GDP, fiscal revenue, and employment projections <span class="citation" data-cites="knbs_forest_2026">(<a href="#ref-knbs_forest_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026b</a>)</span>. This link makes Kenya the only country in the AFE region with an operational tool for making budget-level arguments for forest conservation directly comparable to those of any other economic sector.</p>
+<p>Kenya’s forest accounts note separately that the KENMOD framework enables forest-related scenarios to be translated directly into GDP, fiscal revenue, and employment projections <span class="citation" data-cites="knbs_forest_2026">(<a href="#ref-knbs_forest_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026b</a>)</span>. These include climate shocks to forest extent and macroeconomic impacts of forest restoration investments, This link makes Kenya the only country in the AFE region with an operational tool for making budget-level arguments for forest conservation directly comparable to those of any other economic sector.</p>
 </section>
 <section id="rwanda-water-pricing-and-infrastructure-investment" class="level2">
 <h2 class="anchored" data-anchor-id="rwanda-water-pricing-and-infrastructure-investment">Rwanda: Water Pricing and Infrastructure Investment</h2>
-<p>Rwanda’s monetary water supply and use tables provide the most direct link between water accounts and a specific policy argument in the region: the quantified economic case for water tariff reform and distribution infrastructure investment. The accounts establish that WASAC achieves only 75 percent cost recovery, with a break-even tariff of approximately 700 Rwf/m³ against actual residential charges of 340–877 Rwf/m³ <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>. Non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Halving NRW would free 8 million m³ per year—equivalent to supply for 42,000 households or irrigation for 660 additional hectares—and add approximately USD 4 million in annual revenue.</p>
-<p>The monetary water productivity data—showing agriculture at 118 Rwf/m³ against mining at 6,236 Rwf/m³—provides the macro-economic basis for water allocation governance that physical accounts alone cannot support. Rwanda’s relative decoupling (GDP +25 percent, water use +10 percent, 2012–2015) is the type of macroeconomic efficiency argument that informs both domestic water policy and donor investment rationale.</p>
+<p>Rwanda’s monetary water supply and use tables underpin the policy argument for the quantified economic case for water tariff reform and distribution infrastructure investment. The accounts establish that WASAC achieves only 75 percent cost recovery, with a break-even tariff of approximately 700 Rwf/m³ against actual residential charges of 340–877 Rwf/m³ <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019b</a>)</span>. Non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Halving NRW would free 8 million m³ per year, which is equivalent to supply for 42,000 households or irrigation for 660 additional hectares, and add approximately USD 4 million in annual revenue.</p>
+<p>The monetary water productivity data showing agriculture at 118 Rwf/m³ against mining at 6,236 Rwf/m³, provides the macro-economic basis for water allocation governance that physical accounts alone cannot support. Rwanda’s relative decoupling (GDP +25 percent, water use +10 percent, 2012–2015) is also an important macroeconomic efficiency argument that informs domestic water policy.</p>
 </section>
 <section id="south-africa-biodiversity-economy-and-conservation-finance" class="level2">
 <h2 class="anchored" data-anchor-id="south-africa-biodiversity-economy-and-conservation-finance">South Africa: Biodiversity Economy and Conservation Finance</h2>
@@ -1596,61 +1633,50 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="uganda-forest-supply-projections" class="level2">
 <h2 class="anchored" data-anchor-id="uganda-forest-supply-projections">Uganda: Forest Supply Projections</h2>
-<p>Uganda’s forest accounts include the region’s most explicit forward-looking projections: sustainable wood supply fully depleted by approximately 2025, with a supply deficit of 105 million tonnes projected by 2040 <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. This projection was explicitly intended to inform Uganda’s energy policy and ASCENT-type clean cooking investments. The non-wood forest product monetary accounts—<em>Prunus africana</em> bark at UGX 265,195 million and shea butter at UGX 14,553 million—provide the value-chain data needed to design formalization programs for high-value species that generate both livelihoods and conservation incentives.</p>
+<p>Uganda’s forest accounts include forward-looking projections showing sustainable wood supply fully depleted by approximately 2025, with a supply deficit of 105 million tonnes projected by 2040 <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. This projection was explicitly intended to inform Uganda’s energy policy and ASCENT-type clean cooking investments. The non-wood forest product monetary accounts, which show <em>Prunus africana</em> bark at UGX 265,195 million and shea butter at UGX 14,553 million, provide value-chain data needed to design formalization programs for high-value species that generate both livelihoods and conservation incentives.</p>
 </section>
 <section id="zambia-wildlife-revenue-and-climate-vulnerability" class="level2">
 <h2 class="anchored" data-anchor-id="zambia-wildlife-revenue-and-climate-vulnerability">Zambia: Wildlife Revenue and Climate Vulnerability</h2>
-<p>Zambia’s accounts establish the economic scale of wildlife-based provisioning: fish production valued at ZMW 8 billion (USD 422.6 million) in 2023, bush meat revenue growing 158.5 percent (2018–2023), and non-wood forest product harvests of over 300,000 tonnes per year <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. These figures, compiled within the formal SEEA framework for the first time, provide the baseline for wildlife sector investment decisions and for monitoring the economic resilience of communities that depend on Game Management Areas. The carbon NPV of USD 46 million for 2018–2023 ecosystem degradation provides a carbon finance entry point even in the absence of full monetary ecosystem accounts.</p>
+<p>Zambia’s accounts show the economic scale of wildlife-based provisioning, in which fish production is valued at ZMW 8 billion (USD 422.6 million) in 2023, bush meat revenue growing 158.5 percent (2018–2023), and non-wood forest product harvests of over 300,000 tonnes per year <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. These figures, compiled within the formal SEEA framework, provide the baseline for wildlife sector investment decisions and for monitoring the economic resilience of communities that depend on Game Management Areas. The carbon NPV of USD 46 million for 2018–2023 ecosystem degradation provides a carbon finance entry point even in the absence of full monetary ecosystem accounts.</p>
 </section>
 </section>
 <section id="recommendations" class="level1">
 <h1>Recommendations</h1>
 <section id="completing-the-monetary-frontier" class="level2">
 <h2 class="anchored" data-anchor-id="completing-the-monetary-frontier">Completing the Monetary Frontier</h2>
-<ol type="1">
-<li><p><strong>Prioritize monetary ecosystem service accounts for Ethiopia and Madagascar.</strong> Both countries have comprehensive physical frameworks in place. Carbon sequestration valuation (using Article 6 carbon market prices) and water regulation services (using avoided cost methodologies) have the most established pathways and the highest policy demand. Ethiopia’s soil protection data, linked to the 2–6.75 percent agricultural GDP damage estimate, provides an immediate physical basis for a cost-benefit account. Madagascar’s NBS investment zones concentrate 31 percent of national carbon stock in 7.5 percent of national territory—a spatial concentration that would generate very large monetary values per hectare once properly monetized.</p></li>
-<li><p><strong>Support energy supply and use table development in Ethiopia, the DRC, and Uganda.</strong> Physical energy accounts are the minimum baseline for ASCENT program monitoring. Monetary energy supply and use tables—as developed in Kenya—provide the most policy-actionable insights, linking physical energy flows to sectoral value added, household expenditure, and fiscal revenue. The DRC’s biomass-to-carbon finance linkage and Uganda’s 2025 wood supply depletion projection both require updated physical accounts to verify outcomes.</p></li>
-</ol>
+<p><strong>Prioritize monetary ecosystem service accounts for Ethiopia and Madagascar.</strong> Both countries have comprehensive physical frameworks in place. Carbon sequestration valuation (using Article 6 carbon market prices) and water regulation services (using avoided cost methodologies) have the most established pathways and the highest policy potential. Ethiopia’s soil protection data, linked to the 2–6.75 percent agricultural GDP damage estimate, provides an immediate physical basis for a cost-benefit account. Madagascar’s NBS investment zones concentrate 31 percent of national carbon stock in 7.5 percent of national territory, which constitutes a spatial concentration that would generate very large monetary values per hectare once properly monetized.</p>
+<p><strong>Support energy supply and use table development in Ethiopia, the DRC, and Uganda.</strong> Physical energy accounts are the minimum baseline for ASCENT program monitoring. Monetary energy supply and use tables, like the ones developed in Kenya, provide policy-actionable insights, linking physical energy flows to sectoral value added, household expenditure, and fiscal revenue. The DRC’s biomass-to-carbon finance linkage and Uganda’s 2025 wood supply depletion projection both require updated physical accounts to verify outcomes.</p>
 </section>
 <section id="institutionalizing-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="institutionalizing-accounts">Institutionalizing Accounts</h2>
-<ol start="3" type="1">
-<li><p><strong>Invest in sub-national disaggregation for water and land accounts.</strong> Basin-level and district-level accounts already exist in prototype form in several countries. Kenya’s ten water basins, Zambia’s provincial NEDI, Rwanda’s district-level baseflow decline, and South Africa’s 22 SWSA analyses demonstrate that sub-national disaggregation transforms national accounts into investment targeting tools. Systematic spatial disaggregation should be built into account design from the start rather than treated as a future elaboration.</p></li>
-<li><p><strong>Institutionalize NCA within national statistical agencies.</strong> The DRC, Ethiopia, and Zambia explicitly identify institutionalization as a priority. Technical assistance for placing SEEA compilation within the mandate and budget of national statistical offices—following the Mauritius and Uganda water account models—is the single most important intervention for ensuring that existing account investments generate long-term value. The key ingredients are formal inter-agency data-sharing agreements, clear mandates within national statistical plans, and budget lines independent of donor project cycles.</p></li>
-</ol>
+<p><strong>Invest in sub-national disaggregation for water and land accounts.</strong> Basin-level and district-level accounts already exist in prototype form in several countries. Kenya’s ten water basins, Zambia’s provincial NEDI, Rwanda’s district-level baseflow decline, and South Africa’s 22 SWSA analyses demonstrate that sub-national disaggregation transforms national accounts into investment targeting tools. Systematic spatial disaggregation should be built into account design from the start rather than treated as a future addition.</p>
+<p><strong>Institutionalize NCA within national statistical agencies.</strong> The DRC, Ethiopia, and Zambia explicitly identify institutionalization as a priority. Technical assistance for placing SEEA compilation within the mandate and budget of national statistical offices, following the Mauritius and Uganda water account models, is an important intervention for ensuring that existing account investments generate long-term value. The key elements are formal inter-agency data-sharing agreements, clear mandates within national statistical plans, and budget lines independent of donor project cycles.</p>
 </section>
 <section id="cross-country-coordination" class="level2">
 <h2 class="anchored" data-anchor-id="cross-country-coordination">Cross-Country Coordination</h2>
-<ol start="5" type="1">
-<li><p><strong>Develop cross-country harmonized accounts for shared resources.</strong> The Zambezi Basin spans Zambia, Zimbabwe, Mozambique, and others. The Congo Basin spans the DRC, Republic of Congo, Cameroon, and others. Harmonized basin-level water and forest accounts would enable regional governance discussions and shared investment planning that national-level accounts cannot support alone. A practical starting point is common reporting categories for land cover and forest classification alongside national definitions—a technical fix that would immediately improve analytical value.</p></li>
-<li><p><strong>Initiate marine and coastal ecosystem accounts.</strong> Marine and ocean accounts are compiled by no country in the region, despite the economic importance of Indian Ocean fisheries and South Africa’s 200 km² EEZ. South Africa’s estuarine accounts—sawfish extinct, dusky kob spawner biomass below 2 percent of pristine—illustrate what such accounts would reveal along the eastern African coastline. Zambia’s fish production at USD 422.6 million per year points to the scale of what remains formally unaccounted.</p></li>
-</ol>
+<p><strong>Develop cross-country harmonized accounts for shared resources.</strong> The Zambezi Basin spans Zambia, Zimbabwe, Mozambique, and others. The Congo Basin spans the DRC, Republic of Congo, Cameroon, and others. Harmonized basin-level water and forest accounts would enable regional governance discussions and shared investment planning that national-level accounts cannot support alone. A practical starting point is common reporting categories for land cover and forest classification alongside national definitions. This would be an immediate value addition to improve analytical value.</p>
+<p><strong>Initiate marine and coastal ecosystem accounts.</strong> Marine and ocean accounts have not been compiled in the region, despite the economic importance of Indian Ocean fisheries and South Africa’s 200 km² EEZ. South Africa’s estuarine accounts, which show that sawfish has gone extinct and that dusky kob spawner biomass has dipped below 2 percent of pristine levels, illustrate what such accounts would reveal along the eastern African coastline. Zambia’s fish production at USD 422.6 million per year points to the scale of what remains formally unaccounted.</p>
 </section>
 <section id="leveraging-artificial-intelligence" class="level2">
 <h2 class="anchored" data-anchor-id="leveraging-artificial-intelligence">Leveraging Artificial Intelligence</h2>
-<ol start="7" type="1">
-<li><p><strong>Use AI to accelerate priority account development and reduce costs.</strong> Several of the constraints identified in this review—manual land cover classification, data gap imputation, cross-country harmonization of classification schemes, and the production of account reports—are now addressable using AI tools at meaningfully reduced cost:</p>
+<p><strong>Use AI to accelerate priority account development and reduce costs.</strong> Several of the constraints identified in this review, like manual land cover classification, data gap imputation, cross-country harmonization of classification schemes, and the production of account reports, are now addressable using AI tools at meaningfully reduced cost:</p>
 <ul>
 <li><p><em>Automated satellite-based land cover classification</em>: Large-scale deep learning models trained on globally available remote sensing data (Sentinel, Landsat, MODIS) can produce consistent 30-metre annual land cover maps at low marginal cost, directly feeding ecosystem extent accounts and land accounts. This reduces the expert time required for the most labour-intensive step in account compilation.</p></li>
 <li><p><em>AI-assisted report writing and documentation</em>: Large language models can draft initial account narratives, policy summaries, and cross-table analyses from structured account data, reducing the documentation burden on national statistical offices and freeing technical staff for quality review and validation rather than text production.</p></li>
-<li><p><em>Machine learning for gap imputation</em>: Countries with sparse data can benefit from imputation models that draw on regional patterns—a technique already used in the UN SEEA Global Assessment—but that can be substantially improved with recent advances in model calibration and uncertainty quantification.</p></li>
-<li><p><em>Cross-country harmonization</em>: Natural language processing approaches can assist in mapping country-specific classification systems to common SEEA taxonomies, reducing the manual effort currently required to make cross-country comparison possible.</p></li>
-</ul></li>
-</ol>
+<li><p><em>Machine learning for gap imputation</em>: Countries with sparse data can benefit from imputation models that draw on regional patterns, which is a technique that can be substantially improved with recent advances in model calibration and uncertainty quantification.</p></li>
+</ul>
 </section>
 <section id="responding-to-the-new-international-landscape" class="level2">
 <h2 class="anchored" data-anchor-id="responding-to-the-new-international-landscape">Responding to the New International Landscape</h2>
-<ol start="8" type="1">
-<li><p><strong>Align account development with the converging international statistical and policy frameworks.</strong> The period since 2021 has seen a rapid increase in the institutional pressure on countries to develop SEEA-compatible data systems. Specifically:</p>
+<p><strong>Align account development with the converging international statistical and policy frameworks.</strong> The period since 2021 has seen a rapid increase in the institutional pressure on countries to develop SEEA-compatible data systems. Specifically:</p>
 <ul>
-<li><p>The UN Secretary-General’s <em>Our Common Agenda</em> (2021) urges all Member States to begin implementing SEEA EA and calls for pathways for national and global accounting systems to include complementary measurements.</p></li>
-<li><p>The <strong>2025 System of National Accounts</strong>, adopted by the UN Statistical Commission at its 56th session, incorporates natural resource depletion as a cost of production and the split-asset approach for natural resource valuation—both directly aligned with SEEA Central Framework methodology. Countries implementing the 2025 SNA will therefore require SEEA-compatible physical and monetary asset data as an input.</p></li>
-<li><p>The <strong>SEEA Central Framework update</strong>, endorsed by the Statistical Commission in 2024 (Decision 55/109(s)), is on track for completion by the 59th session in 2028. The update process includes global consultation rounds in 2026–2027. Countries that contribute to the consultation—particularly those with compiled accounts—have the opportunity to shape how the standard accommodates the data realities of developing-country contexts.</p></li>
-<li><p>The <strong>Kunming-Montreal Global Biodiversity Framework</strong> (2022) identifies the SEEA as the recommended methodological basis for headline indicators under Goals A and B of its monitoring framework, with 2030 reporting targets. All nine countries reviewed here are CBD signatories. Countries that have compiled ecosystem extent accounts (all nine) and condition accounts (Kenya, DRC, Ethiopia, South Africa, Rwanda) are already positioned to report against at least some GBF indicators.</p></li>
+<li><p>The UN Secretary-General’s <em>Our Common Agenda</em> (2021) urges all Member States to begin implementing SEEA and calls for pathways for national and global accounting systems to include complementary measurements.</p></li>
+<li><p>The <strong>2025 System of National Accounts</strong>, adopted by the UN Statistical Commission at its 56th session, incorporates natural resource depletion as a cost of production and the split-asset approach for natural resource valuation, which are directly aligned with SEEA Central Framework methodology. Countries implementing the 2025 SNA will therefore require SEEA-compatible physical and monetary asset data as an input.</p></li>
+<li><p>The <strong>SEEA Central Framework update</strong>, endorsed by the Statistical Commission in 2024 (Decision 55/109(s)), is on track for completion by the 59th session in 2028. The update process includes global consultation rounds in 2026–2027. Countries with compiled accounts that contribute to the consultation have the opportunity to shape how the standard accommodates the data realities of developing-country contexts.</p></li>
+<li><p>The <strong>Kunming-Montreal Global Biodiversity Framework (2022)</strong> identifies the SEEA as the recommended methodological basis for headline indicators under Goals A and B of its monitoring framework, with 2030 reporting targets. All nine countries reviewed here are CBD signatories. Countries that have compiled ecosystem extent accounts and condition accounts (Kenya, DRC, Ethiopia, South Africa, Rwanda) are already positioned to report against some GBF indicators.</p></li>
 <li><p>SDG indicator <strong>15.9.1(b)</strong> is monitored annually by the UN Committee of Experts on Environmental-Economic Accounting, providing a standing reporting obligation that rewards progression through SEEA implementation stages.</p></li>
 </ul>
-<p>Together, these frameworks create a policy environment in which the question for AFE countries is not whether to implement SEEA, but how to prioritize account development to maximize usefulness for national planning while meeting international reporting requirements at the lowest statistical cost. The NCA programme reviewed here has built exactly the institutional foundations from which this expansion can be launched.</p></li>
-</ol>
+<p>Together, these frameworks create a policy environment in which the question for AFE countries is not whether to implement SEEA, but how to prioritize account development to maximize usefulness for national planning while meeting international reporting requirements at the lowest statistical cost.</p>
 </section>
 </section>
 <section id="annex-country-level-policy-insights-from-available-accounts" class="level1">
@@ -1658,8 +1684,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 <p>This annex draws directly on published reports and supporting data files for each country to extract specific indicators, facts, and data insights relevant to planning, policy, and World Bank operations. Entries are organized by country and, within each country, by the SEEA accounts compiled, following the account order in <a href="#tbl-all-seea-accounts" class="quarto-xref">Table&nbsp;1</a>. Where monetary valuation of ecosystem services has not yet been completed, this is noted with the magnitude of the physical flows involved and available economic proxy data. Public websites where accounts or associated data are available are listed for each country.</p>
 <section id="sec-annex-drc" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-drc">Democratic Republic of Congo (DRC)</h2>
-<p>The Democratic Republic of Congo has compiled five SEEA Ecosystem Accounting accounts—ecosystem extent, ecosystem condition, physical ecosystem services, monetary ecosystem services, and ecosystem asset accounts—all presented in a single comprehensive report covering 2000 to 2020 <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. The accounts are restricted to forest ecosystems, reflecting the DRC’s status as custodian of the world’s second-largest tropical forest biome. They were produced by Anchor Environmental Consultants under the leadership of Dr Jane Turpie, with World Bank project leadership from Kanta Kumari Rigaud, Tsegaye Ginbo Gatiso, and colleagues, with financial support from CAFI and the Climate Investment Funds. The macroeconomic context is stark: the forestry sector contributes approximately 9 percent of GDP (down from 11 percent in 1990), 94 percent of total energy supply comes from forest biomass, and approximately 90 percent of logging activity is informal, small-scale, or illegal.</p>
-<p><strong>Public resources:</strong> Reports and data are available via the World Bank Open Knowledge Repository and the CAFI Secretariat website (https://www.cafi.org).</p>
+<p>The Democratic Republic of Congo has compiled five SEEA Ecosystem Accounting accounts—ecosystem extent, ecosystem condition, physical ecosystem services, monetary ecosystem services, and ecosystem asset accounts—all presented in a single comprehensive report covering 2000 to 2020 <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. The accounts are restricted to forest ecosystems, reflecting the DRC’s status as custodian of the world’s second-largest tropical forest biome. They were produced by Anchor Environmental Consultants under the leadership of Dr Jane Turpie, with World Bank project leadership from Kanta Kumari Rigaud, Tsegaye Ginbo Gatiso, and colleagues, with financial support from CAFI and the Climate Investment Funds. The macroeconomic context is stark: the forestry sector contributes approximately 9 percent of GDP (down from 11 percent in 1990), 94 percent of total energy supply comes from forest biomass, and approximately 90 percent of logging activity is informal, small-scale, or illegal<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <section id="ecosystem-extent-accounts-seea-ecosystem-accounting" class="level3">
 <h3 class="anchored" data-anchor-id="ecosystem-extent-accounts-seea-ecosystem-accounting">Ecosystem Extent Accounts (SEEA Ecosystem Accounting)</h3>
 <p>The accounts use a 15-class typology to document forest and land cover change from 2000 to 2020 across the DRC’s 230 million hectares <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Lowland forest, the dominant class, covered 104,336,681 ha (45.2 percent) in 2000 and declined to 97,467,643 ha (42.3 percent) by 2020, a net loss of 6,869,000 ha (6.6 percent). Total forest cover lost across all types was 11,568,000 ha. The deforestation rate accelerated from approximately 0.5 percent per year in 2000–2010 to above 0.8 percent per year in 2010–2020—more than doubling. Forest-farm mosaic expanded 259 percent over 20 years (from 2.8 to 9.97 million ha). Cropland expanded 147 percent. At the provincial level, Kwilu suffered the largest absolute lowland forest loss (720,000 ha), while Kinshasa province lost 67 percent of its forest cover.</p>
@@ -1679,8 +1704,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-eth" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-eth">Ethiopia</h2>
-<p>Ethiopia has compiled four SEEA accounts—physical and monetary asset accounts for land (SEEA-CF) and ecosystem extent and condition accounts (SEEA-EA)—covering 2013 to 2022 and disaggregated to regions and major river basins including the Abay (Blue Nile) and Awash basins <span class="citation" data-cites="government_of_ethiopia_land_2026 rutebuka_ethiopia_2025">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>; <a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. The accounts were produced through a government-led Technical Working Group with World Bank and UNSD support. Monetary valuation of ecosystem services has not yet been undertaken.</p>
-<p><strong>Public resources:</strong> Land accounts available at https://www.csa.gov.et. Ecosystem services accounts available via the World Bank GPS programme documentation.</p>
+<p>Ethiopia has compiled four SEEA accounts—physical and monetary asset accounts for land (SEEA-CF) and ecosystem extent and condition accounts (SEEA-EA)—covering 2013 to 2022 and disaggregated to regions and major river basins including the Abay (Blue Nile) and Awash basins <span class="citation" data-cites="government_of_ethiopia_land_2026 rutebuka_ethiopia_2025">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>; <a href="#ref-rutebuka_ethiopia_2025" role="doc-biblioref">Rutebuka et al., 2025</a>)</span>. The accounts were produced through a government-led Technical Working Group with World Bank and UNSD support. Monetary valuation of ecosystem services has not yet been undertaken<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <section id="land-asset-accounts-seea-central-framework" class="level3">
 <h3 class="anchored" data-anchor-id="land-asset-accounts-seea-central-framework">Land Asset Accounts (SEEA Central Framework)</h3>
 <p>Annual cropland grew 20 percent (21.7 to 25.9 million ha) and built-up area grew 50 percent between 2013 and 2022. Total forest area increased 22 percent (22.3 to 27.2 million ha), but the accounts explicitly caution that this may partly reflect reclassification rather than genuine restoration. Open shrublands declined 23 percent. The Abay basin is 43 percent annual cropland—more than double the national share—making it the agricultural heartland and the principal zone for soil erosion risk and watershed investment. Only 52 percent of land cover remained in the same class across the two reference years, indicating a high rate of landscape change.</p>
@@ -1697,8 +1721,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-ken" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-ken">Kenya</h2>
-<p>Kenya has compiled the most comprehensive set of SEEA accounts in the AFE region—ten accounts across five sectors spanning water, energy, land, ecosystem accounts, and forest thematic accounts <span class="citation" data-cites="worldbank_kenya_water_energy_2025 knbs_energy_2026 soulard_kenya_land_2025 turpie_kenya_ecosystem_2025 knbs_forest_2026">(<a href="#ref-knbs_energy_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026a</a>, <a href="#ref-knbs_forest_2026" role="doc-biblioref">2026b</a>; <a href="#ref-soulard_kenya_land_2025" role="doc-biblioref">Soulard, 2025</a>; <a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>; <a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. These were produced through KNBS in partnership with Technical Working Committees under the National Plan for Advancing Environmental-Economic Accounting (NP-AEEA) 2025–2028, with World Bank GPS support. Kenya’s accounts are notable for including monetary ecosystem service valuation—covering livestock production, sediment retention, and nature-based tourism—and for integration with the KENMod macro-fiscal model.</p>
-<p><strong>Public resources:</strong> KNBS publishes accounts at https://www.knbs.or.ke. Energy accounts are incorporated annually in the Kenya Economic Survey. Water accounts and ecosystem accounts available via the GPS programme.</p>
+<p>Kenya has compiled the most comprehensive set of SEEA accounts in the AFE region—ten accounts across five sectors spanning water, energy, land, ecosystem accounts, and forest thematic accounts <span class="citation" data-cites="worldbank_kenya_water_energy_2025 knbs_energy_2026 soulard_kenya_land_2025 turpie_kenya_ecosystem_2025 knbs_forest_2026">(<a href="#ref-knbs_energy_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026a</a>, <a href="#ref-knbs_forest_2026" role="doc-biblioref">2026b</a>; <a href="#ref-soulard_kenya_land_2025" role="doc-biblioref">Soulard, 2025</a>; <a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>; <a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. These were produced through KNBS in partnership with Technical Working Committees under the National Plan for Advancing Environmental-Economic Accounting (NP-AEEA) 2025–2028, with World Bank GPS support. Kenya’s accounts are notable for including monetary ecosystem service valuation—covering livestock production, sediment retention, and nature-based tourism—and for integration with the KENMod macro-fiscal model<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <section id="water-supply-and-use-tables-and-asset-accounts-seea-central-framework" class="level3">
 <h3 class="anchored" data-anchor-id="water-supply-and-use-tables-and-asset-accounts-seea-central-framework">Water Supply and Use Tables and Asset Accounts (SEEA Central Framework)</h3>
 <p>Per capita water use ranges from 8 m³/person/year (Lake Victoria South) to 91 m³/person/year (Tana basin), a tenfold range within national territory. The Rift Valley shows groundwater abstraction exceeding 100 percent of sustainable yield. Electricity generation is the single largest sectoral water user. Non-revenue water declined modestly.</p>
@@ -1726,8 +1749,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-mad" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-mad">Madagascar</h2>
-<p>Madagascar has compiled two SEEA Ecosystem Accounting accounts—ecosystem extent and ecosystem condition—based on an integrated landscape assessment covering 1992–2020 <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. This is an experimental but spatially explicit exercise by the World Bank BELA team, not yet a fully institutionalized SEEA-EA process.</p>
-<p><strong>Public resources:</strong> Assessment data available at https://www.instat.mg. Detailed Excel databases in the repository at <code>data/assessment/mad/</code>.</p>
+<p>Madagascar has compiled two SEEA Ecosystem Accounting accounts—ecosystem extent and ecosystem condition—based on an integrated landscape assessment covering 1992–2020 <span class="citation" data-cites="vogl_madagascar_2022">(<a href="#ref-vogl_madagascar_2022" role="doc-biblioref">Vogl et al., 2022</a>)</span>. This is an experimental but spatially explicit exercise by the World Bank BELA team, not yet a fully institutionalized SEEA-EA process<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 <section id="ecosystem-extent-and-condition-accounts-seea-ecosystem-accounting-1" class="level3">
 <h3 class="anchored" data-anchor-id="ecosystem-extent-and-condition-accounts-seea-ecosystem-accounting-1">Ecosystem Extent and Condition Accounts (SEEA Ecosystem Accounting)</h3>
 <p>35.6 percent of national territory (21.1 million ha) showed degrading trends 1992–2020. Of this, 7.4 million ha are highly degrading, 6.1 million ha moderately degrading, and 7.6 million ha slightly degrading. The three main Antananarivo grid hydropower plants lose approximately 19 percent of installed generation capacity to watershed degradation. Implementing integrated landscape management in highest-priority zones could reduce soil erosion by 81 percent and surface runoff by 73.5 percent within those areas. Total terrestrial carbon stock estimated at 6.25 billion tonnes, with 1.96 billion tonnes (31 percent) concentrated in the highest-priority NBS zones representing only 7.5 percent of national territory.</p>
@@ -1735,8 +1757,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-mus" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-mus">Mauritius</h2>
-<p>Mauritius has compiled two SEEA Central Framework water accounts—physical supply and use tables and physical asset accounts—published as the fifth edition of the <em>Water Account, Mauritius</em> by Statistics Mauritius in December 2024 <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>. The series covers 2021–2022 with a ten-year trend series for selected indicators. This is the most institutionalized and regularly produced water accounting system in the AFE region.</p>
-<p><strong>Public resources:</strong> Statistics Mauritius publishes accounts at https://statsmauritius.govmu.org.</p>
+<p>Mauritius has compiled two SEEA Central Framework water accounts—physical supply and use tables and physical asset accounts—published as the fifth edition of the <em>Water Account, Mauritius</em> by Statistics Mauritius in December 2024 <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>. The series covers 2021–2022 with a ten-year trend series for selected indicators. This is the most institutionalized and regularly produced water accounting system in the AFE region<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
 <section id="physical-supply-and-use-tables-for-water-seea-cf" class="level3">
 <h3 class="anchored" data-anchor-id="physical-supply-and-use-tables-for-water-seea-cf">Physical Supply and Use Tables for Water (SEEA-CF)</h3>
 <p>Total freshwater abstraction is 22 percent of total renewable water resources—below the 25 percent stress threshold, but with abstraction rising steadily from 591 Mm³ in 2017. Agriculture accounts for 89.1 percent of net water consumption. Unaccounted-for water (UFW) in the CWA network was 64.6 percent in 2022 (up from 56.4 percent in 2013)—nearly two-thirds of all treated potable water is lost before reaching end users despite 99.8 percent national access to safely managed water services. Households received 197 L/capita/day against 719 L/day abstracted, with the gap almost entirely explained by network losses.</p>
@@ -1748,8 +1769,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-rwa" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-rwa">Rwanda</h2>
-<p>Rwanda has compiled five SEEA accounts—water (physical and monetary supply and use tables), land (physical asset accounts), and ecosystems (condition and physical services)—produced by NISR in collaboration with the Ministry of Environment and MINECOFIN, with World Bank WAVES technical support <span class="citation" data-cites="nisr_rwanda_land_2018 nisr_rwanda_water_2019 nisr_rwanda_ecosystem_2019">(<a href="#ref-nisr_rwanda_land_2018" role="doc-biblioref">Government of Rwanda, 2018</a>, <a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">2019b</a>, <a href="#ref-nisr_rwanda_ecosystem_2019" role="doc-biblioref">2019a</a>)</span>. Rwanda’s accounts are notable for including monetary water supply and use tables—one of very few in Africa.</p>
-<p><strong>Public resources:</strong> NISR publishes accounts at https://www.statistics.gov.rw.</p>
+<p>Rwanda has compiled five SEEA accounts—water (physical and monetary supply and use tables), land (physical asset accounts), and ecosystems (condition and physical services)—produced by NISR in collaboration with the Ministry of Environment and MINECOFIN, with World Bank WAVES technical support <span class="citation" data-cites="nisr_rwanda_land_2018 nisr_rwanda_water_2019 nisr_rwanda_ecosystem_2019">(<a href="#ref-nisr_rwanda_land_2018" role="doc-biblioref">Government of Rwanda, 2018</a>, <a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">2019b</a>, <a href="#ref-nisr_rwanda_ecosystem_2019" role="doc-biblioref">2019a</a>)</span>. Rwanda’s accounts are notable for including monetary water supply and use tables—one of very few in Africa<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
 <section id="physical-and-monetary-supply-and-use-tables-for-water-seea-cf" class="level3">
 <h3 class="anchored" data-anchor-id="physical-and-monetary-supply-and-use-tables-for-water-seea-cf">Physical and Monetary Supply and Use Tables for Water (SEEA-CF)</h3>
 <p>Agriculture accounts for over 96 percent of water abstraction but generates only 118 Rwf/m³ in water productivity, against 6,236 Rwf/m³ for mining and 9,300–11,600 Rwf/m³ for services. GDP grew 25 percent between 2012 and 2015 while total water use grew only 10 percent—relative decoupling invisible in standard national accounts. National water demand is projected to grow tenfold by 2040 driven by irrigation expansion, which would cross the 25 percent water stress threshold. WASAC NRW: 41 percent = USD 8.7 million foregone revenue annually. Reservoir sedimentation grew 123 percent between 1990 and 2015.</p>
@@ -1765,11 +1785,10 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-uga" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-uga">Uganda (UGA)</h2>
-<p>Uganda has compiled six SEEA accounts across two published programmes—physical water supply and use tables (2015–2024 series) and forest-based accounts (monetary timber asset, ecosystem extent, physical and monetary ecosystem services, ecosystem asset accounts) <span class="citation" data-cites="ubos_uganda_water_2025 ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>, <a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">2025</a>)</span>. Uganda’s water accounts are in their tenth iteration.</p>
-<p><strong>Public resources:</strong> Uganda Bureau of Statistics publishes accounts at https://www.ubos.org. Water accounts updated annually. Forest accounts available via WAVES programme documentation.</p>
+<p>Uganda has compiled six SEEA accounts across two published programs—physical water supply and use tables (2015–2024 series) and forest-based accounts (monetary timber asset, ecosystem extent, physical and monetary ecosystem services, ecosystem asset accounts) <span class="citation" data-cites="ubos_uganda_water_2025 ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>, <a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">2025</a>)</span>. Uganda’s water accounts are in their tenth iteration<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
 <section id="physical-supply-and-use-tables-for-water-seea-cf-1" class="level3">
 <h3 class="anchored" data-anchor-id="physical-supply-and-use-tables-for-water-seea-cf-1">Physical Supply and Use Tables for Water (SEEA-CF)</h3>
-<p>National water productivity: UGX 5,557/m³ consumed in 2024 (+84 percent above 2015 baseline). Agriculture: 55.4 percent of abstraction, 96.4 percent of consumptive use, UGX 1,458/m³ (lowest productivity). Oil and mining abstraction +113.9 percent year-on-year in 2024, reflecting oil development programme. Distribution losses: 34.8 percent. Household daily consumption: 27 L/household—well below 50 L basic-needs benchmark.</p>
+<p>National water productivity: UGX 5,557/m³ consumed in 2024 (+84 percent above 2015 baseline). Agriculture: 55.4 percent of abstraction, 96.4 percent of consumptive use, UGX 1,458/m³ (lowest productivity). Oil and mining abstraction +113.9 percent year-on-year in 2024, reflecting oil development program. Distribution losses: 34.8 percent. Household daily consumption: 27 L/household—well below 50 L basic-needs benchmark.</p>
 </section>
 <section id="monetary-asset-accounts-for-timber-resources-and-ecosystem-accounts-seea-cf-and-seea-ea" class="level3">
 <h3 class="anchored" data-anchor-id="monetary-asset-accounts-for-timber-resources-and-ecosystem-accounts-seea-cf-and-seea-ea">Monetary Asset Accounts for Timber Resources and Ecosystem Accounts (SEEA-CF and SEEA-EA)</h3>
@@ -1778,8 +1797,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-zaf" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-zaf">South Africa (ZAF)</h2>
-<p>South Africa operates the most comprehensive natural capital accounting programme in the AFE region. Statistics South Africa has published seven volumes in its Natural Capital Series, with accounts covering water (including water emission accounts), energy, land, ecosystem extent, ecosystem services, protected areas, and biodiversity-based tourism <span class="citation" data-cites="statssa_water_swsa_2023 statssa_energy_2025 statssa_land_2020 statssa_biodiversity_tourism_2024 statssa_protected_areas_2021 csir_estuaries_2020">(<a href="#ref-csir_estuaries_2020" role="doc-biblioref"><span class="nocase">Niekerk et al.</span>, 2020</a>; <a href="#ref-statssa_land_2020" role="doc-biblioref">Statistics South Africa, 2020</a>, <a href="#ref-statssa_protected_areas_2021" role="doc-biblioref">2021</a>, <a href="#ref-statssa_water_swsa_2023" role="doc-biblioref">2023</a>, <a href="#ref-statssa_biodiversity_tourism_2024" role="doc-biblioref">2024</a>, <a href="#ref-statssa_energy_2025" role="doc-biblioref">2025</a>)</span>.</p>
-<p><strong>Public resources:</strong> Statistics South Africa publishes all Natural Capital Series volumes at https://www.statssa.gov.za.</p>
+<p>South Africa operates the most comprehensive natural capital accounting program in the AFE region. Statistics South Africa has published seven volumes in its Natural Capital Series, with accounts covering water (including water emission accounts), energy, land, ecosystem extent, ecosystem services, protected areas, and biodiversity-based tourism <span class="citation" data-cites="statssa_water_swsa_2023 statssa_energy_2025 statssa_land_2020 statssa_biodiversity_tourism_2024 statssa_protected_areas_2021 csir_estuaries_2020">(<a href="#ref-csir_estuaries_2020" role="doc-biblioref"><span class="nocase">Niekerk et al.</span>, 2020</a>; <a href="#ref-statssa_land_2020" role="doc-biblioref">Statistics South Africa, 2020</a>, <a href="#ref-statssa_protected_areas_2021" role="doc-biblioref">2021</a>, <a href="#ref-statssa_water_swsa_2023" role="doc-biblioref">2023</a>, <a href="#ref-statssa_biodiversity_tourism_2024" role="doc-biblioref">2024</a>, <a href="#ref-statssa_energy_2025" role="doc-biblioref">2025</a>)</span><a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
 <section id="physical-supply-and-use-tables-for-water-physical-asset-accounts-for-water-and-water-emission-accounts-seea-cf" class="level3">
 <h3 class="anchored" data-anchor-id="physical-supply-and-use-tables-for-water-physical-asset-accounts-for-water-and-water-emission-accounts-seea-cf">Physical Supply and Use Tables for Water, Physical Asset Accounts for Water, and Water Emission Accounts (SEEA-CF)</h3>
 <p>The 22 Strategic Water Source Areas (SWSAs) cover 8.2 percent of national land but supply approximately two-thirds of national economic activity and 90+ percent of urban water users. Three SWSAs have fallen below the 60 percent natural land cover threshold for functional water production: Upper Usutu (40.9 percent natural), Table Mountain (50.4 percent), Mpumalanga Drakensberg (51.3 percent). These catchments regulate water for Gauteng. Commercially irrigated pivots expanded 221 percent nationally (1990–2014), with Free State growing 489.7 percent.</p>
@@ -1799,8 +1817,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 <section id="sec-annex-zmb" class="level2">
 <h2 class="anchored" data-anchor-id="sec-annex-zmb">Zambia (ZMB)</h2>
-<p>Zambia has compiled five SEEA accounts—land, timber, water, ecosystem extent, and protected areas/wildlife—presented in a Natural Capital Asset Compendium and a standalone Ecosystem Service Account, produced by the Ministry of Finance and National Planning with World Bank GPS support <span class="citation" data-cites="zambia_nca_compendium_2026 zambia_ecosystem_account_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-zambia_ecosystem_account_2026" role="doc-biblioref">Chisanga, 2026</a>)</span>. The accounting period is 2018–2023, a window defined by major floods and culminating in the catastrophic 2023/24 El Niño drought.</p>
-<p><strong>Public resources:</strong> Accounts available via the Zambia Ministry of Finance and National Planning (https://www.mofnp.gov.zm) and the World Bank GPS programme repository.</p>
+<p>Zambia has compiled five SEEA accounts—land, timber, water, ecosystem extent, and protected areas/wildlife—presented in a Natural Capital Asset Compendium and a standalone Ecosystem Service Account, produced by the Ministry of Finance and National Planning with World Bank GPS support <span class="citation" data-cites="zambia_nca_compendium_2026 zambia_ecosystem_account_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-zambia_ecosystem_account_2026" role="doc-biblioref">Chisanga, 2026</a>)</span>. The accounting period is 2018–2023, a window defined by major floods and culminating in the catastrophic 2023/24 El Niño drought<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
 <section id="physical-asset-accounts-for-land-seea-cf-2" class="level3">
 <h3 class="anchored" data-anchor-id="physical-asset-accounts-for-land-seea-cf-2">Physical Asset Accounts for Land (SEEA-CF)</h3>
 <p>Tree cover fell from 55.4 to 52.8 percent of national territory (loss of 1,881,924 ha, 2018–2023). Cropland +36.9 percent (+960,450 ha). The dominant conversion was trees to rangeland (4,921,342 ha, 44.7 percent of all conversions), reflecting miombo woodland degradation. Eastern Province NEDI: 5.25 percent (nearly four times national average of 1.44 percent). North-Western Province NEDI: 0.12 percent. Ecosystem accounts use MODIS satellite data with classification boundaries differing from national land cover data; percentage changes are more reliable than absolute area totals.</p>
@@ -1826,6 +1843,7 @@ Figure&nbsp;5: Biomass share of national energy supply derived from compiled NCA
 </section>
 </section>
 </section>
+
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-zambia_ecosystem_account_2026" class="csl-entry" role="listitem">
@@ -1906,7 +1924,20 @@ World Bank BELA Initiative. (2026). <em>Developing an investment prioritization 
 <div id="ref-worldbank_kenya_water_energy_2025" class="csl-entry" role="listitem">
 World Bank, &amp; Prime Africa Consult. (2025). <em>Kenya water and energy account report, v1.0</em>. World Bank Global Program on Sustainability.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Reports and data are available via the World Bank Open Knowledge Repository and the CAFI Secretariat website (https://www.cafi.org).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Land accounts available at https://www.csa.gov.et. Ecosystem services accounts available via the World Bank GPS program documentation.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>KNBS publishes accounts at https://www.knbs.or.ke. Energy accounts are incorporated annually in the Kenya Economic Survey. Water accounts and ecosystem accounts available via the GPS program.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Assessment data available at https://www.instat.mg.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Statistics Mauritius publishes accounts at https://statsmauritius.govmu.org.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>NISR publishes accounts at https://www.statistics.gov.rw.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Uganda Bureau of Statistics publishes accounts at https://www.ubos.org. Water accounts updated annually. Forest accounts available via WAVES program documentation.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Statistics South Africa publishes all Natural Capital Series volumes at https://www.statssa.gov.za.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Accounts available via the Zambia Ministry of Finance and National Planning (https://www.mofnp.gov.zm) and the World Bank GPS program repository.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

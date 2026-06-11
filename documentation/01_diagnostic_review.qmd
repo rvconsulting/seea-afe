@@ -11,15 +11,15 @@ format:
     toc: true
     html-math-method: katex
     # css: styles.css
-  docx:
-    reference-doc: custom-reference-doc.docx
-    toc: true
-    number-sections: true
-    syntax-highlighting: github
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
+  # docx:
+  #   reference-doc: custom-reference-doc.docx
+  #   toc: true
+  #   number-sections: true
+  #   syntax-highlighting: github
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
 bibliography: references.bib
 csl: apa.csl
 ---

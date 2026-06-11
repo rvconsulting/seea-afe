@@ -10,11 +10,11 @@ format:
   html:
     toc: true
     html-math-method: katex
-  # docx:
-  #   reference-doc: custom-reference-doc.docx
-  #   toc: true
-  #   number-sections: true
-  #   syntax-highlighting: github
+  docx:
+    reference-doc: custom-reference-doc.docx
+    toc: true
+    number-sections: true
+    syntax-highlighting: github
   # pdf:
   #   toc: true
   #   number-sections: true
@@ -628,15 +628,15 @@ The analysis identified that while Government investments in the highlands had e
 
 The IPT and associated analysis also provides the analytical foundation for Ethiopia's Strategic Investment Framework for Sustainable Land Management (ESIF-II), which will guide government-financed programs on sustainable land management.
 
-Under a business-as-usual scenario, erosion and sedimentation are projected to rise by more than 26 percent in numerous regions of Ethiopia. The Adaptation scenario—which directs investments toward areas with the highest potential to enhance ecosystem services, including erosion control, water regulation, and carbon sequestration—projects conversion and restoration of approximately 6.7 million hectares by 2030 and 23.8 million hectares by 2050. The Resilient Scenario projects carbon stocks increasing by 389 million metric tonnes by 2050, with a carbon market potential estimated at approximately USD 130 million, providing a potential financing stream for land restoration programs.
+Under a business-as-usual scenario, erosion and sedimentation are projected to rise by more than 26 percent in numerous regions of Ethiopia. The Adaptation scenario, which directs investments toward areas with the highest potential to enhance ecosystem services, including erosion control, water regulation, and carbon sequestration, projects conversion and restoration of approximately 6.7 million hectares by 2030 and 23.8 million hectares by 2050. The Resilient Scenario projects carbon stocks increasing by 389 million metric tonnes by 2050, with a carbon market potential estimated at approximately USD 130 million, providing a potential financing stream for land restoration programs.
 
-The ecosystem accounts' specific finding that Southwest Ethiopia and Benishangul-Gumuz are disproportionate contributors to dry-season water flows illustrates the type of watershed investment justification that the accounts make possible. These regions had been identified in the accounts as high-priority zones for water security investment; the question of whether the accounts directly informed Bank engagement in these areas is one that warrants confirmation with the GPS teams involved—and is precisely the type of documentation that should be maintained in institutional records as the programs proceed.
+The ecosystem accounts' specific finding that Southwest Ethiopia and Benishangul-Gumuz are disproportionate contributors to dry-season water flows illustrates the type of watershed investment justification that the accounts make possible. These regions had been identified in the accounts as high-priority zones for water security investment; the question of whether the accounts directly informed Bank engagement in these areas is one that warrants confirmation with the GPS teams involved.
 
 ## Kenya: Natural Capital Data in the Macro-Fiscal Framework
 
 Kenya's use of natural capital accounts in fiscal planning is the most advanced documented case in the AFE region, as formally recognized in the 2026 Budget Policy Statement of the National Treasury [@national_treasury_kenya_2026].
 
-The World Bank, working with the National Treasury through technical assistance, supported development of a customized macroeconomic model for Kenya known as KENMod. This is an extension of the World Bank's standard Macro-Fiscal Model (MFMod)—a structural macroeconometric model used across client countries for GDP, consumption, investment, employment, and fiscal forecasting—customized to incorporate a Climate and Natural Capital Extension. Technical capacity was built among officers from the National Treasury, the State Department of Planning, and the Kenya National Bureau of Statistics.
+The World Bank, working with the National Treasury through technical assistance, supported development of a customized macroeconomic model for Kenya known as KENMod. This is an extension of the World Bank's standard Macro-Fiscal Model (MFMod), which is a structural macroeconometric model used across client countries for GDP, consumption, investment, employment, and fiscal forecasting, customized to incorporate a Climate and Natural Capital Extension. Technical capacity was built among officers from the National Treasury, the State Department of Planning, and the Kenya National Bureau of Statistics.
 
 KENMod's Climate and Natural Capital Extension comprises four interlinked analytical channels: (a) a Climate Damages Module covering labor heat stress, human health, water and heat stress, erosion and land degradation, livestock, flooding, and roads and bridges; (b) a Reconstruction and Adaptation Module analyzing investment costs and benefits in reducing climate damages; (c) an Energy, Emissions, and Pollution Module that includes energy as a production factor, assesses carbon pricing impacts, and tracks CO₂ and PM 2.5 emissions; and (d) a Land Use and Natural Capital Module that models land allocation using ecosystem service-adjusted land prices and computes Adjusted Net Savings—capturing resource depletion. Data from the NCA program, including water accounts, energy accounts, land accounts, and ecosystem service accounts, directly feed into channels (a) and (d).
 
@@ -644,13 +644,13 @@ The 2026 BPS reports that four climate-related scenarios were simulated using KE
 
 The BPS also documents progress in NCA institutionalization: advances in Ecosystem, Energy, Forest, and Water Accounts with the natural capital dataset extending to 2023; development of an Investment Prioritization Tool for land restoration; and establishment of a National Plan for the Advancement of Environmental-Economic Accounting with discussions underway on a National Steering Committee for NCA integration into national planning.
 
-Kenya's forest accounts note separately that the KENMOD framework enables forest-related scenarios—including climate shocks to forest extent and macroeconomic impacts of forest restoration investments—to be translated directly into GDP, fiscal revenue, and employment projections [@knbs_forest_2026]. This link makes Kenya the only country in the AFE region with an operational tool for making budget-level arguments for forest conservation directly comparable to those of any other economic sector.
+Kenya's forest accounts note separately that the KENMOD framework enables forest-related scenarios to be translated directly into GDP, fiscal revenue, and employment projections [@knbs_forest_2026]. These include climate shocks to forest extent and macroeconomic impacts of forest restoration investments, This link makes Kenya the only country in the AFE region with an operational tool for making budget-level arguments for forest conservation directly comparable to those of any other economic sector.
 
 ## Rwanda: Water Pricing and Infrastructure Investment
 
-Rwanda's monetary water supply and use tables provide the most direct link between water accounts and a specific policy argument in the region: the quantified economic case for water tariff reform and distribution infrastructure investment. The accounts establish that WASAC achieves only 75 percent cost recovery, with a break-even tariff of approximately 700 Rwf/m³ against actual residential charges of 340–877 Rwf/m³ [@nisr_rwanda_water_2019]. Non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Halving NRW would free 8 million m³ per year—equivalent to supply for 42,000 households or irrigation for 660 additional hectares—and add approximately USD 4 million in annual revenue.
+Rwanda's monetary water supply and use tables underpin the policy argument for the quantified economic case for water tariff reform and distribution infrastructure investment. The accounts establish that WASAC achieves only 75 percent cost recovery, with a break-even tariff of approximately 700 Rwf/m³ against actual residential charges of 340–877 Rwf/m³ [@nisr_rwanda_water_2019]. Non-revenue water at 41 percent represents USD 8.7 million in annual foregone revenue. Halving NRW would free 8 million m³ per year, which is equivalent to supply for 42,000 households or irrigation for 660 additional hectares, and add approximately USD 4 million in annual revenue.
 
-The monetary water productivity data—showing agriculture at 118 Rwf/m³ against mining at 6,236 Rwf/m³—provides the macro-economic basis for water allocation governance that physical accounts alone cannot support. Rwanda's relative decoupling (GDP +25 percent, water use +10 percent, 2012–2015) is the type of macroeconomic efficiency argument that informs both domestic water policy and donor investment rationale.
+The monetary water productivity data showing agriculture at 118 Rwf/m³ against mining at 6,236 Rwf/m³, provides the macro-economic basis for water allocation governance that physical accounts alone cannot support. Rwanda's relative decoupling (GDP +25 percent, water use +10 percent, 2012–2015) is also an important macroeconomic efficiency argument that informs domestic water policy.
 
 ## South Africa: Biodiversity Economy and Conservation Finance
 
@@ -658,60 +658,58 @@ South Africa's biodiversity tourism accounts have contributed to the quantified 
 
 ## Uganda: Forest Supply Projections
 
-Uganda's forest accounts include the region's most explicit forward-looking projections: sustainable wood supply fully depleted by approximately 2025, with a supply deficit of 105 million tonnes projected by 2040 [@ubos_uganda_forest_2020]. This projection was explicitly intended to inform Uganda's energy policy and ASCENT-type clean cooking investments. The non-wood forest product monetary accounts—*Prunus africana* bark at UGX 265,195 million and shea butter at UGX 14,553 million—provide the value-chain data needed to design formalization programs for high-value species that generate both livelihoods and conservation incentives.
+Uganda's forest accounts include forward-looking projections showing sustainable wood supply fully depleted by approximately 2025, with a supply deficit of 105 million tonnes projected by 2040 [@ubos_uganda_forest_2020]. This projection was explicitly intended to inform Uganda's energy policy and ASCENT-type clean cooking investments. The non-wood forest product monetary accounts, which show *Prunus africana* bark at UGX 265,195 million and shea butter at UGX 14,553 million, provide value-chain data needed to design formalization programs for high-value species that generate both livelihoods and conservation incentives.
 
 ## Zambia: Wildlife Revenue and Climate Vulnerability
 
-Zambia's accounts establish the economic scale of wildlife-based provisioning: fish production valued at ZMW 8 billion (USD 422.6 million) in 2023, bush meat revenue growing 158.5 percent (2018–2023), and non-wood forest product harvests of over 300,000 tonnes per year [@zambia_nca_compendium_2026]. These figures, compiled within the formal SEEA framework for the first time, provide the baseline for wildlife sector investment decisions and for monitoring the economic resilience of communities that depend on Game Management Areas. The carbon NPV of USD 46 million for 2018–2023 ecosystem degradation provides a carbon finance entry point even in the absence of full monetary ecosystem accounts.
+Zambia's accounts show the economic scale of wildlife-based provisioning, in which fish production is valued at ZMW 8 billion (USD 422.6 million) in 2023, bush meat revenue growing 158.5 percent (2018–2023), and non-wood forest product harvests of over 300,000 tonnes per year [@zambia_nca_compendium_2026]. These figures, compiled within the formal SEEA framework, provide the baseline for wildlife sector investment decisions and for monitoring the economic resilience of communities that depend on Game Management Areas. The carbon NPV of USD 46 million for 2018–2023 ecosystem degradation provides a carbon finance entry point even in the absence of full monetary ecosystem accounts.
 
 
 # Recommendations
 
 ## Completing the Monetary Frontier
 
-1. **Prioritize monetary ecosystem service accounts for Ethiopia and Madagascar.** Both countries have comprehensive physical frameworks in place. Carbon sequestration valuation (using Article 6 carbon market prices) and water regulation services (using avoided cost methodologies) have the most established pathways and the highest policy demand. Ethiopia's soil protection data, linked to the 2–6.75 percent agricultural GDP damage estimate, provides an immediate physical basis for a cost-benefit account. Madagascar's NBS investment zones concentrate 31 percent of national carbon stock in 7.5 percent of national territory—a spatial concentration that would generate very large monetary values per hectare once properly monetized.
+**Prioritize monetary ecosystem service accounts for Ethiopia and Madagascar.** Both countries have comprehensive physical frameworks in place. Carbon sequestration valuation (using Article 6 carbon market prices) and water regulation services (using avoided cost methodologies) have the most established pathways and the highest policy potential. Ethiopia's soil protection data, linked to the 2–6.75 percent agricultural GDP damage estimate, provides an immediate physical basis for a cost-benefit account. Madagascar's NBS investment zones concentrate 31 percent of national carbon stock in 7.5 percent of national territory, which constitutes a spatial concentration that would generate very large monetary values per hectare once properly monetized.
 
-2. **Support energy supply and use table development in Ethiopia, the DRC, and Uganda.** Physical energy accounts are the minimum baseline for ASCENT program monitoring. Monetary energy supply and use tables—as developed in Kenya—provide the most policy-actionable insights, linking physical energy flows to sectoral value added, household expenditure, and fiscal revenue. The DRC's biomass-to-carbon finance linkage and Uganda's 2025 wood supply depletion projection both require updated physical accounts to verify outcomes.
+**Support energy supply and use table development in Ethiopia, the DRC, and Uganda.** Physical energy accounts are the minimum baseline for ASCENT program monitoring. Monetary energy supply and use tables, like the ones developed in Kenya, provide policy-actionable insights, linking physical energy flows to sectoral value added, household expenditure, and fiscal revenue. The DRC's biomass-to-carbon finance linkage and Uganda's 2025 wood supply depletion projection both require updated physical accounts to verify outcomes.
 
 ## Institutionalizing Accounts
 
-3. **Invest in sub-national disaggregation for water and land accounts.** Basin-level and district-level accounts already exist in prototype form in several countries. Kenya's ten water basins, Zambia's provincial NEDI, Rwanda's district-level baseflow decline, and South Africa's 22 SWSA analyses demonstrate that sub-national disaggregation transforms national accounts into investment targeting tools. Systematic spatial disaggregation should be built into account design from the start rather than treated as a future elaboration.
+**Invest in sub-national disaggregation for water and land accounts.** Basin-level and district-level accounts already exist in prototype form in several countries. Kenya's ten water basins, Zambia's provincial NEDI, Rwanda's district-level baseflow decline, and South Africa's 22 SWSA analyses demonstrate that sub-national disaggregation transforms national accounts into investment targeting tools. Systematic spatial disaggregation should be built into account design from the start rather than treated as a future addition.
 
-4. **Institutionalize NCA within national statistical agencies.** The DRC, Ethiopia, and Zambia explicitly identify institutionalization as a priority. Technical assistance for placing SEEA compilation within the mandate and budget of national statistical offices—following the Mauritius and Uganda water account models—is the single most important intervention for ensuring that existing account investments generate long-term value. The key ingredients are formal inter-agency data-sharing agreements, clear mandates within national statistical plans, and budget lines independent of donor project cycles.
+**Institutionalize NCA within national statistical agencies.** The DRC, Ethiopia, and Zambia explicitly identify institutionalization as a priority. Technical assistance for placing SEEA compilation within the mandate and budget of national statistical offices, following the Mauritius and Uganda water account models, is an important intervention for ensuring that existing account investments generate long-term value. The key elements are formal inter-agency data-sharing agreements, clear mandates within national statistical plans, and budget lines independent of donor project cycles.
 
 ## Cross-Country Coordination
 
-5. **Develop cross-country harmonized accounts for shared resources.** The Zambezi Basin spans Zambia, Zimbabwe, Mozambique, and others. The Congo Basin spans the DRC, Republic of Congo, Cameroon, and others. Harmonized basin-level water and forest accounts would enable regional governance discussions and shared investment planning that national-level accounts cannot support alone. A practical starting point is common reporting categories for land cover and forest classification alongside national definitions—a technical fix that would immediately improve analytical value.
+**Develop cross-country harmonized accounts for shared resources.** The Zambezi Basin spans Zambia, Zimbabwe, Mozambique, and others. The Congo Basin spans the DRC, Republic of Congo, Cameroon, and others. Harmonized basin-level water and forest accounts would enable regional governance discussions and shared investment planning that national-level accounts cannot support alone. A practical starting point is common reporting categories for land cover and forest classification alongside national definitions. This would be an immediate value addition to improve analytical value.
 
-6. **Initiate marine and coastal ecosystem accounts.** Marine and ocean accounts are compiled by no country in the region, despite the economic importance of Indian Ocean fisheries and South Africa's 200 km² EEZ. South Africa's estuarine accounts—sawfish extinct, dusky kob spawner biomass below 2 percent of pristine—illustrate what such accounts would reveal along the eastern African coastline. Zambia's fish production at USD 422.6 million per year points to the scale of what remains formally unaccounted.
+**Initiate marine and coastal ecosystem accounts.** Marine and ocean accounts have not been compiled in the region, despite the economic importance of Indian Ocean fisheries and South Africa's 200 km² EEZ. South Africa's estuarine accounts, which show that sawfish has gone extinct and that dusky kob spawner biomass has dipped below 2 percent of pristine levels, illustrate what such accounts would reveal along the eastern African coastline. Zambia's fish production at USD 422.6 million per year points to the scale of what remains formally unaccounted.
 
 ## Leveraging Artificial Intelligence
 
-7. **Use AI to accelerate priority account development and reduce costs.** Several of the constraints identified in this review—manual land cover classification, data gap imputation, cross-country harmonization of classification schemes, and the production of account reports—are now addressable using AI tools at meaningfully reduced cost:
+**Use AI to accelerate priority account development and reduce costs.** Several of the constraints identified in this review, like manual land cover classification, data gap imputation, cross-country harmonization of classification schemes, and the production of account reports, are now addressable using AI tools at meaningfully reduced cost:
 
    - *Automated satellite-based land cover classification*: Large-scale deep learning models trained on globally available remote sensing data (Sentinel, Landsat, MODIS) can produce consistent 30-metre annual land cover maps at low marginal cost, directly feeding ecosystem extent accounts and land accounts. This reduces the expert time required for the most labour-intensive step in account compilation.
    
    - *AI-assisted report writing and documentation*: Large language models can draft initial account narratives, policy summaries, and cross-table analyses from structured account data, reducing the documentation burden on national statistical offices and freeing technical staff for quality review and validation rather than text production.
    
-   - *Machine learning for gap imputation*: Countries with sparse data can benefit from imputation models that draw on regional patterns—a technique already used in the UN SEEA Global Assessment—but that can be substantially improved with recent advances in model calibration and uncertainty quantification.
-   
-   - *Cross-country harmonization*: Natural language processing approaches can assist in mapping country-specific classification systems to common SEEA taxonomies, reducing the manual effort currently required to make cross-country comparison possible.
+   - *Machine learning for gap imputation*: Countries with sparse data can benefit from imputation models that draw on regional patterns, which is a technique that can be substantially improved with recent advances in model calibration and uncertainty quantification.
 
 ## Responding to the New International Landscape
 
-8. **Align account development with the converging international statistical and policy frameworks.** The period since 2021 has seen a rapid increase in the institutional pressure on countries to develop SEEA-compatible data systems. Specifically:
+**Align account development with the converging international statistical and policy frameworks.** The period since 2021 has seen a rapid increase in the institutional pressure on countries to develop SEEA-compatible data systems. Specifically:
 
-   - The UN Secretary-General's *Our Common Agenda* (2021) urges all Member States to begin implementing SEEA EA and calls for pathways for national and global accounting systems to include complementary measurements.
+   - The UN Secretary-General's *Our Common Agenda* (2021) urges all Member States to begin implementing SEEA and calls for pathways for national and global accounting systems to include complementary measurements.
    
-   - The **2025 System of National Accounts**, adopted by the UN Statistical Commission at its 56th session, incorporates natural resource depletion as a cost of production and the split-asset approach for natural resource valuation—both directly aligned with SEEA Central Framework methodology. Countries implementing the 2025 SNA will therefore require SEEA-compatible physical and monetary asset data as an input.
+   - The **2025 System of National Accounts**, adopted by the UN Statistical Commission at its 56th session, incorporates natural resource depletion as a cost of production and the split-asset approach for natural resource valuation, which are directly aligned with SEEA Central Framework methodology. Countries implementing the 2025 SNA will therefore require SEEA-compatible physical and monetary asset data as an input.
    
-   - The **SEEA Central Framework update**, endorsed by the Statistical Commission in 2024 (Decision 55/109(s)), is on track for completion by the 59th session in 2028. The update process includes global consultation rounds in 2026–2027. Countries that contribute to the consultation—particularly those with compiled accounts—have the opportunity to shape how the standard accommodates the data realities of developing-country contexts.
+   - The **SEEA Central Framework update**, endorsed by the Statistical Commission in 2024 (Decision 55/109(s)), is on track for completion by the 59th session in 2028. The update process includes global consultation rounds in 2026–2027. Countries with compiled accounts that contribute to the consultation have the opportunity to shape how the standard accommodates the data realities of developing-country contexts.
    
-   - The **Kunming-Montreal Global Biodiversity Framework** (2022) identifies the SEEA as the recommended methodological basis for headline indicators under Goals A and B of its monitoring framework, with 2030 reporting targets. All nine countries reviewed here are CBD signatories. Countries that have compiled ecosystem extent accounts (all nine) and condition accounts (Kenya, DRC, Ethiopia, South Africa, Rwanda) are already positioned to report against at least some GBF indicators.
+   - The **Kunming-Montreal Global Biodiversity Framework (2022)** identifies the SEEA as the recommended methodological basis for headline indicators under Goals A and B of its monitoring framework, with 2030 reporting targets. All nine countries reviewed here are CBD signatories. Countries that have compiled ecosystem extent accounts and condition accounts (Kenya, DRC, Ethiopia, South Africa, Rwanda) are already positioned to report against some GBF indicators.
    
    - SDG indicator **15.9.1(b)** is monitored annually by the UN Committee of Experts on Environmental-Economic Accounting, providing a standing reporting obligation that rewards progression through SEEA implementation stages.
 
-   Together, these frameworks create a policy environment in which the question for AFE countries is not whether to implement SEEA, but how to prioritize account development to maximize usefulness for national planning while meeting international reporting requirements at the lowest statistical cost. The NCA program reviewed here has built exactly the institutional foundations from which this expansion can be launched.
+   Together, these frameworks create a policy environment in which the question for AFE countries is not whether to implement SEEA, but how to prioritize account development to maximize usefulness for national planning while meeting international reporting requirements at the lowest statistical cost.
 
 
 # Annex: Country-Level Policy Insights from Available Accounts
@@ -720,9 +718,7 @@ This annex draws directly on published reports and supporting data files for eac
 
 ## Democratic Republic of Congo (DRC) {#sec-annex-drc}
 
-The Democratic Republic of Congo has compiled five SEEA Ecosystem Accounting accounts—ecosystem extent, ecosystem condition, physical ecosystem services, monetary ecosystem services, and ecosystem asset accounts—all presented in a single comprehensive report covering 2000 to 2020 [@worldbank_drc_forest_2025]. The accounts are restricted to forest ecosystems, reflecting the DRC's status as custodian of the world's second-largest tropical forest biome. They were produced by Anchor Environmental Consultants under the leadership of Dr Jane Turpie, with World Bank project leadership from Kanta Kumari Rigaud, Tsegaye Ginbo Gatiso, and colleagues, with financial support from CAFI and the Climate Investment Funds. The macroeconomic context is stark: the forestry sector contributes approximately 9 percent of GDP (down from 11 percent in 1990), 94 percent of total energy supply comes from forest biomass, and approximately 90 percent of logging activity is informal, small-scale, or illegal.
-
-**Public resources:** Reports and data are available via the World Bank Open Knowledge Repository and the CAFI Secretariat website (https://www.cafi.org).
+The Democratic Republic of Congo has compiled five SEEA Ecosystem Accounting accounts—ecosystem extent, ecosystem condition, physical ecosystem services, monetary ecosystem services, and ecosystem asset accounts—all presented in a single comprehensive report covering 2000 to 2020 [@worldbank_drc_forest_2025]. The accounts are restricted to forest ecosystems, reflecting the DRC's status as custodian of the world's second-largest tropical forest biome. They were produced by Anchor Environmental Consultants under the leadership of Dr Jane Turpie, with World Bank project leadership from Kanta Kumari Rigaud, Tsegaye Ginbo Gatiso, and colleagues, with financial support from CAFI and the Climate Investment Funds. The macroeconomic context is stark: the forestry sector contributes approximately 9 percent of GDP (down from 11 percent in 1990), 94 percent of total energy supply comes from forest biomass, and approximately 90 percent of logging activity is informal, small-scale, or illegal^[Reports and data are available via the World Bank Open Knowledge Repository and the CAFI Secretariat website (https://www.cafi.org).].
 
 ### Ecosystem Extent Accounts (SEEA Ecosystem Accounting)
 
@@ -743,9 +739,9 @@ Total forest asset value in international terms increased from USD 5,446 billion
 
 ## Ethiopia {#sec-annex-eth}
 
-Ethiopia has compiled four SEEA accounts—physical and monetary asset accounts for land (SEEA-CF) and ecosystem extent and condition accounts (SEEA-EA)—covering 2013 to 2022 and disaggregated to regions and major river basins including the Abay (Blue Nile) and Awash basins [@government_of_ethiopia_land_2026; @rutebuka_ethiopia_2025]. The accounts were produced through a government-led Technical Working Group with World Bank and UNSD support. Monetary valuation of ecosystem services has not yet been undertaken.
+Ethiopia has compiled four SEEA accounts—physical and monetary asset accounts for land (SEEA-CF) and ecosystem extent and condition accounts (SEEA-EA)—covering 2013 to 2022 and disaggregated to regions and major river basins including the Abay (Blue Nile) and Awash basins [@government_of_ethiopia_land_2026; @rutebuka_ethiopia_2025]. The accounts were produced through a government-led Technical Working Group with World Bank and UNSD support. Monetary valuation of ecosystem services has not yet been undertaken^[Land accounts available at https://www.csa.gov.et. Ecosystem services accounts available via the World Bank GPS program documentation.].
 
-**Public resources:** Land accounts available at https://www.csa.gov.et. Ecosystem services accounts available via the World Bank GPS program documentation.
+
 
 ### Land Asset Accounts (SEEA Central Framework)
 
@@ -764,9 +760,7 @@ Seven priority services in physical units: soil protection, water quality regula
 
 ## Kenya {#sec-annex-ken}
 
-Kenya has compiled the most comprehensive set of SEEA accounts in the AFE region—ten accounts across five sectors spanning water, energy, land, ecosystem accounts, and forest thematic accounts [@worldbank_kenya_water_energy_2025; @knbs_energy_2026; @soulard_kenya_land_2025; @turpie_kenya_ecosystem_2025; @knbs_forest_2026]. These were produced through KNBS in partnership with Technical Working Committees under the National Plan for Advancing Environmental-Economic Accounting (NP-AEEA) 2025–2028, with World Bank GPS support. Kenya's accounts are notable for including monetary ecosystem service valuation—covering livestock production, sediment retention, and nature-based tourism—and for integration with the KENMod macro-fiscal model.
-
-**Public resources:** KNBS publishes accounts at https://www.knbs.or.ke. Energy accounts are incorporated annually in the Kenya Economic Survey. Water accounts and ecosystem accounts available via the GPS program.
+Kenya has compiled the most comprehensive set of SEEA accounts in the AFE region—ten accounts across five sectors spanning water, energy, land, ecosystem accounts, and forest thematic accounts [@worldbank_kenya_water_energy_2025; @knbs_energy_2026; @soulard_kenya_land_2025; @turpie_kenya_ecosystem_2025; @knbs_forest_2026]. These were produced through KNBS in partnership with Technical Working Committees under the National Plan for Advancing Environmental-Economic Accounting (NP-AEEA) 2025–2028, with World Bank GPS support. Kenya's accounts are notable for including monetary ecosystem service valuation—covering livestock production, sediment retention, and nature-based tourism—and for integration with the KENMod macro-fiscal model^[KNBS publishes accounts at https://www.knbs.or.ke. Energy accounts are incorporated annually in the Kenya Economic Survey. Water accounts and ecosystem accounts available via the GPS program.].
 
 ### Water Supply and Use Tables and Asset Accounts (SEEA Central Framework)
 
@@ -795,9 +789,7 @@ Forest cover at 3,591,486 ha in 2024 across six strata (montane, western rainfor
 
 ## Madagascar {#sec-annex-mad}
 
-Madagascar has compiled two SEEA Ecosystem Accounting accounts—ecosystem extent and ecosystem condition—based on an integrated landscape assessment covering 1992–2020 [@vogl_madagascar_2022]. This is an experimental but spatially explicit exercise by the World Bank BELA team, not yet a fully institutionalized SEEA-EA process.
-
-**Public resources:** Assessment data available at https://www.instat.mg. Detailed Excel databases in the repository at `data/assessment/mad/`.
+Madagascar has compiled two SEEA Ecosystem Accounting accounts—ecosystem extent and ecosystem condition—based on an integrated landscape assessment covering 1992–2020 [@vogl_madagascar_2022]. This is an experimental but spatially explicit exercise by the World Bank BELA team, not yet a fully institutionalized SEEA-EA process^[Assessment data available at https://www.instat.mg.].
 
 ### Ecosystem Extent and Condition Accounts (SEEA Ecosystem Accounting)
 
@@ -806,9 +798,7 @@ Madagascar has compiled two SEEA Ecosystem Accounting accounts—ecosystem exten
 
 ## Mauritius {#sec-annex-mus}
 
-Mauritius has compiled two SEEA Central Framework water accounts—physical supply and use tables and physical asset accounts—published as the fifth edition of the *Water Account, Mauritius* by Statistics Mauritius in December 2024 [@statsmauritius_water_2024]. The series covers 2021–2022 with a ten-year trend series for selected indicators. This is the most institutionalized and regularly produced water accounting system in the AFE region.
-
-**Public resources:** Statistics Mauritius publishes accounts at https://statsmauritius.govmu.org.
+Mauritius has compiled two SEEA Central Framework water accounts—physical supply and use tables and physical asset accounts—published as the fifth edition of the *Water Account, Mauritius* by Statistics Mauritius in December 2024 [@statsmauritius_water_2024]. The series covers 2021–2022 with a ten-year trend series for selected indicators. This is the most institutionalized and regularly produced water accounting system in the AFE region^[Statistics Mauritius publishes accounts at https://statsmauritius.govmu.org.].
 
 ### Physical Supply and Use Tables for Water (SEEA-CF)
 
@@ -821,9 +811,7 @@ In 2022, surface water abstraction at 31.3 percent of available surface water an
 
 ## Rwanda {#sec-annex-rwa}
 
-Rwanda has compiled five SEEA accounts—water (physical and monetary supply and use tables), land (physical asset accounts), and ecosystems (condition and physical services)—produced by NISR in collaboration with the Ministry of Environment and MINECOFIN, with World Bank WAVES technical support [@nisr_rwanda_land_2018; @nisr_rwanda_water_2019; @nisr_rwanda_ecosystem_2019]. Rwanda's accounts are notable for including monetary water supply and use tables—one of very few in Africa.
-
-**Public resources:** NISR publishes accounts at https://www.statistics.gov.rw.
+Rwanda has compiled five SEEA accounts—water (physical and monetary supply and use tables), land (physical asset accounts), and ecosystems (condition and physical services)—produced by NISR in collaboration with the Ministry of Environment and MINECOFIN, with World Bank WAVES technical support [@nisr_rwanda_land_2018; @nisr_rwanda_water_2019; @nisr_rwanda_ecosystem_2019]. Rwanda's accounts are notable for including monetary water supply and use tables—one of very few in Africa^[NISR publishes accounts at https://www.statistics.gov.rw.].
 
 ### Physical and Monetary Supply and Use Tables for Water (SEEA-CF)
 
@@ -840,9 +828,7 @@ Soil erosion +54 percent (1990–2015). Sediment export +123 percent. Quickflow 
 
 ## Uganda (UGA) {#sec-annex-uga}
 
-Uganda has compiled six SEEA accounts across two published programs—physical water supply and use tables (2015–2024 series) and forest-based accounts (monetary timber asset, ecosystem extent, physical and monetary ecosystem services, ecosystem asset accounts) [@ubos_uganda_water_2025; @ubos_uganda_forest_2020]. Uganda's water accounts are in their tenth iteration.
-
-**Public resources:** Uganda Bureau of Statistics publishes accounts at https://www.ubos.org. Water accounts updated annually. Forest accounts available via WAVES program documentation.
+Uganda has compiled six SEEA accounts across two published programs—physical water supply and use tables (2015–2024 series) and forest-based accounts (monetary timber asset, ecosystem extent, physical and monetary ecosystem services, ecosystem asset accounts) [@ubos_uganda_water_2025; @ubos_uganda_forest_2020]. Uganda's water accounts are in their tenth iteration^[Uganda Bureau of Statistics publishes accounts at https://www.ubos.org. Water accounts updated annually. Forest accounts available via WAVES program documentation.].
 
 ### Physical Supply and Use Tables for Water (SEEA-CF)
 
@@ -855,9 +841,7 @@ Forest cover fell from 4,933,762 ha (24 percent of national territory, 1990) to 
 
 ## South Africa (ZAF) {#sec-annex-zaf}
 
-South Africa operates the most comprehensive natural capital accounting program in the AFE region. Statistics South Africa has published seven volumes in its Natural Capital Series, with accounts covering water (including water emission accounts), energy, land, ecosystem extent, ecosystem services, protected areas, and biodiversity-based tourism [@statssa_water_swsa_2023; @statssa_energy_2025; @statssa_land_2020; @statssa_biodiversity_tourism_2024; @statssa_protected_areas_2021; @csir_estuaries_2020].
-
-**Public resources:** Statistics South Africa publishes all Natural Capital Series volumes at https://www.statssa.gov.za.
+South Africa operates the most comprehensive natural capital accounting program in the AFE region. Statistics South Africa has published seven volumes in its Natural Capital Series, with accounts covering water (including water emission accounts), energy, land, ecosystem extent, ecosystem services, protected areas, and biodiversity-based tourism [@statssa_water_swsa_2023; @statssa_energy_2025; @statssa_land_2020; @statssa_biodiversity_tourism_2024; @statssa_protected_areas_2021; @csir_estuaries_2020]^[Statistics South Africa publishes all Natural Capital Series volumes at https://www.statssa.gov.za.].
 
 ### Physical Supply and Use Tables for Water, Physical Asset Accounts for Water, and Water Emission Accounts (SEEA-CF)
 
@@ -878,9 +862,7 @@ Biodiversity-based tourism (2013–2019): R60,663 million internal spending in 2
 
 ## Zambia (ZMB) {#sec-annex-zmb}
 
-Zambia has compiled five SEEA accounts—land, timber, water, ecosystem extent, and protected areas/wildlife—presented in a Natural Capital Asset Compendium and a standalone Ecosystem Service Account, produced by the Ministry of Finance and National Planning with World Bank GPS support [@zambia_nca_compendium_2026; @zambia_ecosystem_account_2026]. The accounting period is 2018–2023, a window defined by major floods and culminating in the catastrophic 2023/24 El Niño drought.
-
-**Public resources:** Accounts available via the Zambia Ministry of Finance and National Planning (https://www.mofnp.gov.zm) and the World Bank GPS program repository.
+Zambia has compiled five SEEA accounts—land, timber, water, ecosystem extent, and protected areas/wildlife—presented in a Natural Capital Asset Compendium and a standalone Ecosystem Service Account, produced by the Ministry of Finance and National Planning with World Bank GPS support [@zambia_nca_compendium_2026; @zambia_ecosystem_account_2026]. The accounting period is 2018–2023, a window defined by major floods and culminating in the catastrophic 2023/24 El Niño drought^[Accounts available via the Zambia Ministry of Finance and National Planning (https://www.mofnp.gov.zm) and the World Bank GPS program repository.].
 
 ### Physical Asset Accounts for Land (SEEA-CF)
 
