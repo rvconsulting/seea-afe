@@ -15,10 +15,10 @@ format:
     toc: true
     number-sections: true
     syntax-highlighting: github
-  # pdf:
-  #   toc: true
-  #   number-sections: true
-  #   colorlinks: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 bibliography: references.bib
 csl: apa.csl
 ---
@@ -32,6 +32,7 @@ csl: apa.csl
 library(tidyverse)
 library(gt)
 library(readxl)
+library(ggrepel)
 
 # ── Assessment data ────────────────────────────────────────────────────────────
 afe2025 <- readxl::read_xlsx(
@@ -56,14 +57,14 @@ country_summary <- afe2025 |>
   mutate(
     stage_label = case_when(
       `Implementing the SEEA` == "Yes" ~ `Stage of implementation (SDG 15.9.1b)`,
-      n_compiled > 0 ~ "Compiled (donor program)",
+      n_compiled > 0 ~ "No Stage",
       TRUE ~ "Not implementing"
     ),
     stage_label = factor(
       stage_label,
       levels = c(
         "Not implementing",
-        "Compiled (donor program)",
+        "No Stage",
         "Stage I",
         "Stage II",
         "Stage III"
@@ -72,7 +73,7 @@ country_summary <- afe2025 |>
   )
 
 implementing_countries <- country_summary |>
-  filter(`Implementing the SEEA` == "Yes") |>
+  filter(`Implementing the SEEA` == "Yes" | n_compiled > 0) |>
   arrange(desc(n_compiled)) |>
   pull(`Country or area`)
 
@@ -130,7 +131,7 @@ nca_indicators <- tribble(
   ~biomass_energy_pct,      # biomass share of national energy supply (%)
   ~forest_cover_change_pct, # net forest cover change over latest account period (%)
   ~land_degradation_pct,    # net ecosystem degradation index or equivalent (%)
-  "COD", "DR Congo",    NA,   94, -6.6,  NA,
+  "COD", "DRC",    NA,   94, -6.6,  NA,
   "ETH", "Ethiopia",    NA,   90, NA,    NA,
   "KEN", "Kenya",       15.9, 70, -8.7,  NA,
   "MDG", "Madagascar",  NA,   NA, NA,    35.6,
@@ -146,26 +147,26 @@ nca_indicators <- tribble(
 
 Natural capital accounts (NCAs) compiled under the System of Environmental-Economic Accounting (SEEA) [@european_commission_system_2013] for Eastern and Southern Africa offer a coherent, internationally comparable basis for linking each country's resource wealth to its economic performance. This report consolidates findings from a diagnostic review of SEEA implementation across the 26-country AFE region and an analytical assessment of the nine countries that have compiled accounts in any form, including the Democratic Republic of Congo (DRC), Ethiopia, Kenya, Madagascar, Mauritius, Rwanda, South Africa, Uganda, and Zambia. It then examines how these countries have used their accounts to inform policy, investment decisions, and economic modeling, and concludes with recommendations for deepening and sustaining this work in a regional context.
 
-**Implementation of NCA varies across the region.** Of the 26 AFE countries assessed, 11 are implementing the SEEA. Four are at Stage III (i.e. they have sustained institutional programs for the continuous production of NCAs), four at Stage II (i.e. have produced at least one SEEA ecosystem or thematic account, in addition to at least one SEEA Central Framework account), and three at Stage I (i.e. have produced at least one SEEA Central Framework account). Three additional countries are compiling accounts outside the formal SEEA framework. South Africa and Uganda lead with six and five compiled accounts respectively. Physical water accounts are the most common entry point, compiled by six countries.
+**Implementation of NCA varies across the region.** Of the 26 AFE countries assessed, 11 are implementing the SEEA. Four are at Stage III (i.e. they have sustained institutional programs for the continuous production of NCAs), four at Stage II (i.e. have produced at least one SEEA ecosystem or thematic account, in addition to at least one SEEA Central Framework account), and three at Stage I (i.e. have produced at least one SEEA Central Framework account). Three additional countries are compiling accounts outside of the formal institutional SEEA framework, and thus have no stage in this review. However, their efforts, are substantive and deserve attention. Overall, South Africa and Uganda lead with six and five compiled accounts respectively. Physical water accounts are the most common entry point, compiled by six countries.
 
-**Across the nine reviewed countries, the accounts reveal a structurally coherent picture of natural capital stress.** For example, Woody biomass supplies 78 to 94 percent of national energy in the DRC, Uganda, and Zambia, a share that is driving forest loss across all three. Uganda's forest cover fell 60 percent between 1990 and 2015, while Zambia lost 1.9 million hectares of tree cover in just five years (2018–2023). Water productivity in agriculture is consistently the lowest of any sector. For instance, Rwanda's agriculture achieves 118 Rwf per cubic metre against 6,236 Rwf/m³ for mining and Uganda's agriculture earns UGX 1,458/m³ against UGX 364,299/m³ for services, which translate into those sectors being 52 and 250 times more productive than agriculture, respectively. Mauritius has lost two-thirds of treated potable water to distribution leaks before it reaches households.
+**Across the reviewed countries, the accounts reveal a structurally coherent picture of natural capital stress.** For example, Woody biomass supplies 78 to 94 percent of national energy in the DRC, Uganda, and Zambia, which is a share that is driving forest loss across all three countries. Uganda's forest cover fell 60 percent between 1990 and 2015, while Zambia lost 1.9 million hectares of tree cover in just five years (2018–2023). Water productivity in agriculture is consistently the lowest of any sector. For instance, Rwanda's agriculture achieves 118 Rwf per cubic metre against 6,236 Rwf/m³ for mining and Uganda's agriculture earns UGX 1,458/m³ against UGX 364,299/m³ for services, which translate into those sectors being 52 and 250 times more water productive than agriculture, respectively. Mauritius has lost two-thirds of treated potable water to distribution leaks before it reaches households.
 
 **This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.** Forest cover change correlates positively with agricultural value added as a share of GDP, confirming that forest-to-cropland conversion tracks structural economic transformation but does not always improve food security per capita. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.
 
 **The accounts have been applied to real decisions in several countries.** In Kenya, NCA data underpin the KENMod macro-fiscal model, which is now used by the National Treasury to simulate the fiscal impact of drought, flooding, and infrastructure damage and to compute adjusted net savings. The model's Land Use and Natural Capital Module draws directly on ecosystem service data from the accounts and is cited in the 2026 Budget Policy Statement. In Ethiopia, BELA ecosystem service modeling, which is grounded in the same biophysical accounts reviewed here, identified priority investment watersheds for the World Bank's CALM PforR program (a US$900 million portfolio covering 8,000 community watersheds) and informed the Ethiopia Strategic Investment Framework for Sustainable Land Management. In Rwanda, the monetary water supply and use tables provided the quantitative case for water pricing reform. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected area expansion.
 
-**Priority actions include completing monetary ecosystem service accounts in Ethiopia and Madagascar, expanding sub-national disaggregation for water and land accounts, institutionalizing compilation within national statistical plans, and developing cross-country harmonized accounts for shared river basins.** The international statistical landscape now creates an urgency that was not present only a few years ago, because the 2025 System of National Accounts, adopted by the UN Statistical Commission, incorporates natural resource depletion as a cost of production and the split-asset approach—both directly aligned with SEEA Central Framework methodology. This means that countries implementing SNA 2025 will require SEEA-compatible data systems. Additionally, the SEEA is the methodological basis for headline indicators under the Kunming-Montreal Global Biodiversity Framework, with reporting targets due by 2030.
+**Priority actions include completing monetary ecosystem service accounts in Ethiopia and Madagascar, expanding sub-national disaggregation for water and land accounts, institutionalizing compilation within national statistical plans, and developing cross-country harmonized accounts for shared river basins.** The international statistical landscape now creates an urgency that was not present only a few years ago, because the 2025 System of National Accounts, adopted by the UN Statistical Commission, incorporates natural resource depletion as a cost of production and the split-asset approach, which are both directly aligned with SEEA Central Framework methodology. This means that countries implementing SNA 2025 will require SEEA-compatible data systems. Additionally, the SEEA is the methodological basis for headline indicators under the Kunming-Montreal Global Biodiversity Framework, with reporting targets due by 2030.
 
 
 # Implementation and Status
 
-The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy and the 2025 Global Assessment of SEEA Implementation provides the global context within which the AFE region's progress is situated. It is supplemented here by an individual review of all 26 AFE countries to determine whether any form of Natural Capital Accounting (NCA) has been undertaken, regardless of formal SEEA status and official institutional participation. This review examines whether each of 36 distinct SEEA accounts, which include the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and Thematic Accounts, has been compiled at least once.
+The System of Environmental Economic Accounting (SEEA) [@european_commission_system_2013] is the international statistical standard for measuring the environment and its relationship with the economy and the 2025 Global Assessment of SEEA Implementation [@unceea_global_assessment_2025] provides the global context within which the AFE region's progress is situated. It is supplemented here by an individual review of all 26 AFE countries to determine whether any form of Natural Capital Accounting (NCA) has been undertaken, regardless of formal SEEA status and official institutional participation. This review examines whether each of 36 distinct SEEA accounts, which include the SEEA Central Framework (CF), SEEA Ecosystem Accounts (EA), and Thematic Accounts, has been compiled at least once.
 
 The assessment tracks the implementation of 36 accounts grouped into three broad categories. The SEEA CF covers material and monetary flow and asset accounts for natural resources. The SEEA EA covers ecosystem extent, condition, services, and monetary asset accounts. Thematic Accounts address specialized areas including forests, oceans, and protected areas. @tbl-all-seea-accounts lists all accounts tracked in this review.
 
 ```{r}
 #| label: tbl-all-seea-accounts
-#| tbl-cap: "Accounts of the System of Environmental and Economic Accounts (SEEA). Source: UN Statistics Division [@european_commission_system_2013]."
+#| tbl-cap: "Accounts of the System of Environmental and Economic Accounts (SEEA)"
 #| echo: false
 #| warning: false
 #| message: false
@@ -195,25 +196,27 @@ readRDS("outputs/assessment/seea_accounts.RDS") |>
   )
 ```
 
+Source: @unceea_global_assessment_2025[].
+
 Within the structure of the UN's assessment, 11 of the 26 AFE countries are actively implementing the SEEA  [@european_commission_system_2013]. The remaining 15 have not yet begun. Among those implementing, countries are classified by their stage of progress under SDG indicator 15.9.1(b), *"Integration of biodiversity into national accounting and reporting systems, defined as implementation of the System of Environmental-Economic Accounting"*.
 
 The stages are defined as Stage I, which refers to countries that have compiled at least one SEEA CF account. Stage II includes countries that have additionally compiled at least one SEEA EA or Thematic account. Stage III countries demonstrate a sustained institutional program to produce NCA. In practice, a sustained program means that at least two account types are compiled under a formally established institutional mandate, with a dedicated budget line or inter-agency data-sharing agreement in place to ensure continuity across government cycles, rather than relying exclusively on project-by-project donor financing. The distinction matters because the analytical value of NCA data grows with temporal depth, because a single account produces a snapshot, while a maintained series produces the trends required by economic planning.
 
-Regular compilation and dissemination, referenced in Stage III criteria, means at minimum biennial production of accounts. More important than the frequency, however, is whether an institutional mechanism and a budget for replication are in place. Mauritius's five-edition water account series and Uganda's ten-iteration water account series both illustrate how a sustainable institutional arrangement, rather than technical sophistication, is what determines whether accounts persist.
+Regular compilation and dissemination, referenced in Stage III criteria, means at minimum biennial production of accounts. More important than the frequency, however, is whether an institutional mechanism and a budget for replication are in place. Mauritius's five-edition water account series and Uganda's ten-iteration water account series both illustrate institutional continuity.
 
-In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, indicating that while uptake remains modest, a meaningful cluster of countries has progressed beyond initial experimentation. @fig-stage shows a summary of implementation in the region. Countries are sorted by number of compiled accounts, while non-implementing countries are shown in grey. Stage labels follow SDG indicator 15.9.1(b) definitions as reported in the UN Global Assessment of Environmental-Economic Accounting (2025). Additionally, Three additional countries, which include Rwanda, the Democratic Republic of Congo, and Madagascar, have accounts compiled through World Bank and international donor programs, and that means that they are not registered as formally implementing the SEEA in the UN classification. These are shown separately in @fig-stage as "Compiled (donor program)" to distinguish them from countries with nationally institutionalized programs. The accounts produced under these donor programs are substantive and are reviewed in this report. This means that the classification reflects their institutional status, not the quality or scope of the work.
+In the AFE region, 3 countries are at Stage I, 4 at Stage II, and 4 at Stage III, officially [@unceea_global_assessment_2025], indicating that while uptake remains modest, a meaningful cluster of countries has progressed beyond initial experimentation. @fig-stage shows a summary of implementation in the region. Countries are sorted by number of compiled accounts, while non-implementing countries are shown in grey. Stage labels follow SDG indicator 15.9.1(b) definitions as reported in the UN Global Assessment of Environmental-Economic Accounting (2025). Additionally, Three additional countries, which include Rwanda, the Democratic Republic of Congo, and Madagascar, have accounts compiled through World Bank and international donor programs, and that means that they are not registered as formally implementing the SEEA in the UN classification. These are shown separately in @fig-stage as "No Stage" to distinguish them from countries with nationally institutionalized programs. The accounts produced under these donor programs are substantive and are reviewed in this report. This means that the classification reflects their institutional status, not the quality or scope of the work.
 
 ```{r}
 #| label: fig-stage
 #| echo: false
-#| fig-cap: "AFE countries by SEEA implementation stage and number of compiled accounts. Source: World Bank AFE Regional Assessment (2025), complemented by this review."
+#| fig-cap: "AFE countries by SDG indicator 15.9.1(b) SEEA implementation stage and number of compiled accounts"
 #| fig-alt: "A lollipop chart showing 26 AFE countries on the y-axis, ordered by number of compiled accounts. Points are colored by SEEA implementation stage. Kenya and South Africa lead with 10 and 7 accounts each."
 #| fig-width: 7
 #| fig-height: 6
 
 stage_palette <- c(
   "Not implementing"           = "#cccccc",
-  "Compiled (donor program)" = "#f4a261",
+  "No Stage"                   = "#f4a261",
   "Stage I"                    = "#8ecae6",
   "Stage II"                   = "#219ebc",
   "Stage III"                  = "#023047"
@@ -228,10 +231,9 @@ country_summary |>
   ) +
   geom_point(size = 3.5) +
   scale_colour_manual(values = stage_palette, name = "Stage") +
-  scale_x_continuous(breaks = 0:6, expand = expansion(mult = c(0, 0.05))) +
+  scale_x_continuous(breaks = scales::breaks_width(1), expand = expansion(mult = c(0, 0.05))) +
   labs(
     title = "SEEA Implementation in the AFE Region (2025)",
-    subtitle = "Number of compiled accounts per country",
     x = "Number of compiled accounts",
     y = NULL
   ) +
@@ -243,16 +245,16 @@ country_summary |>
   )
 ```
 
-The slow growth of formally registered implementation across the region reflects primarily resource and budget constraints, including the absence of dedicated funding lines within national statistical budgets and the limited technical staffing available for a task that requires sustained multi-agency coordination. It does not reflect a lack of country interest, because in the 2023 Global Assessment, 77 percent of non-implementing countries indicated plans to begin implementation. The count of accounts identified in this review also diverges from UN-reported figures in that Kenya and South Africa each have more accounts documented here than in official UN records, reflecting World Bank program work not yet captured in the UN's institutional classification cycle.
+The slow growth of formally registered implementation across the region reflects primarily resource and budget constraints, including the absence of dedicated funding lines within national statistical budgets and the limited technical staffing available for a task that requires sustained multi-agency coordination. It does not reflect a lack of country interest, because in the Global Assessment, 77 percent of non-implementing countries indicated plans to begin implementation [@unceea_global_assessment_2025]. The count of accounts identified in this review also diverges from UN-reported figures in that Kenya and South Africa each have more accounts documented here than in official UN records, reflecting work not yet captured in the UN's institutional classification cycle.
 
 ## Account Coverage
 
-@tbl-group-summary provides an aggregate view of account group coverage. Countries are ordered left to right by total number of compiled accounts and accounts within each group are ordered by frequency of compilation. Across all 14 implementing countries, the most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for water, compiled by 6 countries, followed by PSUTs for Energy and Ecosystem Extent Accounts, each compiled by 5 countries, reflecting their relative accessibility as entry-level accounts and their relevance to the region's resource management priorities. Physical asset accounts for land follow, compiled by 4 countries. Beyond this initial tier, account compilation remains constrained by data availability and institutional capacity, due to the fact that monetary accounts require price data, sector-level consumption surveys, and inter-agency coordination. Ecosystem accounts appear in only 3 countries, and thematic accounts for forests and protected areas are at the same level. This pattern reflects capacity and resource limitations rather than absence of demand.
+@fig-heatmap provides an aggregate view of account group coverage across 14 AFE countries: the 11 formally tracked by the UN’s Global Assessment [@unceea_global_assessment_2025], plus Rwanda, the DRC, and Madagascar, whose accounts were compiled through World Bank and donor programs and are not yet registered in the UN classification. Countries are ordered left to right by total number of compiled accounts and accounts within each group are ordered by frequency of compilation. Across all implementing countries, the most widely compiled accounts are the Physical Supply and Use Tables (PSUTs) for water, followed by PSUTs for Energy and Ecosystem Extent Accounts, reflecting their relative accessibility as entry-level accounts and their relevance to the region's resource management priorities. Physical asset accounts for land follow. Beyond this initial tier, account compilation remains constrained by data availability and institutional capacity, due to the fact that monetary accounts require price data, sector-level consumption surveys, and inter-agency coordination. Ecosystem accounts appear in only 3 countries, and thematic accounts for forests and protected areas are at the same level.
 
 ```{r}
 #| label: fig-heatmap
 #| echo: false
-#| fig-cap: "Account compilation status across the 11 implementing AFE countries, grouped by account category"
+#| fig-cap: "Account implementation across 14 AFE countries: the 11 tracked by the UN Global Assessment plus Rwanda, DRC, and Madagascar, whose accounts were compiled outside its scope"
 #| fig-alt: "A tile heatmap with SEEA accounts on the y-axis grouped by account category and implementing countries on the x-axis. Filled tiles indicate a compiled account. Energy and water PSUTs have the most coverage."
 #| fig-width: 9
 #| fig-height: 7
@@ -276,7 +278,6 @@ ggplot(
   scale_x_discrete(position = "top") +
   labs(
     title = "SEEA Account Coverage of Implementing Countries (2025)",
-    subtitle = "Each cell indicates whether a country has compiled that account at least once",
     x = NULL,
     y = NULL
   ) +
@@ -291,37 +292,11 @@ ggplot(
   )
 ```
 
-
-
-```{r}
-#| label: tbl-group-summary
-#| echo: false
-#| tbl-cap: "Summary of SEEA account coverage by account group across the 11 implementing AFE countries. Source: World Bank AFE Regional Assessment (2025)."
-
-group_summary |>
-  arrange(`Account Group`) |>
-  gt() |>
-  cols_label(
-    `Account Group` = "Account Group",
-    n_accounts = "Accounts tracked",
-    n_compiled = "Compilations recorded",
-    n_countries = "Countries compiling at least one"
-  ) |>
-  fmt_number(columns = c(n_accounts, n_compiled, n_countries), decimals = 0) |>
-  cols_hide(pct_compiled) |>
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_labels()
-  ) |>
-  tab_options(table.width = pct(100))
-```
-
-
 # Correlations with Macroeconomic Indicators
 
 The analytical value of natural capital accounts increases substantially when account-derived indicators are placed alongside macroeconomic benchmarks. The three comparisons in this section pair indicators from compiled water, forest, and energy accounts, with other macro level indicators to provide additional context. In each figure, the NCA indicator is the primary variable, while GDP, agricultural value added, and CO₂ emissions per capita serve as the economic reference against which account findings are interpreted. All indicator data use the most recent available observation per country for the period covered by NCA and account reference periods vary by country and are noted as such.
 
-@fig-water-gdp shows Water Productivity and Sectoral Economic Performance. That is, how many times more economic value per m³ each non-agriculture sector generates compared to agriculture, for three AFE countries with compiled water accounts. Agriculture is equivalent to the reference line (or 1x) in each country. Rwanda and Uganda values are derived from monetary water supply and use tables (local currency per m³, indexed) and Mauritius values are derived from WDI sector GVA divided by sector water use volumes in the Physical Water Account 2021–2022 (Statistics Mauritius, 5th edition, December 2024). For context, agriculture GDP share is shown in parentheses from World Development Indicators (WDI) alongside Rwanda monetary water accounts data [@nisr_rwanda_water_2019]; Uganda water accounts data [@ubos_uganda_water_2025]; and Mauritius Physical Water Account [@statsmauritius_water_2024].
+@fig-water-gdp shows Water Productivity and Sectoral Economic Performance. That is, how many more times economic value per m³ each non-agriculture sector generates compared to agriculture, for three AFE countries with compiled water accounts. Agriculture is equivalent to the reference line (or 1x) in each respective country. Rwanda and Uganda values are derived from monetary water supply and use tables (local currency per m³, indexed) and Mauritius values are derived from World Development Indicators--WDI--[@worldbank_wdi_2026] sector Gross Value Added divided by sector water use volumes in the Physical Water Account 2021–2022 (Statistics Mauritius, 5th edition, December 2024). For context, agriculture GDP share is shown in parentheses from WDI alongside Rwanda monetary water accounts data [@nisr_rwanda_water_2019]; Uganda water accounts data [@ubos_uganda_water_2025]; and Mauritius Physical Water Account [@statsmauritius_water_2024].
 
 ```{r}
 #| label: wdi-summary
@@ -401,21 +376,21 @@ ggplot(sector_water, aes(
 )) +
   geom_col(width = 0.6, alpha = 0.9) +
   geom_text(hjust = -0.15, size = 3.5, fontface = "bold") +
-  geom_vline(xintercept = 1, linetype = "dashed", colour = "grey40") +
-  annotate("text", x = 1, y = 0.4, label = "Agriculture\n= 1\u00d7",
-           hjust = -0.1, vjust = 0, size = 2.8, colour = "grey40") +
+  geom_vline(xintercept = 1, linetype = "dashed", colour = "black") +
+  annotate("text", x = 1, y = 0.3, label = "Agriculture = 1x",
+           hjust = -0.1, vjust = -0.4, size = 2.8, colour = "grey40") +
   scale_x_continuous(
     expand = expansion(mult = c(0, 0.18)),
     labels = function(x) paste0(x, "\u00d7"),
-    name   = "Water productivity relative to agriculture (same country)"
+    name   = "Water productivity relative to agriculture in the same country"
   ) +
   scale_fill_manual(values = country_colours, name = NULL) +
   labs(
     y     = NULL,
-    x     = "Times more economic value per m\u00b3 than agriculture (same country)",
+    # x     = "Times more economic value per m\u00b3 than agriculture (same country)",
     title = "Water productivity by sector in NCA publications"
   ) +
-  theme_minimal(base_size = 11) +
+  theme_minimal(base_size = 10) +
   theme(
     legend.position   = "bottom",
     panel.grid.major.y = element_blank(),
@@ -423,18 +398,18 @@ ggplot(sector_water, aes(
   )
 ```
 
-Water supply and use tables from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value. The gaps are significant. In Uganda, the services sector generates 250 times more economic value per cubic metre than agriculture, while in Mauritius, manufacturing and services generate 214 times more. Similarly, in Rwanda, services generate 89 times more and mining 53 times more than agriculture.
+Water _Supply and Use Tables_ from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value. The gaps are significant. In Uganda, the services sector generates 250 times more economic value per cubic metre than agriculture, while in Mauritius, manufacturing and services generate 214 times more. Similarly, in Rwanda, services generate 89 times more and mining 53 times more than agriculture.
 
-The pattern holds across countries at very different income levels and with different accounting methodologies. All three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This finding is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs, which is an insight that is only observable through water accounts.
+The pattern holds across countries at very different income levels and with different accounting methodologies. All three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This finding is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs.
 
-Comparing forest cover change from the accounts against agricultural value added from WDI shows that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. @fig-forest-agr shows net forest cover change derived from national SEEA accounts plotted against agricultural value added as a percentage of GDP for the six reviewed countries with compiled forest or ecosystem extent accounts. Point size reflects rural population as a percentage of total population. Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020.
+Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. @fig-forest-agr shows net forest cover change derived from national SEEA accounts plotted against agricultural value added as a percentage of GDP from WDI [@worldbank_wdi_2026] in the last year of the respective accounting period for the countries with compiled forest or ecosystem extent accounts. Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020.
 
 ```{r}
 #| label: fig-forest-agr
 #| echo: false
 #| message: false
 #| warning: false
-#| fig-cap: "Forest Cover Change and Agricultural Transformation"
+#| fig-cap: "Forest cover change and agricultural Value Added as a percentage of GDP"
 
 forest_nca <- nca_indicators |>
   filter(!is.na(forest_cover_change_pct)) |>
@@ -447,37 +422,38 @@ forest_nca <- nca_indicators |>
 ggplot(forest_nca, aes(
   x     = NV.AGR.TOTL.ZS,
   y     = forest_cover_change_pct,
-  size  = SP.RUR.TOTL.ZS,
+  fill  = SP.RUR.TOTL.ZS,
   label = country_label
 )) +
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey55") +
-  geom_point(colour = "#2d6a4f", alpha = 0.8) +
-  geom_text(size = 3, nudge_y = 3.5) +
-  scale_size_continuous(
-    name   = "Rural population\n(% of total, WDI)",
-    range  = c(5, 13),
-    guide  = guide_legend(override.aes = list(colour = "#2d6a4f", alpha = 0.7))
+  geom_point(size = 5, alpha = 0.85, shape = 21, colour = "black") +
+  geom_text_repel(size = 3, colour = "grey20", box.padding = 0.4) +
+  scale_x_continuous(limits = c(-3, NA)) +
+  scale_y_continuous(limits = c(-65, NA)) +
+  scale_fill_gradient(
+    name = "Rural population\n(% of total, WDI)",
+    low  = "#ffffcc",
+    high = "#006837"
   ) +
   labs(
-    x        = "Agriculture, value added (% of GDP, WDI — latest year)",
-    y        = "Net forest cover change (%, from NCA accounts)",
-    title    = "Forest loss from the accounts vs agricultural economic dependence",
-    subtitle = "Y-axis values are only observable through NCA compilation; WDI forest data is a static annual snapshot"
+    x = "Agriculture, value added (% of GDP)",
+    y = "Net forest cover change (%, from NCA accounts)",
+    # title    = "Net forest cover change vs agricultural value added as a percentage of GDP",
   ) +
-  theme_minimal(base_size = 11) +
+  theme_minimal(base_size = 10) +
   theme(legend.position = "right")
 ```
 
 Uganda (where agriculture represents 24% of GDP) and Rwanda (where it represents 27%) each show approximately 60 percent net forest cover decline over their account periods, driven by smallholder cropland expansion. The DRC, with the lowest agricultural GDP share at 10 percent, still shows a 6.6 percent forest decline, which reflects artisanal fuelwood extraction rather than formal cropland conversion. Zambia presents a notable exception, in which agriculture accounts for only 2.2 percent of GDP, but at the same time 59 percent of its population is rural. It lost 1.88 million hectares of tree cover in five years (2018–2023) through woodland-to-rangeland degradation. South Africa, with a low agricultural share and low rural population, shows near-zero forest change. The critical observation is that net forest cover change over the account period is traditionally invisible in macroeconomic data. While there is a forest area indicator in WDI, it only provides an annual static snapshot. SEEA accounts provide change rates and driving factors that make this comparison possible.
 
-Regarding energy dependence, @fig-land-rural shows the biomass share of national energy supply derived from compiled NCA energy accounts, compared against CO₂ emissions per capita, excluding LULUCF (WDI AR5 methodology, latest year) for six AFE countries with energy account data. Point size reflects GDP per capita (in current USD) from WDI. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics, which is an apparent paradox that natural capital accounts resolve by documenting accelerating forest depletion from fuelwood harvesting [@worldbank_drc_forest_2025; @ubos_uganda_forest_2020; @zambia_nca_compendium_2026; @statssa_energy_2025].
+Regarding energy dependence, @fig-land-rural shows the biomass share of national energy supply derived from compiled NCA energy accounts, compared against CO₂ emissions per capita, excluding LULUCF (WDI AR5 methodology, latest year) for six AFE countries with energy account data. Point color reflects GDP per capita in current USD from WDI [@worldbank_wdi_2026]. A lighter orange represents a lower value and a darker red a higher value. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics, which is an apparent paradox that natural capital accounts resolve by documenting accelerating forest depletion from fuelwood harvesting for energy purposes [@worldbank_drc_forest_2025; @ubos_uganda_forest_2020; @zambia_nca_compendium_2026; @statssa_energy_2025].
 
 ```{r}
 #| label: fig-land-rural
 #| echo: false
 #| message: false
 #| warning: false
-#| fig-cap: ""
+#| fig-cap: "Biomass share of energy supply vs CO\u2082 per capita"
 
 biomass_co2 <- nca_indicators |>
   filter(!is.na(biomass_energy_pct)) |>
@@ -490,27 +466,28 @@ biomass_co2 <- nca_indicators |>
 ggplot(biomass_co2, aes(
   x     = EN.GHG.CO2.PC.CE.AR5,
   y     = biomass_energy_pct,
-  size  = NY.GDP.PCAP.CD,
+  fill  = NY.GDP.PCAP.CD,
   label = country_label
 )) +
-  geom_point(colour = "#fb8500", alpha = 0.8) +
-  geom_text(size = 3, nudge_y = 1.8) +
+  geom_point(size = 5, alpha = 0.8, shape = 21, colour = "black") +
+  geom_text_repel(size = 3, colour = "grey20", box.padding = 0.4) +
   annotate(
-    "text", x = 0.12, y = 85,
-    label = "High biomass dependence,\nlow CO\u2082 in WDI stats\n\u2192 accounts reveal hidden\nforest depletion",
+    "text", x = 0.8, y = 85,
+    label = "High biomass dependence,\nwith low CO\u2082 per capita\nparadox",
     size = 2.9, colour = "#9e2a00", hjust = 0, fontface = "italic"
   ) +
-  scale_x_continuous(name = "CO\u2082 per capita excl. LULUCF (t CO\u2082e, AR5 \u2014 WDI, latest year)") +
-  scale_size_continuous(
-    name   = "GDP per capita\n(current USD, WDI)",
+  scale_x_continuous(
+    name   = "CO\u2082 per capita excl. LULUCF (t CO\u2082e, AR5, latest year)",
+    limits = c(NA, 7.3)
+  ) +
+  scale_fill_gradient(
+    name   = "GDP per capita\n(current USD)",
     labels = scales::dollar_format(),
-    range  = c(4, 13),
-    breaks = c(700, 1000, 2000, 6000, 11000)
+    low    = "#fdd0a2",
+    high   = "#8b0000"
   ) +
   labs(
-    y        = "Biomass share of national energy supply (%, from NCA energy accounts)",
-    title    = "The biomass emissions blind spot: NCA energy accounts vs WDI CO\u2082 statistics",
-    subtitle = "NCA data on Y-axis; WDI CO\u2082 on X-axis; point size = GDP per capita"
+    y = "Biomass percentage share of national energy supply",
   ) +
   theme_minimal(base_size = 11) +
   theme(legend.position = "right")
@@ -710,6 +687,12 @@ Zambia's accounts show the economic scale of wildlife-based provisioning, in whi
    - SDG indicator **15.9.1(b)** is monitored annually by the UN Committee of Experts on Environmental-Economic Accounting, providing a standing reporting obligation that rewards progression through SEEA implementation stages.
 
    Together, these frameworks create a policy environment in which the question for AFE countries is not whether to implement SEEA, but how to prioritize account development to maximize usefulness for national planning while meeting international reporting requirements at the lowest statistical cost.
+
+
+# References
+
+::: {#refs}
+:::
 
 
 # Annex: Country-Level Policy Insights from Available Accounts
