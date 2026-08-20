@@ -28,8 +28,7 @@ website:
                 href: documentation/02_analytical_results.qmd
               - text: "Combined Analysis"
                 href: documentation/03_combined_document.qmd
-              - text: "Addressing comments"
-                href: documentation/address_comments.qmd
+
 
 format:
   html:
