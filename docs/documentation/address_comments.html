@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Renato Vargas">
+
+<title>Addressing reviewer comments – SEEA AFE</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SEEA AFE</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../documentation/index.html" aria-current="page"> 
+<span class="menu-text">Documentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dashboard/index.html"> 
+<span class="menu-text">Dashboard</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/address_comments.html">Addressing comments</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../documentation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/01_diagnostic_review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagnostic Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/02_analytical_results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analytical Results</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/03_combined_document.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Combined Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/address_comments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Addressing comments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-use-this-file" id="toc-how-to-use-this-file" class="nav-link active" data-scroll-target="#how-to-use-this-file">How to use this file</a></li>
+  <li><a href="#word-comments-in-order-of-appearance" id="toc-word-comments-in-order-of-appearance" class="nav-link" data-scroll-target="#word-comments-in-order-of-appearance">Word comments, in order of appearance</a>
+  <ul class="collapse">
+  <li><a href="#diji-recast-the-executive-summary-as-highlights" id="toc-diji-recast-the-executive-summary-as-highlights" class="nav-link" data-scroll-target="#diji-recast-the-executive-summary-as-highlights">1. Diji — Recast the executive summary as highlights</a></li>
+  <li><a href="#diji-are-the-nine-countries-non-compliant-and-are-they-inside-the-26" id="toc-diji-are-the-nine-countries-non-compliant-and-are-they-inside-the-26" class="nav-link" data-scroll-target="#diji-are-the-nine-countries-non-compliant-and-are-they-inside-the-26">2. Diji — Are the nine countries non-compliant, and are they inside the 26?</a></li>
+  <li><a href="#yurani-confirm-the-un-classification-source" id="toc-yurani-confirm-the-un-classification-source" class="nav-link" data-scroll-target="#yurani-confirm-the-un-classification-source">3. Yurani — Confirm the UN classification source</a></li>
+  <li><a href="#yurani-list-the-three-countries" id="toc-yurani-list-the-three-countries" class="nav-link" data-scroll-target="#yurani-list-the-three-countries">4. Yurani — List the three countries</a></li>
+  <li><a href="#yurani-expand-the-last-three-executive-summary-paragraphs" id="toc-yurani-expand-the-last-three-executive-summary-paragraphs" class="nav-link" data-scroll-target="#yurani-expand-the-last-three-executive-summary-paragraphs">5. Yurani — Expand the last three executive-summary paragraphs</a></li>
+  <li><a href="#diji-show-what-the-applications-found-not-only-that-they-exist" id="toc-diji-show-what-the-applications-found-not-only-that-they-exist" class="nav-link" data-scroll-target="#diji-show-what-the-applications-found-not-only-that-they-exist">6. Diji — Show what the applications found, not only that they exist</a></li>
+  <li><a href="#diji-which-sectors-are-compared-to-agricultural-water-productivity" id="toc-diji-which-sectors-are-compared-to-agricultural-water-productivity" class="nav-link" data-scroll-target="#diji-which-sectors-are-compared-to-agricultural-water-productivity">7. Diji — Which sectors are compared to agricultural water productivity?</a></li>
+  <li><a href="#diji-present-each-country-as-a-separate-sentence" id="toc-diji-present-each-country-as-a-separate-sentence" class="nav-link" data-scroll-target="#diji-present-each-country-as-a-separate-sentence">8. Diji — Present each country as a separate sentence</a></li>
+  <li><a href="#diji-close-the-executive-summary-on-opportunity-and-sna-2025" id="toc-diji-close-the-executive-summary-on-opportunity-and-sna-2025" class="nav-link" data-scroll-target="#diji-close-the-executive-summary-on-opportunity-and-sna-2025">9. Diji — Close the executive summary on opportunity and SNA 2025</a></li>
+  <li><a href="#yurani-expand-the-seea-introduction-central-framework-and-ea" id="toc-yurani-expand-the-seea-introduction-central-framework-and-ea" class="nav-link" data-scroll-target="#yurani-expand-the-seea-introduction-central-framework-and-ea">10. Yurani — Expand the SEEA introduction (Central Framework and EA)</a></li>
+  <li><a href="#yurani-add-a-few-more-details-on-the-36-accounts" id="toc-yurani-add-a-few-more-details-on-the-36-accounts" class="nav-link" data-scroll-target="#yurani-add-a-few-more-details-on-the-36-accounts">11. Yurani — Add a few more details on the 36 accounts</a></li>
+  <li><a href="#yurani-stage-iii-may-not-fit-uganda-and-zambia" id="toc-yurani-stage-iii-may-not-fit-uganda-and-zambia" class="nav-link" data-scroll-target="#yurani-stage-iii-may-not-fit-uganda-and-zambia">12. Yurani — Stage III may not fit Uganda and Zambia</a></li>
+  <li><a href="#yurani-footnote-on-uganda-and-zambia" id="toc-yurani-footnote-on-uganda-and-zambia" class="nav-link" data-scroll-target="#yurani-footnote-on-uganda-and-zambia">13. Yurani — Footnote on Uganda and Zambia</a></li>
+  <li><a href="#yurani-world-banksupported-countries-and-accounts" id="toc-yurani-world-banksupported-countries-and-accounts" class="nav-link" data-scroll-target="#yurani-world-banksupported-countries-and-accounts">14. Yurani — World Bank–supported countries and accounts</a></li>
+  <li><a href="#diji-water-productivity-gaps-are-unsurprising-look-at-change-over-time" id="toc-diji-water-productivity-gaps-are-unsurprising-look-at-change-over-time" class="nav-link" data-scroll-target="#diji-water-productivity-gaps-are-unsurprising-look-at-change-over-time">15. Diji — Water productivity gaps are unsurprising; look at change over time</a></li>
+  <li><a href="#diji-uganda-and-rwanda-dominate-the-forestagriculture-slope" id="toc-diji-uganda-and-rwanda-dominate-the-forestagriculture-slope" class="nav-link" data-scroll-target="#diji-uganda-and-rwanda-dominate-the-forestagriculture-slope">16. Diji — Uganda and Rwanda dominate the forest–agriculture slope</a></li>
+  <li><a href="#diji-move-the-gdp-per-capita-colour-note-under-figure-5" id="toc-diji-move-the-gdp-per-capita-colour-note-under-figure-5" class="nav-link" data-scroll-target="#diji-move-the-gdp-per-capita-colour-note-under-figure-5">17. Diji — Move the GDP-per-capita colour note under Figure 5</a></li>
+  <li><a href="#diji-the-biomassco₂-paradox-is-unclear" id="toc-diji-the-biomassco₂-paradox-is-unclear" class="nav-link" data-scroll-target="#diji-the-biomassco₂-paradox-is-unclear">18. Diji — The biomass–CO₂ “paradox” is unclear</a></li>
+  <li><a href="#diji-put-the-ugandadrc-fuelwood-factoids-in-a-data-box" id="toc-diji-put-the-ugandadrc-fuelwood-factoids-in-a-data-box" class="nav-link" data-scroll-target="#diji-put-the-ugandadrc-fuelwood-factoids-in-a-data-box">19. Diji — Put the Uganda/DRC fuelwood factoids in a data box</a></li>
+  <li><a href="#diji-ascent-as-a-transition-path-not-only-a-triple-dividend" id="toc-diji-ascent-as-a-transition-path-not-only-a-triple-dividend" class="nav-link" data-scroll-target="#diji-ascent-as-a-transition-path-not-only-a-triple-dividend">20. Diji — ASCENT as a transition path, not only a triple dividend</a></li>
+  <li><a href="#diji-how-is-fuelwood-a-driver-of-water-scarcity-in-the-drc" id="toc-diji-how-is-fuelwood-a-driver-of-water-scarcity-in-the-drc" class="nav-link" data-scroll-target="#diji-how-is-fuelwood-a-driver-of-water-scarcity-in-the-drc">21. Diji — How is fuelwood a driver of water scarcity in the DRC?</a></li>
+  <li><a href="#diji-electricity-as-kenyas-largest-water-user-is-surprising" id="toc-diji-electricity-as-kenyas-largest-water-user-is-surprising" class="nav-link" data-scroll-target="#diji-electricity-as-kenyas-largest-water-user-is-surprising">22. Diji — Electricity as Kenya’s largest water user is surprising</a></li>
+  <li><a href="#diji-is-mauritius-at-22-percent-too-close-for-comfort" id="toc-diji-is-mauritius-at-22-percent-too-close-for-comfort" class="nav-link" data-scroll-target="#diji-is-mauritius-at-22-percent-too-close-for-comfort">23. Diji — Is Mauritius at 22 percent “too close for comfort”?</a></li>
+  <li><a href="#diji-does-ascent-in-the-drc-already-use-this-dual-entry-point" id="toc-diji-does-ascent-in-the-drc-already-use-this-dual-entry-point" class="nav-link" data-scroll-target="#diji-does-ascent-in-the-drc-already-use-this-dual-entry-point">24. Diji — Does ASCENT in the DRC already use this dual entry point?</a></li>
+  <li><a href="#diji-ugandas-wood-supply-is-not-depleted" id="toc-diji-ugandas-wood-supply-is-not-depleted" class="nav-link" data-scroll-target="#diji-ugandas-wood-supply-is-not-depleted">25. Diji — Uganda’s wood supply is not depleted</a></li>
+  <li><a href="#diji-add-a-time-period-to-rwandas-soil-erosion-cost" id="toc-diji-add-a-time-period-to-rwandas-soil-erosion-cost" class="nav-link" data-scroll-target="#diji-add-a-time-period-to-rwandas-soil-erosion-cost">26. Diji — Add a time period to Rwanda’s soil-erosion cost</a></li>
+  <li><a href="#diji-confirm-million-versus-billion-for-drc-forest-services" id="toc-diji-confirm-million-versus-billion-for-drc-forest-services" class="nav-link" data-scroll-target="#diji-confirm-million-versus-billion-for-drc-forest-services">27. Diji — Confirm million versus billion for DRC forest services</a></li>
+  <li><a href="#diji-put-the-bushmeat-finding-in-a-box" id="toc-diji-put-the-bushmeat-finding-in-a-box" class="nav-link" data-scroll-target="#diji-put-the-bushmeat-finding-in-a-box">28. Diji — Put the bushmeat finding in a box</a></li>
+  <li><a href="#diji-move-the-missing-services-paragraph-out-of-kenya" id="toc-diji-move-the-missing-services-paragraph-out-of-kenya" class="nav-link" data-scroll-target="#diji-move-the-missing-services-paragraph-out-of-kenya">29. Diji — Move the missing-services paragraph out of Kenya</a></li>
+  <li><a href="#diji-simplify-the-data-infrastructure-point" id="toc-diji-simplify-the-data-infrastructure-point" class="nav-link" data-scroll-target="#diji-simplify-the-data-infrastructure-point">30. Diji — Simplify the data-infrastructure point</a></li>
+  <li><a href="#diji-reframe-applications-toward-uses-and-impact" id="toc-diji-reframe-applications-toward-uses-and-impact" class="nav-link" data-scroll-target="#diji-reframe-applications-toward-uses-and-impact">31. Diji — Reframe applications toward uses and impact</a></li>
+  </ul></li>
+  <li><a href="#applications-of-natural-capital-accounts" id="toc-applications-of-natural-capital-accounts" class="nav-link" data-scroll-target="#applications-of-natural-capital-accounts">Applications of Natural Capital Accounts</a>
+  <ul class="collapse">
+  <li><a href="#ethiopia-targeting-land-and-watershed-investment" id="toc-ethiopia-targeting-land-and-watershed-investment" class="nav-link" data-scroll-target="#ethiopia-targeting-land-and-watershed-investment">Ethiopia: targeting land and watershed investment</a></li>
+  <li><a href="#kenya-climate-risk-in-the-budget" id="toc-kenya-climate-risk-in-the-budget" class="nav-link" data-scroll-target="#kenya-climate-risk-in-the-budget">Kenya: climate risk in the budget</a></li>
+  <li><a href="#rwanda-the-tariff-and-leak-argument" id="toc-rwanda-the-tariff-and-leak-argument" class="nav-link" data-scroll-target="#rwanda-the-tariff-and-leak-argument">Rwanda: the tariff and leak argument</a></li>
+  <li><a href="#south-africa-jobs-and-gdp-from-conservation" id="toc-south-africa-jobs-and-gdp-from-conservation" class="nav-link" data-scroll-target="#south-africa-jobs-and-gdp-from-conservation">South Africa: jobs and GDP from conservation</a></li>
+  <li><a href="#uganda-and-zambia-supply-risk-and-livelihood-baselines" id="toc-uganda-and-zambia-supply-risk-and-livelihood-baselines" class="nav-link" data-scroll-target="#uganda-and-zambia-supply-risk-and-livelihood-baselines">Uganda and Zambia: supply risk and livelihood baselines</a></li>
+  <li><a href="#diji-retitle-recommendations-as-a-way-forward-with-sna-2025-first" id="toc-diji-retitle-recommendations-as-a-way-forward-with-sna-2025-first" class="nav-link" data-scroll-target="#diji-retitle-recommendations-as-a-way-forward-with-sna-2025-first">32. Diji — Retitle recommendations as a way forward, with SNA 2025 first</a></li>
+  </ul></li>
+  <li><a href="#way-forward" id="toc-way-forward" class="nav-link" data-scroll-target="#way-forward">Way forward</a>
+  <ul class="collapse">
+  <li><a href="#diji-check-energy-suts-with-ascent-ttls" id="toc-diji-check-energy-suts-with-ascent-ttls" class="nav-link" data-scroll-target="#diji-check-energy-suts-with-ascent-ttls">33. Diji — Check energy SUTs with ASCENT TTLs</a></li>
+  <li><a href="#yurani-will-share-the-updated-report" id="toc-yurani-will-share-the-updated-report" class="nav-link" data-scroll-target="#yurani-will-share-the-updated-report">34. Yurani — Will share the updated report</a></li>
+  <li><a href="#diji-support-data-providers-not-only-nsos" id="toc-diji-support-data-providers-not-only-nsos" class="nav-link" data-scroll-target="#diji-support-data-providers-not-only-nsos">35. Diji — Support data providers, not only NSOs</a></li>
+  <li><a href="#diji-motivate-marine-accounts-with-jobs-food-security-exports-and-asset-management" id="toc-diji-motivate-marine-accounts-with-jobs-food-security-exports-and-asset-management" class="nav-link" data-scroll-target="#diji-motivate-marine-accounts-with-jobs-food-security-exports-and-asset-management">36. Diji — Motivate marine accounts with jobs, food security, exports, and asset management</a></li>
+  <li><a href="#diji-ai-land-classification-versus-government-control-of-land-classes" id="toc-diji-ai-land-classification-versus-government-control-of-land-classes" class="nav-link" data-scroll-target="#diji-ai-land-classification-versus-government-control-of-land-classes">37. Diji — AI land classification versus government control of land classes</a></li>
+  <li><a href="#diji-move-sna-2025-to-the-front-of-the-way-forward-section" id="toc-diji-move-sna-2025-to-the-front-of-the-way-forward-section" class="nav-link" data-scroll-target="#diji-move-sna-2025-to-the-front-of-the-way-forward-section">38. Diji — Move SNA 2025 to the front of the way-forward section</a></li>
+  </ul></li>
+  <li><a href="#additional-comments" id="toc-additional-comments" class="nav-link" data-scroll-target="#additional-comments">Additional comments</a>
+  <ul class="collapse">
+  <li><a href="#a.-executive-summary-more-highlights" id="toc-a.-executive-summary-more-highlights" class="nav-link" data-scroll-target="#a.-executive-summary-more-highlights">A. Executive summary — more highlights</a></li>
+  <li><a href="#b.-correlations-period-change-versus-annualized-rates" id="toc-b.-correlations-period-change-versus-annualized-rates" class="nav-link" data-scroll-target="#b.-correlations-period-change-versus-annualized-rates">B. Correlations — period change versus annualized rates</a></li>
+  <li><a href="#c.-figure-5-add-biomass-versus-net-forest-cover-change" id="toc-c.-figure-5-add-biomass-versus-net-forest-cover-change" class="nav-link" data-scroll-target="#c.-figure-5-add-biomass-versus-net-forest-cover-change">C. Figure 5 — add biomass versus net forest-cover change</a></li>
+  <li><a href="#d.-energy-productivity-indicator-analogous-to-figure-3-for-water" id="toc-d.-energy-productivity-indicator-analogous-to-figure-3-for-water" class="nav-link" data-scroll-target="#d.-energy-productivity-indicator-analogous-to-figure-3-for-water">D. Energy productivity indicator, analogous to Figure 3 for water</a></li>
+  <li><a href="#e.-balance-seeas-national-purpose-with-spatial-disaggregation" id="toc-e.-balance-seeas-national-purpose-with-spatial-disaggregation" class="nav-link" data-scroll-target="#e.-balance-seeas-national-purpose-with-spatial-disaggregation">E. Balance SEEA’s national purpose with spatial disaggregation</a></li>
+  <li><a href="#f.-time-series-are-the-most-useful-product-and-the-hardest-to-sustain" id="toc-f.-time-series-are-the-most-useful-product-and-the-hardest-to-sustain" class="nav-link" data-scroll-target="#f.-time-series-are-the-most-useful-product-and-the-hardest-to-sustain">F. Time series are the most useful product and the hardest to sustain</a></li>
+  <li><a href="#g.-quality-checks-same-accounting-period-for-physical-and-monetary-data" id="toc-g.-quality-checks-same-accounting-period-for-physical-and-monetary-data" class="nav-link" data-scroll-target="#g.-quality-checks-same-accounting-period-for-physical-and-monetary-data">G. Quality checks: same accounting period for physical and monetary data</a></li>
+  <li><a href="#h.-machine-learning-for-gap-imputation-when-each-country-has-few-observations" id="toc-h.-machine-learning-for-gap-imputation-when-each-country-has-few-observations" class="nav-link" data-scroll-target="#h.-machine-learning-for-gap-imputation-when-each-country-has-few-observations">H. Machine learning for gap imputation when each country has few observations</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="address_comments.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../documentation/index.html">Documentation</a></li><li class="breadcrumb-item"><a href="../documentation/address_comments.html">Addressing comments</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Addressing reviewer comments</h1>
+<p class="subtitle lead">Proposed text for the combined NCA report</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Renato Vargas </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Consultant for The World Bank
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="how-to-use-this-file" class="level1">
+<h1>How to use this file</h1>
+<p>Each item follows the same order as the comments in <em>03_combined_document 06_16_2026 with WB comments.docx</em>, then the additional comments sent with this request. For every item you will find:</p>
+<ul>
+<li>the <strong>comment</strong> (quoted);</li>
+<li>the <strong>location</strong>, as the first six words of the paragraph where it sits;</li>
+<li>a <strong>Note</strong> only where a decision, a box, or an action by you or the task team is required;</li>
+<li>the <strong>proposed text</strong> to paste into <code>documentation/03_combined_document.qmd</code>. Suggestion-type comments still receive optional text the editor can keep or drop.</li>
+</ul>
+<p>Citations use the same keys as the combined document.</p>
+</section>
+<section id="word-comments-in-order-of-appearance" class="level1">
+<h1>Word comments, in order of appearance</h1>
+<section id="diji-recast-the-executive-summary-as-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="diji-recast-the-executive-summary-as-highlights">1. Diji — Recast the executive summary as highlights</h2>
+<p><strong>Comment.</strong> “Suggest to think of ES as more of a highlight of the key findings and applications and less a summary that mirrors the report. For example, para 1 - Start with many countries in AFE face natural capital stress. Then have brief description of what the stress is… Second para.. Re: data … sentence on data used”</p>
+<p><strong>Location.</strong> “Executive Summary”</p>
+<p><strong>Note.</strong> This rewrite also absorbs comments 17, 22, 26, 27, 31, 33, and 36, and the additional request to elaborate correlations, thematic findings, and Section 5 applications. If you apply this block, you can skip pasting the overlapping later items unless you prefer to keep a shorter edit.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Many countries in Eastern and Southern Africa face mounting natural capital stress even where headline growth looks solid. Woody biomass still supplies 78 to 94 percent of national energy in the Democratic Republic of Congo (DRC), Uganda, and Zambia, and that dependence is a documented driver of forest loss. Uganda’s forest cover fell about 60 percent between 1990 and 2015. Zambia lost 1.88 million hectares of tree cover in five years (2018–2023). Agriculture remains the lowest-productivity water user wherever monetary water accounts exist, while taking almost all of the water. Rwanda’s agriculture uses more than 96 percent of freshwater abstraction and generates only 118 Rwf per cubic metre, against 6,236 Rwf/m³ in mining. Uganda’s agriculture generates UGX 1,458/m³ against UGX 364,299/m³ in services. Mauritius loses two-thirds of treated potable water in the pipe network before it reaches households.</p>
+<p>This report draws on three sources: the 2025 Global Assessment of Environmental-Economic Accounting, presented to the UN Statistical Commission in 2026 <span class="citation" data-cites="unceea_global_assessment_2025">(<a href="#ref-unceea_global_assessment_2025" role="doc-biblioref">Committee of Experts on Environmental-Economic Accounting, 2026</a>)</span>; a country-by-country review of compiled natural capital accounts (NCAs) for nine of the 26 countries in the World Bank’s Eastern and Southern Africa (AFE) region, namely the DRC, Ethiopia, Kenya, Madagascar, Mauritius, Rwanda, South Africa, Uganda, and Zambia; and World Development Indicators used to place account results next to GDP, sectoral value added, rural population, and CO₂ per capita <span class="citation" data-cites="worldbank_wdi_2026">(<a href="#ref-worldbank_wdi_2026" role="doc-biblioref">World Bank, 2026</a>)</span>. The nine countries are a subset of the 26. Three of them (Rwanda, the DRC, and Madagascar) have substantive accounts compiled through World Bank and donor programmes but are not yet registered as formally implementing the System of Environmental-Economic Accounting (SEEA) in the UN classification. “In any form” in this report means that those accounts are reviewed on their merits; it does not mean they are outside the SEEA statistical standard.</p>
+<p>Of the 26 AFE countries, 11 are implementing the SEEA. Four are at Stage III, four at Stage II, and three at Stage I under SDG indicator 15.9.1(b). South Africa and Kenya lead on the number of compiled accounts documented in this review. Physical water supply and use tables are the most common entry point.</p>
+<p>When account indicators are read against macroeconomic data, three patterns stand out. First, net forest cover <em>change over the full account period</em>—not an annualized rate—is larger where agriculture’s share of GDP is higher, but the relationship is not a law: Uganda and Rwanda each lost about 60 percent of forest cover over 25 years (1990–2015), while Zambia lost 4.5 percent over only five years (2018–2023) despite agriculture contributing just 2.2 percent of GDP. Second, biomass dependence moves inversely with GDP per capita and with conventional CO₂ per capita excluding land use. Countries that look “clean” on energy-sector emissions are often drawing down forest carbon through fuelwood. Third, water and energy productivity gaps between agriculture and other sectors are large in every country that has compiled the relevant supply and use tables. Those gaps are expected at the aggregate sector level because a cubic metre used to grow food cannot match the value added of a cubic metre used in mining or services; their policy value is that they quantify the opportunity cost of allocation, leakage, and irrigation choices.</p>
+<p>Thematic accounts add the operational detail that the correlations cannot. Water accounts show that national averages conceal basin-level scarcity (Kenya’s per capita use ranges from 8 m³ to 91 m³ a year) and that unaccounted-for water is a first-order fiscal leak (64.6 percent in Mauritius, 41 percent in Rwanda, 34.8 percent in Uganda). Energy accounts show that biomass dominates physical supply while electricity and petroleum dominate household spending, so tariffs and subsidies are calibrated to a monetized minority of energy use. Land and ecosystem accounts show conversion from woodland to cropland or rangeland, declining dry-season baseflow, and, in the DRC, a global climate-regulation value of forest services on the order of USD 706 billion per year against only about USD 3.3 billion captured domestically.</p>
+<p>The most consequential applications are already in government and World Bank decision systems. Kenya’s KENMod macro-fiscal model, fed by NCA data, simulates drought, livestock, and flood shocks and is cited in the 2026 Budget Policy Statement: climate shocks reduce GDP, raise short-term inflation, widen the primary deficit, and increase debt-to-GDP, and they identify sectors that are most exposed <span class="citation" data-cites="national_treasury_kenya_2026">(<a href="#ref-national_treasury_kenya_2026" role="doc-biblioref">National Treasury of Kenya, 2026</a>)</span>. Ethiopia’s Investment Prioritization Tool, built on the same ecosystem-service modelling that underpins the accounts, informed watershed selection for the Climate Action through Landscape Management (CALM) Programme-for-Results, a portfolio of about USD 900 million covering 8,000 community watersheds, and the Ethiopia Strategic Investment Framework for Sustainable Land Management <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. Rwanda’s monetary water tables supplied the quantitative case for tariff reform and non-revenue-water reduction. South Africa’s biodiversity tourism accounts put a GDP and jobs number on protected area expansion.</p>
+<p>There is a clear opportunity to do more, because the same accounts can inform water allocation and pricing, clean-cooking and grid investment under ASCENT, catchment and restoration targeting, carbon-finance pipelines, and climate-responsive budgeting. Expanding compilation will also position countries for the 2025 System of National Accounts, which treats natural resource depletion as a cost of production and will require SEEA-compatible physical and monetary asset data as an input.</p>
+</section>
+<section id="diji-are-the-nine-countries-non-compliant-and-are-they-inside-the-26" class="level2">
+<h2 class="anchored" data-anchor-id="diji-are-the-nine-countries-non-compliant-and-are-they-inside-the-26">2. Diji — Are the nine countries non-compliant, and are they inside the 26?</h2>
+<p><strong>Comment.</strong> “Is this suggesting not in compliance with SEEA and are the 9 listed not part of the 26?”</p>
+<p><strong>Location.</strong> “Natural capital accounts (NCAs) compiled”</p>
+<p><strong>Note.</strong> Apply this paragraph if you do not use the full executive-summary rewrite in item 1.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Natural capital accounts (NCAs) compiled under the System of Environmental-Economic Accounting (SEEA) <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span> for Eastern and Southern Africa offer a coherent, internationally comparable basis for linking each country’s resource wealth to its economic performance. This report consolidates findings from a diagnostic review of SEEA implementation across the 26-country AFE region and an analytical assessment of nine of those 26 countries that have compiled accounts in any form: the Democratic Republic of Congo (DRC), Ethiopia, Kenya, Madagascar, Mauritius, Rwanda, South Africa, Uganda, and Zambia. “In any form” refers to coverage, not to non-compliance. All nine programmes use SEEA concepts. Three of them (Rwanda, the DRC, and Madagascar) are not yet recorded as formally implementing the SEEA in the UN Global Assessment, because the accounts were compiled through World Bank and donor programmes rather than through a nationally registered statistical process. The report then examines how countries have used the accounts to inform policy, investment, and economic modelling, and it concludes with recommendations for deepening this work.</p>
+</section>
+<section id="yurani-confirm-the-un-classification-source" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-confirm-the-un-classification-source">3. Yurani — Confirm the UN classification source</h2>
+<p><strong>Comment.</strong> “Renato please confirm that this is the study with the proposed classification: United Nations Statistics Division, Committee of Experts on Environmental-Economic Accounting. (2026).”</p>
+<p><strong>Location.</strong> “Implementation of NCA varies across”</p>
+<p><strong>Note.</strong> Confirmed. The bibliographic record in <code>references.bib</code> is the 2025 Global Assessment of Environmental-Economic Accounting and Supporting Statistics, authored by the UNCEEA, issued by UNSD, and tabled at the 57th Statistical Commission (3–6 March 2026). The “2025” in the title is the assessment year; the “2026” in the citation is the document year. No change of source is needed. The sentence below makes that explicit.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Implementation of NCA varies across the region. Of the 26 AFE countries assessed, 11 are implementing the SEEA according to the 2025 Global Assessment of Environmental-Economic Accounting, prepared by the Committee of Experts on Environmental-Economic Accounting and issued by the United Nations Statistics Division for the 57th session of the Statistical Commission <span class="citation" data-cites="unceea_global_assessment_2025">(<a href="#ref-unceea_global_assessment_2025" role="doc-biblioref">Committee of Experts on Environmental-Economic Accounting, 2026</a>)</span>. Four are at Stage III (sustained institutional programmes for continuous production of NCAs), four at Stage II (at least one SEEA ecosystem or thematic account in addition to at least one SEEA Central Framework account), and three at Stage I (at least one SEEA Central Framework account). Three additional countries—Rwanda, the DRC, and Madagascar—are compiling accounts outside the formal institutional SEEA framework recorded in that assessment, and thus have no stage in this review. Their efforts are substantive and are treated in full below.</p>
+</section>
+<section id="yurani-list-the-three-countries" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-list-the-three-countries">4. Yurani — List the three countries</h2>
+<p><strong>Comment.</strong> “Please list the three countires”</p>
+<p><strong>Location.</strong> “Implementation of NCA varies across”</p>
+<p><strong>Proposed text.</strong></p>
+<p>Three additional countries—Rwanda, the Democratic Republic of Congo, and Madagascar—are compiling accounts outside the formal institutional SEEA framework recorded in the UN Global Assessment, and thus have no stage in this review. However, their efforts are substantive and deserve attention.</p>
+</section>
+<section id="yurani-expand-the-last-three-executive-summary-paragraphs" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-expand-the-last-three-executive-summary-paragraphs">5. Yurani — Expand the last three executive-summary paragraphs</h2>
+<p><strong>Comment.</strong> “These three paragraphs can be expanded slightly to include more key findings from the report, following its structure: correlations, NCA key figures, and specific applications.”</p>
+<p><strong>Location.</strong> “This report pairs NCA data”</p>
+<p><strong>Note.</strong> Covered by the rewrite in item 1. The three paragraphs below are a drop-in expansion if you keep the current executive-summary structure.</p>
+<p><strong>Proposed text.</strong></p>
+<p>This report pairs NCA data with other macroeconomic indicators to place these findings in economic context. Net forest cover change over the account period is larger where agriculture’s share of GDP is higher, which is consistent with forest-to-cropland conversion during structural transformation, but it does not always improve food security per capita. The comparison uses the cumulative change reported in each country’s accounts, not an annualized rate: Uganda and Rwanda are 25-year windows (1990–2015), the DRC is 20 years (2000–2020), Kenya 16 years (2002–2018), and Zambia only five years (2018–2023). Biomass energy dependence moves inversely with GDP per capita. Countries with higher rural population shares show faster natural land-cover loss, reflecting smallholder frontier expansion. A comparison of biomass’s share of energy supply against net forest cover change shows the same group of high-biomass countries sitting on the forest-loss side of the chart.</p>
+<p>Water productivity in agriculture is the lowest of any sector with monetary tables. In the case of Rwanda 118 Rwf/m³ against 6,236 Rwf/m³ in mining, Uganda UGX 1,458/m³ against UGX 364,299/m³ in services. National water-use efficiency in Uganda rose from UGX 3,014/m³ in 2015 to UGX 5,557/m³ in 2024, so the gap is not static. Energy accounts, where they exist, show the inverse of the water story in physical terms: in South Africa, manufacturing end-use of energy products was about 1,253 PJ in 2022, against 72 PJ in agriculture, while mining remains the most energy-intensive sector at 1.21 TJ per million Rand of GVA <span class="citation" data-cites="statssa_energy_2025">(<a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>)</span>. Forest and land accounts document 11.6 million hectares of forest lost in the DRC (2000–2020), 1.88 million hectares of tree cover lost in Zambia (2018–2023), and a 60 percent forest-area decline in Uganda (1990–2015).</p>
+<p>The accounts have already entered real decisions. In Kenya, NCA data feed KENMod, which the National Treasury uses to simulate drought, livestock, and flood shocks; the 2026 Budget Policy Statement reports that those shocks reduce GDP, affect inflation in the short term, widen the primary deficit, and raise debt-to-GDP, and that they identify sectors most exposed to climate risk <span class="citation" data-cites="national_treasury_kenya_2026">(<a href="#ref-national_treasury_kenya_2026" role="doc-biblioref">National Treasury of Kenya, 2026</a>)</span>. In Ethiopia, ecosystem-service modelling that underpins the accounts was used to build an Investment Prioritization Tool that informed watershed selection for the World Bank CALM PforR and the national sustainable land-management investment framework <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. In Rwanda, monetary water supply and use tables provided the quantified case for water pricing reform and for reducing WASAC’s 41 percent non-revenue water. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected-area expansion, with biodiversity-based tourism generating R27.7 billion in GDP and 91,836 direct jobs in 2019.</p>
+</section>
+<section id="diji-show-what-the-applications-found-not-only-that-they-exist" class="level2">
+<h2 class="anchored" data-anchor-id="diji-show-what-the-applications-found-not-only-that-they-exist">6. Diji — Show what the applications found, not only that they exist</h2>
+<p><strong>Comment.</strong> “Agree. For example, instead of stating that accounts have been applied to real decisions, show what the application in macro has found. E.g., for KY we know that the incorporation of scenarios covering reductions in crop yields, declines in livestock output, flood-related damages, and combined climate shocks in the macro fiscal model resulted identifying specific economic sectors that are vulnerable to climate risks. Find that climate shocks affect inflation in the short-term and have significant implications for fiscal outcome (section 5.3.4 of Budget Policy Statement 2026, pg. 104 onwards)”</p>
+<p><strong>Location.</strong> “This report pairs NCA data”</p>
+<p><strong>Proposed text.</strong></p>
+<p>The accounts have been applied to real decisions, and the findings of those applications are themselves policy results. Kenya’s KENMod, which draws on water, energy, land, and ecosystem-service accounts, was used to simulate a 10 percent reduction in crop yields from drought, a 20 percent decline in livestock output, flood damage equivalent to 2 percent of public capital stock, and a combined shock. The 2026 Budget Policy Statement reports that these scenarios identify economic sectors that are vulnerable to climate risks, that climate shocks affect inflation in the short term, and that they have material implications for the primary deficit and debt-to-GDP <span class="citation" data-cites="national_treasury_kenya_2026">(<a href="#ref-national_treasury_kenya_2026" role="doc-biblioref">National Treasury of Kenya, 2026</a>)</span>. Under a hot scenario, GDP is projected 4.2 percentage points below baseline by 2100. In Ethiopia, the Investment Prioritization Tool showed that highland investments had reversed some degradation while new hotspots were emerging in the lowlands; that geographic shift entered the Country Climate and Development Report and the selection of CALM investment areas across about 8,000 community watersheds <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. In Rwanda, the accounts showed that WASAC recovers only about 75 percent of costs and that halving non-revenue water would free 8 million m³ a year and about USD 4 million in revenue. In South Africa, biodiversity-based tourism of R27.7 billion in GDP (0.4–0.5 percent) and 91,836 jobs supplied a sector-comparable argument for protected-area expansion.</p>
+</section>
+<section id="diji-which-sectors-are-compared-to-agricultural-water-productivity" class="level2">
+<h2 class="anchored" data-anchor-id="diji-which-sectors-are-compared-to-agricultural-water-productivity">7. Diji — Which sectors are compared to agricultural water productivity?</h2>
+<p><strong>Comment.</strong> “Which sectors are usually compared to water productivity in ag. and is this surprising? Would you need a fact on the share of water used for ag. and then talk about productivity?”</p>
+<p><strong>Location.</strong> “Across the reviewed countries, the accounts”</p>
+<p><strong>Proposed text.</strong></p>
+<p>Water productivity in agriculture is consistently the lowest of any sector against which the accounts compare it, namely mining, manufacturing, and services in Rwanda, and services in Uganda. That ranking is not surprising at the aggregate sector level: a cubic metre used to produce food will rarely match the value added of a cubic metre used in mining or finance. What the accounts add is the <em>share</em> of water that sits behind that low productivity. Agriculture accounts for more than 96 percent of freshwater abstraction in Rwanda and 89 percent of net consumption in Mauritius, and for 96.4 percent of consumptive use in Uganda. The policy question is therefore not whether agriculture “should” have the same return per cubic metre as services, but how large a share of a scarce resource is locked into the least productive use, and whether irrigation efficiency, crop mix, and reduced distribution losses can raise agricultural returns without cutting food output.</p>
+<p>Rwanda’s agriculture achieves 118 Rwf per cubic metre, against 6,236 Rwf/m³ for mining. Uganda’s agriculture earns UGX 1,458/m³, against UGX 364,299/m³ for services. Those ratios mean mining is about 53 times, and Ugandan services about 250 times, more water-productive than agriculture in the same country.</p>
+</section>
+<section id="diji-present-each-country-as-a-separate-sentence" class="level2">
+<h2 class="anchored" data-anchor-id="diji-present-each-country-as-a-separate-sentence">8. Diji — Present each country as a separate sentence</h2>
+<p><strong>Comment.</strong> “Present each country as a separate sentence”</p>
+<p><strong>Location.</strong> “Across the reviewed countries, the accounts”</p>
+<p><strong>Proposed text.</strong></p>
+<p>Rwanda’s agriculture achieves 118 Rwf per cubic metre, against 6,236 Rwf/m³ for mining and 9,300–11,600 Rwf/m³ for services. Uganda’s agriculture earns UGX 1,458/m³, against UGX 364,299/m³ for services. Those figures mean mining is about 53 times more water-productive than Rwandan agriculture, and services about 250 times more water-productive than Ugandan agriculture.</p>
+</section>
+<section id="diji-close-the-executive-summary-on-opportunity-and-sna-2025" class="level2">
+<h2 class="anchored" data-anchor-id="diji-close-the-executive-summary-on-opportunity-and-sna-2025">9. Diji — Close the executive summary on opportunity and SNA 2025</h2>
+<p><strong>Comment.</strong> “Present this final para as: there opportunity to do more because it can help with decision-making and share what type of decisions could be influenced. Plus doing more also will position countries to be able to handle the upcoming requirement in the SNA”</p>
+<p><strong>Location.</strong> “Priority actions include completing monetary”</p>
+<p><strong>Proposed text.</strong></p>
+<p>There is a clear opportunity to do more, because the accounts already show that they can change the decisions in front of ministries of finance, water, energy, and agriculture. Completing monetary ecosystem-service accounts in Ethiopia and Madagascar would allow restoration and carbon-finance proposals to be compared with other public investments in the same units. Expanding basin- and watershed-level water and land accounts would improve targeting of irrigation, catchment protection, and landscape programmes. Institutionalizing compilation inside national statistical plans would give budget offices a time series rather than a one-off study. Harmonized accounts for shared river basins would support regional allocation and investment talks that national totals cannot. Doing this work now also positions countries for a hard statistical requirement: the 2025 System of National Accounts treats natural resource depletion as a cost of production and uses a split-asset approach aligned with the SEEA Central Framework, so countries implementing SNA 2025 will need SEEA-compatible physical and monetary asset data as an input.</p>
+</section>
+<section id="yurani-expand-the-seea-introduction-central-framework-and-ea" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-expand-the-seea-introduction-central-framework-and-ea">10. Yurani — Expand the SEEA introduction (Central Framework and EA)</h2>
+<p><strong>Comment.</strong> “Expand this paragraph and add one/two more paragraphs with information on the SEEA Central Framework and the SEEA EEA, what it is, how it is developed.”</p>
+<p><strong>Location.</strong> “The System of Environmental Economic Accounting”</p>
+<p><strong>Proposed text.</strong></p>
+<p>The System of Environmental-Economic Accounting (SEEA) <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span> is the international statistical standard for measuring the environment and its relationship with the economy. It is maintained by the UN Committee of Experts on Environmental-Economic Accounting (UNCEEA) under the UN Statistical Commission, in the same institutional family as the System of National Accounts. The 2025 Global Assessment of SEEA Implementation <span class="citation" data-cites="unceea_global_assessment_2025">(<a href="#ref-unceea_global_assessment_2025" role="doc-biblioref">Committee of Experts on Environmental-Economic Accounting, 2026</a>)</span> provides the global context for the AFE region’s progress. This report supplements that assessment with an individual review of all 26 AFE countries to determine whether any form of NCA has been undertaken, regardless of formal SEEA status. The review examines whether each of 36 distinct SEEA accounts has been compiled at least once.</p>
+<p>The SEEA has two complementary parts. The SEEA Central Framework (SEEA CF), adopted as an international statistical standard in 2012, accounts for individual environmental assets (such as water, energy, timber, minerals, and land) and for physical and monetary flows between the environment and the economy. Its core building blocks are physical supply and use tables, monetary supply and use tables, and asset accounts. These tables are designed to be internally consistent with the SNA, so that, for example, water or energy used by a sector can be read against that sector’s value added.</p>
+<p>The SEEA Ecosystem Accounting (SEEA EA), adopted by the Statistical Commission in 2021, accounts for ecosystems as spatial assets. It records extent (how much of each ecosystem type exists), condition (the quality of those ecosystems), ecosystem services in physical terms, and, where possible, monetary values and ecosystem-asset values. Thematic accounts (forests, oceans, protected areas, and related topics) sit alongside both frameworks and apply the same accounting rules to a policy domain. Accounts are typically developed by national statistical offices working with line ministries, using existing statistical, administrative, and geospatial data, and they are compiled for a country as a whole even when they are also disaggregated spatially for analysis.</p>
+</section>
+<section id="yurani-add-a-few-more-details-on-the-36-accounts" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-add-a-few-more-details-on-the-36-accounts">11. Yurani — Add a few more details on the 36 accounts</h2>
+<p><strong>Comment.</strong> “A few more details can be added.”</p>
+<p><strong>Location.</strong> “The assessment tracks the implementation of”</p>
+<p><strong>Proposed text.</strong></p>
+<p>The assessment tracks the implementation of 36 accounts grouped into three broad categories. The SEEA Central Framework covers material and monetary flow and asset accounts for natural resources, including physical and monetary supply and use tables for water and energy, and physical and monetary asset accounts for land, timber, and minerals. The SEEA Ecosystem Accounts cover ecosystem extent, condition, physical and monetary ecosystem services, and ecosystem asset accounts. Thematic accounts address specialized areas including forests, oceans, and protected areas. <strong>?@tbl-all-seea-accounts</strong> lists all accounts tracked in this review. Not every country is expected to compile all 36. The Global Assessment treats even a single Central Framework account as Stage I, because the constraint in most AFE countries is data availability and institutional mandate rather than the length of the menu.</p>
+</section>
+<section id="yurani-stage-iii-may-not-fit-uganda-and-zambia" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-stage-iii-may-not-fit-uganda-and-zambia">12. Yurani — Stage III may not fit Uganda and Zambia</h2>
+<p><strong>Comment.</strong> “This definition of stage III would not apply for Zambia and Uganda. Not sure why they were classified in stage III by the authors of the UN’s assessment. I suggest we classify them as stage II. For Mozambique and Mauritius, I don’t have the information to classify them.”</p>
+<p><strong>Location.</strong> “The stages are defined as Stage”</p>
+<p><strong>Note.</strong> Do not override the UN official classification in Figure 1 or in SDG 15.9.1(b) reporting. The Global Assessment is the source of record, and Mozambique and Mauritius are Stage III in that source. Keep the UN stages in the figure, and add the footnote in item 13 so the operational reading of Stage III is visible.</p>
+<p><strong>Proposed text.</strong></p>
+<p>The stages are defined as Stage I, which refers to countries that have compiled at least one SEEA CF account. Stage II includes countries that have additionally compiled at least one SEEA EA or thematic account. Stage III countries demonstrate a sustained institutional programme to produce NCA. In this report, a sustained programme means that at least two account types are compiled under a formally established institutional mandate, with a dedicated budget line or inter-agency data-sharing agreement in place to ensure continuity across government cycles, rather than relying exclusively on project-by-project donor financing. The UN Global Assessment still classifies Uganda, Zambia, Mauritius, and Mozambique as Stage III. That official classification is retained in <strong>?@fig-stage</strong>. The operational reading used here is stricter, and it is not fully evidenced for every Stage III country in this review (see footnote).</p>
+<p>Regular compilation and dissemination, referenced in Stage III criteria, means at minimum biennial production of accounts. More important than the frequency, however, is whether an institutional mechanism and a budget for replication are in place. Mauritius’s five-edition water account series illustrates that continuity. Uganda’s ten-iteration water account series also illustrates continuity, but its forest accounts remain a 2020 compilation. Zambia’s accounts are a 2018–2023 compendium led from the Ministry of Finance and National Planning rather than a standing NSO product.</p>
+</section>
+<section id="yurani-footnote-on-uganda-and-zambia" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-footnote-on-uganda-and-zambia">13. Yurani — Footnote on Uganda and Zambia</h2>
+<p><strong>Comment.</strong> “I added a footnote to include this clarification for Uganda and Zambia.”</p>
+<p><strong>Location.</strong> “The stages are defined as Stage”</p>
+<p><strong>Note.</strong> Keep this as a footnote attached to “Stage III” in the paragraph above.</p>
+<p><strong>Proposed text.</strong></p>
+<p><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="yurani-world-banksupported-countries-and-accounts" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-world-banksupported-countries-and-accounts">14. Yurani — World Bank–supported countries and accounts</h2>
+<p><strong>Comment.</strong> “Yurani will add details on which countries and accounts have been supported by the World Bank”</p>
+<p><strong>Location.</strong> “In the AFE region, 3 countries”</p>
+<p><strong>Note.</strong> Placeholder for Yurani to confirm and complete. The list below is drafted from the country reports in <code>data/assessment</code> and the annex. Please replace or annotate before the next draft.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Additionally, three countries—Rwanda, the DRC, and Madagascar—have accounts compiled through World Bank and international donor programmes and are not registered as formally implementing the SEEA in the UN classification. They are shown in <strong>?@fig-stage</strong> as “No Stage” to distinguish them from countries with nationally institutionalized programmes. The accounts produced under these programmes are substantive and are reviewed in this report. The classification reflects institutional status, not the quality or scope of the work.</p>
+<p>World Bank support, including WAVES, the Global Program on Sustainability (GPS), and BELA, has also underpinned accounts in countries that <em>are</em> in the UN classification. On the basis of the reports reviewed for this study, that support includes: Rwanda (water, land, and ecosystem accounts, WAVES); the DRC (forest ecosystem accounts, with CAFI and CIF co-financing); Madagascar (experimental ecosystem extent and condition, BELA); Ethiopia (land accounts and ecosystem services accounts, and the Investment Prioritization Tool); Kenya (water, energy, land, ecosystem, and forest accounts under NP-AEEA, and KENMod); Zambia (NCA compendium and ecosystem accounts, GPS); and Uganda (forest accounts under WAVES; water accounts are an UBOS series). [Yurani: please add or correct the country–account–trust-fund mapping here.]</p>
+</section>
+<section id="diji-water-productivity-gaps-are-unsurprising-look-at-change-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="diji-water-productivity-gaps-are-unsurprising-look-at-change-over-time">15. Diji — Water productivity gaps are unsurprising; look at change over time</h2>
+<p><strong>Comment.</strong> “At the aggregate sector level this should not be surprising because of the use of economic value. Is this common way to compare especially if water is not a constraint? Do any of the countries have multiple years, so you can look at change in economic value over time and if it has been going down over time, then recommendation on irrigation needs or crop diversification may be an option?”</p>
+<p><strong>Location.</strong> “Water Supply and Use Tables from”</p>
+<p><strong>Proposed text.</strong></p>
+<p>Water <em>Supply and Use Tables</em> from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value. The gaps are large. In Uganda, the services sector generates about 250 times more economic value per cubic metre than agriculture. In Mauritius, manufacturing and services generate about 214 times more. In Rwanda, services generate about 89 times more and mining about 53 times more than agriculture.</p>
+<p>That ranking is a common way to present monetary water accounts, and it should not be read as a surprise or as an argument that agriculture is an inefficient use of water in the abstract. Value added per cubic metre will almost always be lower in agriculture than in mining or services, whether or not water is the binding constraint. The comparison becomes policy-relevant when it is paired with two other facts from the same tables: agriculture’s <em>share</em> of water, and the <em>direction of change</em> where a time series exists.</p>
+<p>On shares, agriculture absorbs the overwhelming majority of water in all three countries. In Mauritius it represents only 4 percent of GDP but 302 of the 344 million cubic metres abstracted from the environment each year. On change over time, the accounts do not show agricultural water productivity collapsing. Rwanda’s national water-use efficiency rose from about 4,500 Rwf/m³ in 2012 to 4,762 Rwf/m³ in 2015 (constant 2014 prices), while GDP grew 25 percent and total water use grew only 10 percent <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019</a>)</span>. Uganda’s national water productivity rose from UGX 3,014/m³ in 2015 to UGX 5,557/m³ in 2024, an 84 percent increase, even though agriculture remains the least productive sector at UGX 1,458/m³ <span class="citation" data-cites="ubos_uganda_water_2025">(<a href="#ref-ubos_uganda_water_2025" role="doc-biblioref">Uganda Bureau of Statistics, 2025</a>)</span>. Mauritius’s ten-year physical series (2013–2022) shows agricultural abstraction stable at about 300–304 Mm³ while unaccounted-for water in the utility network worsened from 56.4 to 64.6 percent <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>.</p>
+<p>The implication is therefore not to move water out of food production on the basis of a single-year ratio. It is to use the accounts to track whether agricultural returns per cubic metre are rising, and to target irrigation efficiency, crop diversification, and leak reduction where they are not. Rwanda’s and Uganda’s rising national productivity is the signal that relative decoupling is possible; the still-low agricultural ratio is the signal that irrigation and crop-mix policy still have the largest physical lever.</p>
+</section>
+<section id="diji-uganda-and-rwanda-dominate-the-forestagriculture-slope" class="level2">
+<h2 class="anchored" data-anchor-id="diji-uganda-and-rwanda-dominate-the-forestagriculture-slope">16. Diji — Uganda and Rwanda dominate the forest–agriculture slope</h2>
+<p><strong>Comment.</strong> “Interesting that if UG and RW were not there the slope would be less. Wondering if there is anything in the accounts that explains this, is it the longer time period 25 years (DRC is also quite long but has much more forest cover)”</p>
+<p><strong>Location.</strong> “Turning to the forest sector,”</p>
+<p><strong>Note.</strong> This balloon did not attach cleanly in the Word file; it belongs on <strong>?@fig-forest-agr</strong>. The figure now plots average annual rates. Annualizing does <strong>not</strong> pull Uganda and Rwanda up toward the other countries: they remain the two fastest rates (about −2.4 percentage points a year) because that pace is real. DRC (20 years) and Kenya (16 years) already had windows comparable to Uganda and Rwanda (25 years). The country that moves is Zambia (5 years), from looking like DRC on a cumulative scale to a faster annual rate than DRC or Kenya, still well below Uganda and Rwanda. Keep the 60 percent cumulative losses in the text. These paragraphs replace the figure lead-in and the two paragraphs after the figure.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to lose forest cover faster. <strong>?@fig-forest-agr</strong> plots average annual net forest-cover change from national SEEA accounts against agricultural value added as a percentage of GDP from WDI <span class="citation" data-cites="worldbank_wdi_2026">(<a href="#ref-worldbank_wdi_2026" role="doc-biblioref">World Bank, 2026</a>)</span> in the last year of each accounting period. The annual rate is the cumulative change reported in the accounts divided by the number of years in that country’s window; it is not a compound growth rate. Account windows differ: Uganda and Rwanda 1990–2015 (25 years); DR Congo 2000–2020 (20 years); Kenya 2002–2018 (16 years); Zambia 2018–2023 (5 years); South Africa 2018–2022 (4 years). Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line lost forest cover on average over their account period.</p>
+<p>Uganda (agriculture 24 percent of GDP) and Rwanda (27 percent) remain the two outliers, at about −2.4 percentage points a year. That is the 25-year cumulative decline of about 60 percent in each country, driven by smallholder cropland expansion, expressed as a constant annual average. The long window does not explain their position relative to DRC or Kenya. DRC’s accounts also cover two decades (2000–2020) and Kenya’s cover 16 years (2002–2018). If DRC had lost forest at Uganda’s annual pace, the 20-year change would have been on the order of 50 percent, not 6.6 percent. DRC’s annual rate is about −0.3 percentage points: a small rate on a still-forested land base, even though the area lost is large (11.6 million hectares). Kenya averages about −0.5 percentage points a year. South Africa, with a low agricultural share and low rural population, is near zero.</p>
+<p>Zambia is the comparison that the old period totals distorted. Agriculture is only 2.2 percent of GDP, 59 percent of the population is rural, and 1.88 million hectares of tree cover were lost in five years (2018–2023) through woodland-to-rangeland degradation. On a cumulative chart that loss sat next to DRC. As an annual rate it is about −0.9 percentage points a year, faster than DRC and Kenya, and still well below Uganda and Rwanda. The slope in <strong>?@fig-forest-agr</strong> is therefore not an artifact of mixing 25-year and 5-year windows. Uganda and Rwanda lost forest faster each year; Zambia’s short window was the one that needed annualizing to be read against the others.</p>
+<p>The cumulative totals remain the policy facts the accounts were built to show. Uganda and Rwanda lost about 60 percent of forest cover in a generation. WDI reports forest area as an annual snapshot; SEEA accounts report change and the conversions that produced it.</p>
+</section>
+<section id="diji-move-the-gdp-per-capita-colour-note-under-figure-5" class="level2">
+<h2 class="anchored" data-anchor-id="diji-move-the-gdp-per-capita-colour-note-under-figure-5">17. Diji — Move the GDP-per-capita colour note under Figure 5</h2>
+<p><strong>Comment.</strong> “Move this to a note under the figure”</p>
+<p><strong>Location.</strong> “Regarding energy dependence, Figure 5”</p>
+<p><strong>Note.</strong> Delete the colour sentence from the body paragraph. Put it in the figure caption (or as a caption note) as below.</p>
+<p><strong>Proposed text.</strong></p>
+<p><em>Figure caption / note.</em> Biomass share of energy supply vs CO₂ per capita, excluding LULUCF (WDI AR5, latest year), for six AFE countries with energy-account data. Point colour is GDP per capita in current USD (WDI): lighter orange is lower, darker red is higher.</p>
+<p><em>Body paragraph, without the colour sentence.</em> Regarding energy dependence, <strong>?@fig-land-rural</strong> shows the biomass share of national energy supply from compiled NCA energy accounts, compared with CO₂ emissions per capita excluding LULUCF. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics. That is not a puzzle about measurement error. Standard emissions inventories that exclude land use treat burning of collected fuelwood as largely outside the energy-sector CO₂ total, so a biomass-dependent country can look carbon-light while its forest accounts show accelerating depletion from fuelwood harvesting <span class="citation" data-cites="worldbank_drc_forest_2025 ubos_uganda_forest_2020 zambia_nca_compendium_2026 statssa_energy_2025">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>; <a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>; <a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>.</p>
+</section>
+<section id="diji-the-biomassco₂-paradox-is-unclear" class="level2">
+<h2 class="anchored" data-anchor-id="diji-the-biomassco₂-paradox-is-unclear">18. Diji — The biomass–CO₂ “paradox” is unclear</h2>
+<p><strong>Comment.</strong> “Not sure I understand this.”</p>
+<p><strong>Location.</strong> “Regarding energy dependence, Figure 5”</p>
+<p><strong>Proposed text.</strong></p>
+<p>The upper-left of <strong>?@fig-land-rural</strong> is easy to misread. DRC, Ethiopia, Uganda, and Zambia appear among the least carbon-intensive countries on CO₂ per capita <em>excluding land use, land-use change, and forestry</em>. That indicator mainly captures fossil-fuel combustion. It does not capture the carbon released, or the carbon not sequestered, when forests are harvested for fuelwood and charcoal. The energy and forest accounts fill that gap: 78 to 94 percent of national energy in those countries is biomass, and the forest accounts record the associated depletion. South Africa sits at the opposite corner: high fossil CO₂ per capita, low biomass share, coal at 72.2 percent of domestic energy inputs. Both corners are energy-transition problems. They are different problems, and GDP statistics plus energy-sector CO₂ alone cannot tell them apart.</p>
+</section>
+<section id="diji-put-the-ugandadrc-fuelwood-factoids-in-a-data-box" class="level2">
+<h2 class="anchored" data-anchor-id="diji-put-the-ugandadrc-fuelwood-factoids-in-a-data-box">19. Diji — Put the Uganda/DRC fuelwood factoids in a data box</h2>
+<p><strong>Comment.</strong> “BTW - such factoid should be made into data boxes to highlight the finding.”</p>
+<p><strong>Location.</strong> “Countries most dependent on biomass for”</p>
+<p><strong>Note.</strong> Format as a box (Word text box, or a Quarto callout). Title can be “What the energy-sector CO₂ number misses”.</p>
+<p><strong>Proposed text.</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What the energy-sector CO₂ number misses
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uganda’s forest supply deficit reached 35 million tonnes by 2015 and was projected at 105 million tonnes by 2040 <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Fuelwood harvesting from DRC forest-farm mosaics grew 709 percent between 2000 and 2020 <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. These are physical energy facts that do not appear in CO₂ per capita excluding LULUCF.</p>
+</div>
+</div>
+</section>
+<section id="diji-ascent-as-a-transition-path-not-only-a-triple-dividend" class="level2">
+<h2 class="anchored" data-anchor-id="diji-ascent-as-a-transition-path-not-only-a-triple-dividend">20. Diji — ASCENT as a transition path, not only a triple dividend</h2>
+<p><strong>Comment.</strong> “Good point. Would be good to check if this is already factored into ASCENT programs and also highlight that it will need to be a transition path because population will keep going up and as percentages go down the absolute number may be going up…so yes, ASCENT has opportunity for triple dividend but how it thinks about the transition will also be important.”</p>
+<p><strong>Location.</strong> “Countries most dependent on biomass for”</p>
+<p><strong>Note.</strong> Please confirm with ASCENT TTLs whether clean-cooking and biomass displacement are already in country operations for DRC, Uganda, Ethiopia, and Zambia. The text below states the transition logic without claiming that ASCENT has already adopted it.</p>
+<p><strong>Proposed text.</strong></p>
+<p>For the ASCENT clean energy programme, the accounts establish that energy-transition investments in biomass-dependent economies can deliver three dividends at once: improved energy access, slower forest depletion, and carbon reduction that is real once LULUCF is counted. Delivering those dividends is a transition, not a one-step switch. Population will keep rising, so a falling <em>share</em> of biomass in the energy mix can still mean a rising <em>absolute</em> volume of fuelwood and charcoal, as Uganda’s fivefold increase in charcoal production between 1990 and 2015 already showed <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. ASCENT planning therefore needs a path that expands electricity and clean-cooking supply faster than household energy demand, and that tracks absolute biomass harvest—not only the biomass share—against the forest accounts. Whether current ASCENT country operations already use the accounts in this way is a question for the task teams; the accounts supply the baseline that would make that tracking possible.</p>
+</section>
+<section id="diji-how-is-fuelwood-a-driver-of-water-scarcity-in-the-drc" class="level2">
+<h2 class="anchored" data-anchor-id="diji-how-is-fuelwood-a-driver-of-water-scarcity-in-the-drc">21. Diji — How is fuelwood a driver of water scarcity in the DRC?</h2>
+<p><strong>Comment.</strong> “How is this the case? And would there not be a temporal lag between cutting down wood and seeing change in rainfall patterns or greenwater?”</p>
+<p><strong>Location.</strong> “Democratic Republic of Congo. No dedicated”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Democratic Republic of Congo.</strong> No dedicated water accounts have been compiled for the DRC. The forest ecosystem accounts do not show that the DRC is water-scarce at the national scale; it remains one of the most freshwater-rich countries in Sub-Saharan Africa, and the absence of a SEEA-Water account is itself a significant data gap. What the forest accounts do show is that fuelwood harvesting from forest-farm mosaics increased 709 percent between 2000 and 2020, expanding a degraded mixed-use landscape that retains less soil and sediment <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Reduced tree cover can lower infiltration and dry-season baseflow and, over longer periods, can alter local rainfall recycling (green water). Those hydrological effects are lagged and local; they are not a claim that cutting wood this year produces national water scarcity next year. A water account, disaggregated to basins, would be the instrument that tests the lag and the location. Until then, the energy–water link in the DRC should be stated as a plausible landscape pathway, not as a measured national water-stress result.</p>
+</section>
+<section id="diji-electricity-as-kenyas-largest-water-user-is-surprising" class="level2">
+<h2 class="anchored" data-anchor-id="diji-electricity-as-kenyas-largest-water-user-is-surprising">22. Diji — Electricity as Kenya’s largest water user is surprising</h2>
+<p><strong>Comment.</strong> “Over agriculture - that is surprising. Also because KY uses geothermal”</p>
+<p><strong>Location.</strong> “Kenya. Kenya’s water accounts reveal that”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Kenya.</strong> Kenya’s water accounts reveal that per capita water availability varies by a factor of eleven across basins, from 8 m³ per person per year in Lake Victoria South to 91 m³ in the Tana basin, against a national average of 26.6 m³ <span class="citation" data-cites="worldbank_kenya_water_energy_2025">(<a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. The Rift Valley shows groundwater abstraction exceeding 100 percent of sustainable yield. Electricity generation is the single largest <em>sectoral abstractor</em> of water, which is surprising if the comparison is made with agriculture and if Kenya’s geothermal-heavy grid is taken to be a low-water system. The 2023 physical supply and use table resolves both points. Own use of abstracted water by electricity, gas, steam and air conditioning (ISIC 35) was about 2,088 million m³, against about 751 million m³ in agriculture and 1,955 million m³ by households. Almost all of the electricity volume is returned to inland water resources in the same table: it is hydropower throughflow, plus water used in thermal and geothermal operations, not irrigation-style consumption. Agriculture, by contrast, evaporates or incorporates about 558 million m³ of the 751 million m³ it abstracts. Geothermal is important in Kenya’s <em>energy</em> mix (19,984 TJ, ahead of hydro at 13,071 TJ), but it does not dominate the <em>water</em> abstraction total; hydro throughflow does. The planning implication is a water–energy nexus at the basin scale—especially Tana, where the Seven Forks cascade sits—rather than a finding that farms use less water than power plants in consumptive terms. Non-revenue water declined modestly over the accounting period.</p>
+</section>
+<section id="diji-is-mauritius-at-22-percent-too-close-for-comfort" class="level2">
+<h2 class="anchored" data-anchor-id="diji-is-mauritius-at-22-percent-too-close-for-comfort">23. Diji — Is Mauritius at 22 percent “too close for comfort”?</h2>
+<p><strong>Comment.</strong> “Below - yes, but it is too close for comfort? Is 22 a signal to start putting in place measures?”</p>
+<p><strong>Location.</strong> “Mauritius. Mauritius total freshwater abstraction is”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Mauritius.</strong> Mauritius’s total freshwater abstraction is 22 percent of total renewable water resources, just under the 25 percent water-stress threshold, but agriculture accounts for 89.1 percent of net water consumption and the trend is in the wrong direction <span class="citation" data-cites="statsmauritius_water_2024">(<a href="#ref-statsmauritius_water_2024" role="doc-biblioref">Statistics Mauritius, 2024</a>)</span>. Twenty-two percent is not a comfortable buffer. Abstraction has been rising from 591 Mm³ in 2017, surface-water withdrawal was already 31.3 percent of available surface water in 2022, and rainfall in the ten-year series has swung from 1,896 mm (2016) to 2,816 mm (2018). A dry year at current abstraction would cross the stress threshold. That is a signal to put measures in place now, before the indicator flips. The highest-return measure visible in the same accounts is not new supply. It is the unaccounted-for water rate in the Central Water Authority network: 64.6 percent in 2022, up from 56.4 percent in 2013. Nearly two-thirds of treated potable water is lost before it reaches end users. Households received only 197 litres per capita per day in 2022 despite 99.8 percent access to safely managed drinking water, because the abstraction-to-delivery gap (719 L/day versus 197 L/day) is almost entirely pipe-network losses. A monetary water account that valued treatment cost, pumping energy, and foregone revenue of those losses would make the investment case in fiscal terms.</p>
+</section>
+<section id="diji-does-ascent-in-the-drc-already-use-this-dual-entry-point" class="level2">
+<h2 class="anchored" data-anchor-id="diji-does-ascent-in-the-drc-already-use-this-dual-entry-point">24. Diji — Does ASCENT in the DRC already use this dual entry point?</h2>
+<p><strong>Comment.</strong> “Check if this is already happening. If yes, then suggest saying it confirms ASCENT’s approach. Also see point above re: transition.”</p>
+<p><strong>Location.</strong> “Democratic Republic of Congo. The DRC’s”</p>
+<p><strong>Note.</strong> Use the single proposed paragraph below. The claims rest on three World Bank project documents now in <code>references.bib</code>: the ASCENT MPA PAD <span class="citation" data-cites="worldbank_ascent_mpa_2023">(<a href="#ref-worldbank_ascent_mpa_2023" role="doc-biblioref">World Bank, 2023c</a>)</span>, the Regional Energy Access Financing Platform appraisal PID <span class="citation" data-cites="worldbank_ascent_reaf_2023">(<a href="#ref-worldbank_ascent_reaf_2023" role="doc-biblioref">World Bank, 2023a</a>)</span>, and the FOREST PAD <span class="citation" data-cites="worldbank_drc_forest_restoration_2023">(<a href="#ref-worldbank_drc_forest_restoration_2023" role="doc-biblioref">World Bank, 2023b</a>)</span>. They confirm design and eligibility, not that the forest accounts are an ASCENT results metric.</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts establish that 94 percent of the country’s total energy supply comes from forest biomass <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Fuelwood harvesting from forest-farm mosaics increased 709 percent between 2000 and 2020 as the agricultural frontier expanded. Only approximately 10 percent of the population has reliable electricity access. This confirms ASCENT’s dual-entry design rather than proposing a new one. The MPA treats clean cooking as a core pillar alongside electrification, and it already frames biomass cooking as a health, gender, and climate problem, including the time and risk of collecting wood fuels <span class="citation" data-cites="worldbank_ascent_mpa_2023">(<a href="#ref-worldbank_ascent_mpa_2023" role="doc-biblioref">World Bank, 2023c</a>)</span>. DRC is included among future country phases, with an indicative IDA allocation of US$400 million <span class="citation" data-cites="worldbank_ascent_mpa_2023">(<a href="#ref-worldbank_ascent_mpa_2023" role="doc-biblioref">World Bank, 2023c</a>)</span>. The Regional Energy Access Financing Platform, implemented by TDB, is designed to lend to distributed-renewable-energy and clean-cooking companies and to provide results-based grants for underserved markets in IDA-eligible TDB member countries <span class="citation" data-cites="worldbank_ascent_reaf_2023">(<a href="#ref-worldbank_ascent_reaf_2023" role="doc-biblioref">World Bank, 2023a</a>)</span>. The forest accounts quantify the biomass harvest those interventions are meant to displace. They are not, on the public record, an ASCENT monitoring series: results are still framed as connections and stoves, not as cubic metres of fuelwood avoided. The transition still has to outrun population growth, so tracking absolute harvest against the accounts would strengthen what ASCENT is already trying to do. Complementary Bank work under the Forest and Savanna Restoration Investment Program is more explicit on the forest side, pairing improved cookstoves with agroforestry to ease pressure on unsustainable wood energy <span class="citation" data-cites="worldbank_drc_forest_restoration_2023">(<a href="#ref-worldbank_drc_forest_restoration_2023" role="doc-biblioref">World Bank, 2023b</a>)</span>.</p>
+</section>
+<section id="diji-ugandas-wood-supply-is-not-depleted" class="level2">
+<h2 class="anchored" data-anchor-id="diji-ugandas-wood-supply-is-not-depleted">25. Diji — Uganda’s wood supply is not depleted</h2>
+<p><strong>Comment.</strong> “We know it is not the case, unless the focus is on “sustainable” wood supply then need to check… but wood supply is not depleted, it is declining. They are also importing from DRC.”</p>
+<p><strong>Location.</strong> “Uganda. Uganda’s forest accounts establish that”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Uganda.</strong> Uganda’s forest accounts establish that woody biomass supplies 78 percent of national energy <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. Charcoal production grew fivefold between 1990 and 2015, consuming about 95.7 million tonnes of wood per year at a kiln efficiency of only 12.5 percent. The 2020 accounts projected that <em>sustainable</em> wood supply—the harvest consistent with forest growth—would be exhausted by about 2025 under business-as-usual assumptions, with a supply deficit of 35 million tonnes in 2015 and 105 million tonnes by 2040. That projection has been widely read as a forecast that wood would run out. It has not. Wood is still being harvested; the physical stock is declining rather than exhausted, and Uganda also imports wood, including from the DRC. What the accounts measured is the crossing of a <em>sustainable-yield</em> threshold, not the disappearance of trees. The 2025 date is now overdue for verification with post-2015 land-cover, production, and trade data. Until that update exists, the right statement is that Uganda is drawing forest inventory down and plugging part of the gap with imports, not that national wood supply has ended.</p>
+</section>
+<section id="diji-add-a-time-period-to-rwandas-soil-erosion-cost" class="level2">
+<h2 class="anchored" data-anchor-id="diji-add-a-time-period-to-rwandas-soil-erosion-cost">26. Diji — Add a time period to Rwanda’s soil-erosion cost</h2>
+<p><strong>Comment.</strong> “Add time period here.”</p>
+<p><strong>Location.</strong> “Rwanda. Rwanda’s land accounts present the”</p>
+<p><strong>Proposed text.</strong></p>
+<p>During the same period Rwanda’s GDP grew substantially and poverty fell, showing the trade-off between forest protection and rural economic development that the accounts make explicit. Soil erosion costs have been estimated at USD 34 million per year, about 2 percent of GDP, based on a REMA (2009) estimate cited in the 2018 land accounts <span class="citation" data-cites="nisr_rwanda_land_2018">(<a href="#ref-nisr_rwanda_land_2018" role="doc-biblioref">Government of Rwanda, 2018</a>)</span>. That figure is therefore a late-2000s snapshot, not a 1990–2015 account result, and it has not been updated in the reports reviewed here.</p>
+</section>
+<section id="diji-confirm-million-versus-billion-for-drc-forest-services" class="level2">
+<h2 class="anchored" data-anchor-id="diji-confirm-million-versus-billion-for-drc-forest-services">27. Diji — Confirm million versus billion for DRC forest services</h2>
+<p><strong>Comment.</strong> “Please confirm, as in the following sentence it says billion”</p>
+<p><strong>Location.</strong> “Democratic Republic of Congo. The DRC’s forest ecosystem”</p>
+<p><strong>Note.</strong> Confirmed from the DRC forest ecosystem accounts: total annual monetary supply is USD 706,188 <em>million</em> (i.e.&nbsp;about USD 706 billion) in 2020, dominated by global climate regulation at the social cost of carbon. The domestically captured value is USD 3.3 <em>billion</em>. The Word file’s “USD 706,188 billion” is a unit error. Keep million in the first figure or write “USD 706 billion” for readability, and billion in the second.</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Democratic Republic of Congo.</strong> The DRC’s forest ecosystem accounts are the most comprehensive in the region for any single ecosystem type. Total annual monetary supply of forest ecosystem services reached CDF 1,991,451 billion, equal to USD 706,188 million (about USD 706 billion) in 2020, dominated by global climate regulation at the social cost of carbon <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Excluding this carbon externality, the domestically captured value was USD 3.3 billion per year, consisting of timber, wild resources, sediment retention, and tourism.</p>
+</section>
+<section id="diji-put-the-bushmeat-finding-in-a-box" class="level2">
+<h2 class="anchored" data-anchor-id="diji-put-the-bushmeat-finding-in-a-box">28. Diji — Put the bushmeat finding in a box</h2>
+<p><strong>Comment.</strong> “This would be good to go in a box that has a title along the lines of “important not to forget…””</p>
+<p><strong>Location.</strong> “Democratic Republic of Congo. The DRC’s forest ecosystem”</p>
+<p><strong>Note.</strong> Format as a box. Suggested title below.</p>
+<p><strong>Proposed text.</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Important not to forget: bushmeat is income as well as extraction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bushmeat extraction at 64 percent above sustainable yield is both an ecological risk and a livelihood vulnerability. In some forest-dependent communities, bushmeat income is about 32 percent of annual household income <span class="citation" data-cites="worldbank_drc_forest_2025">(<a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>)</span>. Conservation and accounting work that records only the overshoot, and not the income, will miss why the harvest continues.</p>
+</div>
+</div>
+</section>
+<section id="diji-move-the-missing-services-paragraph-out-of-kenya" class="level2">
+<h2 class="anchored" data-anchor-id="diji-move-the-missing-services-paragraph-out-of-kenya">29. Diji — Move the missing-services paragraph out of Kenya</h2>
+<p><strong>Comment.</strong> “As this is not kenya specific, suggest to move to a final section on future opportunities”</p>
+<p><strong>Location.</strong> “Kenya. Kenya’s monetary ecosystem service accounts”</p>
+<p><strong>Note.</strong> Delete the regional-gap sentence from the Kenya subsection. Paste it into the recommendations / way-forward section (see items 32 and 38).</p>
+<p><strong>Proposed text.</strong></p>
+<p><em>Kenya subsection, without the regional sentence.</em> <strong>Kenya.</strong> Kenya’s monetary ecosystem service accounts cover livestock production (provisioning), sediment retention (regulating), and ecosystem-based tourism (cultural) for 2002 and 2018 <span class="citation" data-cites="turpie_kenya_ecosystem_2025">(<a href="#ref-turpie_kenya_ecosystem_2025" role="doc-biblioref">Turpie, Wilson, Hickinbotham, et al., 2025</a>)</span>. Total services reached KSh 247 billion per year in 2018 (1.8 percent of GDP). The decline in the ecosystem-service share of GDP, down from 2.8 percent in 2002, reflects Kenya’s GDP growing faster than measured ecosystem-service flows, not a decline in natural capital value. It also reflects accounts not yet compiled for carbon, fuelwood, pollination, and water regulation. Wildlife populations declined from 31.9 percent of their 1977–1980 baseline to 27.3 percent by 2018 and are projected below 10 percent by 2050 under business-as-usual. That trajectory directly erodes the tourism asset value currently captured in the accounts.</p>
+<p><em>Move to Way forward / future opportunities.</em> Across the region, the most consistently missing ecosystem services in monetary terms are pollination (absent everywhere), freshwater provisioning to households (unpriced throughout), flood damage avoided (proposed but not compiled), and the contribution of forests to agricultural production through rainfall maintenance and soil protection. They remain missing because of data requirements (household water-use surveys, spatial flood records), institutional capacity (valuation expertise not yet embedded in national statistical offices), and method (non-market valuation needs explicit reference states and counterfactuals). Completing even one of these services in monetary form would close the gap that currently forces countries to argue for those benefits outside the accounts.</p>
+</section>
+<section id="diji-simplify-the-data-infrastructure-point" class="level2">
+<h2 class="anchored" data-anchor-id="diji-simplify-the-data-infrastructure-point">30. Diji — Simplify the data-infrastructure point</h2>
+<p><strong>Comment.</strong> “To simplify are you saying data providers are missing the infrastructure to provide the SEEA data?”</p>
+<p><strong>Location.</strong> “Data infrastructure and monitoring. Primary measurement”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Data providers lack the measurement infrastructure that SEEA compilation requires.</strong> Groundwater is largely unmetered in Zambia, and monitoring networks remain sparse. Rwanda’s hydrometric network was designed for far lower abstraction than the tenfold demand increase projected by 2040. DRC poverty and inequality data are more than a decade old, which blocks adjusted net savings calculations. In each case the statistical office cannot compile a complete account because the agencies that hold the physical data do not yet generate it at the required frequency, coverage, or metering density. Support for NCA therefore has to include support to those data providers—water utilities, forest authorities, geological surveys—not only to the national statistical office that assembles the tables.</p>
+</section>
+<section id="diji-reframe-applications-toward-uses-and-impact" class="level2">
+<h2 class="anchored" data-anchor-id="diji-reframe-applications-toward-uses-and-impact">31. Diji — Reframe applications toward uses and impact</h2>
+<p><strong>Comment.</strong> “This section is good and could be reframed a bit - similar to above to talk about the uses of NCA - less detail for Ethiopia and KY on specifics and more on impact. Same for others.”</p>
+<p><strong>Location.</strong> “Applications of Natural Capital Accounts”</p>
+<p><strong>Proposed text.</strong></p>
+</section>
+</section>
+<section id="applications-of-natural-capital-accounts" class="level1">
+<h1>Applications of Natural Capital Accounts</h1>
+<p>The value of the accounts is not that they exist. It is whether they change investment, policy, or fiscal decisions. This section reports documented uses: cases where account data, or the modelling that underpins the accounts, entered a plan, a budget, a programme, or a pricing reform. The most advanced cases connect compilers to decision-makers through a formal model (Kenya) or an investment-targeting tool (Ethiopia). Others enter through a tariff argument (Rwanda), a conservation-finance argument (South Africa), or a supply-risk argument (Uganda, Zambia).</p>
+<section id="ethiopia-targeting-land-and-watershed-investment" class="level2">
+<h2 class="anchored" data-anchor-id="ethiopia-targeting-land-and-watershed-investment">Ethiopia: targeting land and watershed investment</h2>
+<p>Ethiopia used ecosystem-service modelling of soil protection, water regulation, and carbon storage to build an Investment Prioritization Tool with the Ministry of Agriculture <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. The impact was geographic. Analysis showed that highland investments had reversed some degradation while new hotspots were emerging in the lowlands. That finding entered the Country Climate and Development Report and the selection of investment areas for the World Bank CALM Programme-for-Results (about USD 900 million; 8,000 community watersheds) and for the Ethiopia Strategic Investment Framework for Sustainable Land Management. Under an adaptation scenario, the same modelling projects conversion and restoration of about 6.7 million hectares by 2030. The accounts’ identification of Southwest Ethiopia and Benishangul-Gumuz as high dry-season water-yield regions illustrates the type of evidence the tool uses; whether those two regions were selected as CALM sites should be confirmed with the GPS team.</p>
+</section>
+<section id="kenya-climate-risk-in-the-budget" class="level2">
+<h2 class="anchored" data-anchor-id="kenya-climate-risk-in-the-budget">Kenya: climate risk in the budget</h2>
+<p>Kenya is the only AFE country in this review where NCA data feed an operational macro-fiscal model used by the National Treasury. KENMod’s climate and natural-capital extension takes water, energy, land, and ecosystem-service accounts into damage, adaptation, energy, and land-use modules <span class="citation" data-cites="national_treasury_kenya_2026">(<a href="#ref-national_treasury_kenya_2026" role="doc-biblioref">National Treasury of Kenya, 2026</a>)</span>. The impact is a set of budget-relevant results, not a methodological description: drought, livestock, and flood scenarios identify vulnerable sectors, raise short-term inflation, widen the primary deficit, and increase debt-to-GDP. A hot scenario leaves GDP 4.2 percentage points below baseline by 2100. The 2026 Budget Policy Statement reports these results in the fiscal-risk discussion and records progress on a National Plan for Advancing Environmental-Economic Accounting. Forest scenarios can be run through the same model, which is the first time a forest-restoration argument in the region can be compared with other sectors in GDP, revenue, and employment units <span class="citation" data-cites="knbs_forest_2026">(<a href="#ref-knbs_forest_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026b</a>)</span>.</p>
+</section>
+<section id="rwanda-the-tariff-and-leak-argument" class="level2">
+<h2 class="anchored" data-anchor-id="rwanda-the-tariff-and-leak-argument">Rwanda: the tariff and leak argument</h2>
+<p>Rwanda’s monetary water tables changed the form of the water-policy argument. WASAC recovers about 75 percent of costs; the break-even tariff is about 700 Rwf/m³ against residential charges of 340–877 Rwf/m³; non-revenue water at 41 percent is USD 8.7 million a year in foregone revenue <span class="citation" data-cites="nisr_rwanda_water_2019">(<a href="#ref-nisr_rwanda_water_2019" role="doc-biblioref">Government of Rwanda, 2019</a>)</span>. Halving those losses would free 8 million m³ a year and about USD 4 million in revenue. Agriculture at 118 Rwf/m³ against mining at 6,236 Rwf/m³ supplies the allocation argument that physical tables alone cannot make. Relative decoupling (GDP +25 percent, water use +10 percent, 2012–2015) supplies the efficiency argument.</p>
+</section>
+<section id="south-africa-jobs-and-gdp-from-conservation" class="level2">
+<h2 class="anchored" data-anchor-id="south-africa-jobs-and-gdp-from-conservation">South Africa: jobs and GDP from conservation</h2>
+<p>South Africa’s biodiversity tourism accounts converted protected-area policy into sector-comparable units: R27.7 billion in GDP (0.4–0.5 percent) and 91,836 direct jobs in 2019 <span class="citation" data-cites="statssa_biodiversity_tourism_2024">(<a href="#ref-statssa_biodiversity_tourism_2024" role="doc-biblioref">Statistics South Africa, 2024</a>)</span>. Mainland protected area rose from 7.3 to 9.2 percent between 2000 and 2020. The SWSA water accounts further show <em>which</em> catchments have fallen below ecological-function thresholds, so conservation spending can be spatially targeted rather than spread nationally.</p>
+</section>
+<section id="uganda-and-zambia-supply-risk-and-livelihood-baselines" class="level2">
+<h2 class="anchored" data-anchor-id="uganda-and-zambia-supply-risk-and-livelihood-baselines">Uganda and Zambia: supply risk and livelihood baselines</h2>
+<p>Uganda’s forest accounts were built to inform energy policy: a sustainable-yield deficit was projected to widen to 105 million tonnes by 2040, and non-wood products such as <em>Prunus africana</em> bark (UGX 265,195 million) and shea butter (UGX 14,553 million) quantify value chains that can be formalized <span class="citation" data-cites="ubos_uganda_forest_2020">(<a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>. The impact intended was an energy and livelihood warning; verification of the 2025 sustainable-yield date is now the next use of the same series. Zambia’s accounts put wildlife and fish into the same economic conversation as other sectors: fish production of USD 422.6 million in 2023, bush-meat revenue up 158.5 percent, and a USD 46 million NPV of carbon-stock loss from 2018–2023 degradation <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. Those figures are baselines for wildlife-sector investment and carbon-finance talks, even without full monetary ecosystem accounts.</p>
+</section>
+<section id="diji-retitle-recommendations-as-a-way-forward-with-sna-2025-first" class="level2">
+<h2 class="anchored" data-anchor-id="diji-retitle-recommendations-as-a-way-forward-with-sna-2025-first">32. Diji — Retitle recommendations as a way forward, with SNA 2025 first</h2>
+<p><strong>Comment.</strong> “Change title - something along the lines of Way forward and bring the upcoming requirement in the SNA upfront and motivate the recommendations by what the uses can be”</p>
+<p><strong>Location.</strong> “Recommendations”</p>
+<p><strong>Note.</strong> Pair with item 38. Suggested title: “Way forward”. The SNA paragraph moves to the opening.</p>
+<p><strong>Proposed text.</strong></p>
+</section>
+</section>
+<section id="way-forward" class="level1">
+<h1>Way forward</h1>
+<p>The case for compiling and sustaining natural capital accounts in AFE is no longer only a statistical preference. From 2025, the System of National Accounts treats natural resource depletion as a cost of production and applies a split-asset approach aligned with the SEEA Central Framework. Countries implementing SNA 2025 will need SEEA-compatible physical and monetary asset data as an input. That requirement sits alongside the Kunming-Montreal Global Biodiversity Framework, which recommends SEEA as the basis for headline indicators with 2030 reporting targets, and alongside SDG 15.9.1(b), which is monitored annually. These are reasons to build accounts. They are not the only reasons. The applications in the previous section show that the same data already inform budget-risk analysis, investment targeting, tariff reform, and conservation finance. The recommendations that follow are motivated by those uses, and by the gaps that still block them.</p>
+<section id="diji-check-energy-suts-with-ascent-ttls" class="level2">
+<h2 class="anchored" data-anchor-id="diji-check-energy-suts-with-ascent-ttls">33. Diji — Check energy SUTs with ASCENT TTLs</h2>
+<p><strong>Comment.</strong> “This should be checked with a few ASCENT TTLs”</p>
+<p><strong>Location.</strong> “Support energy supply and use table development in”</p>
+<p><strong>Note.</strong> Action for the task team: short confirmation with ASCENT TTLs for Ethiopia, DRC, and Uganda on whether physical or monetary energy SUTs would be used in results frameworks. Until then, keep the recommendation but flag it.</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Support energy supply and use table development in Ethiopia, the DRC, and Uganda, subject to confirmation with ASCENT task teams that the tables would be used in programme monitoring.</strong> Physical energy accounts are the minimum baseline for tracking whether electrification and clean cooking are displacing biomass in absolute terms. Monetary energy supply and use tables, like Kenya’s, link those flows to sectoral value added, household expenditure, and fiscal revenue. The DRC’s biomass-to-carbon-finance linkage and Uganda’s sustainable-yield deficit both require updated physical accounts before they can be used as results metrics. This recommendation should be checked with ASCENT TTLs before it is treated as an operational ask.</p>
+</section>
+<section id="yurani-will-share-the-updated-report" class="level2">
+<h2 class="anchored" data-anchor-id="yurani-will-share-the-updated-report">34. Yurani — Will share the updated report</h2>
+<p><strong>Comment.</strong> “Yurani can share the report after it has been updated.”</p>
+<p><strong>Location.</strong> “Support energy supply and use table development in”</p>
+<p><strong>Note.</strong> No replacement paragraph. Hold the ASCENT-monitoring sentence in item 33 until Yurani’s updated report is in <code>data/assessment</code>. Then align the Ethiopia/DRC/Uganda energy recommendation with that text.</p>
+</section>
+<section id="diji-support-data-providers-not-only-nsos" class="level2">
+<h2 class="anchored" data-anchor-id="diji-support-data-providers-not-only-nsos">35. Diji — Support data providers, not only NSOs</h2>
+<p><strong>Comment.</strong> “This is true, but also need to have the data providers receiving support for obtaining the data - along the lines of point made above.”</p>
+<p><strong>Location.</strong> “Institutionalize NCA within national statistical agencies.”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Institutionalize NCA within national statistical agencies, and finance the data providers who generate the physical series.</strong> The DRC, Ethiopia, and Zambia identify institutionalization as a priority. Technical assistance to place SEEA compilation inside the mandate and budget of national statistical offices, following the Mauritius and Uganda water-account models, is necessary so that existing account investments become a time series. It is not sufficient. Water utilities, forest authorities, geological surveys, and hydrometric services need support to meter, classify, and share the source data—groundwater abstraction, forest harvest, reservoir inflows—without which the statistical office cannot close a table. The key elements are therefore a mandate and budget in the NSO, <em>and</em> funded measurement and data-sharing agreements with the agencies that observe the environment.</p>
+</section>
+<section id="diji-motivate-marine-accounts-with-jobs-food-security-exports-and-asset-management" class="level2">
+<h2 class="anchored" data-anchor-id="diji-motivate-marine-accounts-with-jobs-food-security-exports-and-asset-management">36. Diji — Motivate marine accounts with jobs, food security, exports, and asset management</h2>
+<p><strong>Comment.</strong> “Suggest to motivate more by the importance for jobs, food security, exports and sustainable management of asset”</p>
+<p><strong>Location.</strong> “Initiate marine and coastal ecosystem accounts. Marine and”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Initiate marine and coastal ecosystem accounts.</strong> Marine and ocean accounts have not been compiled in the region, despite the economic importance of Indian Ocean fisheries and South Africa’s EEZ. These are job, food, export, and asset-management accounts, not only biodiversity accounts. Coastal and inland fisheries employ and feed large populations; Zambia’s fish production alone was USD 422.6 million in 2023, with aquaculture up 112.2 percent <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. For Kenya, Tanzania, Madagascar, Mozambique, and South Africa, marine fisheries and related processing are export and employment sectors whose physical stock is largely unaccounted. South Africa’s estuarine accounts already show what unmanaged decline looks like: sawfish extinct, dusky kob spawner biomass below 2 percent of pristine levels, and 70–94 percent of nursery habitats under high or very high fishing pressure <span class="citation" data-cites="csir_estuaries_2020">(<a href="#ref-csir_estuaries_2020" role="doc-biblioref"><span class="nocase">Niekerk et al.</span>, 2020</a>)</span>. Compiling marine extent, condition, and service accounts would give governments a stock-and-flow basis for setting harvest rules, targeting nursery-habitat protection, and tracking the asset that underpins jobs and foreign exchange.</p>
+</section>
+<section id="diji-ai-land-classification-versus-government-control-of-land-classes" class="level2">
+<h2 class="anchored" data-anchor-id="diji-ai-land-classification-versus-government-control-of-land-classes">37. Diji — AI land classification versus government control of land classes</h2>
+<p><strong>Comment.</strong> “Is the issue the labor intensive step or how gov’ts define different land classes and how they want to ‘control’ the data. Would be good to show how this AI tool can help get around these realities”</p>
+<p><strong>Location.</strong> “Automated satellite-based land cover classification: Large-scale deep learning”</p>
+<p><strong>Proposed text.</strong></p>
+<ul>
+<li><em>Automated satellite-based land cover classification.</em> The bottleneck is only partly labour. Governments also define their own land-cover classes, often for tenure, taxation, or forest-definition reasons, and they are reluctant to cede that classification to a global product. Ethiopia’s accounts already warn that a 22 percent forest-cover “gain” may partly be reclassification <span class="citation" data-cites="government_of_ethiopia_land_2026">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>)</span>. Zambia’s MODIS-based extent accounts diverge from national land-cover data at 500 m resolution <span class="citation" data-cites="zambia_nca_compendium_2026">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>)</span>. AI helps with both problems if it is used as a <em>calibration layer</em>, not as a replacement statistical standard. Large models trained on Sentinel and Landsat can produce a consistent 30-metre annual map at low marginal cost. That map can then be crosswalked to the national legend, so the NSO keeps control of official classes while gaining an annual, internally consistent physical series. Disagreements between the national class and the model class become an explicit reconciling item—the same role a statistical discrepancy plays in the SNA—rather than an unstated source of incomparability. Used this way, AI does not take classification away from government. It makes the official series cheaper to update and easier to compare across years and countries.</li>
+</ul>
+</section>
+<section id="diji-move-sna-2025-to-the-front-of-the-way-forward-section" class="level2">
+<h2 class="anchored" data-anchor-id="diji-move-sna-2025-to-the-front-of-the-way-forward-section">38. Diji — Move SNA 2025 to the front of the way-forward section</h2>
+<p><strong>Comment.</strong> “Move this upfront… saying this will be a requirement going forward and there are more than just this requirement as reasons for developing and sustaining accounts.”</p>
+<p><strong>Location.</strong> “The 2025 System of National Accounts, adopted by”</p>
+<p><strong>Note.</strong> If you apply item 32, this paragraph is already at the top of “Way forward”. Keep the fuller list of frameworks below it.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Use the opening in item 32, then retain the remaining bullets (Our Common Agenda, SEEA CF update by 2028, Kunming-Montreal GBF, SDG 15.9.1(b)) as additional reasons, not as the first reason.</p>
+</section>
+</section>
+<section id="additional-comments" class="level1">
+<h1>Additional comments</h1>
+<p>These items were sent with the request and are not all ballooned in the Word file. They are listed in the order given.</p>
+<section id="a.-executive-summary-more-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="a.-executive-summary-more-highlights">A. Executive summary — more highlights</h2>
+<p><strong>Comment.</strong> “Need more elaboration. Include more highlights and key findings of the correlation section, key findings by theme, and the most successful applications in section 5.”</p>
+<p><strong>Location.</strong> “Executive Summary”</p>
+<p><strong>Note.</strong> Use the rewrite in item 1.</p>
+</section>
+<section id="b.-correlations-period-change-versus-annualized-rates" class="level2">
+<h2 class="anchored" data-anchor-id="b.-correlations-period-change-versus-annualized-rates">B. Correlations — period change versus annualized rates</h2>
+<p><strong>Comment.</strong> “Clarify in the figures with percentage changes whether the estimated change cover the whole period of the rate has been annualized for comparison with the value added and GDP variables.”</p>
+<p><strong>Location.</strong> “Turning to the forest sector,”</p>
+<p><strong>Note.</strong> <strong>?@fig-forest-agr</strong> now plots average annual rates (cumulative account change divided by years in the window), not period totals. The caption below is already in the combined document. Keep cumulative losses (Uganda and Rwanda about −60 percent over 1990–2015) in the body text.</p>
+<p><strong>Proposed text.</strong></p>
+<p><em>Caption.</em> Average annual net forest cover change versus agricultural value added as a percentage of GDP. Annual rates equal the cumulative change in each country’s accounts divided by the length of its account window (not a compound annual growth rate). Windows: Uganda and Rwanda 1990–2015; DRC 2000–2020; Kenya 2002–2018; Zambia 2018–2023; South Africa 2018–2022. Agricultural value added is a single-year WDI observation for the last year of each window.</p>
+</section>
+<section id="c.-figure-5-add-biomass-versus-net-forest-cover-change" class="level2">
+<h2 class="anchored" data-anchor-id="c.-figure-5-add-biomass-versus-net-forest-cover-change">C. Figure 5 — add biomass versus net forest-cover change</h2>
+<p><strong>Comment.</strong> “Figure 5: Biomass share of energy supply vs CO₂ per capita. Add additional comparison Biomass share of energy supply vs net forest cover change to show graphically the discussion after figure 5.”</p>
+<p><strong>Location.</strong> “Regarding energy dependence, Figure 5”</p>
+<p><strong>Note.</strong> New companion figure after <strong>?@fig-land-rural</strong>, using the same <code>nca_indicators</code> object already in the combined document (<code>biomass_energy_pct</code> and <code>forest_cover_change_pct</code>). Period change, not annualized.</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>?@fig-biomass-forest</strong> shows the same biomass shares against net forest-cover change over each country’s account period. If biomass dependence were unrelated to forest outcomes, points would spread horizontally. They do not. DRC (94 percent biomass, −6.6 percent forest cover over 2000–2020), Uganda (78 percent, −60.5 percent over 1990–2015), and Zambia (78 percent, −4.5 percent over 2018–2023) sit in the high-biomass, forest-loss quadrant. South Africa (46.5 percent biomass, +0.8 percent forest change) sits in the lower-biomass, near-stable quadrant. Kenya (70 percent biomass, −8.7 percent over 2002–2018) lies between. The chart does not prove that fuelwood is the only driver—cropland expansion is the main conversion in Uganda and Rwanda—but it makes the discussion after <strong>?@fig-land-rural</strong> visible: the countries that look carbon-light on CO₂ excluding LULUCF are the same countries whose forest accounts record loss. Rwanda is omitted from this panel because a national biomass energy share is not compiled in the energy accounts reviewed here.</p>
+<p>Set <code>eval: true</code> after pasting into <code>03_combined_document.qmd</code>.</p>
+</section>
+<section id="d.-energy-productivity-indicator-analogous-to-figure-3-for-water" class="level2">
+<h2 class="anchored" data-anchor-id="d.-energy-productivity-indicator-analogous-to-figure-3-for-water">D. Energy productivity indicator, analogous to Figure 3 for water</h2>
+<p><strong>Comment.</strong> “Prepare and discuss energy productivity indicator, similar to figure 3 done for water (output or sectoral GDP for agriculture, industry and services over physical flows).”</p>
+<p><strong>Location.</strong> “Water Supply and Use Tables from” / new subsection after the water-productivity figure</p>
+<p><strong>Note.</strong> Fully comparable monetary energy productivity (GVA per TJ, indexed to agriculture = 1) can be built cleanly for South Africa from the 2022 PEFA end-use table. Kenya has physical and monetary energy SUTs but biomass is largely unpriced, so physical and monetary rankings diverge. Other countries have biomass shares without sectoral energy SUTs. The discussion below uses what the accounts actually contain.</p>
+<p><strong>Proposed text.</strong></p>
+<p>Energy accounts can be read in the same way as <strong>?@fig-water-gdp</strong>: sectoral output or GVA divided by physical energy use. The ranking is not a moral judgement on agriculture. It is a map of where a petajoule of energy produces economic value, and where it does not appear in GDP at all.</p>
+<p>South Africa’s physical energy flow accounts are the only series in this review that publish end-use of energy products by industry in a form that supports the comparison <span class="citation" data-cites="statssa_energy_2025">(<a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>)</span>. In 2022, end-use of energy products was about 72 PJ in agriculture, 246 PJ in mining, 1,253 PJ in manufacturing, 466 PJ in transport, and 250 PJ in other industries. Mining is also the most energy-intensive sector on the official intensity measure: 1.21 TJ per million Rand of GVA. Manufacturing therefore dominates <em>absolute</em> energy use, while mining dominates <em>energy per unit of value added</em>—the inverse of productivity. Agriculture’s energy end-use is small relative to its water use in the same economy, which is the opposite of the water-productivity pattern in Rwanda, Uganda, and Mauritius.</p>
+<p>Kenya’s accounts show why a single energy-productivity chart cannot be copied from the water chart without a caveat <span class="citation" data-cites="worldbank_kenya_water_energy_2025 knbs_energy_2026">(<a href="#ref-knbs_energy_2026" role="doc-biblioref">Kenya National Bureau of Statistics, 2026a</a>; <a href="#ref-worldbank_kenya_water_energy_2025" role="doc-biblioref">World Bank &amp; Prime Africa Consult, 2025</a>)</span>. In physical terms, household biomass (more than 1.2 million TJ) dwarfs grid electricity (geothermal 19,984 TJ, hydro 13,071 TJ, wind 6,472 TJ). In monetary terms, total energy supply was KES 580.5 billion and household energy spending KES 749.8 billion, concentrated on electricity and petroleum. Biomass is the largest physical flow and almost invisible in the monetary table. Energy “productivity” computed from GVA over <em>monetary</em> energy use will therefore describe the formal electricity and oil economy. The same ratio computed from GVA over <em>physical</em> energy use will be dominated by unpriced firewood and charcoal. Both ratios are valid. They answer different questions. ASCENT and fiscal policy need the monetary ratio; forest and clean-cooking policy need the physical ratio.</p>
+<p>For DRC, Ethiopia, Uganda, and Zambia, sectoral energy SUTs have not been compiled. The only energy-productivity statement the accounts support is at national level: 78 to 94 percent of energy is biomass, so most of the energy input to household production never enters GDP. Building agriculture–industry–services energy-productivity bars for those countries would require pairing WDI sectoral GVA with physical energy SUTs that do not yet exist. That is a reason to compile the tables, not a gap to fill with a proxy.</p>
+<p><em>Figure specification (optional).</em> A companion to <strong>?@fig-water-gdp</strong> for South Africa: bars for mining, manufacturing, transport, and other industries showing GVA per TJ of energy-product end-use, indexed to agriculture = 1, with a caption stating that Kenya cannot be drawn on the same scale because biomass is unpriced. Use PEFA 2022 end-use (not the “total use” row, which includes coal extraction as a natural-resource input and inflates mining).</p>
+</section>
+<section id="e.-balance-seeas-national-purpose-with-spatial-disaggregation" class="level2">
+<h2 class="anchored" data-anchor-id="e.-balance-seeas-national-purpose-with-spatial-disaggregation">E. Balance SEEA’s national purpose with spatial disaggregation</h2>
+<p><strong>Comment.</strong> The SEEA Central Framework 2012 states: “The main focus of the accounting descriptions and explanations is on accounting for a country as a whole. This aligns with the intent of the SNA and with the general purpose of the Central Framework to be a national accounting tool rather than used for accounting at the level of an economic unit.” One of the most successful applications is Ethiopia’s IPT at grid and watershed level, which does not align with that main objective.</p>
+<p><strong>Location.</strong> “Way forward” / sub-national disaggregation recommendation</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Keep national accounts as the statistical objective, and treat spatial layers as an analytical extension—not a substitute.</strong> The SEEA Central Framework is explicit that its main focus is accounting for a country as a whole, in line with the SNA, and that it is a national accounting tool rather than a tool for accounting at the level of an economic unit <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span>. That objective should remain the test of whether a country is implementing SEEA: can the NSO publish national supply, use, and asset tables that reconcile with the national accounts?</p>
+<p>Some of the most successful <em>applications</em> in this review use a finer grain. Ethiopia’s Investment Prioritization Tool uses ecosystem-service modelling at grid and watershed level to inform CALM I and II and the national SLM investment framework <span class="citation" data-cites="worldbank_bela_ethiopia_2026">(<a href="#ref-worldbank_bela_ethiopia_2026" role="doc-biblioref">World Bank BELA Initiative, 2026</a>)</span>. Kenya’s water tables are compiled by basin. South Africa’s water accounts are built around 22 Strategic Water Source Areas. Those products are consistent with SEEA <em>concepts</em> (extent, condition, services, and physical flows), but they are not, on their own, the Central Framework’s national account. The distinction matters for what gets funded. If spatial tools replace national tables, countries will have excellent maps and still be unable to put depletion in the SNA or to report SDG 15.9.1(b). If national tables are compiled without any spatial split, they will miss the targeting use that made the Ethiopia IPT bankable.</p>
+<p>The practical recommendation is therefore a two-layer programme. First, a national SEEA compilation hosted in the statistical office, covering the accounts that SNA 2025 and GBF reporting will require. Second, where the biophysical modelling already exists, a spatial disaggregation that is reconciled to the national totals—so that watershed priorities sum to the national service supply, and basin water use sums to the national SUT. Ethiopia’s IPT should be presented as evidence that the modelling <em>behind</em> the accounts can inform World Bank operations at watershed scale, not as evidence that SEEA has become a project-appraisal tool in place of a national account.</p>
+</section>
+<section id="f.-time-series-are-the-most-useful-product-and-the-hardest-to-sustain" class="level2">
+<h2 class="anchored" data-anchor-id="f.-time-series-are-the-most-useful-product-and-the-hardest-to-sustain">F. Time series are the most useful product and the hardest to sustain</h2>
+<p><strong>Comment.</strong> “Time series data would be the most useful, but this is hard to do in practice. Consistency with which source data are compiled over time, changes in the classifications, coverage, and definitions used in the collection of source data can require significant re-working to ensure consistency and quality. This would be challenging in practice when data are compiled on an irregular basis as it is currently done in most AFE countries.”</p>
+<p><strong>Location.</strong> “Way forward” / institutionalizing accounts</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Treat a short, consistent time series as more valuable than a single comprehensive snapshot, and budget for the re-working that consistency requires.</strong> Almost every application in this report is a trend argument: Uganda’s water productivity rising from 2015 to 2024; Rwanda’s decoupling between 2012 and 2015; DRC forest depletion accelerating between 2010 and 2020; Mauritius unaccounted-for water rising from 2013 to 2022. Cross-section comparisons across countries are weaker, because account windows, forest definitions, and land-cover legends differ.</p>
+<p>Building those series is harder than compiling a first account. Source data change classification, coverage, and definitions. Ethiopia’s land accounts already caution that a recorded forest-cover gain may partly be a change of source and definition <span class="citation" data-cites="government_of_ethiopia_land_2026">(<a href="#ref-government_of_ethiopia_land_2026" role="doc-biblioref">Federal Democratic Republic of Ethiopia, 2026</a>)</span>. Zambia’s MODIS legend is not the national land-cover legend. When compilation is irregular, as it still is in most AFE countries, each new round can become a new baseline rather than a new observation. Restoring comparability then requires back-casting, bridge tables, and explicit overlap years—work that is technical, unglamorous, and rarely funded by a project that wants a new account type.</p>
+<p>The implication for support is to finance <em>reconciliation across vintages</em> as a deliverable: a documented class mapping, a revised back series, and a quality note. Mauritius’s fifth water-account edition and Uganda’s tenth water-account iteration are the regional proof that this is possible when the same institution repeats the same tables. Forest, land, and ecosystem accounts in the region are still mostly one-off compilations, and they will not become time series without that institutional repetition.</p>
+</section>
+<section id="g.-quality-checks-same-accounting-period-for-physical-and-monetary-data" class="level2">
+<h2 class="anchored" data-anchor-id="g.-quality-checks-same-accounting-period-for-physical-and-monetary-data">G. Quality checks: same accounting period for physical and monetary data</h2>
+<p><strong>Comment.</strong> “Something to say on quality checks and consistency: It is important to ensure that the source data underpinning the physical and the monetary data relate to the same accounting period. Generally, monetary accounts will be compiled on a financial or calendar year basis. Physical data may be compiled on a basis that aligns more closely to natural environmental patterns and seasons. Where needed, adjustments to take these differences into account may need to be made.”</p>
+<p><strong>Location.</strong> “Common Data Gaps and Systemic Patterns” or “Way forward”</p>
+<p><strong>Proposed text.</strong></p>
+<p><strong>Align physical and monetary source data on the same accounting period, and record the adjustments when that is not possible.</strong> A recurring quality risk in this review is that physical and monetary numbers that appear in the same table do not always describe the same twelve months. Monetary accounts follow the financial or calendar year used in the SNA. Physical data often follow hydrological years, growing seasons, satellite composites, or the year a survey happened to be fielded. Kenya’s monetary energy SUT is for 2024; the physical energy balance it is read against is compiled on a different production calendar. Ethiopia’s land-cover years are 2013 and 2022; the GDP and agricultural-GDP damage figures used alongside them are not always for those same years. Forest-cover change in <strong>?@fig-forest-agr</strong> is a multi-year stock change; agricultural value added is a single-year flow.</p>
+<p>Where the periods do not coincide, compilers should either (i) allocate physical flows to the SNA year using within-year production profiles (for example, monthly hydropower generation or seasonal crop calendars), or (ii) publish the physical year and the monetary year side by side and avoid computing ratios that mix them. The second option is a minimum quality check for every monetary supply and use table in the region. Without it, water productivity, energy productivity, and ecosystem-service shares of GDP can move because the calendar moved, not because the economy or the environment did.</p>
+</section>
+<section id="h.-machine-learning-for-gap-imputation-when-each-country-has-few-observations" class="level2">
+<h2 class="anchored" data-anchor-id="h.-machine-learning-for-gap-imputation-when-each-country-has-few-observations">H. Machine learning for gap imputation when each country has few observations</h2>
+<p><strong>Comment.</strong> “Recommendation on Use of AI: Machine learning for gap imputation… Please elaborate on what methodologies/econometric or machine learning methods could be used for inputting data, given the few data points available for each account and country.”</p>
+<p><strong>Location.</strong> “Leveraging Artificial Intelligence” / machine-learning bullet</p>
+<p><strong>Note.</strong> Deep learning is the wrong family of methods here. The constraint is small <em>n</em> (a handful of years per country, nine countries with accounts), not unstructured imagery. Imagery <em>is</em> the right place for deep learning (item 37). Imputation of account cells needs regularized, hierarchical, and survey-statistical methods.</p>
+<p><strong>Proposed text.</strong></p>
+<ul>
+<li><p><em>Machine learning and statistical imputation for sparse account tables.</em> Most AFE countries have one or two compiled years per account, and some tables have entire rows missing (groundwater, informal biomass, non-market services). With so few observations, large neural nets will overfit. The useful methods are those designed for small <em>n</em>, hierarchical pooling, and honest uncertainty.</p>
+<p><em>Borrow strength across countries, not only across years.</em> Mixed-effects or hierarchical Bayesian models treat each country as a draw from a regional distribution of, for example, agricultural water-use intensity or biomass share of household energy. Uganda’s and Rwanda’s water productivity, and DRC’s, Uganda’s, and Zambia’s biomass shares, then become priors for a country that has not yet compiled the table. Predictive mean matching in multiple imputation (MICE) is a related, simpler option: a missing cell is filled with a donor value from a country-year with a similar GDP per capita, rural population share, and forest cover, and the imputation is repeated to produce an interval rather than a single number.</p>
+<p><em>Use global geospatial and FAO/AQUASTAT series as covariates, then calibrate to the national account.</em> Where a country has one good SEEA year, that year can pin a mass-imputation or small-area model that predicts other years from satellite land cover, rainfall, night lights, and published FAO water or energy balances. The national account remains the benchmark; the model fills gaps and is not allowed to overwrite a compiled cell. Elastic-net or ridge regression is appropriate when the number of covariates approaches the number of compiled country-years. Quantile random forests can supply prediction intervals, but they should be run in a leave-one-country-out loop so that performance is not judged on the same points used to train.</p>
+<p><em>Do not impute what the accounts are meant to reveal.</em> Informal charcoal, unmetered groundwater, and unpriced household water are structurally missing, not randomly missing. Imputing them from formal-sector ratios will reproduce the bias the accounts exist to correct. For those cells, the honest products are (i) a range from a hierarchical model with a wide prior, or (ii) a flag that the cell is unmeasured. Recent work on conformal prediction and on Bayesian measurement-error models is useful here because it attaches a coverage guarantee to the gap rather than a false point estimate.</p>
+<p><em>Governance of imputed cells.</em> Every imputed figure in a published table should be marked, with the method, the donor years or countries, and the interval. Otherwise an imputed water-productivity ratio will be read as if it had been compiled from a supply and use table. The purpose of these methods is to let a country publish a first complete-looking framework and a revision plan, not to replace compilation.</p></li>
+</ul>
+
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-zambia_nca_compendium_2026" class="csl-entry" role="listitem">
+Chisanga, C. B., Mkhuzo, C., Phiri, M., &amp; Siame, S. (2026). <em>Natural capital asset compendium for zambia, 2018–2023</em>. Ministry of Finance; National Planning, Government of the Republic of Zambia / World Bank.
+</div>
+<div id="ref-unceea_global_assessment_2025" class="csl-entry" role="listitem">
+Committee of Experts on Environmental-Economic Accounting. (2026). <em>Results of the 2025 <span>Global</span> <span>Assessment</span> of <span>Environmental</span>-<span>Economic</span> <span>Accounting</span> and <span>Supporting</span> <span>Statistics</span></em>. United Nations Statistics Division.
+</div>
+<div id="ref-european_commission_system_2013" class="csl-entry" role="listitem">
+European Commission, Organisation for Economic Cooperation and Development, United Nations, &amp; World Bank. (2013). <em>System of <span>Environmental</span>-<span>Economic</span> <span>Accounting</span> 2012</em>. United Nations.
+</div>
+<div id="ref-government_of_ethiopia_land_2026" class="csl-entry" role="listitem">
+Federal Democratic Republic of Ethiopia. (2026). <em>Land <span>Accounts</span> for <span>Ethiopia</span>, 2013 to 2022, 1st <span>Edition</span></em>. Ministry of Planning; Development, Federal Democratic Republic of Ethiopia.
+</div>
+<div id="ref-nisr_rwanda_land_2018" class="csl-entry" role="listitem">
+Government of Rwanda. (2018). <em>Rwanda natural capital accounts: land</em>. National Institute of Statistics of Rwanda / Ministry of Environment / MINILAF.
+</div>
+<div id="ref-nisr_rwanda_water_2019" class="csl-entry" role="listitem">
+Government of Rwanda. (2019). <em>Rwanda natural capital accounts: Water, version 1.0</em>. National Institute of Statistics of Rwanda / Ministry of Environment.
+</div>
+<div id="ref-knbs_energy_2026" class="csl-entry" role="listitem">
+Kenya National Bureau of Statistics. (2026a). <em>Kenya energy monetary accounts</em>. Kenya National Bureau of Statistics.
+</div>
+<div id="ref-knbs_forest_2026" class="csl-entry" role="listitem">
+Kenya National Bureau of Statistics. (2026b). <em>Kenya natural capital accounts for forests, draft 1</em>. Kenya National Bureau of Statistics.
+</div>
+<div id="ref-national_treasury_kenya_2026" class="csl-entry" role="listitem">
+National Treasury of Kenya. (2026). <em>2026 budget policy statement: Accelerating gains under the bottom-up economic transformation agenda for inclusive and sustainable growth</em>. The National Treasury, Republic of Kenya. <a href="https://www.treasury.go.ke">https://www.treasury.go.ke</a>
+</div>
+<div id="ref-csir_estuaries_2020" class="csl-entry" role="listitem">
+<span class="nocase">Niekerk, L. van, Taljaard, S., et al.</span> (2020). <em>Experimental ecosystem accounts for south africa’s estuaries: Extent, condition and ecosystem services accounts</em> (CSIR/SPLA/SECO/IR/2020/0026/A). CSIR Smart Places.
+</div>
+<div id="ref-statsmauritius_water_2024" class="csl-entry" role="listitem">
+Statistics Mauritius. (2024). <em>Water account, mauritius 2021–2022</em>. Statistics Mauritius, Ministry of Finance.
+</div>
+<div id="ref-statssa_biodiversity_tourism_2024" class="csl-entry" role="listitem">
+Statistics South Africa. (2024). <em>Natural capital series 5: Experimental biodiversity-based tourism estimates for south africa, 2013 to 2019</em> (D0401.5). Statistics South Africa.
+</div>
+<div id="ref-statssa_energy_2025" class="csl-entry" role="listitem">
+Statistics South Africa. (2025). <em>Natural capital series 7: Physical energy flow accounts for south africa, 2022</em> (D0401.7). Statistics South Africa.
+</div>
+<div id="ref-worldbank_drc_forest_2025" class="csl-entry" role="listitem">
+Turpie, J., Wilson, L., Brühl, J., Senterre, B., Letley, G., Gardner, K., Hickinbotham, B., &amp; Philippart, J. (2025). <em>Democratic republic of congo’s forest ecosystem accounts and policy recommendations: Ecosystem extent, condition, services, and asset accounts 2000–2020</em>. World Bank Group.
+</div>
+<div id="ref-turpie_kenya_ecosystem_2025" class="csl-entry" role="listitem">
+Turpie, J., Wilson, L., Hickinbotham, B., Brühl, J., &amp; Brom, P. (2025). <em>Towards ecosystem accounts for <span>Kenya</span>: Ecosystem extent, ecosystem condition, and selected physical and monetary ecosystem services accounts for 2002–2018</em>. Kenya National Bureau of Statistics / Anchor Environmental Consultants.
+</div>
+<div id="ref-ubos_uganda_forest_2020" class="csl-entry" role="listitem">
+Uganda Bureau of Statistics. (2020). <em>Uganda wood asset and forest resources accounts</em>. Uganda Bureau of Statistics / Ministry of Finance, Planning; Economic Development / Ministry of Water; Environment / National Planning Authority.
+</div>
+<div id="ref-ubos_uganda_water_2025" class="csl-entry" role="listitem">
+Uganda Bureau of Statistics. (2025). <em>The 2024 uganda water accounts</em>. Uganda Bureau of Statistics.
+</div>
+<div id="ref-worldbank_ascent_reaf_2023" class="csl-entry" role="listitem">
+World Bank. (2023a). <em>Accelerating <span>Sustainable</span> and <span>Clean</span> <span>Energy</span> <span>Access</span> <span>Transformation</span>: <span>Regional</span> <span>Energy</span> <span>Access</span> <span>Financing</span> <span>Platform</span></em> (Project Information Document, Appraisal Stage No. PIDA0187). World Bank.
+</div>
+<div id="ref-worldbank_drc_forest_restoration_2023" class="csl-entry" role="listitem">
+World Bank. (2023b). <em>Congo, <span>Democratic</span> <span>Republic</span> of: <span>Forest</span> and <span>Savanna</span> <span>Restoration</span> <span>Investment</span> <span>Program</span> <span>Project</span></em> (Project Appraisal Document No. PAD5377). World Bank.
+</div>
+<div id="ref-worldbank_ascent_mpa_2023" class="csl-entry" role="listitem">
+World Bank. (2023c). <em>Eastern and <span>Southern</span> <span>Africa</span>: <span>Accelerating</span> <span>Sustainable</span> and <span>Clean</span> <span>Energy</span> <span>Access</span> <span>Transformation</span> <span>Program</span> using the <span>Multiphase</span> <span>Programmatic</span> <span>Approach</span></em> (Project Appraisal Document No. PAD00136). World Bank.
+</div>
+<div id="ref-worldbank_wdi_2026" class="csl-entry" role="listitem">
+World Bank. (2026). <em>World <span>Development</span> <span>Indicators</span> <span>[Database]</span></em>. World Bank. <a href="https://datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators">https://datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators</a>
+</div>
+<div id="ref-worldbank_bela_ethiopia_2026" class="csl-entry" role="listitem">
+World Bank BELA Initiative. (2026). <em>Developing an investment prioritization tool to combat land degradation: <span>BELA</span> case study series: <span>Ethiopia</span></em> (BELA Case Study Series). World Bank.
+</div>
+<div id="ref-worldbank_kenya_water_energy_2025" class="csl-entry" role="listitem">
+World Bank, &amp; Prime Africa Consult. (2025). <em>Kenya water and energy account report, v1.0</em>. World Bank Global Program on Sustainability.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>“Stage III” in <strong>?@fig-stage</strong> follows the UN Global Assessment <span class="citation" data-cites="unceea_global_assessment_2025">(<a href="#ref-unceea_global_assessment_2025" role="doc-biblioref">Committee of Experts on Environmental-Economic Accounting, 2026</a>)</span>, which classifies Mauritius, Mozambique, Uganda, and Zambia at Stage III. This review cannot independently verify a dedicated, non-donor budget line for continuous NCA production in Uganda or Zambia. Uganda’s water accounts are a long-running UBOS product (tenth iteration), but the forest accounts are a 2020 WAVES compilation. Zambia’s 2018–2023 accounts were produced by the Ministry of Finance and National Planning with World Bank GPS support and are not yet a standing National Statistical Office series. Mauritius has published a fifth consecutive <em>Water Account</em>, which is consistent with Stage III as used here. Mozambique is classified Stage III in the Global Assessment, but no compiled accounts were available for this review.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

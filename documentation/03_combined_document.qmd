@@ -129,17 +129,18 @@ nca_indicators <- tribble(
   ~iso3c, ~country_label,
   ~water_prod_usd_m3,       # monetary water productivity (USD/m³)
   ~biomass_energy_pct,      # biomass share of national energy supply (%)
-  ~forest_cover_change_pct, # net forest cover change over latest account period (%)
+  ~forest_cover_change_pct, # net forest cover change over the account period (%)
+  ~forest_period_years,     # length of the account window used for annualization
   ~land_degradation_pct,    # net ecosystem degradation index or equivalent (%)
-  "COD", "DRC",    NA,   94, -6.6,  NA,
-  "ETH", "Ethiopia",    NA,   90, NA,    NA,
-  "KEN", "Kenya",       15.9, 70, -8.7,  NA,
-  "MDG", "Madagascar",  NA,   NA, NA,    35.6,
-  "MUS", "Mauritius",   NA,   NA, NA,    NA,
-  "RWA", "Rwanda",      23.4, NA, -60.5, NA,
-  "UGA", "Uganda",      27.0, 78, -60.5, NA,
-  "ZAF", "South Africa",NA,   46.5, 0.8, NA,
-  "ZMB", "Zambia",      NA,   78, -4.5,  1.44
+  "COD", "DRC",          NA,   94,  -6.6, 20, NA,
+  "ETH", "Ethiopia",     NA,   90,    NA, NA, NA,
+  "KEN", "Kenya",      15.9,   70,  -8.7, 16, NA,
+  "MDG", "Madagascar",   NA,   NA,    NA, NA, 35.6,
+  "MUS", "Mauritius",    NA,   NA,    NA, NA, NA,
+  "RWA", "Rwanda",     23.4,   NA, -60.5, 25, NA,
+  "UGA", "Uganda",     27.0,   78, -60.5, 25, NA,
+  "ZAF", "South Africa", NA, 46.5,   0.8,  4, NA,
+  "ZMB", "Zambia",       NA,   78,  -4.5,  5, 1.44
 )
 ```
 
@@ -151,7 +152,7 @@ Natural capital accounts (NCAs) compiled under the System of Environmental-Econo
 
 **Across the reviewed countries, the accounts reveal a structurally coherent picture of natural capital stress.** For example, Woody biomass supplies 78 to 94 percent of national energy in the DRC, Uganda, and Zambia, which is a share that is driving forest loss across all three countries. Uganda's forest cover fell 60 percent between 1990 and 2015, while Zambia lost 1.9 million hectares of tree cover in just five years (2018–2023). Water productivity in agriculture is consistently the lowest of any sector. For instance, Rwanda's agriculture achieves 118 Rwf per cubic metre against 6,236 Rwf/m³ for mining and Uganda's agriculture earns UGX 1,458/m³ against UGX 364,299/m³ for services, which translate into those sectors being 52 and 250 times more water productive than agriculture, respectively. Mauritius has lost two-thirds of treated potable water to distribution leaks before it reaches households.
 
-**This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.** Forest cover change correlates positively with agricultural value added as a share of GDP, confirming that forest-to-cropland conversion tracks structural economic transformation but does not always improve food security per capita. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.
+**This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.** Average annual forest-cover loss is faster where agriculture is a larger share of GDP, which is consistent with forest-to-cropland conversion during structural transformation, but it does not always improve food security per capita. Uganda and Rwanda still have the highest agricultural shares and the fastest annual rates; their accounts also record a cumulative loss of about 60 percent of forest cover between 1990 and 2015. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.
 
 **The accounts have been applied to real decisions in several countries.** In Kenya, NCA data underpin the KENMod macro-fiscal model, which is now used by the National Treasury to simulate the fiscal impact of drought, flooding, and infrastructure damage and to compute adjusted net savings. The model's Land Use and Natural Capital Module draws directly on ecosystem service data from the accounts and is cited in the 2026 Budget Policy Statement. In Ethiopia, BELA ecosystem service modeling, which is grounded in the same biophysical accounts reviewed here, identified priority investment watersheds for the World Bank's CALM PforR program (a US$900 million portfolio covering 8,000 community watersheds) and informed the Ethiopia Strategic Investment Framework for Sustainable Land Management. In Rwanda, the monetary water supply and use tables provided the quantitative case for water pricing reform. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected area expansion.
 
@@ -402,17 +403,18 @@ Water _Supply and Use Tables_ from Rwanda, Uganda, and Mauritius provide a direc
 
 The pattern holds across countries at very different income levels and with different accounting methodologies. All three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This finding is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs.
 
-Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. @fig-forest-agr shows net forest cover change derived from national SEEA accounts plotted against agricultural value added as a percentage of GDP from WDI [@worldbank_wdi_2026] in the last year of the respective accounting period for the countries with compiled forest or ecosystem extent accounts. Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020.
+Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to lose forest cover faster. @fig-forest-agr plots average annual net forest-cover change from national SEEA accounts against agricultural value added as a percentage of GDP from WDI [@worldbank_wdi_2026] in the last year of each accounting period. The annual rate is the cumulative change reported in the accounts divided by the number of years in that country's window; it is not a compound growth rate. Account windows differ: Uganda and Rwanda 1990–2015 (25 years); DR Congo 2000–2020 (20 years); Kenya 2002–2018 (16 years); Zambia 2018–2023 (5 years); South Africa 2018–2022 (4 years). Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line lost forest cover on average over their account period.
 
 ```{r}
 #| label: fig-forest-agr
 #| echo: false
 #| message: false
 #| warning: false
-#| fig-cap: "Forest cover change and agricultural Value Added as a percentage of GDP"
+#| fig-cap: "Average annual net forest cover change versus agricultural value added as a percentage of GDP. Annual rates equal the cumulative change in each country's accounts divided by the length of its account window (not a compound annual growth rate). Windows: Uganda and Rwanda 1990–2015; DRC 2000–2020; Kenya 2002–2018; Zambia 2018–2023; South Africa 2018–2022. Agricultural value added is a single-year WDI observation for the last year of each window."
 
 forest_nca <- nca_indicators |>
-  filter(!is.na(forest_cover_change_pct)) |>
+  filter(!is.na(forest_cover_change_pct), !is.na(forest_period_years)) |>
+  mutate(forest_annual_pp = forest_cover_change_pct / forest_period_years) |>
   left_join(
     wdi_wide |> select(iso3c, NV.AGR.TOTL.ZS, SP.RUR.TOTL.ZS),
     by = "iso3c"
@@ -421,7 +423,7 @@ forest_nca <- nca_indicators |>
 
 ggplot(forest_nca, aes(
   x     = NV.AGR.TOTL.ZS,
-  y     = forest_cover_change_pct,
+  y     = forest_annual_pp,
   fill  = SP.RUR.TOTL.ZS,
   label = country_label
 )) +
@@ -429,7 +431,10 @@ ggplot(forest_nca, aes(
   geom_point(size = 5, alpha = 0.85, shape = 21, colour = "black") +
   geom_text_repel(size = 3, colour = "grey20", box.padding = 0.4) +
   scale_x_continuous(limits = c(-3, NA)) +
-  scale_y_continuous(limits = c(-65, NA)) +
+  scale_y_continuous(
+    limits = c(-3.2, 0.6),
+    breaks = seq(-3, 0.5, by = 0.5)
+  ) +
   scale_fill_gradient(
     name = "Rural population\n(% of total, WDI)",
     low  = "#ffffcc",
@@ -437,14 +442,17 @@ ggplot(forest_nca, aes(
   ) +
   labs(
     x = "Agriculture, value added (% of GDP)",
-    y = "Net forest cover change (%, from NCA accounts)",
-    # title    = "Net forest cover change vs agricultural value added as a percentage of GDP",
+    y = "Average annual net forest cover change\n(percentage points per year)",
   ) +
   theme_minimal(base_size = 10) +
   theme(legend.position = "right")
 ```
 
-Uganda (where agriculture represents 24% of GDP) and Rwanda (where it represents 27%) each show approximately 60 percent net forest cover decline over their account periods, driven by smallholder cropland expansion. The DRC, with the lowest agricultural GDP share at 10 percent, still shows a 6.6 percent forest decline, which reflects artisanal fuelwood extraction rather than formal cropland conversion. Zambia presents a notable exception, in which agriculture accounts for only 2.2 percent of GDP, but at the same time 59 percent of its population is rural. It lost 1.88 million hectares of tree cover in five years (2018–2023) through woodland-to-rangeland degradation. South Africa, with a low agricultural share and low rural population, shows near-zero forest change. The critical observation is that net forest cover change over the account period is traditionally invisible in macroeconomic data. While there is a forest area indicator in WDI, it only provides an annual static snapshot. SEEA accounts provide change rates and driving factors that make this comparison possible.
+Uganda (agriculture 24 percent of GDP) and Rwanda (27 percent) remain the two outliers, at about −2.4 percentage points a year. That is the 25-year cumulative decline of about 60 percent in each country, driven by smallholder cropland expansion, expressed as a constant annual average. The long window does not explain their position relative to DRC or Kenya. DRC's accounts also cover two decades (2000–2020) and Kenya's cover 16 years (2002–2018). If DRC had lost forest at Uganda's annual pace, the 20-year change would have been on the order of 50 percent, not 6.6 percent. DRC's annual rate is about −0.3 percentage points: a small rate on a still-forested land base, even though the area lost is large (11.6 million hectares). Kenya averages about −0.5 percentage points a year. South Africa, with a low agricultural share and low rural population, is near zero.
+
+Zambia is the comparison that the old period totals distorted. Agriculture is only 2.2 percent of GDP, 59 percent of the population is rural, and 1.88 million hectares of tree cover were lost in five years (2018–2023) through woodland-to-rangeland degradation. On a cumulative chart that loss sat next to DRC. As an annual rate it is about −0.9 percentage points a year, faster than DRC and Kenya, and still well below Uganda and Rwanda. The slope in @fig-forest-agr is therefore not an artifact of mixing 25-year and 5-year windows. Uganda and Rwanda lost forest faster each year; Zambia's short window was the one that needed annualizing to be read against the others.
+
+The cumulative totals remain the policy facts the accounts were built to show. Uganda and Rwanda lost about 60 percent of forest cover in a generation. WDI reports forest area as an annual snapshot; SEEA accounts report change and the conversions that produced it.
 
 Regarding energy dependence, @fig-land-rural shows the biomass share of national energy supply derived from compiled NCA energy accounts, compared against CO₂ emissions per capita, excluding LULUCF (WDI AR5 methodology, latest year) for six AFE countries with energy account data. Point color reflects GDP per capita in current USD from WDI [@worldbank_wdi_2026]. A lighter orange represents a lower value and a darker red a higher value. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics, which is an apparent paradox that natural capital accounts resolve by documenting accelerating forest depletion from fuelwood harvesting for energy purposes [@worldbank_drc_forest_2025; @ubos_uganda_forest_2020; @zambia_nca_compendium_2026; @statssa_energy_2025].
 
@@ -492,6 +500,33 @@ ggplot(biomass_co2, aes(
   theme_minimal(base_size = 11) +
   theme(legend.position = "right")
 ```
+
+@fig-biomass-forest shows the same biomass shares against net forest-cover change over each country's account period. If biomass dependence were unrelated to forest outcomes, points would spread horizontally. They do not. DRC (94 percent biomass, −6.6 percent forest cover over 2000–2020), Uganda (78 percent, −60.5 percent over 1990–2015), and Zambia (78 percent, −4.5 percent over 2018–2023) sit in the high-biomass, forest-loss quadrant. South Africa (46.5 percent biomass, +0.8 percent forest change) sits in the lower-biomass, near-stable quadrant. Kenya (70 percent biomass, −8.7 percent over 2002–2018) lies between. The chart does not prove that fuelwood is the only driver—cropland expansion is the main conversion in Uganda and Rwanda—but it makes the discussion after @fig-land-rural visible: the countries that look carbon-light on CO₂ excluding LULUCF are the same countries whose forest accounts record loss. Rwanda is omitted from this panel because a national biomass energy share is not compiled in the energy accounts reviewed here.
+
+```{r}
+#| label: fig-biomass-forest
+#| echo: false
+#| eval: true
+#| fig-cap: "Biomass share of energy supply vs net forest cover change over each country's account period (not annualized)"
+
+biomass_forest <- nca_indicators |>
+  filter(!is.na(biomass_energy_pct), !is.na(forest_cover_change_pct))
+
+ggplot(biomass_forest, aes(
+  x     = forest_cover_change_pct,
+  y     = biomass_energy_pct,
+  label = country_label
+)) +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "grey55") +
+  geom_point(size = 5, alpha = 0.85, shape = 21, fill = "#219ebc", colour = "black") +
+  ggrepel::geom_text_repel(size = 3, colour = "grey20", box.padding = 0.4) +
+  labs(
+    x = "Net forest cover change (%, full account period)",
+    y = "Biomass share of national energy supply (%)"
+  ) +
+  theme_minimal(base_size = 11)
+```
+
 
 Countries most dependent on biomass for energy, like the DRC (94%), Ethiopia (90%), Uganda and Zambia (78%), appear among the least carbon-intensive by conventional CO₂ statistics. From a standard emissions perspective, they look clean. From the energy accounts perspective, they show forest biomass depletion. Uganda's forest supply deficit reached 35 million tonnes by 2015 and is projected at 105 million tonnes by 2040 [@ubos_uganda_forest_2020]. The DRC's fuelwood harvesting from forest-farm mosaics grew 709 percent between 2000 and 2020 [@worldbank_drc_forest_2025]. Conversely, South Africa and Mauritius show high CO₂ per capita driven by coal and fossil fuels and low biomass dependency. NCA shows that a country burning fossil fuels instead of depending on biomass (with high CO₂) and a country depleting forests for energy (low CO₂, but high ecological cost) look completely different in the accounts but similarly misleading in GDP statistics alone. For the ASCENT clean energy program, this establishes that energy transition investments in biomass-dependent economies deliver a triple dividends that include improved energy access, reduced forest depletion, and legitimate carbon reduction.
 

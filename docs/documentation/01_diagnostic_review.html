@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -59,10 +62,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,6 +179,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../documentation/03_combined_document.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Combined Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/address_comments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Addressing comments</span></a>
   </div>
 </li>
       </ul>
@@ -323,23 +332,23 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
 </figcaption>
 <div aria-describedby="tbl-all-seea-accounts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="cthndhvkeh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cthndhvkeh table {
+<div id="bfwuwwjhbo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bfwuwwjhbo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cthndhvkeh thead, #cthndhvkeh tbody, #cthndhvkeh tfoot, #cthndhvkeh tr, #cthndhvkeh td, #cthndhvkeh th {
+#bfwuwwjhbo thead, #bfwuwwjhbo tbody, #bfwuwwjhbo tfoot, #bfwuwwjhbo tr, #bfwuwwjhbo td, #bfwuwwjhbo th {
   border-style: none;
 }
 
-#cthndhvkeh p {
+#bfwuwwjhbo p {
   margin: 0;
   padding: 0;
 }
 
-#cthndhvkeh .gt_table {
+#bfwuwwjhbo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -365,12 +374,12 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-left-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_caption {
+#bfwuwwjhbo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cthndhvkeh .gt_title {
+#bfwuwwjhbo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -382,7 +391,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-width: 0;
 }
 
-#cthndhvkeh .gt_subtitle {
+#bfwuwwjhbo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -394,7 +403,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-width: 0;
 }
 
-#cthndhvkeh .gt_heading {
+#bfwuwwjhbo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -406,13 +415,13 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_bottom_border {
+#bfwuwwjhbo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_col_headings {
+#bfwuwwjhbo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -427,7 +436,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_col_heading {
+#bfwuwwjhbo .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -447,7 +456,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#cthndhvkeh .gt_column_spanner_outer {
+#bfwuwwjhbo .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -459,15 +468,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 4px;
 }
 
-#cthndhvkeh .gt_column_spanner_outer:first-child {
+#bfwuwwjhbo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cthndhvkeh .gt_column_spanner_outer:last-child {
+#bfwuwwjhbo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cthndhvkeh .gt_column_spanner {
+#bfwuwwjhbo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -479,11 +488,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   width: 100%;
 }
 
-#cthndhvkeh .gt_spanner_row {
+#bfwuwwjhbo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cthndhvkeh .gt_group_heading {
+#bfwuwwjhbo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -509,7 +518,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   text-align: left;
 }
 
-#cthndhvkeh .gt_empty_group_heading {
+#bfwuwwjhbo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -524,15 +533,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: middle;
 }
 
-#cthndhvkeh .gt_from_md > :first-child {
+#bfwuwwjhbo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cthndhvkeh .gt_from_md > :last-child {
+#bfwuwwjhbo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cthndhvkeh .gt_row {
+#bfwuwwjhbo .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -551,7 +560,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#cthndhvkeh .gt_stub {
+#bfwuwwjhbo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -564,7 +573,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#cthndhvkeh .gt_stub_row_group {
+#bfwuwwjhbo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -578,15 +587,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: top;
 }
 
-#cthndhvkeh .gt_row_group_first td {
+#bfwuwwjhbo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cthndhvkeh .gt_row_group_first th {
+#bfwuwwjhbo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cthndhvkeh .gt_summary_row {
+#bfwuwwjhbo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -596,16 +605,16 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#cthndhvkeh .gt_first_summary_row {
+#bfwuwwjhbo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_first_summary_row.thick {
+#bfwuwwjhbo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cthndhvkeh .gt_last_summary_row {
+#bfwuwwjhbo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -615,7 +624,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_grand_summary_row {
+#bfwuwwjhbo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -625,7 +634,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#cthndhvkeh .gt_first_grand_summary_row {
+#bfwuwwjhbo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -635,7 +644,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_last_grand_summary_row_top {
+#bfwuwwjhbo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -645,11 +654,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_striped {
+#bfwuwwjhbo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cthndhvkeh .gt_table_body {
+#bfwuwwjhbo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -658,7 +667,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_footnotes {
+#bfwuwwjhbo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -672,7 +681,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_footnote {
+#bfwuwwjhbo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -681,7 +690,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#cthndhvkeh .gt_sourcenotes {
+#bfwuwwjhbo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -695,7 +704,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#cthndhvkeh .gt_sourcenote {
+#bfwuwwjhbo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -703,72 +712,72 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#cthndhvkeh .gt_left {
+#bfwuwwjhbo .gt_left {
   text-align: left;
 }
 
-#cthndhvkeh .gt_center {
+#bfwuwwjhbo .gt_center {
   text-align: center;
 }
 
-#cthndhvkeh .gt_right {
+#bfwuwwjhbo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cthndhvkeh .gt_font_normal {
+#bfwuwwjhbo .gt_font_normal {
   font-weight: normal;
 }
 
-#cthndhvkeh .gt_font_bold {
+#bfwuwwjhbo .gt_font_bold {
   font-weight: bold;
 }
 
-#cthndhvkeh .gt_font_italic {
+#bfwuwwjhbo .gt_font_italic {
   font-style: italic;
 }
 
-#cthndhvkeh .gt_super {
+#bfwuwwjhbo .gt_super {
   font-size: 65%;
 }
 
-#cthndhvkeh .gt_footnote_marks {
+#bfwuwwjhbo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cthndhvkeh .gt_asterisk {
+#bfwuwwjhbo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cthndhvkeh .gt_indent_1 {
+#bfwuwwjhbo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cthndhvkeh .gt_indent_2 {
+#bfwuwwjhbo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cthndhvkeh .gt_indent_3 {
+#bfwuwwjhbo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cthndhvkeh .gt_indent_4 {
+#bfwuwwjhbo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cthndhvkeh .gt_indent_5 {
+#bfwuwwjhbo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cthndhvkeh .katex-display {
+#bfwuwwjhbo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cthndhvkeh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bfwuwwjhbo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -988,23 +997,23 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
 </figcaption>
 <div aria-describedby="tbl-group-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ybuymqbzzi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ybuymqbzzi table {
+<div id="pbbibxsqxm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pbbibxsqxm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ybuymqbzzi thead, #ybuymqbzzi tbody, #ybuymqbzzi tfoot, #ybuymqbzzi tr, #ybuymqbzzi td, #ybuymqbzzi th {
+#pbbibxsqxm thead, #pbbibxsqxm tbody, #pbbibxsqxm tfoot, #pbbibxsqxm tr, #pbbibxsqxm td, #pbbibxsqxm th {
   border-style: none;
 }
 
-#ybuymqbzzi p {
+#pbbibxsqxm p {
   margin: 0;
   padding: 0;
 }
 
-#ybuymqbzzi .gt_table {
+#pbbibxsqxm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1030,12 +1039,12 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-left-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_caption {
+#pbbibxsqxm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ybuymqbzzi .gt_title {
+#pbbibxsqxm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1047,7 +1056,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-width: 0;
 }
 
-#ybuymqbzzi .gt_subtitle {
+#pbbibxsqxm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1059,7 +1068,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-top-width: 0;
 }
 
-#ybuymqbzzi .gt_heading {
+#pbbibxsqxm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1071,13 +1080,13 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_bottom_border {
+#pbbibxsqxm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_col_headings {
+#pbbibxsqxm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1092,7 +1101,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_col_heading {
+#pbbibxsqxm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1112,7 +1121,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   overflow-x: hidden;
 }
 
-#ybuymqbzzi .gt_column_spanner_outer {
+#pbbibxsqxm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1124,15 +1133,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 4px;
 }
 
-#ybuymqbzzi .gt_column_spanner_outer:first-child {
+#pbbibxsqxm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ybuymqbzzi .gt_column_spanner_outer:last-child {
+#pbbibxsqxm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ybuymqbzzi .gt_column_spanner {
+#pbbibxsqxm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1144,11 +1153,11 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   width: 100%;
 }
 
-#ybuymqbzzi .gt_spanner_row {
+#pbbibxsqxm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ybuymqbzzi .gt_group_heading {
+#pbbibxsqxm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1174,7 +1183,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   text-align: left;
 }
 
-#ybuymqbzzi .gt_empty_group_heading {
+#pbbibxsqxm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1189,15 +1198,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   vertical-align: middle;
 }
 
-#ybuymqbzzi .gt_from_md > :first-child {
+#pbbibxsqxm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ybuymqbzzi .gt_from_md > :last-child {
+#pbbibxsqxm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ybuymqbzzi .gt_row {
+#pbbibxsqxm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1216,7 +1225,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   overflow-x: hidden;
 }
 
-#ybuymqbzzi .gt_stub {
+#pbbibxsqxm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1229,7 +1238,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#ybuymqbzzi .gt_stub_row_group {
+#pbbibxsqxm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1243,15 +1252,15 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   vertical-align: top;
 }
 
-#ybuymqbzzi .gt_row_group_first td {
+#pbbibxsqxm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ybuymqbzzi .gt_row_group_first th {
+#pbbibxsqxm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ybuymqbzzi .gt_summary_row {
+#pbbibxsqxm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1261,16 +1270,16 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#ybuymqbzzi .gt_first_summary_row {
+#pbbibxsqxm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_first_summary_row.thick {
+#pbbibxsqxm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ybuymqbzzi .gt_last_summary_row {
+#pbbibxsqxm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1280,7 +1289,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_grand_summary_row {
+#pbbibxsqxm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1290,7 +1299,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#ybuymqbzzi .gt_first_grand_summary_row {
+#pbbibxsqxm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1300,7 +1309,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-top-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_last_grand_summary_row_top {
+#pbbibxsqxm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1310,11 +1319,11 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_striped {
+#pbbibxsqxm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ybuymqbzzi .gt_table_body {
+#pbbibxsqxm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1323,7 +1332,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-bottom-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_footnotes {
+#pbbibxsqxm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1337,7 +1346,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_footnote {
+#pbbibxsqxm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1346,7 +1355,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#ybuymqbzzi .gt_sourcenotes {
+#pbbibxsqxm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1360,7 +1369,7 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   border-right-color: #D3D3D3;
 }
 
-#ybuymqbzzi .gt_sourcenote {
+#pbbibxsqxm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1368,72 +1377,72 @@ Table&nbsp;2: Summary of SEEA account coverage by account group across the 11 im
   padding-right: 5px;
 }
 
-#ybuymqbzzi .gt_left {
+#pbbibxsqxm .gt_left {
   text-align: left;
 }
 
-#ybuymqbzzi .gt_center {
+#pbbibxsqxm .gt_center {
   text-align: center;
 }
 
-#ybuymqbzzi .gt_right {
+#pbbibxsqxm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ybuymqbzzi .gt_font_normal {
+#pbbibxsqxm .gt_font_normal {
   font-weight: normal;
 }
 
-#ybuymqbzzi .gt_font_bold {
+#pbbibxsqxm .gt_font_bold {
   font-weight: bold;
 }
 
-#ybuymqbzzi .gt_font_italic {
+#pbbibxsqxm .gt_font_italic {
   font-style: italic;
 }
 
-#ybuymqbzzi .gt_super {
+#pbbibxsqxm .gt_super {
   font-size: 65%;
 }
 
-#ybuymqbzzi .gt_footnote_marks {
+#pbbibxsqxm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ybuymqbzzi .gt_asterisk {
+#pbbibxsqxm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ybuymqbzzi .gt_indent_1 {
+#pbbibxsqxm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ybuymqbzzi .gt_indent_2 {
+#pbbibxsqxm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ybuymqbzzi .gt_indent_3 {
+#pbbibxsqxm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ybuymqbzzi .gt_indent_4 {
+#pbbibxsqxm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ybuymqbzzi .gt_indent_5 {
+#pbbibxsqxm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ybuymqbzzi .katex-display {
+#pbbibxsqxm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ybuymqbzzi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pbbibxsqxm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

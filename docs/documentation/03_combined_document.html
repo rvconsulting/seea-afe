@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -59,10 +62,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,6 +179,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../documentation/03_combined_document.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Combined Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../documentation/address_comments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Addressing comments</span></a>
   </div>
 </li>
       </ul>
@@ -326,7 +335,7 @@ div.csl-indent {
 <p>Natural capital accounts (NCAs) compiled under the System of Environmental-Economic Accounting (SEEA) <span class="citation" data-cites="european_commission_system_2013">(<a href="#ref-european_commission_system_2013" role="doc-biblioref">European Commission et al., 2013</a>)</span> for Eastern and Southern Africa offer a coherent, internationally comparable basis for linking each country’s resource wealth to its economic performance. This report consolidates findings from a diagnostic review of SEEA implementation across the 26-country AFE region and an analytical assessment of the nine countries that have compiled accounts in any form, including the Democratic Republic of Congo (DRC), Ethiopia, Kenya, Madagascar, Mauritius, Rwanda, South Africa, Uganda, and Zambia. It then examines how these countries have used their accounts to inform policy, investment decisions, and economic modeling, and concludes with recommendations for deepening and sustaining this work in a regional context.</p>
 <p><strong>Implementation of NCA varies across the region.</strong> Of the 26 AFE countries assessed, 11 are implementing the SEEA. Four are at Stage III (i.e.&nbsp;they have sustained institutional programs for the continuous production of NCAs), four at Stage II (i.e.&nbsp;have produced at least one SEEA ecosystem or thematic account, in addition to at least one SEEA Central Framework account), and three at Stage I (i.e.&nbsp;have produced at least one SEEA Central Framework account). Three additional countries are compiling accounts outside of the formal institutional SEEA framework, and thus have no stage in this review. However, their efforts, are substantive and deserve attention. Overall, South Africa and Uganda lead with six and five compiled accounts respectively. Physical water accounts are the most common entry point, compiled by six countries.</p>
 <p><strong>Across the reviewed countries, the accounts reveal a structurally coherent picture of natural capital stress.</strong> For example, Woody biomass supplies 78 to 94 percent of national energy in the DRC, Uganda, and Zambia, which is a share that is driving forest loss across all three countries. Uganda’s forest cover fell 60 percent between 1990 and 2015, while Zambia lost 1.9 million hectares of tree cover in just five years (2018–2023). Water productivity in agriculture is consistently the lowest of any sector. For instance, Rwanda’s agriculture achieves 118 Rwf per cubic metre against 6,236 Rwf/m³ for mining and Uganda’s agriculture earns UGX 1,458/m³ against UGX 364,299/m³ for services, which translate into those sectors being 52 and 250 times more water productive than agriculture, respectively. Mauritius has lost two-thirds of treated potable water to distribution leaks before it reaches households.</p>
-<p><strong>This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.</strong> Forest cover change correlates positively with agricultural value added as a share of GDP, confirming that forest-to-cropland conversion tracks structural economic transformation but does not always improve food security per capita. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.</p>
+<p><strong>This report pairs NCA data with other macroeconomic indicators to place these findings in economic context.</strong> Average annual forest-cover loss is faster where agriculture is a larger share of GDP, which is consistent with forest-to-cropland conversion during structural transformation, but it does not always improve food security per capita. Uganda and Rwanda still have the highest agricultural shares and the fastest annual rates; their accounts also record a cumulative loss of about 60 percent of forest cover between 1990 and 2015. Biomass energy dependency correlates inversely with GDP per capita, making clean cooking investment a precondition for energy transition rather than a development co-benefit. Countries with higher rural population shares show faster rates of natural land cover loss, reflecting smallholder frontier expansion.</p>
 <p><strong>The accounts have been applied to real decisions in several countries.</strong> In Kenya, NCA data underpin the KENMod macro-fiscal model, which is now used by the National Treasury to simulate the fiscal impact of drought, flooding, and infrastructure damage and to compute adjusted net savings. The model’s Land Use and Natural Capital Module draws directly on ecosystem service data from the accounts and is cited in the 2026 Budget Policy Statement. In Ethiopia, BELA ecosystem service modeling, which is grounded in the same biophysical accounts reviewed here, identified priority investment watersheds for the World Bank’s CALM PforR program (a US$900 million portfolio covering 8,000 community watersheds) and informed the Ethiopia Strategic Investment Framework for Sustainable Land Management. In Rwanda, the monetary water supply and use tables provided the quantitative case for water pricing reform. In South Africa, biodiversity tourism accounts underpinned the economic argument for protected area expansion.</p>
 <p><strong>Priority actions include completing monetary ecosystem service accounts in Ethiopia and Madagascar, expanding sub-national disaggregation for water and land accounts, institutionalizing compilation within national statistical plans, and developing cross-country harmonized accounts for shared river basins.</strong> The international statistical landscape now creates an urgency that was not present only a few years ago, because the 2025 System of National Accounts, adopted by the UN Statistical Commission, incorporates natural resource depletion as a cost of production and the split-asset approach, which are both directly aligned with SEEA Central Framework methodology. This means that countries implementing SNA 2025 will require SEEA-compatible data systems. Additionally, the SEEA is the methodological basis for headline indicators under the Kunming-Montreal Global Biodiversity Framework, with reporting targets due by 2030.</p>
 </section>
@@ -342,23 +351,23 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
 </figcaption>
 <div aria-describedby="tbl-all-seea-accounts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="fushmwnbiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fushmwnbiz table {
+<div id="htbnijggcq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#htbnijggcq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fushmwnbiz thead, #fushmwnbiz tbody, #fushmwnbiz tfoot, #fushmwnbiz tr, #fushmwnbiz td, #fushmwnbiz th {
+#htbnijggcq thead, #htbnijggcq tbody, #htbnijggcq tfoot, #htbnijggcq tr, #htbnijggcq td, #htbnijggcq th {
   border-style: none;
 }
 
-#fushmwnbiz p {
+#htbnijggcq p {
   margin: 0;
   padding: 0;
 }
 
-#fushmwnbiz .gt_table {
+#htbnijggcq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -384,12 +393,12 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-left-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_caption {
+#htbnijggcq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fushmwnbiz .gt_title {
+#htbnijggcq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -401,7 +410,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-width: 0;
 }
 
-#fushmwnbiz .gt_subtitle {
+#htbnijggcq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -413,7 +422,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-width: 0;
 }
 
-#fushmwnbiz .gt_heading {
+#htbnijggcq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -425,13 +434,13 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_bottom_border {
+#htbnijggcq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_col_headings {
+#htbnijggcq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -446,7 +455,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_col_heading {
+#htbnijggcq .gt_col_heading {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -466,7 +475,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#fushmwnbiz .gt_column_spanner_outer {
+#htbnijggcq .gt_column_spanner_outer {
   color: #333333;
   background-color: #F2F2F2;
   font-size: 100%;
@@ -478,15 +487,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 4px;
 }
 
-#fushmwnbiz .gt_column_spanner_outer:first-child {
+#htbnijggcq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fushmwnbiz .gt_column_spanner_outer:last-child {
+#htbnijggcq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fushmwnbiz .gt_column_spanner {
+#htbnijggcq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -498,11 +507,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   width: 100%;
 }
 
-#fushmwnbiz .gt_spanner_row {
+#htbnijggcq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fushmwnbiz .gt_group_heading {
+#htbnijggcq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -528,7 +537,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   text-align: left;
 }
 
-#fushmwnbiz .gt_empty_group_heading {
+#htbnijggcq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -543,15 +552,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: middle;
 }
 
-#fushmwnbiz .gt_from_md > :first-child {
+#htbnijggcq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fushmwnbiz .gt_from_md > :last-child {
+#htbnijggcq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fushmwnbiz .gt_row {
+#htbnijggcq .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -570,7 +579,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   overflow-x: hidden;
 }
 
-#fushmwnbiz .gt_stub {
+#htbnijggcq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -583,7 +592,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#fushmwnbiz .gt_stub_row_group {
+#htbnijggcq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -597,15 +606,15 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   vertical-align: top;
 }
 
-#fushmwnbiz .gt_row_group_first td {
+#htbnijggcq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fushmwnbiz .gt_row_group_first th {
+#htbnijggcq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fushmwnbiz .gt_summary_row {
+#htbnijggcq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -615,16 +624,16 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#fushmwnbiz .gt_first_summary_row {
+#htbnijggcq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_first_summary_row.thick {
+#htbnijggcq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fushmwnbiz .gt_last_summary_row {
+#htbnijggcq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -634,7 +643,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_grand_summary_row {
+#htbnijggcq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -644,7 +653,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#fushmwnbiz .gt_first_grand_summary_row {
+#htbnijggcq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -654,7 +663,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-top-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_last_grand_summary_row_top {
+#htbnijggcq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -664,11 +673,11 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_striped {
+#htbnijggcq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fushmwnbiz .gt_table_body {
+#htbnijggcq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -677,7 +686,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-bottom-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_footnotes {
+#htbnijggcq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -691,7 +700,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_footnote {
+#htbnijggcq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -700,7 +709,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#fushmwnbiz .gt_sourcenotes {
+#htbnijggcq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -714,7 +723,7 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   border-right-color: #D3D3D3;
 }
 
-#fushmwnbiz .gt_sourcenote {
+#htbnijggcq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -722,72 +731,72 @@ Table&nbsp;1: Accounts of the System of Environmental and Economic Accounts (SEE
   padding-right: 5px;
 }
 
-#fushmwnbiz .gt_left {
+#htbnijggcq .gt_left {
   text-align: left;
 }
 
-#fushmwnbiz .gt_center {
+#htbnijggcq .gt_center {
   text-align: center;
 }
 
-#fushmwnbiz .gt_right {
+#htbnijggcq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fushmwnbiz .gt_font_normal {
+#htbnijggcq .gt_font_normal {
   font-weight: normal;
 }
 
-#fushmwnbiz .gt_font_bold {
+#htbnijggcq .gt_font_bold {
   font-weight: bold;
 }
 
-#fushmwnbiz .gt_font_italic {
+#htbnijggcq .gt_font_italic {
   font-style: italic;
 }
 
-#fushmwnbiz .gt_super {
+#htbnijggcq .gt_super {
   font-size: 65%;
 }
 
-#fushmwnbiz .gt_footnote_marks {
+#htbnijggcq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fushmwnbiz .gt_asterisk {
+#htbnijggcq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fushmwnbiz .gt_indent_1 {
+#htbnijggcq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fushmwnbiz .gt_indent_2 {
+#htbnijggcq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fushmwnbiz .gt_indent_3 {
+#htbnijggcq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fushmwnbiz .gt_indent_4 {
+#htbnijggcq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fushmwnbiz .gt_indent_5 {
+#htbnijggcq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fushmwnbiz .katex-display {
+#htbnijggcq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fushmwnbiz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#htbnijggcq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1016,7 +1025,7 @@ Figure&nbsp;3: Water Productivity and Economic Development
 </div>
 <p>Water <em>Supply and Use Tables</em> from Rwanda, Uganda, and Mauritius provide a direct measure of how efficiently different economic sectors convert water into economic value. The gaps are significant. In Uganda, the services sector generates 250 times more economic value per cubic metre than agriculture, while in Mauritius, manufacturing and services generate 214 times more. Similarly, in Rwanda, services generate 89 times more and mining 53 times more than agriculture.</p>
 <p>The pattern holds across countries at very different income levels and with different accounting methodologies. All three countries converge on the fact that agriculture accounts for the overwhelming majority of water demand while generating the lowest return per cubic metre of any sector. In Mauritius, agriculture represents only 4 percent of GDP, but it absorbs 302 of the 344 million cubic metres abstracted from the environment annually. This finding is valuable for water pricing policy, irrigation efficiency investment, and crop diversification programs.</p>
-<p>Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to show greater forest loss in their accounts. <a href="#fig-forest-agr" class="quarto-xref">Figure&nbsp;4</a> shows net forest cover change derived from national SEEA accounts plotted against agricultural value added as a percentage of GDP from WDI <span class="citation" data-cites="worldbank_wdi_2026">(<a href="#ref-worldbank_wdi_2026" role="doc-biblioref">World Bank, 2026</a>)</span> in the last year of the respective accounting period for the countries with compiled forest or ecosystem extent accounts. Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line experienced net forest loss over the account compilation period. Account reference periods vary by country: Uganda and Rwanda 1990–2015; Zambia 2018–2023; Kenya 2002–2018; South Africa 2018–2022; DR Congo 2000–2020.</p>
+<p>Turning to the forest sector, the accounts show that countries with higher agricultural GDP shares tend to lose forest cover faster. <a href="#fig-forest-agr" class="quarto-xref">Figure&nbsp;4</a> plots average annual net forest-cover change from national SEEA accounts against agricultural value added as a percentage of GDP from WDI <span class="citation" data-cites="worldbank_wdi_2026">(<a href="#ref-worldbank_wdi_2026" role="doc-biblioref">World Bank, 2026</a>)</span> in the last year of each accounting period. The annual rate is the cumulative change reported in the accounts divided by the number of years in that country’s window; it is not a compound growth rate. Account windows differ: Uganda and Rwanda 1990–2015 (25 years); DR Congo 2000–2020 (20 years); Kenya 2002–2018 (16 years); Zambia 2018–2023 (5 years); South Africa 2018–2022 (4 years). Bubble color encodes rural population share (lighter yellow is lower and darker green is higher). Countries below the dashed line lost forest cover on average over their account period.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-forest-agr" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1025,13 +1034,15 @@ Figure&nbsp;3: Water Productivity and Economic Development
 <img src="03_combined_document_files/figure-html/fig-forest-agr-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-forest-agr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Forest cover change and agricultural Value Added as a percentage of GDP
+Figure&nbsp;4: Average annual net forest cover change versus agricultural value added as a percentage of GDP. Annual rates equal the cumulative change in each country’s accounts divided by the length of its account window (not a compound annual growth rate). Windows: Uganda and Rwanda 1990–2015; DRC 2000–2020; Kenya 2002–2018; Zambia 2018–2023; South Africa 2018–2022. Agricultural value added is a single-year WDI observation for the last year of each window.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Uganda (where agriculture represents 24% of GDP) and Rwanda (where it represents 27%) each show approximately 60 percent net forest cover decline over their account periods, driven by smallholder cropland expansion. The DRC, with the lowest agricultural GDP share at 10 percent, still shows a 6.6 percent forest decline, which reflects artisanal fuelwood extraction rather than formal cropland conversion. Zambia presents a notable exception, in which agriculture accounts for only 2.2 percent of GDP, but at the same time 59 percent of its population is rural. It lost 1.88 million hectares of tree cover in five years (2018–2023) through woodland-to-rangeland degradation. South Africa, with a low agricultural share and low rural population, shows near-zero forest change. The critical observation is that net forest cover change over the account period is traditionally invisible in macroeconomic data. While there is a forest area indicator in WDI, it only provides an annual static snapshot. SEEA accounts provide change rates and driving factors that make this comparison possible.</p>
+<p>Uganda (agriculture 24 percent of GDP) and Rwanda (27 percent) remain the two outliers, at about −2.4 percentage points a year. That is the 25-year cumulative decline of about 60 percent in each country, driven by smallholder cropland expansion, expressed as a constant annual average. The long window does not explain their position relative to DRC or Kenya. DRC’s accounts also cover two decades (2000–2020) and Kenya’s cover 16 years (2002–2018). If DRC had lost forest at Uganda’s annual pace, the 20-year change would have been on the order of 50 percent, not 6.6 percent. DRC’s annual rate is about −0.3 percentage points: a small rate on a still-forested land base, even though the area lost is large (11.6 million hectares). Kenya averages about −0.5 percentage points a year. South Africa, with a low agricultural share and low rural population, is near zero.</p>
+<p>Zambia is the comparison that the old period totals distorted. Agriculture is only 2.2 percent of GDP, 59 percent of the population is rural, and 1.88 million hectares of tree cover were lost in five years (2018–2023) through woodland-to-rangeland degradation. On a cumulative chart that loss sat next to DRC. As an annual rate it is about −0.9 percentage points a year, faster than DRC and Kenya, and still well below Uganda and Rwanda. The slope in <a href="#fig-forest-agr" class="quarto-xref">Figure&nbsp;4</a> is therefore not an artifact of mixing 25-year and 5-year windows. Uganda and Rwanda lost forest faster each year; Zambia’s short window was the one that needed annualizing to be read against the others.</p>
+<p>The cumulative totals remain the policy facts the accounts were built to show. Uganda and Rwanda lost about 60 percent of forest cover in a generation. WDI reports forest area as an annual snapshot; SEEA accounts report change and the conversions that produced it.</p>
 <p>Regarding energy dependence, <a href="#fig-land-rural" class="quarto-xref">Figure&nbsp;5</a> shows the biomass share of national energy supply derived from compiled NCA energy accounts, compared against CO₂ emissions per capita, excluding LULUCF (WDI AR5 methodology, latest year) for six AFE countries with energy account data. Point color reflects GDP per capita in current USD from WDI <span class="citation" data-cites="worldbank_wdi_2026">(<a href="#ref-worldbank_wdi_2026" role="doc-biblioref">World Bank, 2026</a>)</span>. A lighter orange represents a lower value and a darker red a higher value. Countries in the upper-left combine very high biomass dependence with very low conventional CO₂ statistics, which is an apparent paradox that natural capital accounts resolve by documenting accelerating forest depletion from fuelwood harvesting for energy purposes <span class="citation" data-cites="worldbank_drc_forest_2025 ubos_uganda_forest_2020 zambia_nca_compendium_2026 statssa_energy_2025">(<a href="#ref-zambia_nca_compendium_2026" role="doc-biblioref">Chisanga et al., 2026</a>; <a href="#ref-statssa_energy_2025" role="doc-biblioref">Statistics South Africa, 2025</a>; <a href="#ref-worldbank_drc_forest_2025" role="doc-biblioref">Turpie, Wilson, Brühl, et al., 2025</a>; <a href="#ref-ubos_uganda_forest_2020" role="doc-biblioref">Uganda Bureau of Statistics, 2020</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1042,6 +1053,21 @@ Figure&nbsp;4: Forest cover change and agricultural Value Added as a percentage 
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-land-rural-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Biomass share of energy supply vs CO₂ per capita
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="#fig-biomass-forest" class="quarto-xref">Figure&nbsp;6</a> shows the same biomass shares against net forest-cover change over each country’s account period. If biomass dependence were unrelated to forest outcomes, points would spread horizontally. They do not. DRC (94 percent biomass, −6.6 percent forest cover over 2000–2020), Uganda (78 percent, −60.5 percent over 1990–2015), and Zambia (78 percent, −4.5 percent over 2018–2023) sit in the high-biomass, forest-loss quadrant. South Africa (46.5 percent biomass, +0.8 percent forest change) sits in the lower-biomass, near-stable quadrant. Kenya (70 percent biomass, −8.7 percent over 2002–2018) lies between. The chart does not prove that fuelwood is the only driver—cropland expansion is the main conversion in Uganda and Rwanda—but it makes the discussion after <a href="#fig-land-rural" class="quarto-xref">Figure&nbsp;5</a> visible: the countries that look carbon-light on CO₂ excluding LULUCF are the same countries whose forest accounts record loss. Rwanda is omitted from this panel because a national biomass energy share is not compiled in the energy accounts reviewed here.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-biomass-forest" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-biomass-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_combined_document_files/figure-html/fig-biomass-forest-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biomass-forest-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Biomass share of energy supply vs net forest cover change over each country’s account period (not annualized)
 </figcaption>
 </figure>
 </div>
